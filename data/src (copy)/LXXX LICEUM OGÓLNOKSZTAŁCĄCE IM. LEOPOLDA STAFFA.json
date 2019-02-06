@@ -1,0 +1,92 @@
+{
+    "name": {
+        "full": "LXXX LICEUM OGÓLNOKSZTAŁCĄCE IM. LEOPOLDA STAFFA",
+        "short": ""
+    },
+    "contact": {
+        "email": "szkola@staff.edu.pl , sekretariat@staff.edu.pl",
+        "fax": "226464500",
+        "phone": "226464499 , 226464498",
+        "website": "www.staff.edu.pl"
+    },
+    "students": {
+        "type": "youth",
+        "dominantDisability": null
+    },
+    "location": {
+        "position": {
+            "Latitude": 52.21031,
+            "Longitude": 21.01398
+        },
+        "address": {
+            "Label": "ulica Wiśniowa 56, 02-520 Warszawa, Polska",
+            "Country": "POL",
+            "State": "Woj. Mazowieckie",
+            "County": "Warszawa",
+            "City": "Warszawa",
+            "District": "Mokotów",
+            "Subdistrict": "Stary Mokotów",
+            "Street": "ulica Wiśniowa",
+            "HouseNumber": "56",
+            "PostalCode": "02-520",
+            "AdditionalData": [
+                {
+                    "value": "Polska",
+                    "key": "CountryName"
+                },
+                {
+                    "value": "Woj. Mazowieckie",
+                    "key": "StateName"
+                },
+                {
+                    "value": "Warszawa",
+                    "key": "CountyName"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "schoolType": "Liceum ogólnokształcące",
+        "public": true,
+        "leadingOrgan": {
+            "name": "MOKOTÓW",
+            "type": "Gmina"
+        },
+        "parent": "ZESPÓŁ SZKÓŁ LICEALNYCH I TECHNICZNYCH NR 1",
+        "capitalOwner": "Jednostki Samorządu Terytorialnego",
+        "establishmentDate": "2002-09-01T00:00:00",
+        "dependence": "szkoła/placówka wchodząca w skład jednostki złożonej",
+        "regon": "15228823"
+    },
+    "profiles": {
+        "detailed": [
+            [
+                [
+                    "ang",
+                    "mat",
+                    "inf"
+                ],
+                142.4
+            ],
+            [
+                [
+                    "ang",
+                    "mat",
+                    "inf"
+                ],
+                133.6
+            ]
+        ],
+        "overview": {
+            "availableSubjects": [
+                "ang",
+                "mat",
+                "inf"
+            ],
+            "pointsRange": [
+                133.6,
+                142.4
+            ]
+        }
+    }
+}

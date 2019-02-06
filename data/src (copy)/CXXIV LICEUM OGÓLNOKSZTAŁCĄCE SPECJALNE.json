@@ -1,0 +1,61 @@
+{
+    "name": {
+        "full": "CXXIV LICEUM OGÓLNOKSZTAŁCĄCE SPECJALNE",
+        "short": ""
+    },
+    "contact": {
+        "email": "instytutgluch@post.pl",
+        "fax": "226254720",
+        "phone": "226280431",
+        "website": "instytut-gluchoniemych.waw.pl"
+    },
+    "students": {
+        "type": "youth",
+        "dominantDisability": "niesłyszący"
+    },
+    "location": {
+        "position": {
+            "Latitude": 52.22867,
+            "Longitude": 21.02376
+        },
+        "address": {
+            "Label": "plac Trzech Krzyży 4/6, 00-499 Warszawa, Polska",
+            "Country": "POL",
+            "State": "Woj. Mazowieckie",
+            "County": "Warszawa",
+            "City": "Warszawa",
+            "District": "Śródmieście",
+            "Subdistrict": "Śródmieście Południowe",
+            "Street": "plac Trzech Krzyży",
+            "HouseNumber": "4/6",
+            "PostalCode": "00-499",
+            "AdditionalData": [
+                {
+                    "value": "Polska",
+                    "key": "CountryName"
+                },
+                {
+                    "value": "Woj. Mazowieckie",
+                    "key": "StateName"
+                },
+                {
+                    "value": "Warszawa",
+                    "key": "CountyName"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "schoolType": "Liceum ogólnokształcące",
+        "public": true,
+        "leadingOrgan": {
+            "name": "MIASTO STOŁECZNE WARSZAWA",
+            "type": "Miasto na prawach powiatu"
+        },
+        "parent": "INSTYTUT GŁUCHONIEMYCH IM. JAKUBA FALKOWSKIEGO",
+        "capitalOwner": "Jednostki Samorządu Terytorialnego",
+        "establishmentDate": "2002-04-17T00:00:00",
+        "dependence": "szkoła/placówka wchodząca w skład jednostki złożonej",
+        "regon": "140008355"
+    }
+}

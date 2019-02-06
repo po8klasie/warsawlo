@@ -1,0 +1,62 @@
+{
+	"name": {
+		"full": "XXXVIII LICEUM OGÓLNOKSZTAŁCĄCE IM. STANISŁAWA KOSTKI POTOCKIEGO W WARSZAWIE",
+		"short": "",
+		"nicks": []
+	},
+	"contact": {
+		"email": "sekretariat@kostka-potocki.edu.pl",
+		"fax": "",
+		"phone": "",
+		"website": ""
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.16892,
+			"Longitude": 21.08483
+		},
+		"address": {
+			"Label": "ulica Wiertnicza 26, 02-952 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Wilanów",
+			"Subdistrict": "Wilanów Królewski",
+			"Street": "ulica Wiertnicza",
+			"HouseNumber": "26",
+			"PostalCode": "02-952",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "yes",
+		"leadingOrgan": {
+			"name": "WILANÓW",
+			"type": "Gmina"
+		},
+		"parent": "ZESPÓŁ SZKÓŁ NR 79 IM. ST. KOSTKI POTOCKIEGO W WARSZAWIE",
+		"capitalOwner": "Jednostki Samorządu Terytorialnego",
+		"establishmentDate": "1952-09-01T00:00:00",
+		"dependence": "szkoła lub placówka w zespole",
+		"regon": "17187347"
+	}
+}

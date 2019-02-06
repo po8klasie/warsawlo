@@ -1,0 +1,61 @@
+{
+    "name": {
+        "full": "LXVIII LICEUM OGÓLNOKSZTAŁCĄCE IM.TYTUSA CHAŁUBIŃSKIEGO",
+        "short": ""
+    },
+    "contact": {
+        "email": "sekretariat@68lo.edu.pl , dyrektor@68lo.edu.pl",
+        "fax": "226465276",
+        "phone": "226465276 , 226460297",
+        "website": "www.68lo.edu.pl"
+    },
+    "students": {
+        "type": "youth",
+        "dominantDisability": null
+    },
+    "location": {
+        "position": {
+            "Latitude": 52.20603,
+            "Longitude": 21.01513
+        },
+        "address": {
+            "Label": "ulica Ludwika Narbutta 31, 02-536 Warszawa, Polska",
+            "Country": "POL",
+            "State": "Woj. Mazowieckie",
+            "County": "Warszawa",
+            "City": "Warszawa",
+            "District": "Mokotów",
+            "Subdistrict": "Stary Mokotów",
+            "Street": "ulica Ludwika Narbutta",
+            "HouseNumber": "31",
+            "PostalCode": "02-536",
+            "AdditionalData": [
+                {
+                    "value": "Polska",
+                    "key": "CountryName"
+                },
+                {
+                    "value": "Woj. Mazowieckie",
+                    "key": "StateName"
+                },
+                {
+                    "value": "Warszawa",
+                    "key": "CountyName"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "schoolType": "Liceum ogólnokształcące",
+        "public": true,
+        "leadingOrgan": {
+            "name": "MOKOTÓW",
+            "type": "Gmina"
+        },
+        "parent": "",
+        "capitalOwner": "Jednostki Samorządu Terytorialnego",
+        "establishmentDate": "1991-09-01T00:00:00",
+        "dependence": "samodzielna",
+        "regon": "15452035"
+    }
+}

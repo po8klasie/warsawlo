@@ -1,0 +1,61 @@
+{
+    "name": {
+        "full": "SPORTOWE LICEUM OGÓLNOKSZTAŁCĄCE NR 67 \"M.G.M.\"",
+        "short": ""
+    },
+    "contact": {
+        "email": "",
+        "fax": "",
+        "phone": "",
+        "website": "www.mgm.edu.pl"
+    },
+    "students": {
+        "type": "youth",
+        "dominantDisability": null
+    },
+    "location": {
+        "position": {
+            "Latitude": 52.25761,
+            "Longitude": 20.93077
+        },
+        "address": {
+            "Label": "ulica Obrońców Tobruku 40, 01-494 Warszawa, Polska",
+            "Country": "POL",
+            "State": "Woj. Mazowieckie",
+            "County": "Warszawa",
+            "City": "Warszawa",
+            "District": "Bemowo",
+            "Subdistrict": "Fort Bema",
+            "Street": "ulica Obrońców Tobruku",
+            "HouseNumber": "40",
+            "PostalCode": "01-494",
+            "AdditionalData": [
+                {
+                    "value": "Polska",
+                    "key": "CountryName"
+                },
+                {
+                    "value": "Woj. Mazowieckie",
+                    "key": "StateName"
+                },
+                {
+                    "value": "Warszawa",
+                    "key": "CountyName"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "schoolType": "Liceum ogólnokształcące",
+        "public": "publicPrivileges",
+        "leadingOrgan": {
+            "name": "Słowak Maciej",
+            "type": "Osoba fizyczna"
+        },
+        "parent": "",
+        "capitalOwner": "Krajowe Osoby Fizyczne",
+        "establishmentDate": "2008-02-26T00:00:00",
+        "dependence": "samodzielna",
+        "regon": "146490146"
+    }
+}

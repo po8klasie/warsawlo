@@ -1,0 +1,62 @@
+{
+	"name": {
+		"full": "LICEUM OGÓLNOKSZTAŁCĄCE NIEPUBLICZNE NR 30",
+		"short": "",
+		"nicks": []
+	},
+	"contact": {
+		"email": "",
+		"fax": "",
+		"phone": "228317430",
+		"website": ""
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.24817,
+			"Longitude": 21.00996
+		},
+		"address": {
+			"Label": "ulica Podwale 13, 00-252 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Śródmieście",
+			"Subdistrict": "Stare Miasto",
+			"Street": "ulica Podwale",
+			"HouseNumber": "13",
+			"PostalCode": "00-252",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "publicPrivileges",
+		"leadingOrgan": {
+			"name": "Zakład Doskonalenia Zawodowego",
+			"type": "Spółki Handlowe"
+		},
+		"parent": "",
+		"capitalOwner": "Pozostałe Krajowe Jednostki Prywatne",
+		"establishmentDate": "1996-01-09T00:00:00",
+		"dependence": "samodzielna",
+		"regon": "146337835"
+	}
+}

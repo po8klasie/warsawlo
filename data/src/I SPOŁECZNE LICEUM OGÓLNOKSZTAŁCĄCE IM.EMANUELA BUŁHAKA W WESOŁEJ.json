@@ -1,0 +1,62 @@
+{
+	"name": {
+		"full": "I SPOŁECZNE LICEUM OGÓLNOKSZTAŁCĄCE IM.EMANUELA BUŁHAKA W WESOŁEJ",
+		"short": "",
+		"nicks": []
+	},
+	"contact": {
+		"email": "",
+		"fax": "",
+		"phone": "227735592",
+		"website": ""
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.25101,
+			"Longitude": 21.21688
+		},
+		"address": {
+			"Label": "ulica Armii Krajowej 9, 05-075 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Wesoła",
+			"Subdistrict": "Wesoła-Centrum",
+			"Street": "ulica Armii Krajowej",
+			"HouseNumber": "9",
+			"PostalCode": "05-075",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "publicPrivileges",
+		"leadingOrgan": {
+			"name": "Fundacja Szkoły Społecznej",
+			"type": "Fundacje"
+		},
+		"parent": "",
+		"capitalOwner": "Pozostałe Krajowe Jednostki Prywatne",
+		"establishmentDate": "2002-01-30T00:00:00",
+		"dependence": "samodzielna",
+		"regon": "146439257"
+	}
+}

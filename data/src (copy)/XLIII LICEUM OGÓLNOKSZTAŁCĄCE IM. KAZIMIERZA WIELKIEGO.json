@@ -1,0 +1,139 @@
+{
+    "name": {
+        "full": "XLIII LICEUM OGÓLNOKSZTAŁCĄCE IM. KAZIMIERZA WIELKIEGO",
+        "short": ""
+    },
+    "contact": {
+        "email": "sekretariat@lo43.edu.pl , szkola@lo43.edu.pl",
+        "fax": "228444426",
+        "phone": "228440085",
+        "website": "www.lo43.edu.pl"
+    },
+    "students": {
+        "type": "youth",
+        "dominantDisability": null
+    },
+    "location": {
+        "position": {
+            "Latitude": 52.19365,
+            "Longitude": 21.00824
+        },
+        "address": {
+            "Label": "ulica Mahatmy Ghandiego 13, 02-645 Warszawa, Polska",
+            "Country": "POL",
+            "State": "Woj. Mazowieckie",
+            "County": "Warszawa",
+            "City": "Warszawa",
+            "District": "Mokotów",
+            "Subdistrict": "Wierzbno",
+            "Street": "ulica Mahatmy Ghandiego",
+            "HouseNumber": "13",
+            "PostalCode": "02-645",
+            "AdditionalData": [
+                {
+                    "value": "Polska",
+                    "key": "CountryName"
+                },
+                {
+                    "value": "Woj. Mazowieckie",
+                    "key": "StateName"
+                },
+                {
+                    "value": "Warszawa",
+                    "key": "CountyName"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "schoolType": "Liceum ogólnokształcące",
+        "public": true,
+        "leadingOrgan": {
+            "name": "MOKOTÓW",
+            "type": "Gmina"
+        },
+        "parent": "",
+        "capitalOwner": "Jednostki Samorządu Terytorialnego",
+        "establishmentDate": "1990-09-01T00:00:00",
+        "dependence": "samodzielna",
+        "regon": "15213394"
+    },
+    "profiles": {
+        "detailed": [
+            [
+                [
+                    "geogr",
+                    "ang"
+                ],
+                89.4
+            ],
+            [
+                [
+                    "geogr",
+                    "ang"
+                ],
+                113.6
+            ],
+            [
+                [
+                    "geogr",
+                    "ang"
+                ],
+                100.4
+            ],
+            [
+                [
+                    "geogr",
+                    "ang"
+                ],
+                95.8
+            ],
+            [
+                [
+                    "geogr",
+                    "ang"
+                ],
+                120
+            ],
+            [
+                [
+                    "geogr",
+                    "ang"
+                ],
+                107.2
+            ],
+            [
+                [
+                    "hist",
+                    "ang"
+                ],
+                101
+            ],
+            [
+                [
+                    "hist",
+                    "ang"
+                ],
+                113.4
+            ],
+            [
+                [
+                    "hist",
+                    "ang"
+                ],
+                110.2
+            ]
+        ],
+        "overview": {
+            "availableSubjects": [
+                "geogr",
+                "ang",
+                "hist"
+            ],
+            "pointsRange": [
+                95.8,
+                120
+            ]
+        }
+    }
+}

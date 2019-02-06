@@ -1,0 +1,85 @@
+{
+	"name": {
+		"full": "XCVI LICEUM OGÓLNOKSZTAŁCĄCE IM. AGNIESZKI OSIECKIEJ",
+		"short": "XCVII LO",
+		"nicks": []
+	},
+	"contact": {
+		"email": "zs37@zs37.waw.pl",
+		"fax": "226177760",
+		"phone": "226718937",
+		"website": "www.zs37.waw.pl"
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.22905,
+			"Longitude": 21.06643
+		},
+		"address": {
+			"Label": "aleja Stanów Zjednoczonych 24, 03-965 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Praga-Południe",
+			"Subdistrict": "Saska Kępa",
+			"Street": "aleja Stanów Zjednoczonych",
+			"HouseNumber": "24",
+			"PostalCode": "03-965",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "yes",
+		"leadingOrgan": {
+			"name": "PRAGA-POŁUDNIE",
+			"type": "Gmina"
+		},
+		"parent": "ZESPÓŁ SZKÓŁ NR 37 IM. AGNIESZKI OSIECKIEJ",
+		"capitalOwner": "Jednostki Samorządu Terytorialnego",
+		"establishmentDate": "1995-07-10T00:00:00",
+		"dependence": "szkoła lub placówka w zespole",
+		"regon": "15496601"
+	},
+	"thresholds": {
+		"2018": {
+			"detailed": [
+				{
+					"extensions": [
+						"pol",
+						"hist"
+					],
+					"threshold": 88.6
+				}
+			],
+			"overview": {
+				"availableSubjects": [
+					"pol",
+					"hist"
+				],
+				"pointsRange": [
+					200,
+					88.6
+				]
+			}
+		}
+	}
+}

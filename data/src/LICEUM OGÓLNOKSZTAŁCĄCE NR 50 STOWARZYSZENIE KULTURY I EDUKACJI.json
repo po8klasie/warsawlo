@@ -1,0 +1,62 @@
+{
+	"name": {
+		"full": "LICEUM OGÓLNOKSZTAŁCĄCE NR 50 STOWARZYSZENIE KULTURY I EDUKACJI",
+		"short": "",
+		"nicks": []
+	},
+	"contact": {
+		"email": "",
+		"fax": "",
+		"phone": "228268889 , 228268889",
+		"website": ""
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.27546,
+			"Longitude": 20.9686
+		},
+		"address": {
+			"Label": "ulica Kolektorska 9/11, 01-692 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Bielany",
+			"Subdistrict": "Marymont-Kaskada",
+			"Street": "ulica Kolektorska",
+			"HouseNumber": "9/11",
+			"PostalCode": "01-692",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "publicPrivileges",
+		"leadingOrgan": {
+			"name": "Stowarzyszenie Kultury i Edukacji",
+			"type": "Stowarzyszenia"
+		},
+		"parent": "",
+		"capitalOwner": "Pozostałe Krajowe Jednostki Prywatne",
+		"establishmentDate": "1993-09-01T00:00:00",
+		"dependence": "samodzielna",
+		"regon": "146368623"
+	}
+}

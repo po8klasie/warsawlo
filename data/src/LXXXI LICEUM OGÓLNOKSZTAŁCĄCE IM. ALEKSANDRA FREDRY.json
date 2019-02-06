@@ -1,0 +1,111 @@
+{
+	"name": {
+		"full": "LXXXI LICEUM OGÓLNOKSZTAŁCĄCE IM. ALEKSANDRA FREDRY",
+		"short": "",
+		"nicks": []
+	},
+	"contact": {
+		"email": "sekretariat@fredro.edu.pl",
+		"fax": "228311454",
+		"phone": "228311454",
+		"website": "www.fredro.pl"
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.25082,
+			"Longitude": 20.9913
+		},
+		"address": {
+			"Label": "ulica Miła 7, 00-180 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Śródmieście",
+			"Subdistrict": "Muranów",
+			"Street": "ulica Miła",
+			"HouseNumber": "7",
+			"PostalCode": "00-180",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "yes",
+		"leadingOrgan": {
+			"name": "ŚRÓDMIEŚCIE",
+			"type": "Gmina"
+		},
+		"parent": "",
+		"capitalOwner": "Jednostki Samorządu Terytorialnego",
+		"establishmentDate": "1992-09-01T00:00:00",
+		"dependence": "samodzielna",
+		"regon": "15803233"
+	},
+	"thresholds": {
+		"2018": {
+			"detailed": [
+				{
+					"extensions": [
+						"pol",
+						"hist"
+					],
+					"threshold": 156.4
+				},
+				{
+					"extensions": [
+						"ang",
+						"geogr"
+					],
+					"threshold": 158.8
+				},
+				{
+					"extensions": [
+						"mat",
+						"geogr"
+					],
+					"threshold": 160.2
+				},
+				{
+					"extensions": [
+						"biol",
+						"chem"
+					],
+					"threshold": 160.2
+				}
+			],
+			"overview": {
+				"availableSubjects": [
+					"pol",
+					"hist",
+					"ang",
+					"geogr",
+					"mat",
+					"biol",
+					"chem"
+				],
+				"pointsRange": [
+					160.2,
+					160.2
+				]
+			}
+		}
+	}
+}

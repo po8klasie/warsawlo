@@ -1,0 +1,61 @@
+{
+    "name": {
+        "full": "POLSKO-NIEMIECKA SZKOŁA SPOTKAŃ I DIALOGU IM. WILLY'EGO BRANDTA W WARSZAWIE - LICEUM OGÓLNOKSZTAŁCĄCE",
+        "short": ""
+    },
+    "contact": {
+        "email": "sekretariat1@d-s-w.pl",
+        "fax": "",
+        "phone": "",
+        "website": ""
+    },
+    "students": {
+        "type": "youth",
+        "dominantDisability": null
+    },
+    "location": {
+        "position": {
+            "Latitude": 52.1727,
+            "Longitude": 21.06802
+        },
+        "address": {
+            "Label": "ulica Wandy Rutkiewicz 2, 02-956 Warszawa, Polska",
+            "Country": "POL",
+            "State": "Woj. Mazowieckie",
+            "County": "Warszawa",
+            "City": "Warszawa",
+            "District": "Wilanów",
+            "Subdistrict": "Wilanów Wysoki",
+            "Street": "ulica Wandy Rutkiewicz",
+            "HouseNumber": "2",
+            "PostalCode": "02-956",
+            "AdditionalData": [
+                {
+                    "value": "Polska",
+                    "key": "CountryName"
+                },
+                {
+                    "value": "Woj. Mazowieckie",
+                    "key": "StateName"
+                },
+                {
+                    "value": "Warszawa",
+                    "key": "CountyName"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "schoolType": "Liceum ogólnokształcące",
+        "public": "publicPrivileges",
+        "leadingOrgan": {
+            "name": "Niemieckie Towarzystwo Szkolne W Warszawie",
+            "type": "Stowarzyszenia"
+        },
+        "parent": "POLSKO-NIEMIECKA SZKOŁA SPOTKAŃ I DIALOGU IM. WILLY'EGO BRANDTA",
+        "capitalOwner": "Pozostałe Krajowe Jednostki Prywatne",
+        "establishmentDate": "2008-09-01T00:00:00",
+        "dependence": "szkoła lub placówka w zespole",
+        "regon": "146468690"
+    }
+}

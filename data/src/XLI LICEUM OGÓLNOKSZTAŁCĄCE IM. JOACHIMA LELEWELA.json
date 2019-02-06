@@ -1,0 +1,157 @@
+{
+	"name": {
+		"full": "XLI LICEUM OGÓLNOKSZTAŁCĄCE IM. JOACHIMA LELEWELA",
+		"short": "LO_41",
+		"nicks": []
+	},
+	"contact": {
+		"email": "sekretariat@lelewel.waw.pl",
+		"fax": "228336207",
+		"phone": "228331333",
+		"website": "http://www.lelewel.beep.pl"
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.28359,
+			"Longitude": 20.97045
+		},
+		"address": {
+			"Label": "ulica Kiwerska 3, 01-682 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Bielany",
+			"Subdistrict": "Marymont-Kaskada",
+			"Street": "ulica Kiwerska",
+			"HouseNumber": "3",
+			"PostalCode": "01-682",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "yes",
+		"leadingOrgan": {
+			"name": "BIELANY",
+			"type": "Gmina"
+		},
+		"parent": "ZESPÓŁ SZKÓŁ NR 118",
+		"capitalOwner": "Jednostki Samorządu Terytorialnego",
+		"establishmentDate": "1920-09-01T00:00:00",
+		"dependence": "szkoła lub placówka w zespole",
+		"regon": "799167"
+	},
+	"thresholds": {
+		"2018": {
+			"detailed": [
+				{
+					"extensions": [
+						"mat",
+						"fiz",
+						"ang"
+					],
+					"threshold": 169.4
+				},
+				{
+					"extensions": [
+						"mat",
+						"geogr",
+						"ang"
+					],
+					"threshold": 166.8
+				},
+				{
+					"extensions": [
+						"biol",
+						"chem",
+						"mat"
+					],
+					"threshold": 168
+				},
+				{
+					"extensions": [
+						"mat",
+						"biol",
+						"ang"
+					],
+					"threshold": 165.4
+				},
+				{
+					"extensions": [
+						"ang",
+						"pol",
+						"hist"
+					],
+					"threshold": 156.6
+				},
+				{
+					"extensions": [
+						"pol",
+						"hist",
+						"ang"
+					],
+					"threshold": 158.4
+				},
+				{
+					"extensions": [
+						"pol",
+						"ang",
+						"hist"
+					],
+					"threshold": 144.63
+				},
+				{
+					"extensions": [
+						"pol",
+						"hist",
+						"ang"
+					],
+					"threshold": 167.89
+				},
+				{
+					"extensions": [
+						"hist",
+						"wos",
+						"ang"
+					],
+					"threshold": 163.4
+				}
+			],
+			"overview": {
+				"availableSubjects": [
+					"mat",
+					"fiz",
+					"ang",
+					"geogr",
+					"biol",
+					"chem",
+					"pol",
+					"hist",
+					"wos"
+				],
+				"pointsRange": [
+					144.63,
+					169.4
+				]
+			}
+		}
+	}
+}

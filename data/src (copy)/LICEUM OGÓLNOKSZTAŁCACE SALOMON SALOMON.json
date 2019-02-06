@@ -1,0 +1,61 @@
+{
+    "name": {
+        "full": "LICEUM OGÓLNOKSZTAŁCACE SALOMON SALOMON",
+        "short": ""
+    },
+    "contact": {
+        "email": "sekretariatsalomon@gmail.com",
+        "fax": "",
+        "phone": "690822690",
+        "website": "www.salomon.pl"
+    },
+    "students": {
+        "type": "youth",
+        "dominantDisability": null
+    },
+    "location": {
+        "position": {
+            "Latitude": 52.26263,
+            "Longitude": 21.03533
+        },
+        "address": {
+            "Label": "ulica Namysłowska 4, 03-454 Warszawa, Polska",
+            "Country": "POL",
+            "State": "Woj. Mazowieckie",
+            "County": "Warszawa",
+            "City": "Warszawa",
+            "District": "Praga-Północ",
+            "Subdistrict": "Nowa Praga",
+            "Street": "ulica Namysłowska",
+            "HouseNumber": "4",
+            "PostalCode": "03-454",
+            "AdditionalData": [
+                {
+                    "value": "Polska",
+                    "key": "CountryName"
+                },
+                {
+                    "value": "Woj. Mazowieckie",
+                    "key": "StateName"
+                },
+                {
+                    "value": "Warszawa",
+                    "key": "CountyName"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "schoolType": "Liceum ogólnokształcące",
+        "public": "publicPrivileges",
+        "leadingOrgan": {
+            "name": "Zakrzewska Marzena",
+            "type": "Osoba fizyczna"
+        },
+        "parent": "",
+        "capitalOwner": "Krajowe Osoby Fizyczne",
+        "establishmentDate": "2011-09-01T00:00:00",
+        "dependence": "samodzielna",
+        "regon": "146305025"
+    }
+}

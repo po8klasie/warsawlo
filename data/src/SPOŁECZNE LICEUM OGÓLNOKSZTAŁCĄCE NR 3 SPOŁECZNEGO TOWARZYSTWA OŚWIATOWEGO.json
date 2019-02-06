@@ -1,0 +1,62 @@
+{
+	"name": {
+		"full": "SPOŁECZNE LICEUM OGÓLNOKSZTAŁCĄCE NR 3 SPOŁECZNEGO TOWARZYSTWA OŚWIATOWEGO",
+		"short": "",
+		"nicks": []
+	},
+	"contact": {
+		"email": "",
+		"fax": "",
+		"phone": "22619-39-0",
+		"website": ""
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.2537,
+			"Longitude": 21.03754
+		},
+		"address": {
+			"Label": "ulica Białostocka 4, 03-741 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Praga-Północ",
+			"Subdistrict": "Stara Praga",
+			"Street": "ulica Białostocka",
+			"HouseNumber": "4",
+			"PostalCode": "03-741",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "publicPrivileges",
+		"leadingOrgan": {
+			"name": "Samodzielne Koło Terenowe nr 140 STO",
+			"type": "Stowarzyszenia"
+		},
+		"parent": "",
+		"capitalOwner": "Pozostałe Krajowe Jednostki Prywatne",
+		"establishmentDate": "1991-08-21T00:00:00",
+		"dependence": "samodzielna",
+		"regon": "146348684"
+	}
+}

@@ -1,0 +1,122 @@
+{
+    "name": {
+        "full": "XIX LICEUM OGÓLNOKSZTAŁCĄCE IM. POWSTAŃCÓW WARSZAWY",
+        "short": "XIX LO"
+    },
+    "contact": {
+        "email": "lo19@edu.um.warszawa.pl",
+        "fax": "228103829",
+        "phone": "228103829",
+        "website": "www.lo19.waw.ids.pl"
+    },
+    "students": {
+        "type": "youth",
+        "dominantDisability": null
+    },
+    "location": {
+        "position": {
+            "Latitude": 52.24373,
+            "Longitude": 21.07139
+        },
+        "address": {
+            "Label": "ulica Zbaraska 1, 04-014 Warszawa, Polska",
+            "Country": "POL",
+            "State": "Woj. Mazowieckie",
+            "County": "Warszawa",
+            "City": "Warszawa",
+            "District": "Praga-Południe",
+            "Subdistrict": "Grochów",
+            "Street": "ulica Zbaraska",
+            "HouseNumber": "1",
+            "PostalCode": "04-014",
+            "AdditionalData": [
+                {
+                    "value": "Polska",
+                    "key": "CountryName"
+                },
+                {
+                    "value": "Woj. Mazowieckie",
+                    "key": "StateName"
+                },
+                {
+                    "value": "Warszawa",
+                    "key": "CountyName"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "schoolType": "Liceum ogólnokształcące",
+        "public": true,
+        "leadingOrgan": {
+            "name": "PRAGA-POŁUDNIE",
+            "type": "Gmina"
+        },
+        "parent": "",
+        "capitalOwner": "Jednostki Samorządu Terytorialnego",
+        "establishmentDate": "1944-11-10T00:00:00",
+        "dependence": "samodzielna",
+        "regon": "799078"
+    },
+    "profiles": {
+        "detailed": [
+            [
+                [
+                    "mat",
+                    "biol",
+                    "chem"
+                ],
+                159.4
+            ],
+            [
+                [
+                    "pol",
+                    "hist",
+                    "wos"
+                ],
+                150.8
+            ],
+            [
+                [
+                    "mat",
+                    "geogr",
+                    "ang"
+                ],
+                157
+            ],
+            [
+                [
+                    "mat",
+                    "fiz",
+                    "ang"
+                ],
+                159.4
+            ],
+            [
+                [
+                    "biol",
+                    "chem",
+                    "fiz"
+                ],
+                152.2
+            ]
+        ],
+        "overview": {
+            "availableSubjects": [
+                "mat",
+                "biol",
+                "chem",
+                "pol",
+                "hist",
+                "wos",
+                "geogr",
+                "ang",
+                "fiz"
+            ],
+            "pointsRange": [
+                150.8,
+                159.4
+            ]
+        }
+    }
+}

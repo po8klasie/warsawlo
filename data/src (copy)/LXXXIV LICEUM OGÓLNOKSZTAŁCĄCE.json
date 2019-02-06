@@ -1,0 +1,61 @@
+{
+    "name": {
+        "full": "LXXXIV LICEUM OGÓLNOKSZTAŁCĄCE",
+        "short": "LO LXXXIV"
+    },
+    "contact": {
+        "email": "szkola@narwik.edu.pl",
+        "fax": "228460942",
+        "phone": "228460942",
+        "website": "www.narwik.pl"
+    },
+    "students": {
+        "type": "youth",
+        "dominantDisability": null
+    },
+    "location": {
+        "position": {
+            "Latitude": 52.18771,
+            "Longitude": 20.9601
+        },
+        "address": {
+            "Label": "ulica Gładka 16, 02-172 Warszawa, Polska",
+            "Country": "POL",
+            "State": "Woj. Mazowieckie",
+            "County": "Warszawa",
+            "City": "Warszawa",
+            "District": "Włochy",
+            "Subdistrict": "Okęcie",
+            "Street": "ulica Gładka",
+            "HouseNumber": "16",
+            "PostalCode": "02-172",
+            "AdditionalData": [
+                {
+                    "value": "Polska",
+                    "key": "CountryName"
+                },
+                {
+                    "value": "Woj. Mazowieckie",
+                    "key": "StateName"
+                },
+                {
+                    "value": "Warszawa",
+                    "key": "CountyName"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "schoolType": "Liceum ogólnokształcące",
+        "public": true,
+        "leadingOrgan": {
+            "name": "WŁOCHY",
+            "type": "Gmina"
+        },
+        "parent": "ZESPÓŁ SZKÓŁ IM. BOHATERÓW NARWIKU",
+        "capitalOwner": "Jednostki Samorządu Terytorialnego",
+        "establishmentDate": "2002-04-17T00:00:00",
+        "dependence": "szkoła lub placówka w zespole",
+        "regon": "15771349"
+    }
+}

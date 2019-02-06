@@ -1,0 +1,102 @@
+{
+    "name": {
+        "full": "CXIV LICEUM OGÓLNOKSZTAŁCĄCE IM. JANA KILIŃSKIEGO",
+        "short": "CXIV LICEUM OGÓLNOKSZTAŁCĄCE IM. JANA KILIŃSKIEGO"
+    },
+    "contact": {
+        "email": "zs31@edu.um.warszawa.pl , zs31@interia.pl",
+        "fax": "228390882",
+        "phone": "228390831 , 228390041",
+        "website": "www.zs31.waw.pl"
+    },
+    "students": {
+        "type": "youth",
+        "dominantDisability": null
+    },
+    "location": {
+        "position": {
+            "Latitude": 52.26197,
+            "Longitude": 20.98835
+        },
+        "address": {
+            "Label": "ulica Alojzego Felińskiego, 01-513 Warszawa, Polska",
+            "Country": "POL",
+            "State": "Woj. Mazowieckie",
+            "County": "Warszawa",
+            "City": "Warszawa",
+            "District": "Żoliborz",
+            "Subdistrict": "Stary Żoliborz",
+            "Street": "ulica Alojzego Felińskiego",
+            "PostalCode": "01-513",
+            "AdditionalData": [
+                {
+                    "value": "Polska",
+                    "key": "CountryName"
+                },
+                {
+                    "value": "Woj. Mazowieckie",
+                    "key": "StateName"
+                },
+                {
+                    "value": "Warszawa",
+                    "key": "CountyName"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "schoolType": "Liceum ogólnokształcące",
+        "public": true,
+        "leadingOrgan": {
+            "name": "ŻOLIBORZ",
+            "type": "Gmina"
+        },
+        "parent": "ZESPÓŁ SZKÓŁ NR 31 IM. JANA KILIŃSKIEGO",
+        "capitalOwner": "Jednostki Samorządu Terytorialnego",
+        "establishmentDate": "1998-08-31T00:00:00",
+        "dependence": "szkoła lub placówka w zespole",
+        "regon": "15789094"
+    },
+    "profiles": {
+        "detailed": [
+            [
+                [
+                    "pol",
+                    "hist",
+                    "h.szt."
+                ],
+                99.2
+            ],
+            [
+                [
+                    "pol",
+                    "hist",
+                    "h.szt."
+                ],
+                95
+            ],
+            [
+                [
+                    "ang",
+                    "wos",
+                    "biol"
+                ],
+                69.2
+            ]
+        ],
+        "overview": {
+            "availableSubjects": [
+                "pol",
+                "hist",
+                "h.szt.",
+                "ang",
+                "wos",
+                "biol"
+            ],
+            "pointsRange": [
+                69.2,
+                99.2
+            ]
+        }
+    }
+}

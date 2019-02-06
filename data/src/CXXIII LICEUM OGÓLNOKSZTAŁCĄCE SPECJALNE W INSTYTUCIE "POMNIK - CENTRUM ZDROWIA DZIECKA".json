@@ -1,0 +1,62 @@
+{
+	"name": {
+		"full": "CXXIII LICEUM OGÓLNOKSZTAŁCĄCE SPECJALNE W INSTYTUCIE \"POMNIK - CENTRUM ZDROWIA DZIECKA\"",
+		"short": "",
+		"nicks": []
+	},
+	"contact": {
+		"email": "szkola.czd@wp.pl",
+		"fax": "228151123",
+		"phone": "228151126",
+		"website": ""
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": "przewlekle chorzy"
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.20719,
+			"Longitude": 21.19121
+		},
+		"address": {
+			"Label": "aleja Dzieci Polskich 20, 04-730 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Wawer",
+			"Subdistrict": "Międzylesie",
+			"Street": "aleja Dzieci Polskich",
+			"HouseNumber": "20",
+			"PostalCode": "04-730",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "yes",
+		"leadingOrgan": {
+			"name": "MIASTO STOŁECZNE WARSZAWA",
+			"type": "Miasto na prawach powiatu"
+		},
+		"parent": "ZESPÓŁ SZKÓŁ SPECJALNYCH NR 78 IM. EWY SZELBURG-ZAREMBINY W INSTYTUCIE \"POMNIK CENTRUM ZDROWIA DZIECKA\"",
+		"capitalOwner": "Jednostki Samorządu Terytorialnego",
+		"establishmentDate": "1980-08-20T00:00:00",
+		"dependence": "szkoła lub placówka w zespole",
+		"regon": "15890114"
+	}
+}

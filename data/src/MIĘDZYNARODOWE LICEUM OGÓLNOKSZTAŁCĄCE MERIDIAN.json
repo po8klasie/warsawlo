@@ -1,0 +1,62 @@
+{
+	"name": {
+		"full": "MIĘDZYNARODOWE LICEUM OGÓLNOKSZTAŁCĄCE MERIDIAN",
+		"short": "",
+		"nicks": []
+	},
+	"contact": {
+		"email": "",
+		"fax": "",
+		"phone": "224572424",
+		"website": ""
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.15872,
+			"Longitude": 21.03342
+		},
+		"address": {
+			"Label": "ulica Stokłosy 3, 02-787 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Ursynów",
+			"Subdistrict": "Ursynów Północny",
+			"Street": "ulica Stokłosy",
+			"HouseNumber": "3",
+			"PostalCode": "02-787",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "publicPrivileges",
+		"leadingOrgan": {
+			"name": "Meridian Sp. z o.o.",
+			"type": "Spółki Handlowe"
+		},
+		"parent": "",
+		"capitalOwner": "Pozostałe Krajowe Jednostki Prywatne",
+		"establishmentDate": "1998-05-28T00:00:00",
+		"dependence": "samodzielna",
+		"regon": "146432143"
+	}
+}

@@ -1,0 +1,136 @@
+{
+    "name": {
+        "full": "LXXV LICEUM OGÓLNOKSZTAŁCĄCE IM. JANA III SOBIESKIEGO",
+        "short": ""
+    },
+    "contact": {
+        "email": "sekretariat@sobieski.edu.pl",
+        "fax": "228404579",
+        "phone": "228414945",
+        "website": "www.sobieski.edu.pl"
+    },
+    "students": {
+        "type": "youth",
+        "dominantDisability": null
+    },
+    "location": {
+        "position": {
+            "Latitude": 52.21798,
+            "Longitude": 21.04621
+        },
+        "address": {
+            "Label": "ulica Czerniakowska 128, 00-454 Warszawa, Polska",
+            "Country": "POL",
+            "State": "Woj. Mazowieckie",
+            "County": "Warszawa",
+            "City": "Warszawa",
+            "District": "Śródmieście",
+            "Subdistrict": "Ujazdów",
+            "Street": "ulica Czerniakowska",
+            "HouseNumber": "128",
+            "PostalCode": "00-454",
+            "AdditionalData": [
+                {
+                    "value": "Polska",
+                    "key": "CountryName"
+                },
+                {
+                    "value": "Woj. Mazowieckie",
+                    "key": "StateName"
+                },
+                {
+                    "value": "Warszawa",
+                    "key": "CountyName"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "schoolType": "Liceum ogólnokształcące",
+        "public": true,
+        "leadingOrgan": {
+            "name": "ŚRÓDMIEŚCIE",
+            "type": "Gmina"
+        },
+        "parent": "ZESPÓŁ SZKÓŁ NR 121",
+        "capitalOwner": "Jednostki Samorządu Terytorialnego",
+        "establishmentDate": "1991-09-01T00:00:00",
+        "dependence": "szkoła lub placówka w zespole",
+        "regon": "10734830"
+    },
+    "profiles": {
+        "detailed": [
+            [
+                [
+                    "pol",
+                    "hist",
+                    "obcy"
+                ],
+                145.2
+            ],
+            [
+                [
+                    "biol",
+                    "chem"
+                ],
+                154.4
+            ],
+            [
+                [
+                    "pol",
+                    "ang",
+                    "hist"
+                ],
+                145.2
+            ],
+            [
+                [
+                    "hist",
+                    "h.szt."
+                ],
+                223
+            ],
+            [
+                [
+                    "pol",
+                    "hist",
+                    "h.muz."
+                ],
+                226.4
+            ],
+            [
+                [
+                    "geogr",
+                    "obcy",
+                    "wos"
+                ],
+                146.6
+            ],
+            [
+                [
+                    "biol",
+                    "ang"
+                ],
+                118
+            ]
+        ],
+        "overview": {
+            "availableSubjects": [
+                "pol",
+                "hist",
+                "obcy",
+                "biol",
+                "chem",
+                "ang",
+                "h.szt.",
+                "h.muz.",
+                "geogr",
+                "wos"
+            ],
+            "pointsRange": [
+                118,
+                226.4
+            ]
+        }
+    }
+}

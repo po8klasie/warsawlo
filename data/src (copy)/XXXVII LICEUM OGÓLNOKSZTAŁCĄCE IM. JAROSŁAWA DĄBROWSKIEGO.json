@@ -1,0 +1,139 @@
+{
+    "name": {
+        "full": "XXXVII LICEUM OGÓLNOKSZTAŁCĄCE IM. JAROSŁAWA DĄBROWSKIEGO",
+        "short": ""
+    },
+    "contact": {
+        "email": "sekretariat@37lo.edu.pl",
+        "fax": "228279577",
+        "phone": "228279577",
+        "website": "www.37lo.edu.pl"
+    },
+    "students": {
+        "type": "youth",
+        "dominantDisability": null
+    },
+    "location": {
+        "position": {
+            "Latitude": 52.23695,
+            "Longitude": 21.01914
+        },
+        "address": {
+            "Label": "ulica Świętokrzyska 1, 00-945 Warszawa, Polska",
+            "Country": "POL",
+            "State": "Woj. Mazowieckie",
+            "County": "Warszawa",
+            "City": "Warszawa",
+            "District": "Śródmieście",
+            "Subdistrict": "Śródmieście Północne",
+            "Street": "ulica Świętokrzyska",
+            "HouseNumber": "1",
+            "PostalCode": "00-945",
+            "AdditionalData": [
+                {
+                    "value": "Polska",
+                    "key": "CountryName"
+                },
+                {
+                    "value": "Woj. Mazowieckie",
+                    "key": "StateName"
+                },
+                {
+                    "value": "Warszawa",
+                    "key": "CountyName"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "schoolType": "Liceum ogólnokształcące",
+        "public": true,
+        "leadingOrgan": {
+            "name": "ŚRÓDMIEŚCIE",
+            "type": "Gmina"
+        },
+        "parent": "",
+        "capitalOwner": "Jednostki Samorządu Terytorialnego",
+        "establishmentDate": "1951-09-01T00:00:00",
+        "dependence": "samodzielna",
+        "regon": "798920"
+    },
+    "profiles": {
+        "detailed": [
+            [
+                [
+                    "pol",
+                    "hist",
+                    "wos"
+                ],
+                159.8
+            ],
+            [
+                [
+                    "wło",
+                    "ang",
+                    "pol",
+                    "geogr"
+                ],
+                160.4
+            ],
+            [
+                [
+                    "mat",
+                    "fiz",
+                    "inf"
+                ],
+                167.6
+            ],
+            [
+                [
+                    "mat",
+                    "biol",
+                    "chem"
+                ],
+                165.6
+            ],
+            [
+                [
+                    "mat",
+                    "geogr"
+                ],
+                165.6
+            ],
+            [
+                [
+                    "mat",
+                    "hist",
+                    "ang"
+                ],
+                162.2
+            ],
+            [
+                [
+                    "biol",
+                    "chem"
+                ],
+                164.6
+            ]
+        ],
+        "overview": {
+            "availableSubjects": [
+                "pol",
+                "hist",
+                "wos",
+                "wło",
+                "ang",
+                "geogr",
+                "mat",
+                "fiz",
+                "inf",
+                "biol",
+                "chem"
+            ],
+            "pointsRange": [
+                162.2,
+                167.6
+            ]
+        }
+    }
+}

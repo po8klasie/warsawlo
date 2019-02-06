@@ -1,0 +1,122 @@
+{
+	"name": {
+		"full": "XV LICEUM OGÓLNOKSZTAŁCĄCE Z ODDZIAŁAMI DWUJĘZYCZNYMI IM. NARCYZY ŻMICHOWSKIEJ",
+		"short": "",
+		"nicks": []
+	},
+	"contact": {
+		"email": "liceum15@zmichowska.pl",
+		"fax": "226464952",
+		"phone": "228493734",
+		"website": "www.zmichowska.pl"
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.21267,
+			"Longitude": 21.02308
+		},
+		"address": {
+			"Label": "ulica Klonowa 16, 00-787 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Mokotów",
+			"Subdistrict": "Ujazdów",
+			"Street": "ulica Klonowa",
+			"HouseNumber": "16",
+			"PostalCode": "00-787",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "yes",
+		"leadingOrgan": {
+			"name": "ŚRÓDMIEŚCIE",
+			"type": "Gmina"
+		},
+		"parent": "ZESPÓŁ SZKÓŁ NR 67",
+		"capitalOwner": "Jednostki Samorządu Terytorialnego",
+		"establishmentDate": "1919-09-01T00:00:00",
+		"dependence": "szkoła lub placówka w zespole",
+		"regon": "798883"
+	},
+	"thresholds": {
+		"2018": {
+			"detailed": [
+				{
+					"extensions": [
+						"hist",
+						"pol"
+					],
+					"threshold": 158.8
+				},
+				{
+					"extensions": [
+						"mat",
+						"fiz"
+					],
+					"threshold": 164.6
+				},
+				{
+					"extensions": [
+						"mat"
+					],
+					"threshold": 162.84
+				},
+				{
+					"extensions": [
+						"pol",
+						"hist"
+					],
+					"threshold": 159.8
+				},
+				{
+					"extensions": [
+						"biol",
+						"chem"
+					],
+					"threshold": 164.4
+				},
+				{
+					"extensions": [
+						"pol"
+					],
+					"threshold": 147.84
+				}
+			],
+			"overview": {
+				"availableSubjects": [
+					"hist",
+					"pol",
+					"mat",
+					"fiz",
+					"biol",
+					"chem"
+				],
+				"pointsRange": [
+					147.84,
+					164.6
+				]
+			}
+		}
+	}
+}

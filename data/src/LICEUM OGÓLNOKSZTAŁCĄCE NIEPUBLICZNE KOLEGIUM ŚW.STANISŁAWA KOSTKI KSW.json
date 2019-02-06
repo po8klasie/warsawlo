@@ -1,0 +1,62 @@
+{
+	"name": {
+		"full": "LICEUM OGÓLNOKSZTAŁCĄCE NIEPUBLICZNE KOLEGIUM ŚW.STANISŁAWA KOSTKI KSW",
+		"short": "",
+		"nicks": []
+	},
+	"contact": {
+		"email": "",
+		"fax": "",
+		"phone": "228582950",
+		"website": ""
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.20109,
+			"Longitude": 21.04591
+		},
+		"address": {
+			"Label": "ulica Bobrowiecka 9, 00-728 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Mokotów",
+			"Subdistrict": "Sielce",
+			"Street": "ulica Bobrowiecka",
+			"HouseNumber": "9",
+			"PostalCode": "00-728",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "publicPrivileges",
+		"leadingOrgan": {
+			"name": "Oddział Warszawski Katolickiego Stowarzyszenia Wychowawców",
+			"type": "Stowarzyszenia"
+		},
+		"parent": "",
+		"capitalOwner": "Pozostałe Krajowe Jednostki Prywatne",
+		"establishmentDate": "2004-01-26T00:00:00",
+		"dependence": "samodzielna",
+		"regon": "146337887"
+	}
+}

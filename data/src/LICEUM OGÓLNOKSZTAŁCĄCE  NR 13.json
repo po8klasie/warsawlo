@@ -1,0 +1,62 @@
+{
+	"name": {
+		"full": "LICEUM OGÓLNOKSZTAŁCĄCE  NR 13",
+		"short": "",
+		"nicks": []
+	},
+	"contact": {
+		"email": "",
+		"fax": "",
+		"phone": "226690332",
+		"website": ""
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.27132,
+			"Longitude": 20.92722
+		},
+		"address": {
+			"Label": "ulica Josepha Conrada 7, 01-922 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Bielany",
+			"Subdistrict": "Chomiczówka",
+			"Street": "ulica Josepha Conrada",
+			"HouseNumber": "7",
+			"PostalCode": "01-922",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "publicPrivileges",
+		"leadingOrgan": {
+			"name": "Marianowska Ewa Teresa",
+			"type": "Osoba fizyczna"
+		},
+		"parent": "",
+		"capitalOwner": "Krajowe Osoby Fizyczne",
+		"establishmentDate": "2006-01-16T00:00:00",
+		"dependence": "samodzielna",
+		"regon": "146340346"
+	}
+}

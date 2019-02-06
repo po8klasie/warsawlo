@@ -1,0 +1,165 @@
+{
+    "name": {
+        "full": "LXX LICEUM OGÓLNOKSZTAŁCĄCE IM. ALEKSANDRA KAMIŃSKIEGO",
+        "short": "LXX LICEUM OGÓLNOKSZTAŁCĄCE"
+    },
+    "contact": {
+        "email": "lo70@edu.um.warszawa.pl",
+        "fax": "226418290",
+        "phone": "226436024",
+        "website": "www.liceum70.x.pl"
+    },
+    "students": {
+        "type": "youth",
+        "dominantDisability": null
+    },
+    "location": {
+        "position": {
+            "Latitude": 52.15383,
+            "Longitude": 21.03377
+        },
+        "address": {
+            "Label": "ulica Edwarda Dembowskiego 1, 02-784 Warszawa, Polska",
+            "Country": "POL",
+            "State": "Woj. Mazowieckie",
+            "County": "Warszawa",
+            "City": "Warszawa",
+            "District": "Ursynów",
+            "Subdistrict": "Ursynów Północny",
+            "Street": "ulica Edwarda Dembowskiego",
+            "HouseNumber": "1",
+            "PostalCode": "02-784",
+            "AdditionalData": [
+                {
+                    "value": "Polska",
+                    "key": "CountryName"
+                },
+                {
+                    "value": "Woj. Mazowieckie",
+                    "key": "StateName"
+                },
+                {
+                    "value": "Warszawa",
+                    "key": "CountyName"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "schoolType": "Liceum ogólnokształcące",
+        "public": true,
+        "leadingOrgan": {
+            "name": "URSYNÓW",
+            "type": "Gmina"
+        },
+        "parent": "",
+        "capitalOwner": "Jednostki Samorządu Terytorialnego",
+        "establishmentDate": "1995-06-30T00:00:00",
+        "dependence": "samodzielna",
+        "regon": "11134396"
+    },
+    "profiles": {
+        "detailed": [
+            [
+                [
+                    "pol",
+                    "hist",
+                    "wos"
+                ],
+                148.2
+            ],
+            [
+                [
+                    "pol",
+                    "hist",
+                    "wos"
+                ],
+                148
+            ],
+            [
+                [
+                    "mat",
+                    "fiz",
+                    "inf"
+                ],
+                162.4
+            ],
+            [
+                [
+                    "mat",
+                    "fiz",
+                    "inf"
+                ],
+                159.6
+            ],
+            [
+                [
+                    "mat",
+                    "geogr",
+                    "niem"
+                ],
+                150.8
+            ],
+            [
+                [
+                    "mat",
+                    "geogr",
+                    "hiszp"
+                ],
+                158.4
+            ],
+            [
+                [
+                    "biol",
+                    "chem",
+                    "mat"
+                ],
+                160.2
+            ],
+            [
+                [
+                    "biol",
+                    "chem",
+                    "mat"
+                ],
+                156.6
+            ],
+            [
+                [
+                    "mat",
+                    "geogr",
+                    "ang"
+                ],
+                157
+            ],
+            [
+                [
+                    "mat",
+                    "geogr",
+                    "ang"
+                ],
+                154.2
+            ]
+        ],
+        "overview": {
+            "availableSubjects": [
+                "pol",
+                "hist",
+                "wos",
+                "mat",
+                "fiz",
+                "inf",
+                "geogr",
+                "niem",
+                "hiszp",
+                "biol",
+                "chem",
+                "ang"
+            ],
+            "pointsRange": [
+                148,
+                162.4
+            ]
+        }
+    }
+}

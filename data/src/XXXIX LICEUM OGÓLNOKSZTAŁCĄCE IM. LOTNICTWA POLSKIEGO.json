@@ -1,0 +1,114 @@
+{
+	"name": {
+		"full": "XXXIX LICEUM OGÓLNOKSZTAŁCĄCE IM. LOTNICTWA POLSKIEGO",
+		"short": "LO_39",
+		"nicks": []
+	},
+	"contact": {
+		"email": "39lo@edu.um.warszawa.pl",
+		"fax": "228346033",
+		"phone": "228346033",
+		"website": "www.zs119waw.pl"
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.28143,
+			"Longitude": 20.95452
+		},
+		"address": {
+			"Label": "ulica Szymona Bogumiła Zuga 16, 01-806 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Bielany",
+			"Subdistrict": "Stare Bielany",
+			"Street": "ulica Szymona Bogumiła Zuga",
+			"HouseNumber": "16",
+			"PostalCode": "01-806",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "yes",
+		"leadingOrgan": {
+			"name": "BIELANY",
+			"type": "Gmina"
+		},
+		"parent": "ZESPÓŁ SZKÓŁ NR 119",
+		"capitalOwner": "Jednostki Samorządu Terytorialnego",
+		"establishmentDate": "1963-09-01T00:00:00",
+		"dependence": "szkoła lub placówka w zespole",
+		"regon": "959719"
+	},
+	"thresholds": {
+		"2018": {
+			"detailed": [
+				{
+					"extensions": [
+						"pol",
+						"ang",
+						"hist"
+					],
+					"threshold": 50
+				},
+				{
+					"extensions": [
+						"pol",
+						"ang",
+						"hist"
+					],
+					"threshold": 49.4
+				},
+				{
+					"extensions": [
+						"biol",
+						"geogr",
+						"ang"
+					],
+					"threshold": 50
+				},
+				{
+					"extensions": [
+						"biol",
+						"chem",
+						"ang"
+					],
+					"threshold": 50.4
+				}
+			],
+			"overview": {
+				"availableSubjects": [
+					"pol",
+					"ang",
+					"hist",
+					"biol",
+					"geogr",
+					"chem"
+				],
+				"pointsRange": [
+					49.4,
+					50.4
+				]
+			}
+		}
+	}
+}

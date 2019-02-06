@@ -1,0 +1,62 @@
+{
+	"name": {
+		"full": "\"ŻAGLE\" LICEUM OGÓLNOKSZTAŁCĄCE STOWARZYSZENIA STERNIK",
+		"short": "",
+		"nicks": []
+	},
+	"contact": {
+		"email": "",
+		"fax": "",
+		"phone": "",
+		"website": "http://www.sternik.edu.pl/"
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.20712,
+			"Longitude": 21.17389
+		},
+		"address": {
+			"Label": "ulica Mieczysława Pożaryskiego 28, 04-703 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Wawer",
+			"Subdistrict": "Międzylesie",
+			"Street": "ulica Mieczysława Pożaryskiego",
+			"HouseNumber": "28",
+			"PostalCode": "04-703",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "publicPrivileges",
+		"leadingOrgan": {
+			"name": "Stowarzyszenie Wspierania Edukacji i Rodziny \"Sternik\"",
+			"type": "Stowarzyszenia"
+		},
+		"parent": "",
+		"capitalOwner": "Pozostałe Krajowe Jednostki Prywatne",
+		"establishmentDate": "2010-09-30T00:00:00",
+		"dependence": "samodzielna",
+		"regon": "146440846"
+	}
+}

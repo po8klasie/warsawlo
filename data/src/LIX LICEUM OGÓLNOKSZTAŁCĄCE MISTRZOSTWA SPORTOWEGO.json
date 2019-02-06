@@ -1,0 +1,58 @@
+{
+	"name": {
+		"full": "LIX LICEUM OGÓLNOKSZTAŁCĄCE MISTRZOSTWA SPORTOWEGO",
+		"short": "LO_59",
+		"nicks": []
+	},
+	"contact": {
+		"email": "zs50@edu.um.warszawa.pl",
+		"fax": "228342157",
+		"phone": "228342157",
+		"website": "www.kusy.edu.pl"
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.2356,
+			"Longitude": 21.01038
+		},
+		"address": {
+			"Label": "Warszawa, Woj. Mazowieckie, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"PostalCode": "00-001",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "yes",
+		"leadingOrgan": {
+			"name": "BIELANY",
+			"type": "Gmina"
+		},
+		"parent": "ZESPÓŁ SZKÓŁ SPORTOWYCH NR 50 IM, JANUSZA KUSOCIŃSKIEGO",
+		"capitalOwner": "Jednostki Samorządu Terytorialnego",
+		"establishmentDate": "1979-06-30T00:00:00",
+		"dependence": "szkoła lub placówka w zespole",
+		"regon": "15762623"
+	}
+}

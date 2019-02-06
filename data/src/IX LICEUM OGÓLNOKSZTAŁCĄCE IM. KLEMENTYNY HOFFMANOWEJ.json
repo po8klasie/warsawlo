@@ -1,0 +1,147 @@
+{
+	"name": {
+		"full": "IX LICEUM OGÓLNOKSZTAŁCĄCE IM. KLEMENTYNY HOFFMANOWEJ",
+		"short": "",
+		"nicks": [
+			"hoff",
+			"hoffmanowa"
+		]
+	},
+	"contact": {
+		"email": "ixlo@hoffmanowa.pl",
+		"fax": "226224835",
+		"phone": "226280545",
+		"website": "www.hoffmanowa.pl"
+	},
+	"media": [
+		"https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/IX_Liceum_Og%C3%B3lnokszta%C5%82c%C4%85ce_im._Klementyny_Hoffmanowej_w_Warszawie_2018.jpg/1280px-IX_Liceum_Og%C3%B3lnokszta%C5%82c%C4%85ce_im._Klementyny_Hoffmanowej_w_Warszawie_2018.jpg"
+	],
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.22453,
+			"Longitude": 21.00602
+		},
+		"address": {
+			"Label": "ulica Hoża 88, 00-682 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Śródmieście",
+			"Subdistrict": "Śródmieście Południowe",
+			"Street": "ulica Hoża",
+			"HouseNumber": "88",
+			"PostalCode": "00-682",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "yes",
+		"leadingOrgan": {
+			"name": "ŚRÓDMIEŚCIE",
+			"type": "Gmina"
+		},
+		"parent": "ZESPÓŁ SZKÓŁ NR 125",
+		"capitalOwner": "Jednostki Samorządu Terytorialnego",
+		"establishmentDate": "1900-09-01T00:00:00",
+		"dependence": "szkoła lub placówka w zespole",
+		"regon": "798860"
+	},
+	"thresholds": {
+		"2018": {
+			"detailed": [
+				{
+					"extensions": [
+						"biol",
+						"chem",
+						"mat"
+					],
+					"threshold": 179.4
+				},
+				{
+					"extensions": [
+						"biol",
+						"chem",
+						"fiz"
+					],
+					"threshold": 175.4
+				},
+				{
+					"extensions": [
+						"mat",
+						"fiz",
+						"inf"
+					],
+					"threshold": 177.6
+				},
+				{
+					"extensions": [
+						"mat",
+						"fiz",
+						"chem"
+					],
+					"threshold": 175.2
+				},
+				{
+					"extensions": [
+						"hist",
+						"geogr",
+						"mat"
+					],
+					"threshold": 171.2
+				},
+				{
+					"extensions": [
+						"wos",
+						"geogr",
+						"mat"
+					],
+					"threshold": 172.6
+				},
+				{
+					"extensions": [
+						"mat",
+						"fiz",
+						"ang"
+					],
+					"threshold": 179.2
+				}
+			],
+			"overview": {
+				"availableSubjects": [
+					"biol",
+					"chem",
+					"mat",
+					"fiz",
+					"inf",
+					"hist",
+					"geogr",
+					"wos",
+					"ang"
+				],
+				"pointsRange": [
+					171.2,
+					179.4
+				]
+			}
+		}
+	}
+}

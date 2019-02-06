@@ -1,0 +1,62 @@
+{
+	"name": {
+		"full": "NIEPUBLICZNE LICEUM OGÓLNOKSZTAŁCĄCE NR 61 IM. STEFANA KISIELEWSKIEGO",
+		"short": "",
+		"nicks": []
+	},
+	"contact": {
+		"email": "",
+		"fax": "",
+		"phone": "226499485",
+		"website": ""
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.13735,
+			"Longitude": 21.065
+		},
+		"address": {
+			"Label": "ulica Przy Bażantarni 3, 02-793 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Ursynów",
+			"Subdistrict": "Natolin",
+			"Street": "ulica Przy Bażantarni",
+			"HouseNumber": "3",
+			"PostalCode": "02-793",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "publicPrivileges",
+		"leadingOrgan": {
+			"name": "Towarzystwo Oświatowe Sp. z o.o.",
+			"type": "Spółki Handlowe"
+		},
+		"parent": "",
+		"capitalOwner": "Pozostałe Krajowe Jednostki Prywatne",
+		"establishmentDate": "2002-06-04T00:00:00",
+		"dependence": "samodzielna",
+		"regon": "146359311"
+	}
+}

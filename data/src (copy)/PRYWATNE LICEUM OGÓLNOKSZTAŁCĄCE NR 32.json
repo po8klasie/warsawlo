@@ -1,0 +1,61 @@
+{
+    "name": {
+        "full": "PRYWATNE LICEUM OGÓLNOKSZTAŁCĄCE NR 32",
+        "short": ""
+    },
+    "contact": {
+        "email": "",
+        "fax": "",
+        "phone": "22852-06-08",
+        "website": ""
+    },
+    "students": {
+        "type": "youth",
+        "dominantDisability": null
+    },
+    "location": {
+        "position": {
+            "Latitude": 52.20304,
+            "Longitude": 21.03662
+        },
+        "address": {
+            "Label": "ulica Górska 7, 00-740 Warszawa, Polska",
+            "Country": "POL",
+            "State": "Woj. Mazowieckie",
+            "County": "Warszawa",
+            "City": "Warszawa",
+            "District": "Mokotów",
+            "Subdistrict": "Sielce",
+            "Street": "ulica Górska",
+            "HouseNumber": "7",
+            "PostalCode": "00-740",
+            "AdditionalData": [
+                {
+                    "value": "Polska",
+                    "key": "CountryName"
+                },
+                {
+                    "value": "Woj. Mazowieckie",
+                    "key": "StateName"
+                },
+                {
+                    "value": "Warszawa",
+                    "key": "CountyName"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "schoolType": "Liceum ogólnokształcące",
+        "public": "publicPrivileges",
+        "leadingOrgan": {
+            "name": "Buśkiewicz-Piskorska Hanna",
+            "type": "Osoba fizyczna"
+        },
+        "parent": "ZESPÓŁ SZKÓŁ MIEDZYNARODOWYCH MONNET INTERNATIONAL SCHOOL",
+        "capitalOwner": "Krajowe Osoby Fizyczne",
+        "establishmentDate": "2010-12-21T00:00:00",
+        "dependence": "szkoła lub placówka w zespole",
+        "regon": "146337663"
+    }
+}

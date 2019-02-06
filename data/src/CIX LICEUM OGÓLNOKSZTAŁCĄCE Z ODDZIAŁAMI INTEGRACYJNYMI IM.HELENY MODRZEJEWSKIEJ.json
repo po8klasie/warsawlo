@@ -1,0 +1,62 @@
+{
+	"name": {
+		"full": "CIX LICEUM OGÓLNOKSZTAŁCĄCE Z ODDZIAŁAMI INTEGRACYJNYMI IM.HELENY MODRZEJEWSKIEJ",
+		"short": "CIX LICEUM OGÓLNOKSZTAŁCĄCE",
+		"nicks": []
+	},
+	"contact": {
+		"email": "lo109@edu.um.warszawa.pl",
+		"fax": "226435756",
+		"phone": "226410888",
+		"website": "www.cixlowarszawa.edupage.org"
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.1451,
+			"Longitude": 21.0457
+		},
+		"address": {
+			"Label": "ulica Warchałowskiego 4, 02-776 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Ursynów",
+			"Subdistrict": "Ursynów Centrum",
+			"Street": "ulica Warchałowskiego",
+			"HouseNumber": "4",
+			"PostalCode": "02-776",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "yes",
+		"leadingOrgan": {
+			"name": "URSYNÓW",
+			"type": "Gmina"
+		},
+		"parent": "",
+		"capitalOwner": "Jednostki Samorządu Terytorialnego",
+		"establishmentDate": "1998-01-20T00:00:00",
+		"dependence": "samodzielna",
+		"regon": "17212619"
+	}
+}

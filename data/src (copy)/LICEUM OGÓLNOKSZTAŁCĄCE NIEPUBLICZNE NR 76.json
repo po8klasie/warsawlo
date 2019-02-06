@@ -1,0 +1,61 @@
+{
+    "name": {
+        "full": "LICEUM OGÓLNOKSZTAŁCĄCE NIEPUBLICZNE NR 76",
+        "short": ""
+    },
+    "contact": {
+        "email": "",
+        "fax": "",
+        "phone": "226152567",
+        "website": ""
+    },
+    "students": {
+        "type": "youth",
+        "dominantDisability": null
+    },
+    "location": {
+        "position": {
+            "Latitude": 52.20469,
+            "Longitude": 21.16285
+        },
+        "address": {
+            "Label": "ulica Rogatkowa 50, 04-773 Warszawa, Polska",
+            "Country": "POL",
+            "State": "Woj. Mazowieckie",
+            "County": "Warszawa",
+            "City": "Warszawa",
+            "District": "Wawer",
+            "Subdistrict": "Międzylesie",
+            "Street": "ulica Rogatkowa",
+            "HouseNumber": "50",
+            "PostalCode": "04-773",
+            "AdditionalData": [
+                {
+                    "value": "Polska",
+                    "key": "CountryName"
+                },
+                {
+                    "value": "Woj. Mazowieckie",
+                    "key": "StateName"
+                },
+                {
+                    "value": "Warszawa",
+                    "key": "CountyName"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "schoolType": "Liceum ogólnokształcące",
+        "public": "publicPrivileges",
+        "leadingOrgan": {
+            "name": "Darski Waldemar",
+            "type": "Osoba fizyczna"
+        },
+        "parent": "",
+        "capitalOwner": "Krajowe Osoby Fizyczne",
+        "establishmentDate": "1998-05-25T00:00:00",
+        "dependence": "samodzielna",
+        "regon": "146364217"
+    }
+}

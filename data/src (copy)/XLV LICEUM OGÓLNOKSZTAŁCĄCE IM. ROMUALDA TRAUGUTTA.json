@@ -1,0 +1,105 @@
+{
+    "name": {
+        "full": "XLV LICEUM OGÓLNOKSZTAŁCĄCE IM. ROMUALDA TRAUGUTTA",
+        "short": ""
+    },
+    "contact": {
+        "email": "lo45@traugutt.edu.pl",
+        "fax": "228383532 , 228389896",
+        "phone": "228383532 , 228389896",
+        "website": "www.traugutt.edu.pl"
+    },
+    "students": {
+        "type": "youth",
+        "dominantDisability": null
+    },
+    "location": {
+        "position": {
+            "Latitude": 52.24792,
+            "Longitude": 20.98063
+        },
+        "address": {
+            "Label": "ulica Miła 26, 01-047 Warszawa, Polska",
+            "Country": "POL",
+            "State": "Woj. Mazowieckie",
+            "County": "Warszawa",
+            "City": "Warszawa",
+            "District": "Wola",
+            "Subdistrict": "Nowolipki",
+            "Street": "ulica Miła",
+            "HouseNumber": "26",
+            "PostalCode": "01-047",
+            "AdditionalData": [
+                {
+                    "value": "Polska",
+                    "key": "CountryName"
+                },
+                {
+                    "value": "Woj. Mazowieckie",
+                    "key": "StateName"
+                },
+                {
+                    "value": "Warszawa",
+                    "key": "CountyName"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "schoolType": "Liceum ogólnokształcące",
+        "public": true,
+        "leadingOrgan": {
+            "name": "WOLA",
+            "type": "Gmina"
+        },
+        "parent": "",
+        "capitalOwner": "Jednostki Samorządu Terytorialnego",
+        "establishmentDate": "1954-09-01T00:00:00",
+        "dependence": "samodzielna",
+        "regon": "799210"
+    },
+    "profiles": {
+        "detailed": [
+            [
+                [
+                    "biol",
+                    "chem",
+                    "inf"
+                ],
+                104.6
+            ],
+            [
+                [
+                    "pol",
+                    "hist",
+                    "wos"
+                ],
+                98
+            ],
+            [
+                [
+                    "ang",
+                    "wos",
+                    "geogr"
+                ],
+                98.4
+            ]
+        ],
+        "overview": {
+            "availableSubjects": [
+                "biol",
+                "chem",
+                "inf",
+                "pol",
+                "hist",
+                "wos",
+                "ang",
+                "geogr"
+            ],
+            "pointsRange": [
+                98,
+                104.6
+            ]
+        }
+    }
+}

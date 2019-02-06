@@ -1,0 +1,62 @@
+{
+	"name": {
+		"full": "PRYWATNE LICEUM OGÓLNOKSZTAŁCĄCE SIÓSTR NAZARETANEK Z ODDZIAŁAMI MIĘDZYNARODOWYMI",
+		"short": "",
+		"nicks": []
+	},
+	"contact": {
+		"email": "",
+		"fax": "",
+		"phone": "228413854",
+		"website": ""
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.21044,
+			"Longitude": 21.0472
+		},
+		"address": {
+			"Label": "ulica Czerniakowska 137, 00-720 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Mokotów",
+			"Subdistrict": "Sielce",
+			"Street": "ulica Czerniakowska",
+			"HouseNumber": "137",
+			"PostalCode": "00-720",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "publicPrivileges",
+		"leadingOrgan": {
+			"name": "Zgromadzenie Sióstr Najświętszej Rodziny z Nazaretu-Prowincja Warszawska",
+			"type": "Organizacje Wyznaniowe"
+		},
+		"parent": "",
+		"capitalOwner": "Pozostałe Krajowe Jednostki Prywatne",
+		"establishmentDate": "1918-01-01T00:00:00",
+		"dependence": "samodzielna",
+		"regon": "146348709"
+	}
+}

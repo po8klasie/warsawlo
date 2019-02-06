@@ -1,0 +1,62 @@
+{
+	"name": {
+		"full": "NOVA LICEUM OGÓLNOKSZTAŁCĄCE DLA MŁODZIEŻY W WARSZAWIE",
+		"short": "",
+		"nicks": []
+	},
+	"contact": {
+		"email": "",
+		"fax": "",
+		"phone": "225942494",
+		"website": ""
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.22842,
+			"Longitude": 21.00977
+		},
+		"address": {
+			"Label": "ulica Nowogrodzka 42, 00-695 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Śródmieście",
+			"Subdistrict": "Śródmieście Południowe",
+			"Street": "ulica Nowogrodzka",
+			"HouseNumber": "42",
+			"PostalCode": "00-695",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "publicPrivileges",
+		"leadingOrgan": {
+			"name": "NOVA Centrum Edukacyjne",
+			"type": "Spółki Handlowe"
+		},
+		"parent": "",
+		"capitalOwner": "Pozostałe Krajowe Jednostki Prywatne",
+		"establishmentDate": "2011-09-21T00:00:00",
+		"dependence": "samodzielna",
+		"regon": "146413631"
+	}
+}

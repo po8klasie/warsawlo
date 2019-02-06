@@ -1,0 +1,62 @@
+{
+	"name": {
+		"full": "XX LICEUM OGÓLNOKSZTAŁCĄCE IM. BOLESŁAWA CHROBREGO W WARSZAWIE",
+		"short": "XXLO",
+		"nicks": []
+	},
+	"contact": {
+		"email": "",
+		"fax": "",
+		"phone": "226194540",
+		"website": ""
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.25777,
+			"Longitude": 21.06117
+		},
+		"address": {
+			"Label": "ulica Objazdowa 3, 03-771 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Praga-Północ",
+			"Subdistrict": "Szmulowizna",
+			"Street": "ulica Objazdowa",
+			"HouseNumber": "3",
+			"PostalCode": "03-771",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "yes",
+		"leadingOrgan": {
+			"name": "PRAGA-PÓŁNOC",
+			"type": "Gmina"
+		},
+		"parent": "ZESPÓŁ SZKÓŁ NR 40 IM. STEFANA STARZYŃSKIEGO W WARSZAWIE",
+		"capitalOwner": "Jednostki Samorządu Terytorialnego",
+		"establishmentDate": "2002-09-01T00:00:00",
+		"dependence": "szkoła lub placówka w zespole",
+		"regon": "799032"
+	}
+}

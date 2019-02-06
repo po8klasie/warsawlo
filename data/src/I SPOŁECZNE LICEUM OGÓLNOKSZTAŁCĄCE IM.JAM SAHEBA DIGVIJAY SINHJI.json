@@ -1,0 +1,62 @@
+{
+	"name": {
+		"full": "I SPOŁECZNE LICEUM OGÓLNOKSZTAŁCĄCE IM.JAM SAHEBA DIGVIJAY SINHJI",
+		"short": "",
+		"nicks": []
+	},
+	"contact": {
+		"email": "",
+		"fax": "",
+		"phone": "228289601",
+		"website": ""
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.2433,
+			"Longitude": 20.95972
+		},
+		"address": {
+			"Label": "ulica Zawiszy 13, 01-167 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Wola",
+			"Subdistrict": "Młynów",
+			"Street": "ulica Zawiszy",
+			"HouseNumber": "13",
+			"PostalCode": "01-167",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "publicPrivileges",
+		"leadingOrgan": {
+			"name": "Towarzystwo przyjaciół I Społecznego Liceum Ogólnokształcącego",
+			"type": "Stowarzyszenia"
+		},
+		"parent": "",
+		"capitalOwner": "Pozostałe Krajowe Jednostki Prywatne",
+		"establishmentDate": "2002-04-24T00:00:00",
+		"dependence": "samodzielna",
+		"regon": "146342687"
+	}
+}

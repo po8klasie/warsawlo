@@ -1,0 +1,62 @@
+{
+	"name": {
+		"full": "CXXXVI LICEUM OGÓLNOKSZTAŁCĄCE SPECJALNE",
+		"short": "",
+		"nicks": []
+	},
+	"contact": {
+		"email": "oszwkozminska_7@op.pl",
+		"fax": "226216844",
+		"phone": "226291610",
+		"website": ""
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": "słabo widzący"
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.22481,
+			"Longitude": 21.03701
+		},
+		"address": {
+			"Label": "ulica Koźmińska 7, 00-448 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Śródmieście",
+			"Subdistrict": "Solec",
+			"Street": "ulica Koźmińska",
+			"HouseNumber": "7",
+			"PostalCode": "00-448",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "yes",
+		"leadingOrgan": {
+			"name": "MIASTO STOŁECZNE WARSZAWA",
+			"type": "Miasto na prawach powiatu"
+		},
+		"parent": "SPECJALNY OŚRODEK SZKOLNO-WYCHOWAWCZY DLA DZIECI SŁABOWIDZĄCYCH NR 8 IM.DR ZOFII GALEWSKIEJ",
+		"capitalOwner": "Jednostki Samorządu Terytorialnego",
+		"establishmentDate": "2008-07-10T00:00:00",
+		"dependence": "szkoła/placówka wchodząca w skład jednostki złożonej",
+		"regon": "141570165"
+	}
+}

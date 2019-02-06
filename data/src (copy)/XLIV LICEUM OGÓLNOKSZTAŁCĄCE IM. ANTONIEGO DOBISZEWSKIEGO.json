@@ -1,0 +1,181 @@
+{
+    "name": {
+        "full": "XLIV LICEUM OGÓLNOKSZTAŁCĄCE IM. ANTONIEGO DOBISZEWSKIEGO",
+        "short": ""
+    },
+    "contact": {
+        "email": "lo44@mokotow.waw.pl , dobisz@lo44.edu.pl",
+        "fax": "228417598",
+        "phone": "228419578 , 228403648",
+        "website": ""
+    },
+    "students": {
+        "type": "youth",
+        "dominantDisability": null
+    },
+    "location": {
+        "position": {
+            "Latitude": 52.2017,
+            "Longitude": 21.03283
+        },
+        "address": {
+            "Label": "ulica Dolna 6, 00-777 Warszawa, Polska",
+            "Country": "POL",
+            "State": "Woj. Mazowieckie",
+            "County": "Warszawa",
+            "City": "Warszawa",
+            "District": "Mokotów",
+            "Subdistrict": "Sielce",
+            "Street": "ulica Dolna",
+            "HouseNumber": "6",
+            "PostalCode": "00-777",
+            "AdditionalData": [
+                {
+                    "value": "Polska",
+                    "key": "CountryName"
+                },
+                {
+                    "value": "Woj. Mazowieckie",
+                    "key": "StateName"
+                },
+                {
+                    "value": "Warszawa",
+                    "key": "CountyName"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "schoolType": "Liceum ogólnokształcące",
+        "public": true,
+        "leadingOrgan": {
+            "name": "MOKOTÓW",
+            "type": "Gmina"
+        },
+        "parent": "",
+        "capitalOwner": "Jednostki Samorządu Terytorialnego",
+        "establishmentDate": "1966-09-01T00:00:00",
+        "dependence": "samodzielna",
+        "regon": "798995"
+    },
+    "profiles": {
+        "detailed": [
+            [
+                [
+                    "mat",
+                    "fiz",
+                    "inf"
+                ],
+                154.4
+            ],
+            [
+                [
+                    "mat",
+                    "fiz",
+                    "inf"
+                ],
+                152.2
+            ],
+            [
+                [
+                    "mat",
+                    "biol",
+                    "chem"
+                ],
+                153
+            ],
+            [
+                [
+                    "mat",
+                    "biol",
+                    "chem"
+                ],
+                152.8
+            ],
+            [
+                [
+                    "mat",
+                    "geogr",
+                    "wos"
+                ],
+                148
+            ],
+            [
+                [
+                    "mat",
+                    "geogr",
+                    "wos"
+                ],
+                144
+            ],
+            [
+                [
+                    "ang",
+                    "niem",
+                    "geogr"
+                ],
+                135.6
+            ],
+            [
+                [
+                    "ang",
+                    "franc",
+                    "geogr"
+                ],
+                132.4
+            ],
+            [
+                [
+                    "ang",
+                    "geogr",
+                    "wos"
+                ],
+                141.6
+            ],
+            [
+                [
+                    "ang",
+                    "geogr",
+                    "wos"
+                ],
+                140
+            ],
+            [
+                [
+                    "pol",
+                    "hist",
+                    "wos"
+                ],
+                140.4
+            ],
+            [
+                [
+                    "pol",
+                    "hist",
+                    "wos"
+                ],
+                137.8
+            ]
+        ],
+        "overview": {
+            "availableSubjects": [
+                "mat",
+                "fiz",
+                "inf",
+                "biol",
+                "chem",
+                "geogr",
+                "wos",
+                "ang",
+                "niem",
+                "franc",
+                "pol",
+                "hist"
+            ],
+            "pointsRange": [
+                132.4,
+                154.4
+            ]
+        }
+    }
+}

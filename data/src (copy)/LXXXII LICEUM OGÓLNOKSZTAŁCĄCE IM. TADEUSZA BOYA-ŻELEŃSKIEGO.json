@@ -1,0 +1,61 @@
+{
+    "name": {
+        "full": "LXXXII LICEUM OGÓLNOKSZTAŁCĄCE IM. TADEUSZA BOYA-ŻELEŃSKIEGO",
+        "short": ""
+    },
+    "contact": {
+        "email": "",
+        "fax": "228496218",
+        "phone": "228490346 , 228496218",
+        "website": "www.zso.edu.pl"
+    },
+    "students": {
+        "type": "youth",
+        "dominantDisability": null
+    },
+    "location": {
+        "position": {
+            "Latitude": 52.20548,
+            "Longitude": 21.01406
+        },
+        "address": {
+            "Label": "ulica Kazimierzowska 60, 02-543 Warszawa, Polska",
+            "Country": "POL",
+            "State": "Woj. Mazowieckie",
+            "County": "Warszawa",
+            "City": "Warszawa",
+            "District": "Mokotów",
+            "Subdistrict": "Stary Mokotów",
+            "Street": "ulica Kazimierzowska",
+            "HouseNumber": "60",
+            "PostalCode": "02-543",
+            "AdditionalData": [
+                {
+                    "value": "Polska",
+                    "key": "CountryName"
+                },
+                {
+                    "value": "Woj. Mazowieckie",
+                    "key": "StateName"
+                },
+                {
+                    "value": "Warszawa",
+                    "key": "CountyName"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "schoolType": "Liceum ogólnokształcące",
+        "public": true,
+        "leadingOrgan": {
+            "name": "MOKOTÓW",
+            "type": "Gmina"
+        },
+        "parent": "ZESPÓL SZKÓŁ ODZIEŻOWYCH, FRYZJERSKICH I KOSMETYCZNYCH NR 22",
+        "capitalOwner": "Jednostki Samorządu Terytorialnego",
+        "establishmentDate": "2006-09-01T00:00:00",
+        "dependence": "szkoła/placówka wchodząca w skład jednostki złożonej",
+        "regon": "15769588"
+    }
+}

@@ -1,0 +1,61 @@
+{
+    "name": {
+        "full": "XIII LICEUM OGÓLNOKSZTAŁCĄCE Z ODDZIAŁAMI DWUJĘZYCZNYMI   IM. PŁK. LEOPOLDA LISA-KULI",
+        "short": ""
+    },
+    "contact": {
+        "email": "liceum13@liceum13.waw.pl",
+        "fax": "",
+        "phone": "226793862",
+        "website": ""
+    },
+    "students": {
+        "type": "youth",
+        "dominantDisability": null
+    },
+    "location": {
+        "position": {
+            "Latitude": 52.26873,
+            "Longitude": 21.0422
+        },
+        "address": {
+            "Label": "ulica Oszmiańska 23, 03-503 Warszawa, Polska",
+            "Country": "POL",
+            "State": "Woj. Mazowieckie",
+            "County": "Warszawa",
+            "City": "Warszawa",
+            "District": "Targówek",
+            "Subdistrict": "Targówek Mieszkaniowy",
+            "Street": "ulica Oszmiańska",
+            "HouseNumber": "23",
+            "PostalCode": "03-503",
+            "AdditionalData": [
+                {
+                    "value": "Polska",
+                    "key": "CountryName"
+                },
+                {
+                    "value": "Woj. Mazowieckie",
+                    "key": "StateName"
+                },
+                {
+                    "value": "Warszawa",
+                    "key": "CountyName"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "schoolType": "Liceum ogólnokształcące",
+        "public": true,
+        "leadingOrgan": {
+            "name": "TARGÓWEK",
+            "type": "Gmina"
+        },
+        "parent": "",
+        "capitalOwner": "Jednostki Samorządu Terytorialnego",
+        "establishmentDate": "1928-01-01T00:00:00",
+        "dependence": "samodzielna",
+        "regon": "799049"
+    }
+}

@@ -1,0 +1,62 @@
+{
+	"name": {
+		"full": "XLVIII LICEUM OGÓLNOKSZTAŁCĄCE IM. EDWARDA DEMBOWSKIEGO W WARSZAWIE",
+		"short": "XLVIII LO",
+		"nicks": []
+	},
+	"contact": {
+		"email": "lo48@lo48.waw.pl",
+		"fax": "228220658",
+		"phone": "228220658",
+		"website": "www.lo48.waw.pl"
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.21587,
+			"Longitude": 20.96802
+		},
+		"address": {
+			"Label": "ulica Szczęśliwicka 50/54, 02-327 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Ochota",
+			"Subdistrict": "Stara Ochota",
+			"Street": "ulica Szczęśliwicka",
+			"HouseNumber": "50/54",
+			"PostalCode": "02-327",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "yes",
+		"leadingOrgan": {
+			"name": "OCHOTA",
+			"type": "Gmina"
+		},
+		"parent": "",
+		"capitalOwner": "Jednostki Samorządu Terytorialnego",
+		"establishmentDate": "1957-09-01T00:00:00",
+		"dependence": "samodzielna",
+		"regon": "799262"
+	}
+}

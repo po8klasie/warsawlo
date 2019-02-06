@@ -1,0 +1,61 @@
+{
+    "name": {
+        "full": "SPOŁECZNE LICEUM OGÓLNOKSZTAŁCĄCE NR 7 SPOŁECZNEGO TOWARZYSTWA OŚWIATOWEGO",
+        "short": ""
+    },
+    "contact": {
+        "email": "",
+        "fax": "",
+        "phone": "223926140",
+        "website": ""
+    },
+    "students": {
+        "type": "youth",
+        "dominantDisability": null
+    },
+    "location": {
+        "position": {
+            "Latitude": 52.25077,
+            "Longitude": 20.98989
+        },
+        "address": {
+            "Label": "ulica Karmelicka 26, 00-181 Warszawa, Polska",
+            "Country": "POL",
+            "State": "Woj. Mazowieckie",
+            "County": "Warszawa",
+            "City": "Warszawa",
+            "District": "Śródmieście",
+            "Subdistrict": "Muranów",
+            "Street": "ulica Karmelicka",
+            "HouseNumber": "26",
+            "PostalCode": "00-181",
+            "AdditionalData": [
+                {
+                    "value": "Polska",
+                    "key": "CountryName"
+                },
+                {
+                    "value": "Woj. Mazowieckie",
+                    "key": "StateName"
+                },
+                {
+                    "value": "Warszawa",
+                    "key": "CountyName"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "schoolType": "Liceum ogólnokształcące",
+        "public": "publicPrivileges",
+        "leadingOrgan": {
+            "name": "Samodzielne Koło Terenowe nr 52 Społecznego Towarzystwa Oświatowego",
+            "type": "Stowarzyszenia"
+        },
+        "parent": "",
+        "capitalOwner": "Pozostałe Krajowe Jednostki Prywatne",
+        "establishmentDate": "1999-07-05T00:00:00",
+        "dependence": "samodzielna",
+        "regon": "146359222"
+    }
+}

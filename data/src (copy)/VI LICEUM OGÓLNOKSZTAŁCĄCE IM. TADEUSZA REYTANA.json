@@ -1,0 +1,137 @@
+{
+    "name": {
+        "full": "VI LICEUM OGÓLNOKSZTAŁCĄCE IM. TADEUSZA REYTANA",
+        "short": ""
+    },
+    "contact": {
+        "email": "sekretariat@reytan.edu.pl",
+        "fax": "226462780",
+        "phone": "228441368 , 228449384",
+        "website": "www.reytan.edu.pl"
+    },
+    "students": {
+        "type": "youth",
+        "dominantDisability": null
+    },
+    "location": {
+        "position": {
+            "Latitude": 52.20009,
+            "Longitude": 21.01499
+        },
+        "address": {
+            "Label": "ulica Wiktorska 30/32, 02-587 Warszawa, Polska",
+            "Country": "POL",
+            "State": "Woj. Mazowieckie",
+            "County": "Warszawa",
+            "City": "Warszawa",
+            "District": "Mokotów",
+            "Subdistrict": "Stary Mokotów",
+            "Street": "ulica Wiktorska",
+            "HouseNumber": "30/32",
+            "PostalCode": "02-587",
+            "AdditionalData": [
+                {
+                    "value": "Polska",
+                    "key": "CountryName"
+                },
+                {
+                    "value": "Woj. Mazowieckie",
+                    "key": "StateName"
+                },
+                {
+                    "value": "Warszawa",
+                    "key": "CountyName"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "schoolType": "Liceum ogólnokształcące",
+        "public": true,
+        "leadingOrgan": {
+            "name": "MOKOTÓW",
+            "type": "Gmina"
+        },
+        "parent": "ZESPÓŁ SZKÓŁ NR 61 IM. TADEUSZA REYTANA",
+        "capitalOwner": "Jednostki Samorządu Terytorialnego",
+        "establishmentDate": "2002-09-01T00:00:00",
+        "dependence": "szkoła lub placówka w zespole",
+        "regon": "798937"
+    },
+    "profiles": {
+        "detailed": [
+            [
+                [
+                    "mat",
+                    "fiz",
+                    "ang"
+                ],
+                167.4
+            ],
+            [
+                [
+                    "mat",
+                    "fiz",
+                    "chem"
+                ],
+                162.6
+            ],
+            [
+                [
+                    "ang",
+                    "hist",
+                    "wos"
+                ],
+                156
+            ],
+            [
+                [
+                    "mat",
+                    "geogr",
+                    "ang"
+                ],
+                165.4
+            ],
+            [
+                [
+                    "mat",
+                    "biol",
+                    "chem"
+                ],
+                165.6
+            ],
+            [
+                [
+                    "ang",
+                    "biol",
+                    "chem"
+                ],
+                162.8
+            ],
+            [
+                [
+                    "mat",
+                    "fiz",
+                    "ang"
+                ],
+                165.2
+            ]
+        ],
+        "overview": {
+            "availableSubjects": [
+                "mat",
+                "fiz",
+                "ang",
+                "chem",
+                "hist",
+                "wos",
+                "geogr",
+                "biol"
+            ],
+            "pointsRange": [
+                156,
+                167.4
+            ]
+        }
+    }
+}

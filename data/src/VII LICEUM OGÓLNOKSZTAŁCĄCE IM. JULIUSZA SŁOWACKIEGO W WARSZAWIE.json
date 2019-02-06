@@ -1,0 +1,62 @@
+{
+	"name": {
+		"full": "VII LICEUM OGÓLNOKSZTAŁCĄCE IM. JULIUSZA SŁOWACKIEGO W WARSZAWIE",
+		"short": "VII LO",
+		"nicks": []
+	},
+	"contact": {
+		"email": "julius@liceum7.edu.pl",
+		"fax": "228251008",
+		"phone": "228250553",
+		"website": "www.liceum7.edu.pl"
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.21705,
+			"Longitude": 20.9964
+		},
+		"address": {
+			"Label": "ulica Wawelska 46, 02-067 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Ochota",
+			"Subdistrict": "Filtry",
+			"Street": "ulica Wawelska",
+			"HouseNumber": "46",
+			"PostalCode": "02-067",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "yes",
+		"leadingOrgan": {
+			"name": "OCHOTA",
+			"type": "Gmina"
+		},
+		"parent": "",
+		"capitalOwner": "Jednostki Samorządu Terytorialnego",
+		"establishmentDate": "1922-08-01T00:00:00",
+		"dependence": "samodzielna",
+		"regon": "15765975"
+	}
+}

@@ -1,0 +1,117 @@
+{
+    "name": {
+        "full": "IV LICEUM OGÓLNOKSZTAŁCĄCE IM. ADAMA MICKIEWICZA",
+        "short": "IV LO"
+    },
+    "contact": {
+        "email": "sekretariat@mickiewicz.edu.pl",
+        "fax": "226178583",
+        "phone": "226178583",
+        "website": "www.mickiewicz.edu.pl"
+    },
+    "students": {
+        "type": "youth",
+        "dominantDisability": null
+    },
+    "location": {
+        "position": {
+            "Latitude": 52.22922,
+            "Longitude": 21.06205
+        },
+        "address": {
+            "Label": "ulica Saska 57, 03-914 Warszawa, Polska",
+            "Country": "POL",
+            "State": "Woj. Mazowieckie",
+            "County": "Warszawa",
+            "City": "Warszawa",
+            "District": "Praga-Południe",
+            "Subdistrict": "Saska Kępa",
+            "Street": "ulica Saska",
+            "HouseNumber": "57",
+            "PostalCode": "03-914",
+            "AdditionalData": [
+                {
+                    "value": "Polska",
+                    "key": "CountryName"
+                },
+                {
+                    "value": "Woj. Mazowieckie",
+                    "key": "StateName"
+                },
+                {
+                    "value": "Warszawa",
+                    "key": "CountyName"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "schoolType": "Liceum ogólnokształcące",
+        "public": true,
+        "leadingOrgan": {
+            "name": "PRAGA-POŁUDNIE",
+            "type": "Gmina"
+        },
+        "parent": "",
+        "capitalOwner": "Jednostki Samorządu Terytorialnego",
+        "establishmentDate": "1987-08-01T00:00:00",
+        "dependence": "samodzielna",
+        "regon": "799061"
+    },
+    "profiles": {
+        "detailed": [
+            [
+                [
+                    "mat",
+                    "ang"
+                ],
+                146.4
+            ],
+            [
+                [
+                    "geogr",
+                    "wos",
+                    "ang"
+                ],
+                140.8
+            ],
+            [
+                [
+                    "mat",
+                    "inf"
+                ],
+                144.8
+            ],
+            [
+                [
+                    "biol",
+                    "chem"
+                ],
+                146
+            ],
+            [
+                [
+                    "pol",
+                    "ang"
+                ],
+                136.2
+            ]
+        ],
+        "overview": {
+            "availableSubjects": [
+                "mat",
+                "ang",
+                "geogr",
+                "wos",
+                "inf",
+                "biol",
+                "chem",
+                "pol"
+            ],
+            "pointsRange": [
+                136.2,
+                146.4
+            ]
+        }
+    }
+}

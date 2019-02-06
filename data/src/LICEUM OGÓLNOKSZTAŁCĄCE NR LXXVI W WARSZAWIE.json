@@ -1,0 +1,62 @@
+{
+	"name": {
+		"full": "LICEUM OGÓLNOKSZTAŁCĄCE NR LXXVI W WARSZAWIE",
+		"short": "LO76",
+		"nicks": []
+	},
+	"contact": {
+		"email": "",
+		"fax": "",
+		"phone": "226196288 , 226193083",
+		"website": ""
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.26232,
+			"Longitude": 21.03999
+		},
+		"address": {
+			"Label": "ulica Kowelska 1, 03-432 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Praga-Północ",
+			"Subdistrict": "Nowa Praga",
+			"Street": "ulica Kowelska",
+			"HouseNumber": "1",
+			"PostalCode": "03-432",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "yes",
+		"leadingOrgan": {
+			"name": "PRAGA-PÓŁNOC",
+			"type": "Gmina"
+		},
+		"parent": "",
+		"capitalOwner": "Jednostki Samorządu Terytorialnego",
+		"establishmentDate": "1992-04-28T00:00:00",
+		"dependence": "samodzielna",
+		"regon": "10854160"
+	}
+}

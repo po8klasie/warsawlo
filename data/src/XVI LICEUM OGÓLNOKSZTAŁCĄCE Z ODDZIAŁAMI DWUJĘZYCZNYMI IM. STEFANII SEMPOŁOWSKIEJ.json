@@ -1,0 +1,126 @@
+{
+	"name": {
+		"full": "XVI LICEUM OGÓLNOKSZTAŁCĄCE Z ODDZIAŁAMI DWUJĘZYCZNYMI IM. STEFANII SEMPOŁOWSKIEJ",
+		"short": "",
+		"nicks": []
+	},
+	"contact": {
+		"email": "zs53@edu.um.warszawa.pl",
+		"fax": "226638995",
+		"phone": "226636894",
+		"website": "www.zs53.waw.pl"
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.26441,
+			"Longitude": 20.97644
+		},
+		"address": {
+			"Label": "ulica ks. Jerzego Popiełuszki 5, 01-785 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Żoliborz",
+			"Subdistrict": "Sady Żoliborskie",
+			"Street": "ulica ks. Jerzego Popiełuszki",
+			"HouseNumber": "5",
+			"PostalCode": "01-785",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "yes",
+		"leadingOrgan": {
+			"name": "ŻOLIBORZ",
+			"type": "Gmina"
+		},
+		"parent": "ZESPÓŁ SZKÓŁ NR 53",
+		"capitalOwner": "Jednostki Samorządu Terytorialnego",
+		"establishmentDate": "1935-09-01T00:00:00",
+		"dependence": "szkoła lub placówka w zespole",
+		"regon": "799144"
+	},
+	"thresholds": {
+		"2018": {
+			"detailed": [
+				{
+					"extensions": [
+						"biol"
+					],
+					"threshold": 136.2
+				},
+				{
+					"extensions": [
+						"hist"
+					],
+					"threshold": 139.33
+				},
+				{
+					"extensions": [
+						"mat",
+						"ang"
+					],
+					"threshold": 157.6
+				},
+				{
+					"extensions": [
+						"hist",
+						"franc"
+					],
+					"threshold": 136.8
+				},
+				{
+					"extensions": [
+						"mat"
+					],
+					"threshold": 78.26
+				},
+				{
+					"extensions": [
+						"biol",
+						"franc"
+					],
+					"threshold": 143.2
+				},
+				{
+					"extensions": [
+						"mat"
+					],
+					"threshold": 155
+				}
+			],
+			"overview": {
+				"availableSubjects": [
+					"biol",
+					"hist",
+					"mat",
+					"ang",
+					"franc"
+				],
+				"pointsRange": [
+					78.26,
+					157.6
+				]
+			}
+		}
+	}
+}

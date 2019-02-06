@@ -1,0 +1,62 @@
+{
+	"name": {
+		"full": "LICEUM OGÓLNOKSZTAŁCĄCE",
+		"short": "",
+		"nicks": []
+	},
+	"contact": {
+		"email": "",
+		"fax": "",
+		"phone": "228705429",
+		"website": ""
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.24615,
+			"Longitude": 21.08097
+		},
+		"address": {
+			"Label": "ulica Kaleńska 3, 04-367 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Praga-Południe",
+			"Subdistrict": "Grochów",
+			"Street": "ulica Kaleńska",
+			"HouseNumber": "3",
+			"PostalCode": "04-367",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "publicPrivileges",
+		"leadingOrgan": {
+			"name": "Mydłowska Beata",
+			"type": "Osoba fizyczna"
+		},
+		"parent": "",
+		"capitalOwner": "Krajowe Osoby Fizyczne",
+		"establishmentDate": "2010-01-27T00:00:00",
+		"dependence": "samodzielna",
+		"regon": "146429709"
+	}
+}

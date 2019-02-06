@@ -1,0 +1,61 @@
+{
+    "name": {
+        "full": "LXI LICEUM OGÓLNOKSZTAŁCĄCE SPECJALNE",
+        "short": ""
+    },
+    "contact": {
+        "email": "sekretariatsos@wp.pl",
+        "fax": "226354427",
+        "phone": "226354427",
+        "website": "mossos1.w.interia.pl"
+    },
+    "students": {
+        "type": "youth",
+        "dominantDisability": "zagrożeni niedostosowaniem społecznym"
+    },
+    "location": {
+        "position": {
+            "Latitude": 52.27151,
+            "Longitude": 21.04292
+        },
+        "address": {
+            "Label": "ulica św. Wincentego 38, 03-526 Warszawa, Polska",
+            "Country": "POL",
+            "State": "Woj. Mazowieckie",
+            "County": "Warszawa",
+            "City": "Warszawa",
+            "District": "Targówek",
+            "Subdistrict": "Targówek Mieszkaniowy",
+            "Street": "ulica św. Wincentego",
+            "HouseNumber": "38",
+            "PostalCode": "03-526",
+            "AdditionalData": [
+                {
+                    "value": "Polska",
+                    "key": "CountryName"
+                },
+                {
+                    "value": "Woj. Mazowieckie",
+                    "key": "StateName"
+                },
+                {
+                    "value": "Warszawa",
+                    "key": "CountyName"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "schoolType": "Liceum ogólnokształcące",
+        "public": true,
+        "leadingOrgan": {
+            "name": "MIASTO STOŁECZNE WARSZAWA",
+            "type": "Miasto na prawach powiatu"
+        },
+        "parent": "MŁODZIEŻOWY OŚRODEK SOCJOTERAPII NR 1 \"SOS\"",
+        "capitalOwner": "Jednostki Samorządu Terytorialnego",
+        "establishmentDate": "1981-06-01T00:00:00",
+        "dependence": "szkoła/placówka wchodząca w skład jednostki złożonej",
+        "regon": "15840702"
+    }
+}

@@ -1,0 +1,61 @@
+{
+    "name": {
+        "full": "KATOLICKIE LICEUM OGÓLNOKSZTAŁCĄCE IM. KS. PRAŁATA TADEUSZA USZYŃSKIEGO",
+        "short": ""
+    },
+    "contact": {
+        "email": "",
+        "fax": "",
+        "phone": "22620-36-58",
+        "website": ""
+    },
+    "students": {
+        "type": "youth",
+        "dominantDisability": null
+    },
+    "location": {
+        "position": {
+            "Latitude": 52.23971,
+            "Longitude": 20.99397
+        },
+        "address": {
+            "Label": "ulica Ogrodowa 3A, 00-893 Warszawa, Polska",
+            "Country": "POL",
+            "State": "Woj. Mazowieckie",
+            "County": "Warszawa",
+            "City": "Warszawa",
+            "District": "Wola",
+            "Subdistrict": "Mirów",
+            "Street": "ulica Ogrodowa",
+            "HouseNumber": "3A",
+            "PostalCode": "00-893",
+            "AdditionalData": [
+                {
+                    "value": "Polska",
+                    "key": "CountryName"
+                },
+                {
+                    "value": "Woj. Mazowieckie",
+                    "key": "StateName"
+                },
+                {
+                    "value": "Warszawa",
+                    "key": "CountyName"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "schoolType": "Liceum ogólnokształcące",
+        "public": "publicPrivileges",
+        "leadingOrgan": {
+            "name": "FEDERACJA SODALICJI MARIAŃSKICH W POLSCE",
+            "type": "Organizacje Wyznaniowe"
+        },
+        "parent": "KATOLICKI ZESPÓŁ EDUKACYJNY FEDERACJI SODALICJI MARIAŃSKICH W POLSCE",
+        "capitalOwner": "Pozostałe Krajowe Jednostki Prywatne",
+        "establishmentDate": "2003-09-05T00:00:00",
+        "dependence": "szkoła lub placówka w zespole",
+        "regon": "146432350"
+    }
+}

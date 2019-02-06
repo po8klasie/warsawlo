@@ -1,0 +1,61 @@
+{
+    "name": {
+        "full": "XLIX LICEUM OGÓLNOKSZTAŁCACE IM. J. W. GOETHEGO",
+        "short": ""
+    },
+    "contact": {
+        "email": "lo49@lo49.pol.pl",
+        "fax": "226468140",
+        "phone": "228441321 , 228445003",
+        "website": "www.lo49.pol.pl"
+    },
+    "students": {
+        "type": "youth",
+        "dominantDisability": null
+    },
+    "location": {
+        "position": {
+            "Latitude": 52.19288,
+            "Longitude": 21.00995
+        },
+        "address": {
+            "Label": "ulica Fryderyka Joliot-Curie 13, 02-646 Warszawa, Polska",
+            "Country": "POL",
+            "State": "Woj. Mazowieckie",
+            "County": "Warszawa",
+            "City": "Warszawa",
+            "District": "Mokotów",
+            "Subdistrict": "Wierzbno",
+            "Street": "ulica Fryderyka Joliot-Curie",
+            "HouseNumber": "13",
+            "PostalCode": "02-646",
+            "AdditionalData": [
+                {
+                    "value": "Polska",
+                    "key": "CountryName"
+                },
+                {
+                    "value": "Woj. Mazowieckie",
+                    "key": "StateName"
+                },
+                {
+                    "value": "Warszawa",
+                    "key": "CountyName"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "schoolType": "Liceum ogólnokształcące",
+        "public": true,
+        "leadingOrgan": {
+            "name": "MOKOTÓW",
+            "type": "Gmina"
+        },
+        "parent": "",
+        "capitalOwner": "Jednostki Samorządu Terytorialnego",
+        "establishmentDate": "1961-09-01T00:00:00",
+        "dependence": "samodzielna",
+        "regon": "799003"
+    }
+}

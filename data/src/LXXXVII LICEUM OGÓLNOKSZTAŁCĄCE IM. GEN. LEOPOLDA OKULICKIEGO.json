@@ -1,0 +1,62 @@
+{
+	"name": {
+		"full": "LXXXVII LICEUM OGÓLNOKSZTAŁCĄCE IM. GEN. LEOPOLDA OKULICKIEGO",
+		"short": "LXXXVII LO",
+		"nicks": []
+	},
+	"contact": {
+		"email": "zs21@edu.um.warszawa.pl",
+		"fax": "226173374",
+		"phone": "226173374",
+		"website": "www.zs21.edu.pl"
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.2364,
+			"Longitude": 21.05873
+		},
+		"address": {
+			"Label": "ulica Saska 78, 03-914 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Praga-Południe",
+			"Subdistrict": "Saska Kępa",
+			"Street": "ulica Saska",
+			"HouseNumber": "78",
+			"PostalCode": "03-914",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "yes",
+		"leadingOrgan": {
+			"name": "PRAGA-POŁUDNIE",
+			"type": "Gmina"
+		},
+		"parent": "ZESPÓŁ SZKÓŁ NR 21",
+		"capitalOwner": "Jednostki Samorządu Terytorialnego",
+		"establishmentDate": "1993-07-15T00:00:00",
+		"dependence": "szkoła lub placówka w zespole",
+		"regon": "17368043"
+	}
+}

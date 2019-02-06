@@ -1,0 +1,62 @@
+{
+	"name": {
+		"full": "LICEUM OGÓLNOKSZTAŁCĄCE NIEPUBLICZNE NR 29 IM. IGNACEGO JANA PADEREWSKIEGO",
+		"short": "",
+		"nicks": []
+	},
+	"contact": {
+		"email": "",
+		"fax": "",
+		"phone": "226338289",
+		"website": ""
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.2623871,
+			"Longitude": 20.9542094
+		},
+		"address": {
+			"Label": "ulica Powązkowska 90, 01-728 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Żoliborz",
+			"Subdistrict": "Sady Żoliborskie",
+			"Street": "ulica Powązkowska",
+			"HouseNumber": "90",
+			"PostalCode": "01-728",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "publicPrivileges",
+		"leadingOrgan": {
+			"name": "Krysztoforska Bożena",
+			"type": "Osoba fizyczna"
+		},
+		"parent": "",
+		"capitalOwner": "Krajowe Osoby Fizyczne",
+		"establishmentDate": "2001-12-04T00:00:00",
+		"dependence": "samodzielna",
+		"regon": "146333665"
+	}
+}

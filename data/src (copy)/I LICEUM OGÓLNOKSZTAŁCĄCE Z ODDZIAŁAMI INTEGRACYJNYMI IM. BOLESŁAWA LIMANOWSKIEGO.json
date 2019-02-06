@@ -1,0 +1,126 @@
+{
+    "name": {
+        "full": "I LICEUM OGÓLNOKSZTAŁCĄCE Z ODDZIAŁAMI INTEGRACYJNYMI IM. BOLESŁAWA LIMANOWSKIEGO",
+        "short": "I LO Z ODDZIAŁAMI INTEGRACYJNYMI"
+    },
+    "contact": {
+        "email": "sekretariat@jedynka.org , jedynka@jedynka.org",
+        "fax": "228394813",
+        "phone": "228394813",
+        "website": "www.jedynka.org"
+    },
+    "students": {
+        "type": "youth",
+        "dominantDisability": null
+    },
+    "location": {
+        "position": {
+            "Latitude": 52.26281,
+            "Longitude": 20.98754
+        },
+        "address": {
+            "Label": "ulica Alojzego Felińskiego 15, 01-513 Warszawa, Polska",
+            "Country": "POL",
+            "State": "Woj. Mazowieckie",
+            "County": "Warszawa",
+            "City": "Warszawa",
+            "District": "Żoliborz",
+            "Subdistrict": "Stary Żoliborz",
+            "Street": "ulica Alojzego Felińskiego",
+            "HouseNumber": "15",
+            "PostalCode": "01-513",
+            "AdditionalData": [
+                {
+                    "value": "Polska",
+                    "key": "CountryName"
+                },
+                {
+                    "value": "Woj. Mazowieckie",
+                    "key": "StateName"
+                },
+                {
+                    "value": "Warszawa",
+                    "key": "CountyName"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "schoolType": "Liceum ogólnokształcące",
+        "public": true,
+        "leadingOrgan": {
+            "name": "ŻOLIBORZ",
+            "type": "Gmina"
+        },
+        "parent": "",
+        "capitalOwner": "Jednostki Samorządu Terytorialnego",
+        "establishmentDate": "1948-09-01T00:00:00",
+        "dependence": "samodzielna",
+        "regon": "10703219"
+    },
+    "profiles": {
+        "detailed": [
+            [
+                [
+                    "pol"
+                ],
+                126
+            ],
+            [
+                [
+                    "mat"
+                ],
+                138.6
+            ],
+            [
+                [
+                    "mat"
+                ],
+                141.2
+            ],
+            [
+                [
+                    "ang"
+                ],
+                132
+            ],
+            [
+                [
+                    "pol"
+                ],
+                122.2
+            ],
+            [
+                [
+                    "biol"
+                ],
+                132.2
+            ],
+            [
+                [
+                    "hist"
+                ],
+                119.6
+            ],
+            [
+                [
+                    "biol"
+                ],
+                128.2
+            ]
+        ],
+        "overview": {
+            "availableSubjects": [
+                "pol",
+                "mat",
+                "ang",
+                "biol",
+                "hist"
+            ],
+            "pointsRange": [
+                119.6,
+                141.2
+            ]
+        }
+    }
+}

@@ -1,0 +1,122 @@
+{
+    "name": {
+        "full": "XCIV LICEUM OGÓLNOKSZTAŁCĄCE IM. GEN. STANISŁAWA MACZKA",
+        "short": "LO_94"
+    },
+    "contact": {
+        "email": "sekretariatzs55@maczek.pl.pl",
+        "fax": "228330258",
+        "phone": "228330258",
+        "website": "www.maczek.pl.pl"
+    },
+    "students": {
+        "type": "youth",
+        "dominantDisability": null
+    },
+    "location": {
+        "position": {
+            "Latitude": 52.28526,
+            "Longitude": 20.97739
+        },
+        "address": {
+            "Label": "ulica Gwiaździsta 31, 01-651 Warszawa, Polska",
+            "Country": "POL",
+            "State": "Woj. Mazowieckie",
+            "County": "Warszawa",
+            "City": "Warszawa",
+            "District": "Bielany",
+            "Subdistrict": "Marymont-Kaskada",
+            "Street": "ulica Gwiaździsta",
+            "HouseNumber": "31",
+            "PostalCode": "01-651",
+            "AdditionalData": [
+                {
+                    "value": "Polska",
+                    "key": "CountryName"
+                },
+                {
+                    "value": "Woj. Mazowieckie",
+                    "key": "StateName"
+                },
+                {
+                    "value": "Warszawa",
+                    "key": "CountyName"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "schoolType": "Liceum ogólnokształcące",
+        "public": true,
+        "leadingOrgan": {
+            "name": "BIELANY",
+            "type": "Gmina"
+        },
+        "parent": "ZESPÓŁ SZKÓŁ NR 55 IM. GEN. STANISŁAWA MACZKA",
+        "capitalOwner": "Jednostki Samorządu Terytorialnego",
+        "establishmentDate": "1995-05-06T00:00:00",
+        "dependence": "szkoła lub placówka w zespole",
+        "regon": "15761345"
+    },
+    "profiles": {
+        "detailed": [
+            [
+                [
+                    "mat",
+                    "fiz",
+                    "ang"
+                ],
+                156.4
+            ],
+            [
+                [
+                    "pol",
+                    "hist",
+                    "ang"
+                ],
+                135
+            ],
+            [
+                [
+                    "biol",
+                    "chem",
+                    "ang"
+                ],
+                145.8
+            ],
+            [
+                [
+                    "mat",
+                    "geogr",
+                    "ang"
+                ],
+                154
+            ],
+            [
+                [
+                    "pol",
+                    "wos",
+                    "ang"
+                ],
+                142.4
+            ]
+        ],
+        "overview": {
+            "availableSubjects": [
+                "mat",
+                "fiz",
+                "ang",
+                "pol",
+                "hist",
+                "biol",
+                "chem",
+                "geogr",
+                "wos"
+            ],
+            "pointsRange": [
+                135,
+                156.4
+            ]
+        }
+    }
+}

@@ -1,0 +1,124 @@
+{
+	"name": {
+		"full": "II LICEUM OGÓLNOKSZTAŁCĄCE Z ODDZIAŁAMI DWUJĘZYCZNYMI IM. STEFANA BATOREGO",
+		"short": "",
+		"nicks": [
+			"batory"
+		]
+	},
+	"contact": {
+		"email": "sekretariat@batory.edu.pl",
+		"fax": "226219837",
+		"phone": "226282101",
+		"website": "www.batory.edu.pl"
+	},
+	"media": [
+		"https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Gimnazjum_i_Liceum_Batorego_w_Warszawie_2015.JPG/1920px-Gimnazjum_i_Liceum_Batorego_w_Warszawie_2015.JPG"
+	],
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.22264,
+			"Longitude": 21.03442
+		},
+		"address": {
+			"Label": "ulica Myśliwiecka 6, 00-459 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Śródmieście",
+			"Subdistrict": "Solec",
+			"Street": "ulica Myśliwiecka",
+			"HouseNumber": "6",
+			"PostalCode": "00-459",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "yes",
+		"leadingOrgan": {
+			"name": "ŚRÓDMIEŚCIE",
+			"type": "Gmina"
+		},
+		"parent": "ZESPÓŁ SZKÓŁ NR 66",
+		"capitalOwner": "Jednostki Samorządu Terytorialnego",
+		"establishmentDate": "1918-09-01T00:00:00",
+		"dependence": "szkoła lub placówka w zespole",
+		"regon": "798848"
+	},
+	"thresholds": {
+		"2018": {
+			"detailed": [
+				{
+					"extensions": [
+						"biol",
+						"chem"
+					],
+					"threshold": 174.4
+				},
+				{
+					"extensions": [
+						"biol",
+						"chem"
+					],
+					"threshold": 192.44
+				},
+				{
+					"extensions": [
+						"mat",
+						"fiz"
+					],
+					"threshold": 196.48
+				},
+				{
+					"extensions": [
+						"mat",
+						"geogr"
+					],
+					"threshold": 198.19
+				},
+				{
+					"extensions": [
+						"pol",
+						"hist"
+					],
+					"threshold": 185.16
+				}
+			],
+			"overview": {
+				"availableSubjects": [
+					"biol",
+					"chem",
+					"mat",
+					"fiz",
+					"geogr",
+					"pol",
+					"hist",
+					""
+				],
+				"pointsRange": [
+					185.16,
+					198.19
+				]
+			}
+		}
+	}
+}

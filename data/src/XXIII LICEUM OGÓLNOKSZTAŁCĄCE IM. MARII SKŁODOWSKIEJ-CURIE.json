@@ -1,0 +1,99 @@
+{
+	"name": {
+		"full": "XXIII LICEUM OGÓLNOKSZTAŁCĄCE IM. MARII SKŁODOWSKIEJ-CURIE",
+		"short": "XXIII LO",
+		"nicks": []
+	},
+	"contact": {
+		"email": "sekretariat@liceum23.waw.pl",
+		"fax": "226106361",
+		"phone": "225169161 , 226106361",
+		"website": "www.liceum23.waw.pl"
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.23856,
+			"Longitude": 21.12671
+		},
+		"address": {
+			"Label": "ulica Naddnieprzańska 2/4, 04-205 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Praga-Południe",
+			"Subdistrict": "Gocławek",
+			"Street": "ulica Naddnieprzańska",
+			"HouseNumber": "2/4",
+			"PostalCode": "04-205",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "yes",
+		"leadingOrgan": {
+			"name": "PRAGA-POŁUDNIE",
+			"type": "Gmina"
+		},
+		"parent": "",
+		"capitalOwner": "Jednostki Samorządu Terytorialnego",
+		"establishmentDate": "1948-03-10T00:00:00",
+		"dependence": "samodzielna",
+		"regon": "799084"
+	},
+	"thresholds": {
+		"2018": {
+			"detailed": [
+				{
+					"extensions": [
+						"ang"
+					],
+					"threshold": 98
+				},
+				{
+					"extensions": [
+						"ang",
+						"wos"
+					],
+					"threshold": 91
+				},
+				{
+					"extensions": [
+						"biol",
+						"ang"
+					],
+					"threshold": 96.6
+				}
+			],
+			"overview": {
+				"availableSubjects": [
+					"ang",
+					"wos",
+					"biol"
+				],
+				"pointsRange": [
+					91,
+					98
+				]
+			}
+		}
+	}
+}

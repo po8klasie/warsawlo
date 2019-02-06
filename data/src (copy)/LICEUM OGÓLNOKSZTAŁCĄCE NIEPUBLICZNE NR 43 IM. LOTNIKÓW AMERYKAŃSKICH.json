@@ -1,0 +1,61 @@
+{
+    "name": {
+        "full": "LICEUM OGÓLNOKSZTAŁCĄCE NIEPUBLICZNE NR 43 IM. LOTNIKÓW AMERYKAŃSKICH",
+        "short": ""
+    },
+    "contact": {
+        "email": "",
+        "fax": "",
+        "phone": "22835-43-30",
+        "website": ""
+    },
+    "students": {
+        "type": "youth",
+        "dominantDisability": null
+    },
+    "location": {
+        "position": {
+            "Latitude": 52.31293,
+            "Longitude": 20.9175
+        },
+        "address": {
+            "Label": "ulica Kazimierza Wóycickiego 1/3, 01-938 Warszawa, Polska",
+            "Country": "POL",
+            "State": "Woj. Mazowieckie",
+            "County": "Warszawa",
+            "City": "Warszawa",
+            "District": "Bielany",
+            "Subdistrict": "Młociny",
+            "Street": "ulica Kazimierza Wóycickiego",
+            "HouseNumber": "1/3",
+            "PostalCode": "01-938",
+            "AdditionalData": [
+                {
+                    "value": "Polska",
+                    "key": "CountryName"
+                },
+                {
+                    "value": "Woj. Mazowieckie",
+                    "key": "StateName"
+                },
+                {
+                    "value": "Warszawa",
+                    "key": "CountyName"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "schoolType": "Liceum ogólnokształcące",
+        "public": "publicPrivileges",
+        "leadingOrgan": {
+            "name": "Polskie Stowarzyszenie Promocji Oswiatowych - Oddział I",
+            "type": "Stowarzyszenia"
+        },
+        "parent": "",
+        "capitalOwner": "Pozostałe Krajowe Jednostki Prywatne",
+        "establishmentDate": "1999-05-05T00:00:00",
+        "dependence": "samodzielna",
+        "regon": "146441461"
+    }
+}

@@ -1,0 +1,97 @@
+{
+	"name": {
+		"full": "LII LICEUM OGÓLNOKSZTAŁCĄCE IM. WŁADYSŁAWA STANISŁAWA REYMONTA",
+		"short": "LO_52",
+		"nicks": []
+	},
+	"contact": {
+		"email": "zsnr18.dyrekcja@op.pl",
+		"fax": "228346763",
+		"phone": "228347201",
+		"website": ""
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.27754,
+			"Longitude": 20.94007
+		},
+		"address": {
+			"Label": "ulica Stefana Żeromskiego 81, 01-825 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Bielany",
+			"Subdistrict": "Stare Bielany",
+			"Street": "ulica Stefana Żeromskiego",
+			"HouseNumber": "81",
+			"PostalCode": "01-825",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "yes",
+		"leadingOrgan": {
+			"name": "BIELANY",
+			"type": "Gmina"
+		},
+		"parent": "ZESPÓŁ SZKÓŁ NR 18",
+		"capitalOwner": "Jednostki Samorządu Terytorialnego",
+		"establishmentDate": "1949-09-01T00:00:00",
+		"dependence": "szkoła lub placówka w zespole",
+		"regon": "15768070"
+	},
+	"thresholds": {
+		"2018": {
+			"detailed": [
+				{
+					"extensions": [
+						"biol",
+						"pol",
+						"ang"
+					],
+					"threshold": 101.6
+				},
+				{
+					"extensions": [
+						"ang",
+						"geogr",
+						"hiszp"
+					],
+					"threshold": 94.2
+				}
+			],
+			"overview": {
+				"availableSubjects": [
+					"biol",
+					"pol",
+					"ang",
+					"geogr",
+					"hiszp"
+				],
+				"pointsRange": [
+					94.2,
+					101.6
+				]
+			}
+		}
+	}
+}

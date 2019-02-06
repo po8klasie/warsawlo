@@ -1,0 +1,62 @@
+{
+	"name": {
+		"full": "PRYWATNE LICEUM OGÓLNOKSZTAŁCĄCE ZGROMADZENIA SIÓSTR ZMARTWYCHWSTANIA PAŃSKIEGO IM. MATKI JADWIGI BORZĘCKIEJ",
+		"short": "",
+		"nicks": []
+	},
+	"contact": {
+		"email": "",
+		"fax": "",
+		"phone": "22663-87-77",
+		"website": ""
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.26599,
+			"Longitude": 20.97642
+		},
+		"address": {
+			"Label": "ulica Zygmunta Krasińskiego 31, 01-784 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Żoliborz",
+			"Subdistrict": "Sady Żoliborskie",
+			"Street": "ulica Zygmunta Krasińskiego",
+			"HouseNumber": "31",
+			"PostalCode": "01-784",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "publicPrivileges",
+		"leadingOrgan": {
+			"name": "Zgromadzenie Sióstr Zmartwychwstania Pańskiego Prowincja Warszawska",
+			"type": "Organizacje Wyznaniowe"
+		},
+		"parent": "",
+		"capitalOwner": "Pozostałe Krajowe Jednostki Prywatne",
+		"establishmentDate": "1990-09-26T00:00:00",
+		"dependence": "samodzielna",
+		"regon": "146348891"
+	}
+}

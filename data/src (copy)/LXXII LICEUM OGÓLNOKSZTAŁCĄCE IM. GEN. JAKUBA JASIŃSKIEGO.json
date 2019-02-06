@@ -1,0 +1,106 @@
+{
+    "name": {
+        "full": "LXXII LICEUM OGÓLNOKSZTAŁCĄCE IM. GEN. JAKUBA JASIŃSKIEGO",
+        "short": "LXXII LO"
+    },
+    "contact": {
+        "email": "sekretariat@jasinski.edu.pl",
+        "fax": "226191360",
+        "phone": "226191360",
+        "website": "www.jasinski.edu.pl"
+    },
+    "students": {
+        "type": "youth",
+        "dominantDisability": null
+    },
+    "location": {
+        "position": {
+            "Latitude": 52.2473788,
+            "Longitude": 21.0545523
+        },
+        "address": {
+            "Label": "ulica Grochowska 346, 03-838 Warszawa, Polska",
+            "Country": "POL",
+            "State": "Woj. Mazowieckie",
+            "County": "Warszawa",
+            "City": "Warszawa",
+            "District": "Praga-Południe",
+            "Subdistrict": "Kamionek",
+            "Street": "ulica Grochowska",
+            "HouseNumber": "346",
+            "PostalCode": "03-838",
+            "AdditionalData": [
+                {
+                    "value": "Polska",
+                    "key": "CountryName"
+                },
+                {
+                    "value": "Woj. Mazowieckie",
+                    "key": "StateName"
+                },
+                {
+                    "value": "Warszawa",
+                    "key": "CountyName"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "schoolType": "Liceum ogólnokształcące",
+        "public": true,
+        "leadingOrgan": {
+            "name": "PRAGA-POŁUDNIE",
+            "type": "Gmina"
+        },
+        "parent": "",
+        "capitalOwner": "Jednostki Samorządu Terytorialnego",
+        "establishmentDate": "1991-09-01T00:00:00",
+        "dependence": "samodzielna",
+        "regon": "15810470"
+    },
+    "profiles": {
+        "detailed": [
+            [
+                [
+                    "pol",
+                    "wos"
+                ],
+                91.6
+            ],
+            [
+                [
+                    "ang",
+                    "wos"
+                ],
+                95.6
+            ],
+            [
+                [
+                    "ang",
+                    "mat"
+                ],
+                83.4
+            ],
+            [
+                [
+                    "ang",
+                    "biol"
+                ],
+                95.8
+            ]
+        ],
+        "overview": {
+            "availableSubjects": [
+                "pol",
+                "wos",
+                "ang",
+                "mat",
+                "biol"
+            ],
+            "pointsRange": [
+                83.4,
+                95.8
+            ]
+        }
+    }
+}

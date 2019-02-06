@@ -1,0 +1,62 @@
+{
+	"name": {
+		"full": "LXIX LICEUM OGÓLNOKSZTAŁCĄCE Z ODDZIAŁAMI INTEGRACYJNYMI IM. BOHATERÓW POWSTANIA WARSZAWSKIEGO 1944 W WARSZAWIE",
+		"short": "LXIX LO",
+		"nicks": []
+	},
+	"contact": {
+		"email": "zsurba@wp.pl",
+		"fax": "228233003",
+		"phone": "228222031",
+		"website": "zs26.edu.pl"
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.2057,
+			"Longitude": 20.96606
+		},
+		"address": {
+			"Label": "ulica Urbanistów 3, 02-397 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Ochota",
+			"Subdistrict": "Szczęśliwice",
+			"Street": "ulica Urbanistów",
+			"HouseNumber": "3",
+			"PostalCode": "02-397",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "yes",
+		"leadingOrgan": {
+			"name": "OCHOTA",
+			"type": "Gmina"
+		},
+		"parent": "ZESPÓŁ SZKÓŁ NR 26",
+		"capitalOwner": "Jednostki Samorządu Terytorialnego",
+		"establishmentDate": "1996-06-24T00:00:00",
+		"dependence": "szkoła lub placówka w zespole",
+		"regon": "15766058"
+	}
+}

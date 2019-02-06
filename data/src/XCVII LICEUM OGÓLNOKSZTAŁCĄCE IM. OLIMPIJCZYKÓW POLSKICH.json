@@ -1,0 +1,92 @@
+{
+	"name": {
+		"full": "XCVII LICEUM OGÓLNOKSZTAŁCĄCE IM. OLIMPIJCZYKÓW POLSKICH",
+		"short": "XCVII LO",
+		"nicks": []
+	},
+	"contact": {
+		"email": "zs12@edu.um.warszawa.pl",
+		"fax": "228107961",
+		"phone": "228107961",
+		"website": "www.zs12.edupage.org"
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.24643,
+			"Longitude": 21.07722
+		},
+		"address": {
+			"Label": "ulica Siennicka 15, 04-395 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Praga-Południe",
+			"Subdistrict": "Grochów",
+			"Street": "ulica Siennicka",
+			"HouseNumber": "15",
+			"PostalCode": "04-395",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "yes",
+		"leadingOrgan": {
+			"name": "PRAGA-POŁUDNIE",
+			"type": "Gmina"
+		},
+		"parent": "ZESPÓŁ SZKÓŁ NR 12 IM. OLIMPIJCZYKÓW POLSKICH",
+		"capitalOwner": "Jednostki Samorządu Terytorialnego",
+		"establishmentDate": "1996-09-01T00:00:00",
+		"dependence": "szkoła lub placówka w zespole",
+		"regon": "15810598"
+	},
+	"thresholds": {
+		"2018": {
+			"detailed": [
+				{
+					"extensions": [
+						"biol",
+						"ang"
+					],
+					"threshold": 388
+				},
+				{
+					"extensions": [
+						"biol",
+						"ang"
+					],
+					"threshold": 82
+				}
+			],
+			"overview": {
+				"availableSubjects": [
+					"biol",
+					"ang"
+				],
+				"pointsRange": [
+					82,
+					388
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,62 @@
+{
+	"name": {
+		"full": "AUTORSKIE LICEUM OGÓLNOKSZTAŁCĄCE NIEPUBLICZNE NR 42",
+		"short": "",
+		"nicks": []
+	},
+	"contact": {
+		"email": "",
+		"fax": "",
+		"phone": "22-8411545",
+		"website": ""
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.20808,
+			"Longitude": 21.04129
+		},
+		"address": {
+			"Label": "ulica Iwicka 47B, 00-735 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Mokotów",
+			"Subdistrict": "Sielce",
+			"Street": "ulica Iwicka",
+			"HouseNumber": "47B",
+			"PostalCode": "00-735",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "publicPrivileges",
+		"leadingOrgan": {
+			"name": "ZIENTARSKI WOJCIECH",
+			"type": "Osoba fizyczna"
+		},
+		"parent": "",
+		"capitalOwner": "Krajowe Osoby Fizyczne",
+		"establishmentDate": "1993-05-05T00:00:00",
+		"dependence": "samodzielna",
+		"regon": "146339314"
+	}
+}

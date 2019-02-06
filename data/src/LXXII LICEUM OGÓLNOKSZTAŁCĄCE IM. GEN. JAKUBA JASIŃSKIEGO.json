@@ -1,0 +1,109 @@
+{
+	"name": {
+		"full": "LXXII LICEUM OGÓLNOKSZTAŁCĄCE IM. GEN. JAKUBA JASIŃSKIEGO",
+		"short": "LXXII LO",
+		"nicks": []
+	},
+	"contact": {
+		"email": "sekretariat@jasinski.edu.pl",
+		"fax": "226191360",
+		"phone": "226191360",
+		"website": "www.jasinski.edu.pl"
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.2473788,
+			"Longitude": 21.0545523
+		},
+		"address": {
+			"Label": "ulica Grochowska 346, 03-838 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Praga-Południe",
+			"Subdistrict": "Kamionek",
+			"Street": "ulica Grochowska",
+			"HouseNumber": "346",
+			"PostalCode": "03-838",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "yes",
+		"leadingOrgan": {
+			"name": "PRAGA-POŁUDNIE",
+			"type": "Gmina"
+		},
+		"parent": "",
+		"capitalOwner": "Jednostki Samorządu Terytorialnego",
+		"establishmentDate": "1991-09-01T00:00:00",
+		"dependence": "samodzielna",
+		"regon": "15810470"
+	},
+	"thresholds": {
+		"2018": {
+			"detailed": [
+				{
+					"extensions": [
+						"pol",
+						"wos"
+					],
+					"threshold": 91.6
+				},
+				{
+					"extensions": [
+						"ang",
+						"wos"
+					],
+					"threshold": 95.6
+				},
+				{
+					"extensions": [
+						"ang",
+						"mat"
+					],
+					"threshold": 83.4
+				},
+				{
+					"extensions": [
+						"ang",
+						"biol"
+					],
+					"threshold": 95.8
+				}
+			],
+			"overview": {
+				"availableSubjects": [
+					"pol",
+					"wos",
+					"ang",
+					"mat",
+					"biol"
+				],
+				"pointsRange": [
+					83.4,
+					95.8
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,103 @@
+{
+    "name": {
+        "full": "CX LICEUM OGÓLNOKSZTAŁCĄCE IM. ROBERTA SCHUMANA",
+        "short": ""
+    },
+    "contact": {
+        "email": "zs59@edu.um.warszawa.pl , sekretariat@cxlo.waw.pl",
+        "fax": "228167547",
+        "phone": "228424792",
+        "website": "www.cxlo.waw.pl"
+    },
+    "students": {
+        "type": "youth",
+        "dominantDisability": null
+    },
+    "location": {
+        "position": {
+            "Latitude": 52.18462,
+            "Longitude": 21.05552
+        },
+        "address": {
+            "Label": "ulica Jana III Sobieskiego 68, 02-930 Warszawa, Polska",
+            "Country": "POL",
+            "State": "Woj. Mazowieckie",
+            "County": "Warszawa",
+            "City": "Warszawa",
+            "District": "Mokotów",
+            "Subdistrict": "Sadyba",
+            "Street": "ulica Jana III Sobieskiego",
+            "HouseNumber": "68",
+            "PostalCode": "02-930",
+            "AdditionalData": [
+                {
+                    "value": "Polska",
+                    "key": "CountryName"
+                },
+                {
+                    "value": "Woj. Mazowieckie",
+                    "key": "StateName"
+                },
+                {
+                    "value": "Warszawa",
+                    "key": "CountyName"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "schoolType": "Liceum ogólnokształcące",
+        "public": true,
+        "leadingOrgan": {
+            "name": "MOKOTÓW",
+            "type": "Gmina"
+        },
+        "parent": "ZESPÓŁ SZKÓŁ NR 59",
+        "capitalOwner": "Jednostki Samorządu Terytorialnego",
+        "establishmentDate": "2004-09-16T00:00:00",
+        "dependence": "szkoła lub placówka w zespole",
+        "regon": "13220912"
+    },
+    "profiles": {
+        "detailed": [
+            [
+                [
+                    "hiszp",
+                    "pol",
+                    "hist"
+                ],
+                71.4
+            ],
+            [
+                [
+                    "geogr",
+                    "wos",
+                    "ang"
+                ],
+                87.2
+            ],
+            [
+                [
+                    "geogr",
+                    "wos",
+                    "ang"
+                ],
+                91.2
+            ]
+        ],
+        "overview": {
+            "availableSubjects": [
+                "hiszp",
+                "pol",
+                "hist",
+                "geogr",
+                "wos",
+                "ang"
+            ],
+            "pointsRange": [
+                200,
+                91.2
+            ]
+        }
+    }
+}

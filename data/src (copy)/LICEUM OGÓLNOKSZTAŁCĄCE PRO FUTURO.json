@@ -1,0 +1,61 @@
+{
+    "name": {
+        "full": "LICEUM OGÓLNOKSZTAŁCĄCE PRO FUTURO",
+        "short": ""
+    },
+    "contact": {
+        "email": "",
+        "fax": "",
+        "phone": "22861313032",
+        "website": ""
+    },
+    "students": {
+        "type": "youth",
+        "dominantDisability": null
+    },
+    "location": {
+        "position": {
+            "Latitude": 52.26732,
+            "Longitude": 20.89623
+        },
+        "address": {
+            "Label": "ulica gen. Sylwestra Kaliskiego 57, 01-488 Warszawa, Polska",
+            "Country": "POL",
+            "State": "Woj. Mazowieckie",
+            "County": "Warszawa",
+            "City": "Warszawa",
+            "District": "Bemowo",
+            "Subdistrict": "Lotnisko",
+            "Street": "ulica gen. Sylwestra Kaliskiego",
+            "HouseNumber": "57",
+            "PostalCode": "01-488",
+            "AdditionalData": [
+                {
+                    "value": "Polska",
+                    "key": "CountryName"
+                },
+                {
+                    "value": "Woj. Mazowieckie",
+                    "key": "StateName"
+                },
+                {
+                    "value": "Warszawa",
+                    "key": "CountyName"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "schoolType": "Liceum ogólnokształcące",
+        "public": "publicPrivileges",
+        "leadingOrgan": {
+            "name": "Edukacja Pro Futuro Sp. z o.o.",
+            "type": "Spółki Handlowe"
+        },
+        "parent": "",
+        "capitalOwner": "Pozostałe Krajowe Jednostki Prywatne",
+        "establishmentDate": "2010-07-28T00:00:00",
+        "dependence": "samodzielna",
+        "regon": "146437420"
+    }
+}

@@ -1,0 +1,145 @@
+{
+	"name": {
+		"full": "XXVII LICEUM OGÓLNOKSZTAŁCĄCE IM. TADEUSZA CZACKIEGO",
+		"short": "",
+		"nicks": []
+	},
+	"contact": {
+		"email": "sekretariat@czacki.edu.pl",
+		"fax": "228250172",
+		"phone": "2282251314",
+		"website": "www.czacki.edu.pl"
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.21515,
+			"Longitude": 21.01871
+		},
+		"address": {
+			"Label": "ulica Polna 5, 00-625 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Śródmieście",
+			"Subdistrict": "Śródmieście Południowe",
+			"Street": "ulica Polna",
+			"HouseNumber": "5",
+			"PostalCode": "00-625",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "yes",
+		"leadingOrgan": {
+			"name": "ŚRÓDMIEŚCIE",
+			"type": "Gmina"
+		},
+		"parent": "",
+		"capitalOwner": "Jednostki Samorządu Terytorialnego",
+		"establishmentDate": "1876-09-01T00:00:00",
+		"dependence": "samodzielna",
+		"regon": "12743157"
+	},
+	"thresholds": {
+		"2018": {
+			"detailed": [
+				{
+					"extensions": [
+						"biol",
+						"chem",
+						"ang"
+					],
+					"threshold": 180.8
+				},
+				{
+					"extensions": [
+						"biol",
+						"chem",
+						"obcy"
+					],
+					"threshold": 177.6
+				},
+				{
+					"extensions": [
+						"hist",
+						"wos",
+						"ang"
+					],
+					"threshold": 187.6
+				},
+				{
+					"extensions": [
+						"hist",
+						"wos",
+						"obcy"
+					],
+					"threshold": 177.2
+				},
+				{
+					"extensions": [
+						"wos",
+						"geogr",
+						"mat",
+						"obcy"
+					],
+					"threshold": 183
+				},
+				{
+					"extensions": [
+						"inf",
+						"mat",
+						"fiz",
+						"ang"
+					],
+					"threshold": 185.6
+				},
+				{
+					"extensions": [
+						"inf",
+						"mat",
+						"fiz",
+						"obcy"
+					],
+					"threshold": 181.4
+				}
+			],
+			"overview": {
+				"availableSubjects": [
+					"biol",
+					"chem",
+					"ang",
+					"obcy",
+					"hist",
+					"wos",
+					"geogr",
+					"mat",
+					"inf",
+					"fiz"
+				],
+				"pointsRange": [
+					177.2,
+					187.6
+				]
+			}
+		}
+	}
+}

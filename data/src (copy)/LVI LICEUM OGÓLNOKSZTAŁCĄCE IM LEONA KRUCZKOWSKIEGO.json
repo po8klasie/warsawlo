@@ -1,0 +1,61 @@
+{
+    "name": {
+        "full": "LVI LICEUM OGÓLNOKSZTAŁCĄCE IM LEONA KRUCZKOWSKIEGO",
+        "short": "LVI LICEUM OGÓLNOKSZTAŁCĄCE"
+    },
+    "contact": {
+        "email": "lo56@op.pl",
+        "fax": "226626412",
+        "phone": "226626412",
+        "website": ""
+    },
+    "students": {
+        "type": "youth",
+        "dominantDisability": null
+    },
+    "location": {
+        "position": {
+            "Latitude": 52.19607,
+            "Longitude": 20.89889
+        },
+        "address": {
+            "Label": "ulica Dzieci Warszawy 42, 02-495 Warszawa, Polska",
+            "Country": "POL",
+            "State": "Woj. Mazowieckie",
+            "County": "Warszawa",
+            "City": "Warszawa",
+            "District": "Ursus",
+            "Subdistrict": "Skorosze",
+            "Street": "ulica Dzieci Warszawy",
+            "HouseNumber": "42",
+            "PostalCode": "02-495",
+            "AdditionalData": [
+                {
+                    "value": "Polska",
+                    "key": "CountryName"
+                },
+                {
+                    "value": "Woj. Mazowieckie",
+                    "key": "StateName"
+                },
+                {
+                    "value": "Warszawa",
+                    "key": "CountyName"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "schoolType": "Liceum ogólnokształcące",
+        "public": true,
+        "leadingOrgan": {
+            "name": "URSUS",
+            "type": "Gmina"
+        },
+        "parent": "",
+        "capitalOwner": "Jednostki Samorządu Terytorialnego",
+        "establishmentDate": "1946-08-16T00:00:00",
+        "dependence": "samodzielna",
+        "regon": "799279"
+    }
+}

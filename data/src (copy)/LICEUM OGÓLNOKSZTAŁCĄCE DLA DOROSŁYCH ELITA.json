@@ -1,0 +1,61 @@
+{
+    "name": {
+        "full": "LICEUM OGÓLNOKSZTAŁCĄCE DLA DOROSŁYCH ELITA",
+        "short": ""
+    },
+    "contact": {
+        "email": "",
+        "fax": "",
+        "phone": "225177740",
+        "website": ""
+    },
+    "students": {
+        "type": "youth",
+        "dominantDisability": null
+    },
+    "location": {
+        "position": {
+            "Latitude": 52.23736,
+            "Longitude": 21.07914
+        },
+        "address": {
+            "Label": "aleja Stanów Zjednoczonych 51, 04-026 Warszawa, Polska",
+            "Country": "POL",
+            "State": "Woj. Mazowieckie",
+            "County": "Warszawa",
+            "City": "Warszawa",
+            "District": "Praga-Południe",
+            "Subdistrict": "Grochów",
+            "Street": "aleja Stanów Zjednoczonych",
+            "HouseNumber": "51",
+            "PostalCode": "04-026",
+            "AdditionalData": [
+                {
+                    "value": "Polska",
+                    "key": "CountryName"
+                },
+                {
+                    "value": "Woj. Mazowieckie",
+                    "key": "StateName"
+                },
+                {
+                    "value": "Warszawa",
+                    "key": "CountyName"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "schoolType": "Liceum ogólnokształcące",
+        "public": "publicPrivileges",
+        "leadingOrgan": {
+            "name": "Depczyk Zofia",
+            "type": "Osoba fizyczna"
+        },
+        "parent": "",
+        "capitalOwner": "Krajowe Osoby Fizyczne",
+        "establishmentDate": "2004-08-20T00:00:00",
+        "dependence": "samodzielna",
+        "regon": "146439613"
+    }
+}

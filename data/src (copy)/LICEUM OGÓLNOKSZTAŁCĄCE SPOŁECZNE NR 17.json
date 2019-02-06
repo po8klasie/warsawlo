@@ -1,0 +1,61 @@
+{
+    "name": {
+        "full": "LICEUM OGÓLNOKSZTAŁCĄCE SPOŁECZNE NR 17",
+        "short": ""
+    },
+    "contact": {
+        "email": "",
+        "fax": "",
+        "phone": "228254001",
+        "website": ""
+    },
+    "students": {
+        "type": "youth",
+        "dominantDisability": null
+    },
+    "location": {
+        "position": {
+            "Latitude": 52.21042,
+            "Longitude": 21.005
+        },
+        "address": {
+            "Label": "ulica Stefana Batorego 14, 02-591 Warszawa, Polska",
+            "Country": "POL",
+            "State": "Woj. Mazowieckie",
+            "County": "Warszawa",
+            "City": "Warszawa",
+            "District": "Mokotów",
+            "Subdistrict": "Stary Mokotów",
+            "Street": "ulica Stefana Batorego",
+            "HouseNumber": "14",
+            "PostalCode": "02-591",
+            "AdditionalData": [
+                {
+                    "value": "Polska",
+                    "key": "CountryName"
+                },
+                {
+                    "value": "Woj. Mazowieckie",
+                    "key": "StateName"
+                },
+                {
+                    "value": "Warszawa",
+                    "key": "CountyName"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "schoolType": "Liceum ogólnokształcące",
+        "public": "publicPrivileges",
+        "leadingOrgan": {
+            "name": "TOWARZYSTWO SPOŁECZNEGO LICEUM OGÓLNOKSZTAŁCĄCEGO W WARSZAWIE",
+            "type": "Stowarzyszenia"
+        },
+        "parent": "",
+        "capitalOwner": "Pozostałe Krajowe Jednostki Prywatne",
+        "establishmentDate": "2005-11-14T00:00:00",
+        "dependence": "samodzielna",
+        "regon": "146342776"
+    }
+}

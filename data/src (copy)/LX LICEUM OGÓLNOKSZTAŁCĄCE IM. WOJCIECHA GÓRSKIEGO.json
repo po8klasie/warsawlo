@@ -1,0 +1,100 @@
+{
+    "name": {
+        "full": "LX LICEUM OGÓLNOKSZTAŁCĄCE IM. WOJCIECHA GÓRSKIEGO",
+        "short": "LO_60"
+    },
+    "contact": {
+        "email": "zs49_sekretariat@vp.pl",
+        "fax": "228359558",
+        "phone": "228359558",
+        "website": "www.gorskilxlo.edu.pl"
+    },
+    "students": {
+        "type": "youth",
+        "dominantDisability": null
+    },
+    "location": {
+        "position": {
+            "Latitude": 52.28389,
+            "Longitude": 20.93236
+        },
+        "address": {
+            "Label": "ulica Lwa Tołstoja 2, 01-910 Warszawa, Polska",
+            "Country": "POL",
+            "State": "Woj. Mazowieckie",
+            "County": "Warszawa",
+            "City": "Warszawa",
+            "District": "Bielany",
+            "Subdistrict": "Wawrzyszew",
+            "Street": "ulica Lwa Tołstoja",
+            "HouseNumber": "2",
+            "PostalCode": "01-910",
+            "AdditionalData": [
+                {
+                    "value": "Polska",
+                    "key": "CountryName"
+                },
+                {
+                    "value": "Woj. Mazowieckie",
+                    "key": "StateName"
+                },
+                {
+                    "value": "Warszawa",
+                    "key": "CountyName"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "schoolType": "Liceum ogólnokształcące",
+        "public": true,
+        "leadingOrgan": {
+            "name": "BIELANY",
+            "type": "Gmina"
+        },
+        "parent": "ZESPÓŁ SZKÓŁ NR 49",
+        "capitalOwner": "Jednostki Samorządu Terytorialnego",
+        "establishmentDate": "1982-06-15T00:00:00",
+        "dependence": "szkoła lub placówka w zespole",
+        "regon": "1009931"
+    },
+    "profiles": {
+        "detailed": [
+            [
+                [
+                    "geogr",
+                    "ang"
+                ],
+                72
+            ],
+            [
+                [
+                    "pol",
+                    "biol"
+                ],
+                81.8
+            ],
+            [
+                [
+                    "hist",
+                    "wos"
+                ],
+                73.4
+            ]
+        ],
+        "overview": {
+            "availableSubjects": [
+                "geogr",
+                "ang",
+                "pol",
+                "biol",
+                "hist",
+                "wos"
+            ],
+            "pointsRange": [
+                73.4,
+                81.8
+            ]
+        }
+    }
+}

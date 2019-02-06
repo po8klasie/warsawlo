@@ -1,0 +1,170 @@
+{
+	"name": {
+		"full": "XXVIII LICEUM OGÓLNOKSZTAŁCĄCE IM. JANA KOCHANOWSKIEGO",
+		"short": "",
+		"nicks": []
+	},
+	"contact": {
+		"email": "lo28@poczta.internetdsl.pl",
+		"fax": "228442921",
+		"phone": "228448147 , 228442921",
+		"website": "www.kochanowski.waw.pl"
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.19739,
+			"Longitude": 21.00417
+		},
+		"address": {
+			"Label": "ulica Wiktorska 99, 02-582 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Mokotów",
+			"Subdistrict": "Stary Mokotów",
+			"Street": "ulica Wiktorska",
+			"HouseNumber": "99",
+			"PostalCode": "02-582",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "yes",
+		"leadingOrgan": {
+			"name": "MOKOTÓW",
+			"type": "Gmina"
+		},
+		"parent": "",
+		"capitalOwner": "Jednostki Samorządu Terytorialnego",
+		"establishmentDate": "1948-12-18T00:00:00",
+		"dependence": "samodzielna",
+		"regon": "798950"
+	},
+	"thresholds": {
+		"2018": {
+			"detailed": [
+				{
+					"extensions": [
+						"mat",
+						"fiz"
+					],
+					"threshold": 173.4
+				},
+				{
+					"extensions": [
+						"mat",
+						"fiz"
+					],
+					"threshold": 172
+				},
+				{
+					"extensions": [
+						"mat",
+						"fiz"
+					],
+					"threshold": 169.2
+				},
+				{
+					"extensions": [
+						"mat",
+						"fiz"
+					],
+					"threshold": 166.8
+				},
+				{
+					"extensions": [
+						"biol",
+						"chem",
+						"mat"
+					],
+					"threshold": 171.2
+				},
+				{
+					"extensions": [
+						"biol",
+						"chem",
+						"mat"
+					],
+					"threshold": 169.8
+				},
+				{
+					"extensions": [
+						"mat",
+						"fiz",
+						"inf"
+					],
+					"threshold": 173
+				},
+				{
+					"extensions": [
+						"mat",
+						"fiz",
+						"inf"
+					],
+					"threshold": 169.4
+				},
+				{
+					"extensions": [
+						"pol",
+						"hist",
+						"wos"
+					],
+					"threshold": 166
+				},
+				{
+					"extensions": [
+						"pol",
+						"hist",
+						"wos"
+					],
+					"threshold": 161
+				},
+				{
+					"extensions": [
+						"ros",
+						"geogr",
+						"mat"
+					],
+					"threshold": 162.6
+				}
+			],
+			"overview": {
+				"availableSubjects": [
+					"mat",
+					"fiz",
+					"biol",
+					"chem",
+					"inf",
+					"pol",
+					"hist",
+					"wos",
+					"ros",
+					"geogr"
+				],
+				"pointsRange": [
+					161,
+					173.4
+				]
+			}
+		}
+	}
+}

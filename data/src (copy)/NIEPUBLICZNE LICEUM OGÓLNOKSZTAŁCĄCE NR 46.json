@@ -1,0 +1,61 @@
+{
+    "name": {
+        "full": "NIEPUBLICZNE LICEUM OGÓLNOKSZTAŁCĄCE NR 46",
+        "short": ""
+    },
+    "contact": {
+        "email": "",
+        "fax": "",
+        "phone": "226412517",
+        "website": ""
+    },
+    "students": {
+        "type": "youth",
+        "dominantDisability": null
+    },
+    "location": {
+        "position": {
+            "Latitude": 52.15725,
+            "Longitude": 21.04203
+        },
+        "address": {
+            "Label": "ulica Wacława Lachmana 2, 02-786 Warszawa, Polska",
+            "Country": "POL",
+            "State": "Woj. Mazowieckie",
+            "County": "Warszawa",
+            "City": "Warszawa",
+            "District": "Ursynów",
+            "Subdistrict": "Ursynów Północny",
+            "Street": "ulica Wacława Lachmana",
+            "HouseNumber": "2",
+            "PostalCode": "02-786",
+            "AdditionalData": [
+                {
+                    "value": "Polska",
+                    "key": "CountryName"
+                },
+                {
+                    "value": "Woj. Mazowieckie",
+                    "key": "StateName"
+                },
+                {
+                    "value": "Warszawa",
+                    "key": "CountyName"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "schoolType": "Liceum ogólnokształcące",
+        "public": "publicPrivileges",
+        "leadingOrgan": {
+            "name": "Czekalska-Jakubowska Elżbieta",
+            "type": "Osoba fizyczna"
+        },
+        "parent": "",
+        "capitalOwner": "Krajowe Osoby Fizyczne",
+        "establishmentDate": "1993-09-01T00:00:00",
+        "dependence": "samodzielna",
+        "regon": "146339372"
+    }
+}

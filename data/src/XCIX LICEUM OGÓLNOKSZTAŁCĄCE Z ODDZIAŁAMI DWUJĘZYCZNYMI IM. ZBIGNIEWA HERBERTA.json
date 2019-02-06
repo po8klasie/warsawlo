@@ -1,0 +1,121 @@
+{
+	"name": {
+		"full": "XCIX LICEUM OGÓLNOKSZTAŁCĄCE Z ODDZIAŁAMI DWUJĘZYCZNYMI IM. ZBIGNIEWA HERBERTA",
+		"short": "XCIX LO",
+		"nicks": []
+	},
+	"contact": {
+		"email": "sekretariat_lo99@op.pl",
+		"fax": "226711166",
+		"phone": "226719927",
+		"website": "www.herbert99lo.edu.pl"
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.23834,
+			"Longitude": 21.08184
+		},
+		"address": {
+			"Label": "ulica Fundamentowa 38/42, 04-036 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Praga-Południe",
+			"Subdistrict": "Grochów",
+			"Street": "ulica Fundamentowa",
+			"HouseNumber": "38/42",
+			"PostalCode": "04-036",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "yes",
+		"leadingOrgan": {
+			"name": "PRAGA-POŁUDNIE",
+			"type": "Gmina"
+		},
+		"parent": "",
+		"capitalOwner": "Jednostki Samorządu Terytorialnego",
+		"establishmentDate": "1997-04-03T00:00:00",
+		"dependence": "samodzielna",
+		"regon": "12760428"
+	},
+	"thresholds": {
+		"2018": {
+			"detailed": [
+				{
+					"extensions": [
+						"pol",
+						"hist"
+					],
+					"threshold": 131.2
+				},
+				{
+					"extensions": [
+						"fiz",
+						"mat"
+					],
+					"threshold": 135.2
+				},
+				{
+					"extensions": [
+						"geogr",
+						"mat"
+					],
+					"threshold": 141.8
+				},
+				{
+					"extensions": [
+						"hist",
+						"pol",
+						"wos"
+					],
+					"threshold": 116.53
+				},
+				{
+					"extensions": [
+						"biol",
+						"chem",
+						"mat"
+					],
+					"threshold": 137.2
+				}
+			],
+			"overview": {
+				"availableSubjects": [
+					"pol",
+					"hist",
+					"fiz",
+					"mat",
+					"geogr",
+					"wos",
+					"biol",
+					"chem"
+				],
+				"pointsRange": [
+					116.53,
+					141.8
+				]
+			}
+		}
+	}
+}

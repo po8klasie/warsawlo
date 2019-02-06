@@ -1,0 +1,62 @@
+{
+	"name": {
+		"full": "I KATOLICKIE LICEUM SPOŁECZNE",
+		"short": "",
+		"nicks": []
+	},
+	"contact": {
+		"email": "",
+		"fax": "",
+		"phone": "226435338",
+		"website": ""
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.15828,
+			"Longitude": 21.03023
+		},
+		"address": {
+			"Label": "aleja Komisji Edukacji Narodowej 101, 02-777 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Ursynów",
+			"Subdistrict": "Ursynów Północny",
+			"Street": "aleja Komisji Edukacji Narodowej",
+			"HouseNumber": "101",
+			"PostalCode": "02-777",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "publicPrivileges",
+		"leadingOrgan": {
+			"name": "Fundacja im. S. Konarskiego",
+			"type": "Fundacje"
+		},
+		"parent": "",
+		"capitalOwner": "Pozostałe Krajowe Jednostki Prywatne",
+		"establishmentDate": "1993-04-14T00:00:00",
+		"dependence": "samodzielna",
+		"regon": "146340004"
+	}
+}

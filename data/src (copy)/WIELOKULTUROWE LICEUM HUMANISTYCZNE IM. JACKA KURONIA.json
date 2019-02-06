@@ -1,0 +1,61 @@
+{
+    "name": {
+        "full": "WIELOKULTUROWE LICEUM HUMANISTYCZNE IM. JACKA KURONIA",
+        "short": ""
+    },
+    "contact": {
+        "email": "",
+        "fax": "",
+        "phone": "226702142",
+        "website": ""
+    },
+    "students": {
+        "type": "youth",
+        "dominantDisability": null
+    },
+    "location": {
+        "position": {
+            "Latitude": 52.25224,
+            "Longitude": 21.03574
+        },
+        "address": {
+            "Label": "ulica ks. Ignacego Kłopotowskiego 31, 03-720 Warszawa, Polska",
+            "Country": "POL",
+            "State": "Woj. Mazowieckie",
+            "County": "Warszawa",
+            "City": "Warszawa",
+            "District": "Praga-Północ",
+            "Subdistrict": "Stara Praga",
+            "Street": "ulica ks. Ignacego Kłopotowskiego",
+            "HouseNumber": "31",
+            "PostalCode": "03-720",
+            "AdditionalData": [
+                {
+                    "value": "Polska",
+                    "key": "CountryName"
+                },
+                {
+                    "value": "Woj. Mazowieckie",
+                    "key": "StateName"
+                },
+                {
+                    "value": "Warszawa",
+                    "key": "CountyName"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "schoolType": "Liceum ogólnokształcące",
+        "public": "publicPrivileges",
+        "leadingOrgan": {
+            "name": "Towarzystwo przyjaciół I Społecznego Liceum Ogólnokształcącego",
+            "type": "Stowarzyszenia"
+        },
+        "parent": "",
+        "capitalOwner": "Pozostałe Krajowe Jednostki Prywatne",
+        "establishmentDate": "2005-09-23T00:00:00",
+        "dependence": "samodzielna",
+        "regon": "146416210"
+    }
+}

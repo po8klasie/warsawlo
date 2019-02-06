@@ -1,0 +1,62 @@
+{
+	"name": {
+		"full": "AKADEMICKIE LICEUM OGÓLNOKSZTAŁCĄCE PRZY PJATK",
+		"short": "",
+		"nicks": []
+	},
+	"contact": {
+		"email": "",
+		"fax": "",
+		"phone": "600934928",
+		"website": ""
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.21441,
+			"Longitude": 20.97057
+		},
+		"address": {
+			"Label": "ulica Szczęśliwicka 33A, 02-353 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Ochota",
+			"Subdistrict": "Stara Ochota",
+			"Street": "ulica Szczęśliwicka",
+			"HouseNumber": "33A",
+			"PostalCode": "02-353",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "publicPrivileges",
+		"leadingOrgan": {
+			"name": "Polsko-Japońska Akademia Technik Komputerowych",
+			"type": "Szkoły Wyższe Niepubliczne"
+		},
+		"parent": "",
+		"capitalOwner": "Pozostałe Krajowe Jednostki Prywatne",
+		"establishmentDate": "2007-09-01T00:00:00",
+		"dependence": "samodzielna",
+		"regon": "146444376"
+	}
+}

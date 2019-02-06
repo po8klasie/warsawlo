@@ -1,0 +1,62 @@
+{
+	"name": {
+		"full": "LXXIII LICEUM OGÓLNOKSZTAŁCĄCE",
+		"short": "LO LXXIII",
+		"nicks": []
+	},
+	"contact": {
+		"email": "szkola.promienista@wp.pl",
+		"fax": "228637304",
+		"phone": "228637304",
+		"website": "www.promienista.waw.pl"
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.20998,
+			"Longitude": 20.90402
+		},
+		"address": {
+			"Label": "ulica Promienista 12A, 02-428 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Włochy",
+			"Subdistrict": "Nowe Włochy",
+			"Street": "ulica Promienista",
+			"HouseNumber": "12A",
+			"PostalCode": "02-428",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "yes",
+		"leadingOrgan": {
+			"name": "WŁOCHY",
+			"type": "Gmina"
+		},
+		"parent": "ZESPÓŁ SZKÓŁ NR 17 IM ZAWISZAKÓW PROPORCA \"VICTORIA\"",
+		"capitalOwner": "Jednostki Samorządu Terytorialnego",
+		"establishmentDate": "1991-09-01T00:00:00",
+		"dependence": "szkoła lub placówka w zespole",
+		"regon": "15854957"
+	}
+}

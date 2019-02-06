@@ -1,0 +1,62 @@
+{
+	"name": {
+		"full": "XXXII LICEUM OGÓLNOKSZTAŁCĄCE IM. STEFANA GROTA-ROWECKIEGO",
+		"short": "",
+		"nicks": []
+	},
+	"contact": {
+		"email": "zslie1@zslie1.edu.pl",
+		"fax": "228319795",
+		"phone": "228311683",
+		"website": "www.zslie1.edu.pl"
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.25262,
+			"Longitude": 20.98978
+		},
+		"address": {
+			"Label": "ulica Stawki 10, 00-183 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Śródmieście",
+			"Subdistrict": "Muranów",
+			"Street": "ulica Stawki",
+			"HouseNumber": "10",
+			"PostalCode": "00-183",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "yes",
+		"leadingOrgan": {
+			"name": "ŚRÓDMIEŚCIE",
+			"type": "Gmina"
+		},
+		"parent": "ZESPÓŁ SZKÓŁ LICEALNYCH I EKONOMICZNYCH NR 1",
+		"capitalOwner": "Jednostki Samorządu Terytorialnego",
+		"establishmentDate": "1990-09-01T00:00:00",
+		"dependence": "szkoła lub placówka w zespole",
+		"regon": "15850468"
+	}
+}

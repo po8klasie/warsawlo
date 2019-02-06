@@ -1,0 +1,114 @@
+{
+    "name": {
+        "full": "LI LICEUM OGÓLNOKSZTAŁCĄCE IM. TADEUSZA KOŚCIUSZKI",
+        "short": "LI LO"
+    },
+    "contact": {
+        "email": "lo51@edu.um.warszawa.pl",
+        "fax": "226119391",
+        "phone": "226119391",
+        "website": "www.lilo.edu.pl"
+    },
+    "students": {
+        "type": "youth",
+        "dominantDisability": null
+    },
+    "location": {
+        "position": {
+            "Latitude": 52.26534,
+            "Longitude": 21.16798
+        },
+        "address": {
+            "Label": "ulica Kadrowa 5, 04-421 Warszawa, Polska",
+            "Country": "POL",
+            "State": "Woj. Mazowieckie",
+            "County": "Warszawa",
+            "City": "Warszawa",
+            "District": "Rembertów",
+            "Subdistrict": "Stary Rembertów",
+            "Street": "ulica Kadrowa",
+            "HouseNumber": "5",
+            "PostalCode": "04-421",
+            "AdditionalData": [
+                {
+                    "value": "Polska",
+                    "key": "CountryName"
+                },
+                {
+                    "value": "Woj. Mazowieckie",
+                    "key": "StateName"
+                },
+                {
+                    "value": "Warszawa",
+                    "key": "CountyName"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "schoolType": "Liceum ogólnokształcące",
+        "public": true,
+        "leadingOrgan": {
+            "name": "REMBERTÓW",
+            "type": "Gmina"
+        },
+        "parent": "",
+        "capitalOwner": "Jednostki Samorządu Terytorialnego",
+        "establishmentDate": "1944-10-19T00:00:00",
+        "dependence": "samodzielna",
+        "regon": "799115"
+    },
+    "profiles": {
+        "detailed": [
+            [
+                [
+                    "mat",
+                    "inf",
+                    "ang"
+                ],
+                74.6
+            ],
+            [
+                [
+                    "biol",
+                    "chem",
+                    "ang"
+                ],
+                73.4
+            ],
+            [
+                [
+                    "mat",
+                    "geogr",
+                    "wos"
+                ],
+                67
+            ],
+            [
+                [
+                    "pol",
+                    "hist",
+                    "wos"
+                ],
+                89
+            ]
+        ],
+        "overview": {
+            "availableSubjects": [
+                "mat",
+                "inf",
+                "ang",
+                "biol",
+                "chem",
+                "geogr",
+                "wos",
+                "pol",
+                "hist"
+            ],
+            "pointsRange": [
+                67,
+                89
+            ]
+        }
+    }
+}

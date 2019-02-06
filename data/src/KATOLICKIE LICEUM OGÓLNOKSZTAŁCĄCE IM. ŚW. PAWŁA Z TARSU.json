@@ -1,0 +1,62 @@
+{
+	"name": {
+		"full": "KATOLICKIE LICEUM OGÓLNOKSZTAŁCĄCE IM. ŚW. PAWŁA Z TARSU",
+		"short": "",
+		"nicks": []
+	},
+	"contact": {
+		"email": "",
+		"fax": "",
+		"phone": "22789-14-02 , 22789-14-02",
+		"website": ""
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.15844,
+			"Longitude": 21.20211
+		},
+		"address": {
+			"Label": "ulica Poezji 19, 04-994 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Wawer",
+			"Subdistrict": "Falenica",
+			"Street": "ulica Poezji",
+			"HouseNumber": "19",
+			"PostalCode": "04-994",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "publicPrivileges",
+		"leadingOrgan": {
+			"name": "Towarzystwo Absolwentów Katolickiego Uniwersytetu Lubelskiego w Warszawie",
+			"type": "Stowarzyszenia"
+		},
+		"parent": "ZESPÓŁ SZKÓŁ OGÓLNOKSZTAŁCĄCYCH",
+		"capitalOwner": "Pozostałe Krajowe Jednostki Prywatne",
+		"establishmentDate": "1991-11-22T00:00:00",
+		"dependence": "szkoła lub placówka w zespole",
+		"regon": "146441580"
+	}
+}

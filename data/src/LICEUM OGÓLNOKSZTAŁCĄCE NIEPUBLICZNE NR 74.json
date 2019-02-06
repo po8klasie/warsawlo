@@ -1,0 +1,62 @@
+{
+	"name": {
+		"full": "LICEUM OGÓLNOKSZTAŁCĄCE NIEPUBLICZNE NR 74",
+		"short": "",
+		"nicks": []
+	},
+	"contact": {
+		"email": "",
+		"fax": "",
+		"phone": "228448333",
+		"website": ""
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.19077,
+			"Longitude": 20.99122
+		},
+		"address": {
+			"Label": "ulica Wawrzyńca Żuławskiego 4/6, 02-641 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Mokotów",
+			"Subdistrict": "Wyględów",
+			"Street": "ulica Wawrzyńca Żuławskiego",
+			"HouseNumber": "4/6",
+			"PostalCode": "02-641",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "publicPrivileges",
+		"leadingOrgan": {
+			"name": "Zub Henryk",
+			"type": "Osoba fizyczna"
+		},
+		"parent": "",
+		"capitalOwner": "Krajowe Osoby Fizyczne",
+		"establishmentDate": "2001-04-02T00:00:00",
+		"dependence": "samodzielna",
+		"regon": "146444519"
+	}
+}

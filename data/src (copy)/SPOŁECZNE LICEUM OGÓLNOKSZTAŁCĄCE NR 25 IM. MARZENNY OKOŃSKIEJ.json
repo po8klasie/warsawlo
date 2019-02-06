@@ -1,0 +1,61 @@
+{
+    "name": {
+        "full": "SPOŁECZNE LICEUM OGÓLNOKSZTAŁCĄCE NR 25 IM. MARZENNY OKOŃSKIEJ",
+        "short": ""
+    },
+    "contact": {
+        "email": "",
+        "fax": "",
+        "phone": "22654-45-50",
+        "website": ""
+    },
+    "students": {
+        "type": "youth",
+        "dominantDisability": null
+    },
+    "location": {
+        "position": {
+            "Latitude": 52.24253,
+            "Longitude": 20.99692
+        },
+        "address": {
+            "Label": "aleja \"Solidarności\" 101D, 00-144 Warszawa, Polska",
+            "Country": "POL",
+            "State": "Woj. Mazowieckie",
+            "County": "Warszawa",
+            "City": "Warszawa",
+            "District": "Śródmieście",
+            "Subdistrict": "Śródmieście Północne",
+            "Street": "aleja \"Solidarności\"",
+            "HouseNumber": "101D",
+            "PostalCode": "00-144",
+            "AdditionalData": [
+                {
+                    "value": "Polska",
+                    "key": "CountryName"
+                },
+                {
+                    "value": "Woj. Mazowieckie",
+                    "key": "StateName"
+                },
+                {
+                    "value": "Warszawa",
+                    "key": "CountyName"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "schoolType": "Liceum ogólnokształcące",
+        "public": "publicPrivileges",
+        "leadingOrgan": {
+            "name": "Stowarzyszenie Przyjaciół XXV Liceum Społecznego w Warszawie",
+            "type": "Stowarzyszenia"
+        },
+        "parent": "",
+        "capitalOwner": "Pozostałe Krajowe Jednostki Prywatne",
+        "establishmentDate": "2004-04-08T00:00:00",
+        "dependence": "samodzielna",
+        "regon": "146436804"
+    }
+}

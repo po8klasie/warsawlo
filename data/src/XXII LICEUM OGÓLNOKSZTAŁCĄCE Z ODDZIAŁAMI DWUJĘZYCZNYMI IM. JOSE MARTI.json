@@ -1,0 +1,125 @@
+{
+	"name": {
+		"full": "XXII LICEUM OGÓLNOKSZTAŁCĄCE Z ODDZIAŁAMI DWUJĘZYCZNYMI IM. JOSE MARTI",
+		"short": "XXII LICEUM OGÓLNOKSZTAŁCĄCE",
+		"nicks": []
+	},
+	"contact": {
+		"email": "lo22@edu.um.warszawa.pl",
+		"fax": "",
+		"phone": "228340357 , 228343164",
+		"website": ""
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.27514,
+			"Longitude": 20.94821
+		},
+		"address": {
+			"Label": "ulica Leopolda Staffa 111, 01-884 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Bielany",
+			"Subdistrict": "Słodowiec",
+			"Street": "ulica Leopolda Staffa",
+			"HouseNumber": "111",
+			"PostalCode": "01-884",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "yes",
+		"leadingOrgan": {
+			"name": "BIELANY",
+			"type": "Gmina"
+		},
+		"parent": "",
+		"capitalOwner": "Jednostki Samorządu Terytorialnego",
+		"establishmentDate": "1945-09-04T00:00:00",
+		"dependence": "samodzielna",
+		"regon": "16415042"
+	},
+	"thresholds": {
+		"2018": {
+			"detailed": [
+				{
+					"extensions": [
+						"ang",
+						"mat",
+						"fiz"
+					],
+					"threshold": 158.8
+				},
+				{
+					"extensions": [
+						"mat",
+						"geogr",
+						"wos"
+					],
+					"threshold": 157.6
+				},
+				{
+					"extensions": [
+						"ang",
+						"biol",
+						"chem"
+					],
+					"threshold": 154.4
+				},
+				{
+					"extensions": [
+						"mat",
+						"biol",
+						"chem"
+					],
+					"threshold": 159.6
+				},
+				{
+					"extensions": [
+						"hiszp",
+						"pol",
+						"geogr"
+					],
+					"threshold": 144.07
+				}
+			],
+			"overview": {
+				"availableSubjects": [
+					"ang",
+					"mat",
+					"fiz",
+					"geogr",
+					"wos",
+					"biol",
+					"chem",
+					"hiszp",
+					"pol"
+				],
+				"pointsRange": [
+					144.07,
+					159.6
+				]
+			}
+		}
+	}
+}

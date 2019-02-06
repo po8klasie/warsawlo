@@ -1,0 +1,61 @@
+{
+	"name": {
+		"full": "CXXXVII LICEUM OGÓLNOKSZTAŁCĄCE Z ODDZIAŁAMI DWUJĘZYCZNYMI",
+		"short": "",
+		"nicks": []
+	},
+	"contact": {
+		"email": "sekretariat@zs113.pl",
+		"fax": "",
+		"phone": "225119500",
+		"website": ""
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.27259,
+			"Longitude": 21.04508
+		},
+		"address": {
+			"Label": "ulica Olgierda, 03-535 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Targówek",
+			"Subdistrict": "Targówek Mieszkaniowy",
+			"Street": "ulica Olgierda",
+			"PostalCode": "03-535",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "yes",
+		"leadingOrgan": {
+			"name": "TARGÓWEK",
+			"type": "Gmina"
+		},
+		"parent": "ZESPÓŁ SZKÓŁ NR 113 Z ODDZIAŁAMI DWUJĘZYCZNYMI",
+		"capitalOwner": "Jednostki Samorządu Terytorialnego",
+		"establishmentDate": "2010-09-01T00:00:00",
+		"dependence": "szkoła lub placówka w zespole",
+		"regon": "142394606"
+	}
+}

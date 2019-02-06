@@ -1,0 +1,117 @@
+{
+	"name": {
+		"full": "XXV LICEUM OGÓLNOKSZTAŁCĄCE IM. JÓZEFA WYBICKIEGO",
+		"short": "",
+		"nicks": []
+	},
+	"contact": {
+		"email": "lo25@edu.um.warszawa.pl",
+		"fax": "228729117",
+		"phone": "228729117",
+		"website": "www.wybicki.net"
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.16457,
+			"Longitude": 21.20061
+		},
+		"address": {
+			"Label": "ulica Halna 20, 04-961 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Wawer",
+			"Subdistrict": "Miedzeszyn",
+			"Street": "ulica Halna",
+			"HouseNumber": "20",
+			"PostalCode": "04-961",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "yes",
+		"leadingOrgan": {
+			"name": "WAWER",
+			"type": "Gmina"
+		},
+		"parent": "",
+		"capitalOwner": "Jednostki Samorządu Terytorialnego",
+		"establishmentDate": "1950-04-14T00:00:00",
+		"dependence": "samodzielna",
+		"regon": "799090"
+	},
+	"thresholds": {
+		"2018": {
+			"detailed": [
+				{
+					"extensions": [
+						"ang",
+						"mat",
+						"geogr"
+					],
+					"threshold": 108.4
+				},
+				{
+					"extensions": [
+						"ang",
+						"biol",
+						"chem"
+					],
+					"threshold": 113.4
+				},
+				{
+					"extensions": [
+						"pol",
+						"hist",
+						"h.szt."
+					],
+					"threshold": 97
+				},
+				{
+					"extensions": [
+						"ang",
+						"geogr",
+						"wos"
+					],
+					"threshold": 96.8
+				}
+			],
+			"overview": {
+				"availableSubjects": [
+					"ang",
+					"mat",
+					"geogr",
+					"biol",
+					"chem",
+					"pol",
+					"hist",
+					"h.szt.",
+					"wos"
+				],
+				"pointsRange": [
+					96.8,
+					113.4
+				]
+			}
+		}
+	}
+}

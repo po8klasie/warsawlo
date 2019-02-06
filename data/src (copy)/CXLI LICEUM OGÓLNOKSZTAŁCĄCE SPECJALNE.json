@@ -1,0 +1,61 @@
+{
+    "name": {
+        "full": "CXLI LICEUM OGÓLNOKSZTAŁCĄCE SPECJALNE",
+        "short": ""
+    },
+    "contact": {
+        "email": "zpow@zpow.eu",
+        "fax": "228643836",
+        "phone": "228348684",
+        "website": "http://zpow.eu"
+    },
+    "students": {
+        "type": "youth",
+        "dominantDisability": null
+    },
+    "location": {
+        "position": {
+            "Latitude": 52.27604,
+            "Longitude": 20.93909
+        },
+        "address": {
+            "Label": "aleja Władysława Reymonta 16, 01-840 Warszawa, Polska",
+            "Country": "POL",
+            "State": "Woj. Mazowieckie",
+            "County": "Warszawa",
+            "City": "Warszawa",
+            "District": "Bielany",
+            "Subdistrict": "Stare Bielany",
+            "Street": "aleja Władysława Reymonta",
+            "HouseNumber": "16",
+            "PostalCode": "01-840",
+            "AdditionalData": [
+                {
+                    "value": "Polska",
+                    "key": "CountryName"
+                },
+                {
+                    "value": "Woj. Mazowieckie",
+                    "key": "StateName"
+                },
+                {
+                    "value": "Warszawa",
+                    "key": "CountyName"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "schoolType": "Liceum ogólnokształcące",
+        "public": true,
+        "leadingOrgan": {
+            "name": "MIASTO STOŁECZNE WARSZAWA",
+            "type": "Miasto na prawach powiatu"
+        },
+        "parent": "MŁODZIEŻOWY OŚRODEK SOCJOTERAPII NR 4",
+        "capitalOwner": "Jednostki Samorządu Terytorialnego",
+        "establishmentDate": "2012-08-30T00:00:00",
+        "dependence": "szkoła/placówka wchodząca w skład jednostki złożonej",
+        "regon": "360163163"
+    }
+}

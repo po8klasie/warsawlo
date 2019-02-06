@@ -1,0 +1,62 @@
+{
+	"name": {
+		"full": "2 SPOŁECZNE LICEUM OGÓLNOKSZTAŁCĄCE SPOŁECZNEGO TOWARZYSTWA OŚWIATOWEGO IM. PAWŁA JASIENICY",
+		"short": "",
+		"nicks": []
+	},
+	"contact": {
+		"email": "",
+		"fax": "",
+		"phone": "228251199",
+		"website": ""
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.21982,
+			"Longitude": 21.01407
+		},
+		"address": {
+			"Label": "ulica Nowowiejska 5, 00-643 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Śródmieście",
+			"Subdistrict": "Śródmieście Południowe",
+			"Street": "ulica Nowowiejska",
+			"HouseNumber": "5",
+			"PostalCode": "00-643",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "publicPrivileges",
+		"leadingOrgan": {
+			"name": "Samodzielne Koło Terenowe nr 144 Społecznego Towarzystwa Oświatowego",
+			"type": "Stowarzyszenia"
+		},
+		"parent": "ZESPÓŁ SZKÓŁ SPOŁECZNYCH SPOŁECZNEGO TOWARZYSTWA OŚWIATOWEGO",
+		"capitalOwner": "Pozostałe Krajowe Jednostki Prywatne",
+		"establishmentDate": "1998-09-01T00:00:00",
+		"dependence": "szkoła lub placówka w zespole",
+		"regon": "146342279"
+	}
+}

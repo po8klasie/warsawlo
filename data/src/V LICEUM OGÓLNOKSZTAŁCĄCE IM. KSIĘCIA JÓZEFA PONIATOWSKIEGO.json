@@ -1,0 +1,119 @@
+{
+	"name": {
+		"full": "V LICEUM OGÓLNOKSZTAŁCĄCE IM. KSIĘCIA JÓZEFA PONIATOWSKIEGO",
+		"short": "",
+		"nicks": []
+	},
+	"contact": {
+		"email": "poniatowka@vlo.edu.pl",
+		"fax": "228310630",
+		"phone": "228314804 , 228314804",
+		"website": "www.poniatowka.edu.pl"
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.24451,
+			"Longitude": 20.9954
+		},
+		"address": {
+			"Label": "ulica Nowolipie 8, 00-146 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Śródmieście",
+			"Subdistrict": "Muranów",
+			"Street": "ulica Nowolipie",
+			"HouseNumber": "8",
+			"PostalCode": "00-146",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "yes",
+		"leadingOrgan": {
+			"name": "ŚRÓDMIEŚCIE",
+			"type": "Gmina"
+		},
+		"parent": "",
+		"capitalOwner": "Jednostki Samorządu Terytorialnego",
+		"establishmentDate": "1918-09-01T00:00:00",
+		"dependence": "samodzielna",
+		"regon": "12099124"
+	},
+	"thresholds": {
+		"2018": {
+			"detailed": [
+				{
+					"extensions": [
+						"pol",
+						"geogr"
+					],
+					"threshold": 167
+				},
+				{
+					"extensions": [
+						"mat",
+						"fiz"
+					],
+					"threshold": 174.8
+				},
+				{
+					"extensions": [
+						"chem",
+						"fiz",
+						"mat"
+					],
+					"threshold": 174
+				},
+				{
+					"extensions": [
+						"biol",
+						"chem",
+						"mat"
+					],
+					"threshold": 175.4
+				},
+				{
+					"extensions": [
+						"geogr",
+						"mat"
+					],
+					"threshold": 171.8
+				}
+			],
+			"overview": {
+				"availableSubjects": [
+					"pol",
+					"geogr",
+					"mat",
+					"fiz",
+					"chem",
+					"biol"
+				],
+				"pointsRange": [
+					171.8,
+					175.4
+				]
+			}
+		}
+	}
+}

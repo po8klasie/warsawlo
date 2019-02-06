@@ -1,0 +1,62 @@
+{
+	"name": {
+		"full": "CXXI LICEUM OGÓLNOKSZTAŁCĄCE SPECJALNE W INSTYTUCIE PSYCHIATRII I NEUROLOGII",
+		"short": "",
+		"nicks": []
+	},
+	"contact": {
+		"email": "hmp0@poczta.onet.pl",
+		"fax": "224582628",
+		"phone": "224582628",
+		"website": ""
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.17062,
+			"Longitude": 21.06684
+		},
+		"address": {
+			"Label": "ulica Jana III Sobieskiego 1, 02-957 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Mokotów",
+			"Subdistrict": "Stegny",
+			"Street": "ulica Jana III Sobieskiego",
+			"HouseNumber": "1",
+			"PostalCode": "02-957",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "yes",
+		"leadingOrgan": {
+			"name": "MIASTO STOŁECZNE WARSZAWA",
+			"type": "Miasto na prawach powiatu"
+		},
+		"parent": "ZESPÓŁ SZKÓŁ SPECJALNYCH NR 96 W INSTYTUCIE PSYCHIATRII I NEUROLOGII",
+		"capitalOwner": "Jednostki Samorządu Terytorialnego",
+		"establishmentDate": "2001-08-29T00:00:00",
+		"dependence": "szkoła lub placówka w zespole",
+		"regon": "17370100"
+	}
+}

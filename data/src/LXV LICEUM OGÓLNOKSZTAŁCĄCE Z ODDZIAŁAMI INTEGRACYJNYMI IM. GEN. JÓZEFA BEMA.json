@@ -1,0 +1,126 @@
+{
+	"name": {
+		"full": "LXV LICEUM OGÓLNOKSZTAŁCĄCE Z ODDZIAŁAMI INTEGRACYJNYMI IM. GEN. JÓZEFA BEMA",
+		"short": "",
+		"nicks": []
+	},
+	"contact": {
+		"email": "m.puculek@bem.waw.pl , admin@bem.waw.pl",
+		"fax": "228433713",
+		"phone": "228433713 , 228433473",
+		"website": "www.bem.waw.pl"
+	},
+	"students": {
+		"type": "youth",
+		"dominantDisability": null
+	},
+	"location": {
+		"position": {
+			"Latitude": 52.17939,
+			"Longitude": 20.99846
+		},
+		"address": {
+			"Label": "ulica Marynarska 2/6, 02-674 Warszawa, Polska",
+			"Country": "POL",
+			"State": "Woj. Mazowieckie",
+			"County": "Warszawa",
+			"City": "Warszawa",
+			"District": "Mokotów",
+			"Subdistrict": "Służewiec",
+			"Street": "ulica Marynarska",
+			"HouseNumber": "2/6",
+			"PostalCode": "02-674",
+			"AdditionalData": [
+				{
+					"value": "Polska",
+					"key": "CountryName"
+				},
+				{
+					"value": "Woj. Mazowieckie",
+					"key": "StateName"
+				},
+				{
+					"value": "Warszawa",
+					"key": "CountyName"
+				}
+			]
+		}
+	},
+	"meta": {
+		"schoolType": "Liceum ogólnokształcące",
+		"public": "yes",
+		"leadingOrgan": {
+			"name": "MOKOTÓW",
+			"type": "Gmina"
+		},
+		"parent": "",
+		"capitalOwner": "Jednostki Samorządu Terytorialnego",
+		"establishmentDate": "2012-09-01T00:00:00",
+		"dependence": "samodzielna",
+		"regon": "15824784"
+	},
+	"thresholds": {
+		"2018": {
+			"detailed": [
+				{
+					"extensions": [
+						"mat",
+						"fiz",
+						"inf"
+					],
+					"threshold": 122.6
+				},
+				{
+					"extensions": [
+						"biol",
+						"chem"
+					],
+					"threshold": 108.4
+				},
+				{
+					"extensions": [
+						"pol",
+						"hist",
+						"h.szt."
+					],
+					"threshold": 110
+				},
+				{
+					"extensions": [
+						"pol",
+						"hist",
+						"wos"
+					],
+					"threshold": 100
+				},
+				{
+					"extensions": [
+						"ang",
+						"geogr",
+						"wos"
+					],
+					"threshold": 113.8
+				}
+			],
+			"overview": {
+				"availableSubjects": [
+					"mat",
+					"fiz",
+					"inf",
+					"biol",
+					"chem",
+					"pol",
+					"hist",
+					"h.szt.",
+					"wos",
+					"ang",
+					"geogr"
+				],
+				"pointsRange": [
+					100,
+					122.6
+				]
+			}
+		}
+	}
+}

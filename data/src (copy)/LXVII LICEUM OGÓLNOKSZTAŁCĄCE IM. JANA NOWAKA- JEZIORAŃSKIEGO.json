@@ -1,0 +1,61 @@
+{
+    "name": {
+        "full": "LXVII LICEUM OGÓLNOKSZTAŁCĄCE IM. JANA NOWAKA- JEZIORAŃSKIEGO",
+        "short": ""
+    },
+    "contact": {
+        "email": "dyrmir@jezioranski.edu.pl",
+        "fax": "226297063",
+        "phone": "226297063",
+        "website": "www.jezioranski.edu.pl"
+    },
+    "students": {
+        "type": "youth",
+        "dominantDisability": null
+    },
+    "location": {
+        "position": {
+            "Latitude": 52.22095,
+            "Longitude": 21.01904
+        },
+        "address": {
+            "Label": "ulica Mokotowska 16/20, 00-561 Warszawa, Polska",
+            "Country": "POL",
+            "State": "Woj. Mazowieckie",
+            "County": "Warszawa",
+            "City": "Warszawa",
+            "District": "Śródmieście",
+            "Subdistrict": "Śródmieście Południowe",
+            "Street": "ulica Mokotowska",
+            "HouseNumber": "16/20",
+            "PostalCode": "00-561",
+            "AdditionalData": [
+                {
+                    "value": "Polska",
+                    "key": "CountryName"
+                },
+                {
+                    "value": "Woj. Mazowieckie",
+                    "key": "StateName"
+                },
+                {
+                    "value": "Warszawa",
+                    "key": "CountyName"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "schoolType": "Liceum ogólnokształcące",
+        "public": true,
+        "leadingOrgan": {
+            "name": "ŚRÓDMIEŚCIE",
+            "type": "Gmina"
+        },
+        "parent": "",
+        "capitalOwner": "Jednostki Samorządu Terytorialnego",
+        "establishmentDate": "1991-09-01T00:00:00",
+        "dependence": "samodzielna",
+        "regon": "10524505"
+    }
+}

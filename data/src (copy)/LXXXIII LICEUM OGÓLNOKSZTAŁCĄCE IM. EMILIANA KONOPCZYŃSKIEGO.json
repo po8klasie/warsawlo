@@ -1,0 +1,113 @@
+{
+    "name": {
+        "full": "LXXXIII LICEUM OGÓLNOKSZTAŁCĄCE IM. EMILIANA KONOPCZYŃSKIEGO",
+        "short": ""
+    },
+    "contact": {
+        "email": "zs22ek@poczta.onet.pl",
+        "fax": "228264380",
+        "phone": "228264380",
+        "website": "www.konopczynski.com"
+    },
+    "students": {
+        "type": "youth",
+        "dominantDisability": null
+    },
+    "location": {
+        "position": {
+            "Latitude": 52.23719,
+            "Longitude": 21.02163
+        },
+        "address": {
+            "Label": "ulica Emiliana Konopczyńskiego 4, 00-335 Warszawa, Polska",
+            "Country": "POL",
+            "State": "Woj. Mazowieckie",
+            "County": "Warszawa",
+            "City": "Warszawa",
+            "District": "Śródmieście",
+            "Subdistrict": "Śródmieście Północne",
+            "Street": "ulica Emiliana Konopczyńskiego",
+            "HouseNumber": "4",
+            "PostalCode": "00-335",
+            "AdditionalData": [
+                {
+                    "value": "Polska",
+                    "key": "CountryName"
+                },
+                {
+                    "value": "Woj. Mazowieckie",
+                    "key": "StateName"
+                },
+                {
+                    "value": "Warszawa",
+                    "key": "CountyName"
+                }
+            ]
+        }
+    },
+    "meta": {
+        "schoolType": "Liceum ogólnokształcące",
+        "public": true,
+        "leadingOrgan": {
+            "name": "ŚRÓDMIEŚCIE",
+            "type": "Gmina"
+        },
+        "parent": "ZESPÓŁ SZKÓŁ NR 22 IM. EMILIANA KONOPCZYŃSKIEGO",
+        "capitalOwner": "Jednostki Samorządu Terytorialnego",
+        "establishmentDate": "1992-09-01T00:00:00",
+        "dependence": "szkoła lub placówka w zespole",
+        "regon": "15826346"
+    },
+    "profiles": {
+        "detailed": [
+            [
+                [
+                    "ang",
+                    "niem",
+                    "geogr"
+                ],
+                103.4
+            ],
+            [
+                [
+                    "geogr",
+                    "ang",
+                    "mat"
+                ],
+                136
+            ],
+            [
+                [
+                    "hist",
+                    "pol",
+                    "wos"
+                ],
+                119.4
+            ],
+            [
+                [
+                    "biol",
+                    "ang",
+                    "pol"
+                ],
+                133.4
+            ]
+        ],
+        "overview": {
+            "availableSubjects": [
+                "ang",
+                "niem",
+                "geogr",
+                "mat",
+                "hist",
+                "pol",
+                "wos",
+                "biol"
+            ],
+            "pointsRange": [
+                119.4,
+                136
+            ]
+        }
+    }
+}
