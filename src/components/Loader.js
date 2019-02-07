@@ -1,7 +1,7 @@
 import React from 'react'
 import {FontAwesomeIcon }from '@fortawesome/react-fontawesome'
 import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 const Loader = styled('div')`
   width:100%;
   text-align:center;

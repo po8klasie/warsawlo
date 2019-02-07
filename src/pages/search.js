@@ -9,6 +9,9 @@ import Results from 'components/Results'
 import Button from 'components/Button'
 import PointsRangeFilter from 'components/PointsRangeFilter'
 import transformParams from 'utils/engine/transformParams'
+import Loader from 'components/Loader'
+const responsiveWidth = '1000px'
+
 const SearchBar = styled('div')`
   margin-top:calc(70px + ${props => props.center ? '30vh' : '0px'});
   height:10vh;
@@ -35,8 +38,6 @@ const SearchButton = styled('button')`
   border:none;
   outline:none;
   font-size:5vh;
-  position:relative;
-  right:${props => props.active ? '0' : '-100%'};
   // transition:.2s all;
 `
 const Tutorial = styled('div')`
@@ -82,27 +83,37 @@ const FiltersSettings = styled('div')`
   display: ${props => props.active ? 'block' : 'none'};
   padding:20px;
 `
-
+const ResultsWrapper = styled('div')`
+  display: ${props => props.active ? 'block' : 'none'};
+`
+const ResultsLoader = styled(Loader)`
+  display: ${props => props.loading ? 'block' : 'none'};
+`
+let counter = 0
 export default class extends Component{
   constructor(props){
     super(props)
     this.params = new URLSearchParams(this.props.location.search)
     this.state = {
       query: this.params.has('query') ? this.params.get('query') : '',
-      inputDirty: true,
+      inputDirty: this.params.has('query'),
       buttonDirty: false,
       activeFiltersTab: null,
       view: 'horizontal',
+      loading:false,
       loaded:false,
       filters: {
-        profiles: [],
+        profiles: this.params.has('subjects') ? transformParams('subjects', this.params.get('subjects'), true): [] ,
         pointsRange: [0, 200]
       }
     }
-
   }
   updateURI = () => {
     console.log(`${this.props.location.pathname}?${this.params.toString()}`)
+    this.params.forEach((value, key) => {
+      if(!value)
+        this.params.delete(key)
+    })
     this.props.navigate(`${this.props.location.pathname}?${this.params.toString()}`)
   }
   setFiltersParams = () => {
@@ -112,17 +123,41 @@ export default class extends Component{
     // }
   }
   handleQueryChange = (e) => {
-        let query = e.target.value
+    //     let query = e.target.value
     this.setState({
-      query,
-      inputDirty:true
-    }, () => {
-      if(query.trim().length === 0)
-        this.params.delete('query')
-      else
-        this.params.set('query', query)
+      inputDirty: true,
+      query: e.target.value,
+      loading:true
+    }, async () => {
+      this.params.set('query', this.state.query)
       this.updateURI()
     })
+    // ,
+    // this.setState({
+    //   query,
+    //   inputDirty:true
+    // }, () => {
+    //   // if(query.trim().length === 0)
+    //   //   this.params.delete('query')
+    //   // else
+    //   //   this.params.set('query', query)
+    //   // this.updateURI()
+    // })
+
+  }
+  handleSubmit = (e) => {
+    e.preventDefault()
+    let query = document.querySelector('#search-input').value.trim()
+    if(this.state.query !== query){
+      this.setState({
+        inputDirty: true,
+        loading: true,
+        query,
+      }, () => {
+        this.params.set('query', query)
+        this.updateURI()
+      })
+    }
 
   }
   handleProfilesToggle = (profile) => {
@@ -143,6 +178,7 @@ export default class extends Component{
         }
     }, () => {
       this.params.set('subjects', transformParams('subjects', this.state.filters.profiles))
+      this.updateURI()
     })
   }
   handlePointsRangeChange = (value) => {
@@ -168,7 +204,7 @@ export default class extends Component{
   }
   handleLoad = () => {
     this.setState({
-      loaded: true
+      loading:false
     })
   }
   showAll = () => {
@@ -183,8 +219,8 @@ export default class extends Component{
       <Layout>
       <SearchBar center={!this.state.inputDirty}>
       <div></div>
-      <input placeholder="Szukaj szkoły" onChange={this.handleQueryChange} value={this.state.query}/>
-      <SearchButton active={!isQueryEmpty}><FontAwesomeIcon icon={faSearch} /></SearchButton>
+      <input placeholder="Szukaj szkoły" id="search-input" value={this.state.query} onChange={this.handleQueryChange}/>
+      <SearchButton ><FontAwesomeIcon icon={faSearch} /></SearchButton>
       </SearchBar>
       <Filters active={this.state.inputDirty}>
       <ul className="labels">
@@ -206,15 +242,17 @@ export default class extends Component{
           case 'pointsNumber':
             return <PointsRangeFilter onChange={this.state.handlePointsRangeChange} />
           case 'location':
-            return 'beka'
+            return 'Coming soon!'
           default:
             return null
         }
       })()}
       </FiltersSettings>
       </Filters>
-      {this.state.inputDirty ? <Results view={this.state.view} query={this.state.query} filters={this.state.filters} onLoad={this.handleLoad}/> : null}
-
+      <ResultsWrapper  active={this.state.inputDirty && !this.state.loading}>
+      <Results view={this.state.view} query={this.state.query} filters={this.state.filters} onLoad={this.handleLoad}/>
+      </ResultsWrapper>
+      <ResultsLoader active={this.state.loading} />
       <Tutorial active={!this.state.inputDirty}>
       <FontAwesomeIcon icon={faArrowUp} />
       <span>Wpisz nazwę szkoły powyżej <br /> lub</span>

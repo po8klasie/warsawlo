@@ -5,19 +5,26 @@
  */
 
  const path = require('path')
- const WorkerPlugin = require('worker-plugin')
 
  exports.onCreateWebpackConfig = ({ stage, actions }) => {
    actions.setWebpackConfig({
      resolve: {
        modules: [path.resolve(__dirname, "src"), "node_modules"]
      },
-     output: {
-       globalObject: "this"
+     module: {
+       rules: [
+         {
+         test: /\.worker.js$/i,
+         exclude: /node_modules/,
+         use: [
+           'worker-loader'
+         ]
+       }
+       ]
      },
-     plugins: [
-       new WorkerPlugin()
-     ]
+     output: {
+       libraryTarget: "this"
+     }
    })
  }
  // Implement the Gatsby API “createPages”. This is called once the

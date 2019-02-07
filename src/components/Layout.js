@@ -4,9 +4,9 @@ import PropTypes from 'prop-types'
 import { jsx } from '@emotion/core'
 import css from '@emotion/css'
 import Navbar from 'components/Navbar'
-const Layout = ({ children }) => (
+const Layout = ({ children, location }) => (
   <>
-  <Navbar />
+  <Navbar location={location} />
   {children}
   </>
 )

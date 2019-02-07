@@ -1,16 +1,19 @@
+/** @jsx jsx */
 import React, { Component } from 'react'
 import Layout from 'components/Layout'
 import styled from '@emotion/styled'
+import { css, jsx } from '@emotion/core'
 import { graphql, Link } from 'gatsby'
 import LOPlaceholder from 'components/LOPlaceholder'
 import Scrollspy from 'react-scrollspy'
 import DocumentEvents from 'react-document-events'
 import SEO from 'components/SEO'
-import { faPhone, faGlobe, faAt, faFax, faMapMarkerAlt, faRoad, faCity, faUsers, faSchool, faHandshake, faMoneyBill } from '@fortawesome/free-solid-svg-icons'
+import { faPhone, faGlobe, faAt, faFax, faMapMarkerAlt, faRoad, faCity, faUsers, faSchool, faHandshake, faMoneyBill, faGraduationCap } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts'
 import subjects from 'utils/subjectsMapping'
 import Tag from 'components/Tag'
+import ReactMapboxGl, { Marker, ZoomControl } from "react-mapbox-gl"
 // import MoovitEmbed from 'components/MoovitEmbed'
 const Header = styled('header')`
   width: 100%;
@@ -169,9 +172,18 @@ const MoovitWrapper = styled('div')`
   }
 `
 const ContactGrid = styled('div')`
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 20%;
+  display:flex;
+  justify-content:space-between;
+  min-height:20vh;
+  .left{
+    width:${props => props.full ? '0' : 'calc(50% - 1em)'};
+    visibility:${props => props.full ? 'hidden' : 'visible'};
+    transition.3s all;
+  }
+  .right{
+    width:${props => props.full ? '100%' : 'calc(50% - 1em)'};
+    transition.3s all;
+  }
 `
 const ContactBox = styled('div')`
 display:flex;
@@ -193,20 +205,39 @@ display:flex;
     justify-content:center;
   }
 `
+const MapWrapper = styled('div')`
+height:100%;`
+const MarkerWrapper = styled('div')`
+  padding:10px;
+  background:white;
+
+`
+const Map = ReactMapboxGl({
+  accessToken: "pk.eyJ1IjoibWljb3JpeCIsImEiOiJjanJ0cjN2Y2IwcjZiM3ltaWw4a2EwMzNlIn0.9aYkpqbDoPBGO3hTuIvdvw"
+});
+
 export default class extends Component{
   constructor(props){
     super(props)
     console.log(props)
     this.headerEl = React.createRef()
     this.state = {
-      fixedHeader: false
+      fixedHeader: false,
+      mouse: 'out'
     }
   }
-  // componentDidMount = () => {
-  //   if(!document.querySelector('#moovit-jsw')){
-  //
-  //   }
-  // }
+  componentDidMount = () => {
+    (function(d, s, id) {
+      // if(!document.querySelector('#moovit-jsw')){
+        let js, fjs = d.getElementsByTagName(s)[0];
+        js = d.createElement(s); js.id = id;
+        js.src = "https://widgets.moovit.com/wtp/pl";
+        fjs.parentNode.insertBefore(js, fjs);
+      // }
+
+      return null
+      })(document, 'script', 'moovit-jsw')
+  }
   onScroll = (e) => {
     const rect = this.headerEl.current.getBoundingClientRect()
     let fixedHeader = rect.top+rect.height <= 70
@@ -215,6 +246,21 @@ export default class extends Component{
         fixedHeader
       })
     }
+
+  }
+  handleMouseStart = () => {
+    console.log('x')
+    this.setState({
+      mouse: 'over'
+    }, () => {
+      window.dispatchEvent(new Event('resize'))
+      console.log('x')
+    })
+  }
+  handleMouseOut = () => {
+    this.setState({
+      mouse: 'out'
+    }, () => window.dispatchEvent(new Event('resize')))
 
   }
   render = () => {
@@ -310,7 +356,10 @@ export default class extends Component{
   </Section>
   <Section id="contact">
     <h2>Kontakt</h2>
-    <ContactGrid>
+    <address>
+    {school.location.address.Label}
+    </address>
+    <ContactGrid full={this.state.mouse === 'over'}>
     <div class="left">
     {
       school.contact.phone && (
@@ -362,27 +411,50 @@ export default class extends Component{
     }
     </div>
     <div class="right">
-    <address>
-    {school.location.address.Label}
-    </address>
+      <MapWrapper >
+
+      <Map
+    style="mapbox://styles/mapbox/streets-v9"
+    center={[school.location.position.Longitude, school.location.position.Latitude]}
+    onMouseMove={this.handleMouseStart} onMouseOut={this.handleMouseOut}
+    zoom={[13]}
+    containerStyle={{
+      height: "100%",
+      width: "100%"
+    }}>
+    <ZoomControl/>
+      <Marker
+  coordinates={[school.location.position.Longitude, school.location.position.Latitude]}
+  anchor="bottom">
+    <div css={css`
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      `}>
+      <div css={theme => css`
+
+        background:white;
+        padding:5px;
+        border-radius:5px;
+        path{
+          fill:${theme.colors.primary};
+        }
+        `}>
+      <FontAwesomeIcon icon={faGraduationCap} size="2x"/>
+      </div>
+    </div>
+  </Marker>
+
+  </Map>
+</MapWrapper>
     </div>
 
     </ContactGrid>
   </Section>
   <Section id="thresholds">
   <h2>Dojazd</h2>
-  {
-    (function(d, s, id) {
-      // if(!document.querySelector('#moovit-jsw')){
-        let js, fjs = d.getElementsByTagName(s)[0];
-        js = d.createElement(s); js.id = id;
-        js.src = "https://widgets.moovit.com/wtp/pl";
-        fjs.parentNode.insertBefore(js, fjs);
-      // }
 
-      return null
-      })(document, 'script', 'moovit-jsw')
-  }
   <MoovitWrapper className="mv-wtp"
      data-metro="1062"
      data-to-lat-long={[school.location.position.Latitude, school.location.position.Longitude].join('_')}

@@ -37,9 +37,10 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {keyframes} from '@emotion/core'
 const responsiveWidth = '1000px'
 const First = styled('div')`
+
   display:block;
   position:relative;
-  height: calc(100vh - 70px);
+  min-height: calc(100vh - 70px);
   width:100%;
   overflow:hidden;
   background:transparent;
@@ -57,6 +58,9 @@ const First = styled('div')`
     z-index:-2;
     background: ${props => props.theme.colors.primary};
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 60%);
+    @media (max-width: 1000px) {
+      clip-path:none;
+    }
   }
   &::after{
     position:absolute;
@@ -71,7 +75,9 @@ const First = styled('div')`
     opacity:.6;
     background-repeat:no-repeat;
     transform: rotate(30deg) scale(1.2);
-
+    @media (max-width: ${responsiveWidth}){
+      top:30%;
+    }
 
 
   }
@@ -91,10 +97,15 @@ const Header = styled('div')`
   padding-top:10vh;
   margin-left:10vw;
   width:40vw;
+  height:50vh;
   color:white;
   position:absolute;
   z-index:1;
-
+  @media (max-width: ${responsiveWidth}){
+  width:calc(100% - 4em);
+  margin:0 2em;
+  padding-top:2vh;
+  }
   h1{
     font-size:3rem;
   }
@@ -103,10 +114,6 @@ const Header = styled('div')`
     font-size:1.1em;
     letter-spacing:2px;
 
-  }
-  @media (max-width: ${responsiveWidth}){
-    width:100vw;
-    padding-top:2vh;
   }
 `
 const HeaderLogo = styled(Logo)`
@@ -119,7 +126,15 @@ const HeaderLogo = styled(Logo)`
   transform: rotate(30deg);
   path{
     fill: rgba(255,255,255,0.6);
+    @media (max-width: ${responsiveWidth}){
+    fill: rgba(255,255,255,0.4);
+    }
   }
+  @media (max-width: ${responsiveWidth}){
+  top:5%;
+  width:100%;
+  }
+
 `
 const PageWrapper = styled(SiteWrapper)`
 background:transparent;
@@ -318,7 +333,7 @@ const StartButton = styled(Button)`
  }
  render = () => {
  return (
-   <Layout>
+   <Layout location={this.props.location}>
      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
    <PageWrapper>
      <First>
@@ -340,6 +355,9 @@ const StartButton = styled(Button)`
 
      <HalfContainer css={css`
        margin-top:-20vh;
+       @media (max-width: 1350px) {
+         margin-top:0;
+       }
        `}>
        <h1>To prostsze!</h1>
        <Break color="secondary" />

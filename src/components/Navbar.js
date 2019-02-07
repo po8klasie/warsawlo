@@ -2,7 +2,7 @@ import React, { Component, Fragment} from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faFacebookMessenger } from '@fortawesome/free-brands-svg-icons'
-import { faAt, faCompass } from '@fortawesome/free-solid-svg-icons'
+import { faAt, faCompass, faInfoCircle, faMapMarkerAlt, faSearch, faCalculator, faEnvelope, faExclamationTriangle, faTimes } from '@fortawesome/free-solid-svg-icons'
 // import { faCompass } from '@fortawesome/free-regular-svg-icons'
 import { css} from '@emotion/core'
 import styled from '@emotion/styled'
@@ -41,7 +41,9 @@ span:not(.highlight){
 `
 const Navbar = styled('nav')`
   @media (max-width: ${responsiveWidth}) {
-    display:block;
+    display:flex;
+    align-items:center;
+    justify-content:center;
   }
   -webkit-transform: translateZ(0);
   position:fixed;
@@ -79,11 +81,7 @@ const SearchInput = styled('input')`
 `
 const LinksContainer = styled('div')`
 @media (max-width: ${responsiveWidth}) {
-  display:block;
-  ${props => !props.opened && `
     display:none;
-
-    `}
 }
 // transition: visibility 2s ease-in 0s, max-height 5s ease-in .2s;
 
@@ -125,21 +123,6 @@ transition: .2s all;
   color:black;
 }
 `
-const MenuSwitch = styled(FontAwesomeIcon)`
-path{
-  fill:transparent;
-  stroke: ${props => props.theme.colors.secondary};
-  stroke-width:20;
-}
-transition: .2s all;
-&:hover{
-  transform: rotate(30deg);
-}
-  @media (max-width: ${responsiveWidth}) {
-    display:block;
-  }
-  display:none;
-`
 const Top = styled('div')`
 @media (max-width: ${responsiveWidth}) {
   display:flex;
@@ -157,6 +140,88 @@ const ActionsWrapper = styled('div')`
 }
 display:inline-block;
 `
+const MobileNav  = styled('nav')`
+@media (max-width: ${responsiveWidth}) {
+  display:grid;
+}
+  position:fixed;
+  top:calc(100vh - 90px);
+  border-top: 3px solid #eee;
+  left:0;
+  z-index:99;
+  width:100vw;
+  height:90px;
+  background:white;
+  display:none;
+  grid-template-columns:repeat(5, 1fr);
+  grid-column-gap:1em;
+  padding:10px;
+  // @media (max-width: 650px) {
+  //     height:70px;
+  //     padding:0 10px;
+  //   }
+`
+const MobileNavItem = styled(Link)`
+  all:unset;
+  cursor:pointer;
+  user-select:none;
+  display:block;
+  .icon-wrapper{
+
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    svg{
+      path{
+        fill:${props => props.active ? props.theme.colors.primary : '#aaa'};
+      }
+    }
+  }
+  span{
+    margin-top:10px;
+    text-align:center;
+    width:100%;
+    display:block;
+    color:${props => props.active ? 'black' : '#aaa'};
+    font-size:.8em;
+  }
+`
+const Banner = styled('div')`
+  position:fixed;
+  top:70px;
+  left:0;
+  width:100%;
+
+  background: ${({theme}) => theme.colors.secondary};
+  color:white;
+  z-index:90;
+  .wrapper{
+    height:100%;
+    width:75%;
+    margin:10px auto;
+    display:flex;
+    align-items:center;
+    font-size:1.2em;
+    position:relative;
+  }
+  svg:first-child{
+    margin-right:1em;
+    path{
+      fill: white;
+    }
+  }
+  .close{
+    position:absolute;
+    right:0;
+    top: 50%;
+    transform: translate(0, -50%);
+    path{
+      fill:rgba(255,255,255,0.7);
+    }
+    cursor:pointer;
+  }
+`
  class AppNavbar extends Component {
   constructor(props) {
     super(props);
@@ -164,7 +229,8 @@ display:inline-block;
     this.state = {
       isOpen: false,
       consent: localStorage.consent,
-      siteLoading: false
+      siteLoading: false,
+      banner: true
     }
   }
   componentDidUpdate = (prevProps, prevState) => {
@@ -176,6 +242,11 @@ display:inline-block;
     this.setState({
       isOpen: !this.state.isOpen
     });
+  }
+  hideBanner = () => {
+    this.setState({
+      banner:false
+    })
   }
   isLinkActive = (pathname) => false
   handleSearch = (e) => {
@@ -210,7 +281,6 @@ display:inline-block;
 
 
         </Brand>
-          <MenuSwitch icon={faCompass} size="2x" onClick={this.toggle}/>
   </Top>
 
         <LinksContainer opened={this.state.isOpen} onClick={this.toggle}>
@@ -233,8 +303,51 @@ display:inline-block;
 
         </Navbar>
       </div>
+      {
+        this.state.banner && (
+          <Banner>
+          <div className="wrapper">
+          <FontAwesomeIcon icon={faExclamationTriangle} size={"2x"} />
+            <span>Strona jest obecnie w fazie alpha. Niektóre funkcje mogą nie działać poprawnie.</span>
+          <FontAwesomeIcon icon={faTimes} className="close" onClick={this.hideBanner} />
+            </div>
+          </Banner>
+        )
+      }
+      <MobileNav to="/">
+      <MobileNavItem active={this.props.location && this.props.location.pathname === '/'}>
+      <div className="icon-wrapper">
+        <FontAwesomeIcon icon={faInfoCircle} size="2x" />
+      </div>
+      <span>O nas</span>
+      </MobileNavItem>
 
+        <MobileNavItem to="/map">
+        <div className="icon-wrapper">
+          <FontAwesomeIcon icon={faMapMarkerAlt} size="2x"/>
+        </div>
+        <span>Mapa</span>
+        </MobileNavItem>
 
+        <MobileNavItem search={true} to="/search">
+        <div className="icon-wrapper">
+          <FontAwesomeIcon icon={faSearch} size="2x"/>
+        </div>
+        <span>Szukaj</span>
+        </MobileNavItem>
+        <MobileNavItem to="/calculator">
+        <div className="icon-wrapper">
+          <FontAwesomeIcon icon={faCalculator} size="2x"/>
+        </div>
+        <span>Kalkulator</span>
+        </MobileNavItem>
+        <MobileNavItem to="/contactus">
+        <div className="icon-wrapper">
+          <FontAwesomeIcon icon={faEnvelope} size="2x" />
+        </div>
+        <span>Kontakt</span>
+        </MobileNavItem>
+      </MobileNav>
       </Fragment>
     );
   }

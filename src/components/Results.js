@@ -2,14 +2,18 @@ import React, { Component} from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 import styled from '@emotion/styled'
 import isEqual from 'lodash.isequal'
-
+import Engine from 'utils/engine'
 import HorizontalCard from 'components/HorizontalCard'
-import * as Comlink from 'comlinkjs'
 
+
+const responsiveWidth = '1000px'
 const styles = (props) => ({
   horizontal: `
     width:75%;
     margin:auto;
+    @media (max-width: ${responsiveWidth}){
+    width:calc(100% - 2em);
+    }
   `
 })
 
@@ -23,22 +27,23 @@ class Results extends Component{
       results: props.data.allSchool.edges.map(({node}) => node)
     }
     console.log(props.data)
-    this.setupWorker()
-  }
-  setupWorker = async () => {
-    this.workerClass = Comlink.proxy(new Worker('utils/searchWorker.js', { type: 'module' }))
-    this.worker = await new this.workerClass(this.props.data.allSchool.edges.map(({node}) => node))
+    this.engine = new Engine(props.data.allSchool.edges.map(({node}) => node))
+
+
+
+
   }
   componentDidUpdate = async (prevProps, prevState) => {
     if(prevProps.query.trim() !== this.props.query.trim() || !isEqual(prevProps.filters, this.props.filters)){
       console.log(this.props.query)
       this.setState({
-        loading: true
+        loading:true
       })
       this.setState({
-        results: await this.worker.search(this.props.query, this.props.filters),
+        results: await this.engine.search(this.props.query, this.props.filters),
         loading: false
       })
+      this.props.onLoad()
     }
   }
   render = () => {

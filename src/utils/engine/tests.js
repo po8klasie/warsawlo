@@ -1,7 +1,7 @@
 import Subjects from 'utils/subjectsMapping'
 import {getDistance} from 'geolib'
 export const profiles = (values) => (school) => {
-  if(!school.thresholds._2018){
+  if(!school.thresholds){
     return false
   }
   let shortNames = values.map(fullName => Subjects.filter(subject => subject[0] === fullName)[0][2])
