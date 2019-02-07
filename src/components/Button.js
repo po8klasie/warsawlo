@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-
+import theme from 'utils/theme'
 const ButtonElement = styled('button')`
   all:unset;
   cursor:pointer;
@@ -8,10 +8,10 @@ const ButtonElement = styled('button')`
   border: 2px solid rgb(210,210,210);
   color:black;
   border-radius: 3px;
-  background: ${props => props.theme.colors.light};
+  background: ${theme.colors.light};
   transition: .2s all;
   &:hover:not(&:disabled){
-    border-color:${props => props.theme.colors.primary};
+    border-color:${theme.colors.primary};
   }
   &:disabled{
     color:rgb(100,100,100);

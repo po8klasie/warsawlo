@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import theme from 'utils/theme'
 const radius = '3px'
 const InputGroupElement = styled('div')`
   display:flex;
@@ -23,9 +24,9 @@ const InputGroupElement = styled('div')`
   `}
 `
 const AddonElement = styled('div')`
-  background:${props => props.theme.colors.grey};
+  background:${theme.colors.grey};
   color:black;
-  border:3px solid ${props => props.theme.colors.grey};
+  border:3px solid ${theme.colors.grey};
   padding:5px;
   height:100%;
   margin:0 -3px 0 -3px;

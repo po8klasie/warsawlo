@@ -11,6 +11,7 @@ import styled from '@emotion/styled'
 import Logo from 'components/Logo'
 // import SiteLoader from './SiteLoader'
 import { Link } from 'gatsby'
+import theme from 'utils/theme'
 const responsiveWidth = '1100px'
 
 const Brand = styled(Link)`
@@ -25,17 +26,17 @@ color:black !important;
 display:flex;
 align-items:center;
 span:not(.highlight){
-  font-family: ${props => props.theme.fonts.tertiary};
+  font-family: ${theme.fonts.tertiary};
 }
   span.highlight{
-    color: ${props => props.theme.colors.primary};
-    font-family: ${props => props.theme.fonts.secondary}
+    color: ${theme.colors.primary};
+    font-family: ${theme.fonts.secondary}
   }
   svg{
     height:2.5em;
 
       path{
-        fill: ${props => props.theme.colors.primary};
+        fill: ${theme.colors.primary};
       }
   }
 `
@@ -56,7 +57,7 @@ const Navbar = styled('nav')`
   padding:0 20px 0 20px;
   background:white;
   z-index:99;
-  border-bottom: 2px solid ${props => props.theme.colors.light};
+  border-bottom: 2px solid ${theme.colors.light};
 `
 const SearchInput = styled('input')`
   all:unset;
@@ -102,7 +103,7 @@ div:not(&:last-child){
 const Action = styled('a')`
 margin:10px;
 &, &:visited, &:hover{
-  color: ${props => props.theme.colors.primary};
+  color: ${theme.colors.primary};
   background:initial;
 }
 `
@@ -174,7 +175,7 @@ const MobileNavItem = styled(Link)`
     justify-content:center;
     svg{
       path{
-        fill:${props => props.active ? props.theme.colors.primary : '#aaa'};
+        fill:${props => props.active ? theme.colors.primary : '#aaa'};
       }
     }
   }
@@ -193,7 +194,7 @@ const Banner = styled('div')`
   left:0;
   width:100%;
 
-  background: ${({theme}) => theme.colors.secondary};
+  background: ${theme.colors.secondary};
   color:white;
   z-index:90;
   .wrapper{
@@ -228,7 +229,7 @@ const Banner = styled('div')`
     this.toggle = this.toggle.bind(this);
     this.state = {
       isOpen: false,
-      consent: localStorage.consent,
+      consent: false,
       siteLoading: false,
       banner: true
     }

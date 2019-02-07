@@ -15,6 +15,7 @@ import subjects from 'utils/subjectsMapping'
 import Tag from 'components/Tag'
 import mapboxgl from 'mapbox-gl'
 import ReactDOM from 'react-dom'
+import theme from 'utils/theme'
 // import MoovitEmbed from 'components/MoovitEmbed'
 const Header = styled('header')`
   width: 100%;
@@ -50,7 +51,7 @@ width:100%;
     justify-content:center;
     border-bottom: 3px solid #eee;
     &.is-current{
-      border-bottom-color: ${({theme}) => theme.colors.primary};
+      border-bottom-color: ${theme.colors.primary};
     }
     a{
       all:unset;

@@ -5,6 +5,7 @@ import styled from '@emotion/styled'
 import {faBan, faSave, faPlus} from '@fortawesome/free-solid-svg-icons'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import Button from './Button'
+import theme from 'utils/theme'
 //// background: ${props => !props.cancel && props.theme.colors.primary};
 // color:${props => !props.cancel && 'white'};
 const ActionsWrapper = styled('div')`
@@ -17,12 +18,12 @@ const ActionsWrapper = styled('div')`
     width:calc(50% - 20px);
   }
   .new{
-    background: ${props => props.theme.colors.primary};
+    background: ${theme.colors.primary};
     color:white;
   }
 `
 const AddButton = styled(Button)`
-  background: ${props => props.theme.colors.primary};
+  background: ${theme.colors.primary};
   color:white;
   width:calc(100% - 40px);
   margin:10px;

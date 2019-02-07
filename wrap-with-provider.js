@@ -2,10 +2,8 @@ import React from 'react'
 // import { Provider } from 'react-redux'
 // import createStore from './src/state/createStore'
 // const store = createStore()
-import { ThemeProvider } from 'emotion-theming'
 import { Global } from '@emotion/core'
 import css from '@emotion/css'
-import theme from './src/theme'
 // eslint-disable-next-line react/display-name,react/prop-types
 export default ({ element }) =>(
   <>
@@ -19,8 +17,6 @@ export default ({ element }) =>(
        }
        `}
    />
-  <ThemeProvider theme={theme}>
   {element}
-</ThemeProvider>
 </>
 )

@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 import styled from '@emotion/styled'
-
+import theme from 'utils/theme'
 const SelectWrapper = styled('span')`
   all:inherit;
   position: relative;
@@ -16,8 +16,8 @@ const SelectWrapper = styled('span')`
 
 
 select {
-background-color: ${props => props.theme.colors.secondLight};
-border: 3px solid ${props => props.theme.colors.secondLight};
+background-color: ${theme.colors.secondLight};
+border: 3px solid ${theme.colors.secondLight};
 font-size: inherit;
 padding: .5em;
 padding-right: 2.5em;
@@ -28,7 +28,7 @@ text-overflow: '';
 outline:none;
 transition: .2s all;
 &:focus{
-  border-color: ${props => props.theme.colors.grey};
+  border-color: ${theme.colors.grey};
 }
 }
 `

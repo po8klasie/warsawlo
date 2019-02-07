@@ -23,6 +23,7 @@ import Button from 'components/Button'
 import Select from 'components/Select'
 import Accomplishments from 'components/Acomplishments'
 import Layout from 'components/Layout'
+import theme from 'utils/theme'
 const Grid = styled('div')`
   display: grid;
 grid-template-columns: repeat(3, 1fr);
@@ -33,7 +34,7 @@ grid-row-gap: 30px;
   color: rgba(0,0,0,0.5);
 }
 .profile{
-  border-bottom: 3px solid ${props => props.theme.colors.light};
+  border-bottom: 3px solid ${theme.colors.light};
   &:last-of-type{
     border-bottom: none;
   }
@@ -45,7 +46,7 @@ grid-row-gap: 30px;
 `
 const InnerGrid = styled('div')`
   & > div:not(.no-grid) {
-    border-bottom: 2px solid ${props => props.theme.colors.light};
+    border-bottom: 2px solid ${theme.colors.light};
     display: grid;
   grid-template-columns: 1.2em .7fr auto;
   grid-column-gap: 20px;
@@ -83,7 +84,7 @@ const Box = styled('div')`
     justify-content:flex-end;
     margin: 1em -10px 0 -10px;
     padding:10px 10px 0 0;
-    border-top: 5px solid ${props => props.theme.colors.light};
+    border-top: 5px solid ${theme.colors.light};
     font-size:1.5em;
     &::before{
       content: 'Razem:';

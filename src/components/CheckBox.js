@@ -4,7 +4,7 @@ import {faCheckSquare as CheckedIcon} from '@fortawesome/free-solid-svg-icons'
 
 import {faCheckSquare as UncheckedIcon} from '@fortawesome/free-regular-svg-icons'
 import styled from '@emotion/styled'
-
+import theme from 'utils/theme'
 const CheckboxElement = styled('div')`
   position: relative;
   display: inline-block;
@@ -24,8 +24,8 @@ const CheckboxElement = styled('div')`
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: ${props => props.checked ? props.theme.colors.primary : props.theme.colors.secondLight};
-    box-shadow: ${props => props.checked ? `0 0 1px ${props.theme.colors.primary}` : 'none'};
+    background-color: ${props => props.checked ? theme.colors.primary : theme.colors.secondLight};
+    box-shadow: ${props => props.checked ? `0 0 1px ${theme.colors.primary}` : 'none'};
     transition: .4s;
     border-radius: 34px;
 

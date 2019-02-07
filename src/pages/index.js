@@ -15,6 +15,7 @@ import Button from '../components/Button'
 import Break from '../components/Break'
 import {withBadge} from 'utils/withBadge'
 import { animateScroll} from 'react-scroll'
+import theme from 'utils/theme'
 import {
   faMapMarkerAlt,
   faChartBar,
@@ -56,7 +57,7 @@ const First = styled('div')`
     width:100%;
     height:100%;
     z-index:-2;
-    background: ${props => props.theme.colors.primary};
+    background: ${theme.colors.primary};
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 60%);
     @media (max-width: 1000px) {
       clip-path:none;
@@ -140,7 +141,7 @@ const PageWrapper = styled(SiteWrapper)`
 background:transparent;
 `
 const LightButton = styled(Button)`
-  color:${props => props.theme.colors.primary};
+  color:${theme.colors.primary};
   margin:20px;
   border-color:white;
   font-size:1.5em;
@@ -172,7 +173,7 @@ const FullContainer = styled('div')`
 padding: 0 5vw 0 5vw;
 width:100%;
 box-sizing: border-box;
-background:${props => props.background ? props.theme.colors[props.background] : 'transparent'};
+background:${props => props.background ? theme.colors[props.background] : 'transparent'};
 color:${props => props.background ? 'white' : 'black'};
 ${props => props.shape &&
   `
@@ -199,7 +200,7 @@ const Inline = styled('div')`
 display:grid;
 grid-template-columns: .2fr 1fr;
 grid-column-gap:10px;
-color: ${props => props.soon ? props.theme.colors.secondLight: 'black'};
+color: ${props => props.soon ? theme.colors.secondLight: 'black'};
 position:relative;
 h2{
   letter-spacing:2px;
@@ -231,8 +232,8 @@ background:
     45deg,
     transparent,
     transparent 10px,
-    ${props => props.theme.colors.primary} 10px,
-    ${props => props.theme.colors.primary} 20px
+    ${theme.colors.primary} 10px,
+    ${theme.colors.primary} 20px
   );
   width:100%;
   height:20px;
@@ -269,7 +270,7 @@ const SourcesAnimation = styled('div')`
     transform: scale(1.2);
     svg{
       stroke-width:20;
-      stroke: ${props => props.theme.colors.primary};
+      stroke: ${theme.colors.primary};
       path{
         fill:transparent;
       }
@@ -316,12 +317,12 @@ const BoxWrapper = styled('div')`
 `
 const StartButton = styled(Button)`
   font-size: 3em;
-  background: ${props => props.theme.colors.secondary};
+  background: ${theme.colors.secondary};
   color:white;
-  border-color: ${props => props.theme.colors.secondary};
+  border-color: ${theme.colors.secondary};
   &:hover{
     background:transparent;
-    color:${props => props.theme.colors.secondary};
+    color:${theme.colors.secondary};
   }
 `
  export default class About extends Component{
@@ -346,7 +347,7 @@ const StartButton = styled(Button)`
   albo znaleźć swoją szkołę marzeń w trzy klinknięcia!
 </p>
 <LightButton onClick={this.scrollToContent}>Czytaj dalej</LightButton>
-<Link to='/search' css={theme => css`all:unset;margin: 20px 0 0 0;`}>
+<Link to='/search' css={css`all:unset;margin: 20px 0 0 0;`}>
 <LightButtonWithBadge>Znajdź mi szkołę</LightButtonWithBadge>
 </Link>
 </Header>
@@ -362,7 +363,7 @@ const StartButton = styled(Button)`
        <h1>To prostsze!</h1>
        <Break color="secondary" />
        <p>Nadal nie mówimy, że najławiejsze. <br />To twój wybór, ale cieszymy się, że możemy Ci go ułatwić.</p>
-       <h2 css={theme => css`margin: 2em 0 2em 0;`}>Filtruj na podstawie kryteriów:</h2>
+       <h2 css={css`margin: 2em 0 2em 0;`}>Filtruj na podstawie kryteriów:</h2>
        <InlineWrapper>
          <Inline>
            <Centered>
@@ -419,7 +420,7 @@ const StartButton = styled(Button)`
        </InlineWrapper>
      </HalfContainer>
 
-     <FullContainer background="secondary" shape  css={theme => css`
+     <FullContainer background="secondary" shape  css={css`
               display:flex;
               align-items:center;
               margin-top:7vh;
@@ -456,7 +457,7 @@ const StartButton = styled(Button)`
              <br />
              A to wszystko zebrane tylko w jednym miejscu...
            </p>
-           <Link to="/dev" css={theme => css`
+           <Link to="/dev" css={css`
              color:white;
              &:visited{
                color:white;
@@ -466,12 +467,12 @@ const StartButton = styled(Button)`
        </BoxWrapper>
      </FullContainer>
 
-     <FullContainer css={theme => css`
+     <FullContainer css={css`
               display:flex;
               align-items:center;
            `}>
 
-           <div css={theme => css`
+           <div css={css`
              width:50%;
              @media (max-width: ${responsiveWidth}){
                width:100%;
@@ -480,20 +481,20 @@ const StartButton = styled(Button)`
              <h1>Nieaktualne dane?</h1>
              <Break color="secondary" />
              <h2>Nobody's perfect...</h2>
-               <p css={theme => css`width:100%`}>
+               <p css={css`width:100%`}>
                Przetwarzając ogromne ilości informacji może wkraść się do danych jakiś błąd.
                Jeżeli natkniesz się na niego, zgłoś go.
                Nasi moderatorzy zajmą się tym tak szybko, jak tylko będę mogli.
                </p>
              </div>
 
-     <div css={theme => css`
+     <div css={css`
        width:50%;
        display:flex;
        align-items:center;
        justify-content:center;
        `}>
-       <div css={theme => css`
+       <div css={css`
          @media (max-width: ${responsiveWidth}){
            display:none;
          }
@@ -504,18 +505,18 @@ const StartButton = styled(Button)`
      </div>
 
      </FullContainer>
-     <FullContainer css={theme => css`
+     <FullContainer css={css`
               display:flex;
               align-items:center;
               margin-top:7vh;
            `}>
-     <div css={theme => css`
+     <div css={css`
        width:50%;
        display:flex;
        align-items:center;
        justify-content:center;
        `}>
-     <FontAwesomeIcon icon={faUsers} size="10x" css={theme => css`
+     <FontAwesomeIcon icon={faUsers} size="10x" css={css`
        @media (max-width: ${responsiveWidth}){
          display:none;
        }
@@ -526,7 +527,7 @@ const StartButton = styled(Button)`
        <h1>Społeczność</h1>
        <Break color="secondary" />
        <h2>Ten portal tworzy każdy z nas</h2>
-         <p css={theme => css`width:100%`}>
+         <p css={css`width:100%`}>
         Idziesz dopiero do liceum i zrobiłeś ogromny research, czy może masz już rekrutacje za sobą i wiesz jak to działa?
         Podziel się swoimi spostrzeżeniami tutaj.
         Każdego ucznia ostatniej klasy gimnazjum czy podtawówki co roku czeka to samo.
@@ -542,7 +543,7 @@ const StartButton = styled(Button)`
        </Box>
      </BoxWrapper>
    </FullContainer>
-   <FullContainer css={theme => css`
+   <FullContainer css={css`
      padding-top:2em;
      display:flex;
      align-items:center;
@@ -553,12 +554,12 @@ const StartButton = styled(Button)`
      <StartButton>Znajdź swoją szkołę już teraz</StartButton>
    </FullContainer>
    <Line/>
-     <FullContainer  background="primary" css={theme => css`padding-top:2em`}>
+     <FullContainer  background="primary" css={css`padding-top:2em`}>
 
-       <h1 css={theme => css`margin-top:0`}>Kto za tym stoi?</h1>
+       <h1 css={css`margin-top:0`}>Kto za tym stoi?</h1>
        <Break color="light" />
        <h2>Hej!</h2>
-         <p css={theme => css`width:100%`}>
+         <p css={css`width:100%`}>
 
          Jesteśmy grupą uczniów z warszawskich gimnazjów a zarazem pasjonatów informatyki.
          Rekrutacja spotka lub spotkała każdego z nas. Wszyscy mówią, że chcą się dostać do jak najlepszej szkoły,

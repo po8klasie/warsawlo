@@ -10,6 +10,7 @@ import Button from 'components/Button'
 import PointsRangeFilter from 'components/PointsRangeFilter'
 import transformParams from 'utils/engine/transformParams'
 import Loader from 'components/Loader'
+import theme from 'utils/theme'
 const responsiveWidth = '1000px'
 
 const SearchBar = styled('div')`
@@ -33,8 +34,8 @@ const SearchBar = styled('div')`
 `
 const SearchButton = styled('button')`
   height:100%;
-  // background: ${({theme}) => theme.colors.primary};
-  color: ${({theme}) => theme.colors.primary};
+  // background: ${theme.colors.primary};
+  color: ${theme.colors.primary};
   border:none;
   outline:none;
   font-size:5vh;
@@ -93,28 +94,30 @@ let counter = 0
 export default class extends Component{
   constructor(props){
     super(props)
-    this.params = new URLSearchParams(this.props.location.search)
+    if (typeof window !== `undefined`) {
+      this.params = new URLSearchParams(this.props.location.search)
+    }
     this.state = {
-      query: this.params.has('query') ? this.params.get('query') : '',
-      inputDirty: this.params.has('query'),
+      query: this.params && this.params.has('query') ? this.params.get('query') : '',
+      inputDirty: this.params && this.params.has('query'),
       buttonDirty: false,
       activeFiltersTab: null,
       view: 'horizontal',
       loading:false,
       loaded:false,
       filters: {
-        profiles: this.params.has('subjects') ? transformParams('subjects', this.params.get('subjects'), true): [] ,
+        profiles: this.params && this.params.has('subjects') ? transformParams('subjects', this.params.get('subjects'), true): [] ,
         pointsRange: [0, 200]
       }
     }
   }
   updateURI = () => {
-    console.log(`${this.props.location.pathname}?${this.params.toString()}`)
+    console.log(`${this.props.location.pathname}?${this.params ? this.params.toString() : ''}`)
     this.params.forEach((value, key) => {
       if(!value)
         this.params.delete(key)
     })
-    this.props.navigate(`${this.props.location.pathname}?${this.params.toString()}`)
+    this.props.navigate(`${this.props.location.pathname}?${this.params ? this.params.toString() : ''}`)
   }
   setFiltersParams = () => {
     // for(let [name, value] of Object.entries(this.state.filters)) {
