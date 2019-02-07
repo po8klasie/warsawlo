@@ -288,7 +288,7 @@ const Banner = styled('div')`
 
               <NavLink to="/search" className={this.isLinkActive('/start')}>Start</NavLink>
 
-              <NavLink to="/map" className={this.isLinkActive('/map')}>Mapa</NavLink>
+              <NavLink to="#" className={this.isLinkActive('/map')}>Mapa</NavLink>
               <NavLink to="/calculator" className={this.isLinkActive('/calculator')}>Kalkulator punktów</NavLink>
           </div>
             <div>

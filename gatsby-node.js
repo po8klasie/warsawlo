@@ -6,7 +6,19 @@
 
  const path = require('path')
 
- exports.onCreateWebpackConfig = ({ stage, actions }) => {
+ exports.onCreateWebpackConfig = ({ stage, actions, loaders }) => {
+   if (stage === "build-html") {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /mapbox-gl/,
+            use: loaders.null()
+          },
+        ],
+      }
+    })
+  }
    actions.setWebpackConfig({
      resolve: {
        modules: [path.resolve(__dirname, "src"), "node_modules"]

@@ -13,7 +13,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts'
 import subjects from 'utils/subjectsMapping'
 import Tag from 'components/Tag'
-import ReactMapboxGl, { Marker, ZoomControl } from "react-mapbox-gl"
+import mapboxgl from 'mapbox-gl'
+import ReactDOM from 'react-dom'
 // import MoovitEmbed from 'components/MoovitEmbed'
 const Header = styled('header')`
   width: 100%;
@@ -124,7 +125,7 @@ const Section = styled('section')`
 `
 const TabLinks = props => (
   <TabLinksWrapper items={ ['basic-info', 'contact', 'thresholds', 'location'] } currentClassName="is-current">
-  <li><a href="#info">Podstawowe informacje</a></li>
+  <li><a href="#info">Informacje</a></li>
   <li><a href="#contact">Kontakt</a></li>
   <li><a href="#thresholds">Progi punktowe</a></li>
   <li><a href="#location">Dojazd</a></li>
@@ -208,13 +209,15 @@ display:flex;
 const MapWrapper = styled('div')`
 height:100%;`
 const MarkerWrapper = styled('div')`
-  padding:10px;
-  background:white;
-
+background:white;
+padding:5px;
+  svg{
+    path{
+      fill: rgb(89,0,138);
+    }
+  }
 `
-const Map = ReactMapboxGl({
-  accessToken: "pk.eyJ1IjoibWljb3JpeCIsImEiOiJjanJ0cjN2Y2IwcjZiM3ltaWw4a2EwMzNlIn0.9aYkpqbDoPBGO3hTuIvdvw"
-});
+mapboxgl.accessToken = 'pk.eyJ1IjoibWljb3JpeCIsImEiOiJjanJ0cjN2Y2IwcjZiM3ltaWw4a2EwMzNlIn0.9aYkpqbDoPBGO3hTuIvdvw'
 
 export default class extends Component{
   constructor(props){
@@ -225,8 +228,37 @@ export default class extends Component{
       fixedHeader: false,
       mouse: 'out'
     }
+    this.mapContainer = React.createRef()
+  }
+  componentWillUnmount() {
+    this.map.remove();
   }
   componentDidMount = () => {
+    let { location } = this.props.data.school
+    if(location && location.position){
+      this.map = new mapboxgl.Map({
+       container: this.mapContainer.current,
+       style: 'mapbox://styles/mapbox/streets-v9',
+       center: [location.position.Longitude, location.position.Latitude],
+       zoom: 13
+     })
+     let el = document.createElement('div')
+     el.className = 'marker';
+     el.style = 'display:inline-block;'
+     ReactDOM.render((
+       <MarkerWrapper>
+        <FontAwesomeIcon icon={faGraduationCap} size="2x" />
+       </MarkerWrapper>
+     ), el)
+     this.map.addControl(new mapboxgl.NavigationControl(), 'top-left')
+     this.map.addControl(new mapboxgl.FullscreenControl({container: document.querySelector('body')}))
+     this.map.on('mousemove', this.handleMouseStart)
+    this.map.on('mouseout', this.handleMouseOut)
+     new mapboxgl.Marker(el)
+     .setLngLat([location.position.Longitude, location.position.Latitude])
+     .addTo(this.map)
+    }
+
     (function(d, s, id) {
       // if(!document.querySelector('#moovit-jsw')){
         let js, fjs = d.getElementsByTagName(s)[0];
@@ -411,43 +443,9 @@ export default class extends Component{
     }
     </div>
     <div class="right">
-      <MapWrapper >
+      <MapWrapper ref={this.mapContainer} />
 
-      <Map
-    style="mapbox://styles/mapbox/streets-v9"
-    center={[school.location.position.Longitude, school.location.position.Latitude]}
-    onMouseMove={this.handleMouseStart} onMouseOut={this.handleMouseOut}
-    zoom={[13]}
-    containerStyle={{
-      height: "100%",
-      width: "100%"
-    }}>
-    <ZoomControl/>
-      <Marker
-  coordinates={[school.location.position.Longitude, school.location.position.Latitude]}
-  anchor="bottom">
-    <div css={css`
-      display:flex;
-      align-items:center;
-      justify-content:center;
 
-      `}>
-      <div css={theme => css`
-
-        background:white;
-        padding:5px;
-        border-radius:5px;
-        path{
-          fill:${theme.colors.primary};
-        }
-        `}>
-      <FontAwesomeIcon icon={faGraduationCap} size="2x"/>
-      </div>
-    </div>
-  </Marker>
-
-  </Map>
-</MapWrapper>
     </div>
 
     </ContactGrid>
