@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import { jsx } from '@emotion/core'
 import css from '@emotion/css'
 import { Link } from 'gatsby'
-
+import TextLink from 'components/TextLink'
 import Layout from 'components/Layout'
 import Image from 'components/Image'
 import SEO from 'components/SEO'
@@ -41,13 +41,12 @@ const First = styled('div')`
 
   display:block;
   position:relative;
-  min-height: calc(100vh - 70px);
-  width:100%;
   overflow:hidden;
-  background:transparent;
-  &:last-child{
-    margin-top:60vh;
-    margin-left:-10vw;
+  min-height: calc(115vh - 80px);
+  width:100%;
+  // &:last-child{
+  //   margin-top:60vh;
+  //   margin-left:-10vw;
   }
   &::before{
     position:absolute;
@@ -58,29 +57,10 @@ const First = styled('div')`
     height:100%;
     z-index:-2;
     background: ${theme.colors.primary};
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 60%);
-    @media (max-width: 1000px) {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+    @media (max-width: ${responsiveWidth}){
       clip-path:none;
     }
-  }
-  &::after{
-    position:absolute;
-    // content: '';
-    top:10%;
-    right:25vh;
-    width:100vh;
-    height:100vh;
-    z-index:-1;
-    background: url(${logo});
-    filter: invert(100%);
-    opacity:.6;
-    background-repeat:no-repeat;
-    transform: rotate(30deg) scale(1.2);
-    @media (max-width: ${responsiveWidth}){
-      top:30%;
-    }
-
-
   }
   @media (max-width: ${responsiveWidth}){
     overflow-x:hidden;
@@ -98,10 +78,8 @@ const Header = styled('div')`
   padding-top:10vh;
   margin-left:10vw;
   width:40vw;
-  height:50vh;
+  height:auto;
   color:white;
-  position:absolute;
-  z-index:1;
   @media (max-width: ${responsiveWidth}){
   width:calc(100% - 4em);
   margin:0 2em;
@@ -170,7 +148,7 @@ const HalfContainer = styled('div')`
   }
 `
 const FullContainer = styled('div')`
-padding: 0 5vw 0 5vw;
+padding: 1em 5vh;
 width:100%;
 box-sizing: border-box;
 background:${props => props.background ? theme.colors[props.background] : 'transparent'};
@@ -180,7 +158,7 @@ ${props => props.shape &&
   @media (min-width: ${responsiveWidth}){
     clip-path: polygon(0 20%, 100% 0, 100% 80%, 0% 100%);
      padding-top:5%;
-     padding-bottom:5%;`
+     padding-bottom:10%;`
   }
 
 }
@@ -317,12 +295,15 @@ const BoxWrapper = styled('div')`
 `
 const StartButton = styled(Button)`
   font-size: 3em;
-  background: ${theme.colors.secondary};
+  border: 3px dashed ${theme.colors.primary};
   color:white;
-  border-color: ${theme.colors.secondary};
+  background:transparent;
+  color: black;
   &:hover{
-    background:transparent;
-    color:${theme.colors.secondary};
+    border-style:solid;
+  }
+  @media (max-width: ${responsiveWidth}){
+    font-size: 2em;
   }
 `
  export default class About extends Component{
@@ -335,10 +316,9 @@ const StartButton = styled(Button)`
  render = () => {
  return (
    <Layout location={this.props.location}>
-     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-   <PageWrapper>
+     <SEO title="Home" keywords={[`WarsawLO`, `licea`, `wyszukiwarka`]} />
      <First>
-     <HeaderLogo />
+      <HeaderLogo />
      <Header>
 <h1>Wiesz, że zostało mało czasu, <br/>a nie wiesz gdzie chcesz iść?</h1>
 <p>Nie tylko, ty masz ten problem! Będziemy zmierzać się z tym razem w tym roku, ale
@@ -354,16 +334,11 @@ const StartButton = styled(Button)`
 </First>
 
 
-     <HalfContainer css={css`
-       margin-top:-20vh;
-       @media (max-width: 1350px) {
-         margin-top:0;
-       }
-       `}>
+     <FullContainer>
        <h1>To prostsze!</h1>
        <Break color="secondary" />
        <p>Nadal nie mówimy, że najławiejsze. <br />To twój wybór, ale cieszymy się, że możemy Ci go ułatwić.</p>
-       <h2 css={css`margin: 2em 0 2em 0;`}>Filtruj na podstawie kryteriów:</h2>
+       <h2 css={css`margin: 2em 0 2em 0;`}>Dzięki nam szybko sprawdzisz:</h2>
        <InlineWrapper>
          <Inline>
            <Centered>
@@ -387,7 +362,7 @@ const StartButton = styled(Button)`
          <FontAwesomeIcon icon={faMapMarkerAlt} size="3x" />
          </Centered>
          <Centered notHorizontal>
-         <h2>Lokalizacja</h2>
+         <h2>Lokalizacje</h2>
               </Centered>
        </Inline>
 
@@ -404,7 +379,7 @@ const StartButton = styled(Button)`
          <FontAwesomeIcon icon={faChartBar} size="3x" />
               </Centered>
          <Centered notHorizontal>
-         <h2>Progi punktowe</h2>
+         <h2>Średnie ilości punktów</h2>
               </Centered>
        </Inline>
        <InlineSoon>
@@ -412,18 +387,20 @@ const StartButton = styled(Button)`
          <FontAwesomeIcon icon={faStar} size="3x" />
               </Centered>
          <Centered notHorizontal>
-         <h2>Oceny innych</h2>
+         <h2>Opinie</h2>
               </Centered>
        </InlineSoon>
 
 
        </InlineWrapper>
-     </HalfContainer>
+     </FullContainer>
+
 
      <FullContainer background="secondary" shape  css={css`
               display:flex;
               align-items:center;
               margin-top:7vh;
+
               background: #eee;
               color:black;
            `}>
@@ -457,12 +434,7 @@ const StartButton = styled(Button)`
              <br />
              A to wszystko zebrane tylko w jednym miejscu...
            </p>
-           <Link to="/dev" css={css`
-             color:white;
-             &:visited{
-               color:white;
-             }
-             `}>Dowiedz się o tym więcej na naszym blogu</Link>
+           <TextLink to="/about-data">Dowiedz się o tym więcej</TextLink>
          </Box>
        </BoxWrapper>
      </FullContainer>
@@ -539,16 +511,17 @@ const StartButton = styled(Button)`
 
          Masz jakiś pomysł? Myślisz, że fajnie byłoby coś tutaj dodać? To świetnie!
          Napisz do nas na Messengerze albo mailem na ideas@warsawlo.pl
+
+         <TextLink to="/help-us">Dowiedz się, jak możesz nam pomóc</TextLink>
          </p>
        </Box>
      </BoxWrapper>
    </FullContainer>
    <FullContainer css={css`
-     padding-top:2em;
      display:flex;
      align-items:center;
      justify-content:center;
-     margin: 5em 0 5em 0;
+     margin: 1em 0;
      `}>
 
      <StartButton>Znajdź swoją szkołę już teraz</StartButton>
@@ -576,7 +549,7 @@ const StartButton = styled(Button)`
           info@warsawlo.pl
          <br /><br />
      </FullContainer>
-   </PageWrapper>
+
    </Layout>
  )
  }

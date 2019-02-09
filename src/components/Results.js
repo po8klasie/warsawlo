@@ -77,7 +77,7 @@ class Results extends Component{
                   }
                 }
                 meta{
-                  regon,
+                  regon
                 }
                 media,
                 thresholds{

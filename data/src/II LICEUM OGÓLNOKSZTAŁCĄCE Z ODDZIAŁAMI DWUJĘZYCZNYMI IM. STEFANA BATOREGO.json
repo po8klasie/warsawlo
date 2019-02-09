@@ -120,5 +120,28 @@
 				]
 			}
 		}
-	}
+	},
+	"openDays": [
+		{
+			"date": {
+				"start": "2019-05-06T07:00:00.000Z",
+				"end": ""
+			},
+			"for": "dla uczniów klas 8 SP"
+		},
+		{
+			"date": {
+				"start": "2019-05-06T08:30:00.000Z",
+				"end": ""
+			},
+			"for": "dla kandydatów po gimnazjum"
+		},
+		{
+			"date": {
+				"start": "2019-05-06T10:00:00.000Z",
+				"end": ""
+			},
+			"for": "dla kandydatów do klasy międzynarodowej (pre-ib)"
+		}
+	]
 }

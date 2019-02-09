@@ -24,12 +24,18 @@ import Select from 'components/Select'
 import Accomplishments from 'components/Acomplishments'
 import Layout from 'components/Layout'
 import theme from 'utils/theme'
+import SEO from 'components/SEO'
+
+const responsiveWidth = '1100px'
 const Grid = styled('div')`
   display: grid;
 grid-template-columns: repeat(3, 1fr);
 grid-column-gap: 30px;
 grid-row-gap: 30px;
-
+@media (max-width: ${responsiveWidth}) {
+  grid-template-columns: 1fr;
+  width:100%;
+}
 .geo{
   color: rgba(0,0,0,0.5);
 }
@@ -67,7 +73,10 @@ const Box = styled('div')`
   margin:20px;
   background:white;
   padding:10px;
-
+  @media (max-width: ${responsiveWidth}) {
+    margin:0;
+    padding:0;
+  }
   .icon, span{
     display:flex;
     align-items:center;
@@ -86,6 +95,10 @@ const Box = styled('div')`
     padding:10px 10px 0 0;
     border-top: 5px solid ${theme.colors.light};
     font-size:1.5em;
+    @media (max-width: ${responsiveWidth}) {
+      margin:0;
+      padding:0;
+    }
     &::before{
       content: 'Razem:';
       margin-right:.5em;
@@ -97,8 +110,6 @@ const Box = styled('div')`
   }
 `
 const HeaderBox = styled(Box)`
-position:relative;
-top:20px;
 `
 const Grade = styled(Tag)`
   color:black;
@@ -133,7 +144,6 @@ const Accomplishment = styled('div')`
     }
   }
 `
-
 const pointsFromGrades = (grades) => grades.reduce((prev, curr) => {
   switch (curr) {
     case 6:
@@ -266,7 +276,7 @@ toggleSchoolType = () => {
  render = () => {
  return (
    <Layout>
-
+   <SEO title="Kalkulator punktów"  />
  <HeaderBox>
    <h1>Kalkulator punktów</h1>
    <SchoolTypeWrapper>

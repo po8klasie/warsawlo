@@ -6,6 +6,7 @@ import {faBan, faSave, faPlus} from '@fortawesome/free-solid-svg-icons'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import Button from './Button'
 import theme from 'utils/theme'
+const responsiveWidth = '1000px'
 //// background: ${props => !props.cancel && props.theme.colors.primary};
 // color:${props => !props.cancel && 'white'};
 const ActionsWrapper = styled('div')`
@@ -28,6 +29,10 @@ const AddButton = styled(Button)`
   width:calc(100% - 40px);
   margin:10px;
   text-align:center;
+  @media (max-width: ${responsiveWidth}) {
+    margin:0;
+    width:100%;
+  }
 `
 const availableChoices = {
   voivodeship: [

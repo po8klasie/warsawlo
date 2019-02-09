@@ -11,14 +11,20 @@ import PointsRangeFilter from 'components/PointsRangeFilter'
 import transformParams from 'utils/engine/transformParams'
 import Loader from 'components/Loader'
 import theme from 'utils/theme'
-const responsiveWidth = '1000px'
+import SEO from 'components/SEO'
 
+const responsiveWidth = '1000px'
 const SearchBar = styled('div')`
-  margin-top:calc(70px + ${props => props.center ? '30vh' : '0px'});
+  margin-top:${props => props.center ? '30vh' : '0px'};
   height:10vh;
   background:#eee;
   display:grid;
   grid-template-columns:1fr 2fr 1fr;
+  @media (max-width: ${responsiveWidth}) {
+    grid-template-columns: 1fr;
+    padding:10px;
+    margin-top:0;
+  }
   grid-column-gap:20px;
   input{
     width:100%;
@@ -28,6 +34,11 @@ const SearchBar = styled('div')`
     outline:none;
     font-size:5vh;
     border:none;
+  }
+  .placeholder{
+    @media (max-width: ${responsiveWidth}) {
+      display:none;
+    }
   }
     transition:.2s all;
     overflow:hidden;
@@ -40,6 +51,9 @@ const SearchButton = styled('button')`
   outline:none;
   font-size:5vh;
   // transition:.2s all;
+  @media (max-width: ${responsiveWidth}) {
+    display:none;
+  }
 `
 const Tutorial = styled('div')`
   width:50%;
@@ -48,6 +62,9 @@ const Tutorial = styled('div')`
   transition:.2s all;
   text-align:center;
   font-size:2em;
+  @media (max-width: ${responsiveWidth}) {
+    font-size:1em;
+  }
   svg{
     display:block;
     margin:auto;
@@ -67,6 +84,9 @@ border-bottom:3px solid #eee;
     grid-column-gap:2em;
     height:100%;
     margin:0;
+    @media (max-width: ${responsiveWidth}) {
+      grid-template-columns: 1fr;
+    }
     li{
       user-select: none;
       display:flex;
@@ -219,11 +239,12 @@ export default class extends Component{
   render = () => {
     let isQueryEmpty = this.state.query.trim().length === 0 && !this.state.inputDirty
     return (
-      <Layout>
+      <Layout location={this.props.location}>
+      <SEO title="Wyszukiwarka" keywords={[`liceum`, `szukaj`, `wyszukiwarka`]} />
       <SearchBar center={!this.state.inputDirty}>
-      <div></div>
+      <div className="placeholder"></div>
       <input placeholder="Szukaj szkoły" id="search-input" value={this.state.query} onChange={this.handleQueryChange}/>
-      <SearchButton ><FontAwesomeIcon icon={faSearch} /></SearchButton>
+      <SearchButton><FontAwesomeIcon icon={faSearch} /></SearchButton>
       </SearchBar>
       <Filters active={this.state.inputDirty}>
       <ul className="labels">

@@ -47,6 +47,7 @@
    return new Promise((resolve, reject) => {
      const SchoolTemplate = path.resolve(`src/templates/School.js`)
      // Query for markdown nodes to use in creating pages.
+
      resolve(
        graphql(
          `
@@ -55,10 +56,10 @@
                edges {
                  node {
                    id,
-                   name {
-                     full
+                   media,
+                   meta{
+                     regon
                    }
-                   media
                  }
                }
              }
@@ -71,15 +72,17 @@
 
          // Create pages for each markdown file.
          result.data.allSchool.edges.forEach(({ node }) => {
-           createPage({
-             path: `school/${node.name.full.split(' ').join('+')}`,
-             component: SchoolTemplate,
-             // In your blog post template's graphql query, you can use path
-             // as a GraphQL variable to query for data from the markdown file.
-             context: {
-               id: node.id,
-             },
-           })
+           console.log(node)
+             createPage({
+               path: `school/${node.meta.regon}`,
+               component: SchoolTemplate,
+               // In your blog post template's graphql query, you can use path
+               // as a GraphQL variable to query for data from the markdown file.
+               context: {
+                 id: node.id,
+               },
+             })
+
          })
        })
      )
@@ -88,15 +91,15 @@
  exports.onCreatePage = ({ page, actions }) => {
    const { createPage, createRedirect } = actions
 
-   createRedirect({
-    fromPath: `/school`,
-    isPermanent: true,
-    redirectInBrowser: true,
-    toPath: '/search',
-  })
-
-   if (page.path.startsWith('/school/')) {
-     page.matchPath = `${page.path}/*`
-     createPage(page)
-   }
+  //  createRedirect({
+  //   fromPath: `/school`,
+  //   isPermanent: true,
+  //   redirectInBrowser: true,
+  //   toPath: '/search',
+  // })
+  //
+  //  if (page.path.startsWith('/school/')) {
+  //    page.matchPath = `${page.path}/*`
+  //    createPage(page)
+  //  }
  }

@@ -146,7 +146,7 @@ const MobileNav  = styled('nav')`
   display:grid;
 }
   position:fixed;
-  top:calc(100vh - 90px);
+  bottom: 0;
   border-top: 3px solid #eee;
   left:0;
   z-index:99;
@@ -189,9 +189,7 @@ const MobileNavItem = styled(Link)`
   }
 `
 const Banner = styled('div')`
-  position:fixed;
-  top:70px;
-  left:0;
+
   width:100%;
 
   background: ${theme.colors.secondary};
@@ -287,16 +285,17 @@ const Banner = styled('div')`
         <LinksContainer opened={this.state.isOpen} onClick={this.toggle}>
           <div>
 
-              <NavLink to="/search" className={this.isLinkActive('/start')}>Start</NavLink>
+              <NavLink to="/search" className={this.isLinkActive('/search')}>Szukaj</NavLink>
 
-              <NavLink to="#" className={this.isLinkActive('/map')}>Mapa</NavLink>
+
               <NavLink to="/calculator" className={this.isLinkActive('/calculator')}>Kalkulator punktów</NavLink>
+              <NavLink to="/following" className={this.isLinkActive('/following')}>Obserwowane szkoły</NavLink>
           </div>
             <div>
 
               <ActionsWrapper>
 <Action href="http://fb.com/warsawlo" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFacebook} size="2x"/></Action>
-  <Action href="/about" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFacebookMessenger} size="2x"/></Action>
+  <Action href="https://m.me/warsawlo" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFacebookMessenger} size="2x"/></Action>
     <Action href="mailto:info@warsawlo.pl" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faAt} size="2x"/></Action>
 </ActionsWrapper>
             </div>

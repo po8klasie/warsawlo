@@ -6,6 +6,7 @@ const BreakElement = styled('span')`
   height:.5em;
   display:block;
   border-radius:3px;
+  margin-bottom:.5em;
   background:${props => theme.colors[props.color]};
 `;
 
