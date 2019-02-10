@@ -2,7 +2,7 @@ import React, { Component, Fragment} from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faFacebookMessenger } from '@fortawesome/free-brands-svg-icons'
-import { faAt, faCompass, faInfoCircle, faMapMarkerAlt, faSearch, faCalculator, faEnvelope, faExclamationTriangle, faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faAt, faCompass, faInfoCircle, faMapMarkerAlt, faSearch, faCalculator, faEnvelope, faExclamationTriangle, faTimes, faStar } from '@fortawesome/free-solid-svg-icons'
 // import { faCompass } from '@fortawesome/free-regular-svg-icons'
 import { css} from '@emotion/core'
 import styled from '@emotion/styled'
@@ -328,18 +328,19 @@ const Banner = styled('div')`
       <span>O nas</span>
       </MobileNavItem>
 
-        <MobileNavItem to="/map">
-        <div className="icon-wrapper">
-          <FontAwesomeIcon icon={faMapMarkerAlt} size="2x"/>
-        </div>
-        <span>Mapa</span>
-        </MobileNavItem>
+        
 
         <MobileNavItem search={true} to="/search">
         <div className="icon-wrapper">
           <FontAwesomeIcon icon={faSearch} size="2x"/>
         </div>
         <span>Szukaj</span>
+        </MobileNavItem>
+        <MobileNavItem to="/following">
+        <div className="icon-wrapper">
+          <FontAwesomeIcon icon={faStar} size="2x"/>
+        </div>
+        <span>Obserwowane</span>
         </MobileNavItem>
         <MobileNavItem to="/calculator">
         <div className="icon-wrapper">
