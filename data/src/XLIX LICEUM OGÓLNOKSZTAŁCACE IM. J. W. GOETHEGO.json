@@ -58,5 +58,50 @@
 		"establishmentDate": "1961-09-01T00:00:00",
 		"dependence": "samodzielna",
 		"regon": "799003"
+	},
+	"openDays": [
+		{
+			"date": {
+				"start": "2019-03-30T09:00:00.000Z",
+				"end": ""
+			},
+			"for": "SP"
+		},
+		{
+			"date": {
+				"start": "2019-03-30T11:00:00.000Z",
+				"end": ""
+			},
+			"for": "GIM"
+		},
+		{
+			"date": {
+				"start": "2019-04-24T16:00:00.000Z",
+				"end": ""
+			},
+			"for": "SP"
+		},
+		{
+			"date": {
+				"start": "2019-04-25T16:00:00.000Z",
+				"end": ""
+			},
+			"for": "GIM"
+		}
+	],
+	"ranking": {
+		"archive": {
+			"2016": 47,
+			"2017": 48,
+			"2018": 58
+		},
+		"exam": {
+			"basic": "78.30",
+			"extended": "78.30"
+		},
+		"contests": "1.40",
+		"examAverage": "40.12",
+		"label": "silver",
+		"place": 50
 	}
 }

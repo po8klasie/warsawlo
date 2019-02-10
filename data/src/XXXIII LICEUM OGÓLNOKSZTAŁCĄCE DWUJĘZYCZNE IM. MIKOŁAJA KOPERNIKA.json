@@ -104,5 +104,20 @@
 				]
 			}
 		}
+	},
+	"ranking": {
+		"archive": {
+			"2016": 9,
+			"2017": 10,
+			"2018": 9
+		},
+		"exam": {
+			"basic": "95.37",
+			"extended": "95.37"
+		},
+		"contests": "9.42",
+		"examAverage": "65.78",
+		"label": "gold",
+		"place": 9
 	}
 }

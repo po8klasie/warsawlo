@@ -121,17 +121,32 @@
 	"openDays": [
 		{
 			"date": {
-				"start": "2019-04-25T16:00:00.000Z",
+				"start": "2019-03-30T08:00:00.000Z",
 				"end": ""
 			},
-			"for": "dla uczniów klas 8 SP"
+			"for": "GIM"
 		},
 		{
 			"date": {
-				"start": "2019-04-18T16:00:00.000Z",
+				"start": "2019-03-30T11:00:00.000Z",
 				"end": ""
 			},
-			"for": "dla kandydatów po gimnazjum"
+			"for": "SP"
 		}
-	]
+	],
+	"ranking": {
+		"archive": {
+			"2016": 49,
+			"2017": 57,
+			"2018": 53
+		},
+		"exam": {
+			"basic": "80.34",
+			"extended": "80.34"
+		},
+		"contests": "0",
+		"examAverage": "41.15",
+		"label": "silver",
+		"place": 48
+	}
 }

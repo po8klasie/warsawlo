@@ -46,6 +46,9 @@ const Navbar = styled('nav')`
     align-items:center;
     justify-content:center;
   }
+  @media print { 
+    position:absolute; 
+   }
   -webkit-transform: translateZ(0);
   position:fixed;
   top:0;
@@ -161,6 +164,9 @@ const MobileNav  = styled('nav')`
   //     height:70px;
   //     padding:0 10px;
   //   }
+  @media print { 
+    display: none;
+   }
 `
 const MobileNavItem = styled(Link)`
   all:unset;
@@ -308,7 +314,7 @@ const Banner = styled('div')`
           <Banner>
           <div className="wrapper">
           <FontAwesomeIcon icon={faExclamationTriangle} size={"2x"} />
-            <span>Strona jest obecnie w fazie alpha. Niektóre funkcje mogą nie działać poprawnie.</span>
+            <span>Strona jest obecnie w fazie beta. Niektóre funkcje mogą nie działać poprawnie.</span>
           <FontAwesomeIcon icon={faTimes} className="close" onClick={this.hideBanner} />
             </div>
           </Banner>

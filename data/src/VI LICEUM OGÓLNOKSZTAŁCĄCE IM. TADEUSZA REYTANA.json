@@ -136,5 +136,36 @@
 				]
 			}
 		}
+	},
+	"openDays": [
+		{
+			"date": {
+				"start": "2019-04-26T17:30:00.000Z",
+				"end": ""
+			},
+			"for": "SP"
+		},
+		{
+			"date": {
+				"start": "2019-04-26T15:30:00.000Z",
+				"end": ""
+			},
+			"for": "GIM"
+		}
+	],
+	"ranking": {
+		"archive": {
+			"2016": 13,
+			"2017": 16,
+			"2018": 16
+		},
+		"exam": {
+			"basic": "94.19",
+			"extended": "94.19"
+		},
+		"contests": "0",
+		"examAverage": "58.44",
+		"label": "gold",
+		"place": 16
 	}
 }

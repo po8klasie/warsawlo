@@ -58,5 +58,36 @@
 		"establishmentDate": "1906-01-14T00:00:00",
 		"dependence": "szkoła lub placówka w zespole",
 		"regon": "15765320"
+	},
+	"openDays": [
+		{
+			"date": {
+				"start": "2019-03-25T16:00:00.000Z",
+				"end": ""
+			},
+			"for": "GIM"
+		},
+		{
+			"date": {
+				"start": "2019-04-01T15:00:00.000Z",
+				"end": ""
+			},
+			"for": "SP"
+		}
+	],
+	"ranking": {
+		"archive": {
+			"2016": 1,
+			"2017": 1,
+			"2018": 1
+		},
+		"exam": {
+			"basic": "99.61",
+			"extended": "99.61"
+		},
+		"contests": "95.37",
+		"examAverage": "100",
+		"label": "gold",
+		"place": 1
 	}
 }

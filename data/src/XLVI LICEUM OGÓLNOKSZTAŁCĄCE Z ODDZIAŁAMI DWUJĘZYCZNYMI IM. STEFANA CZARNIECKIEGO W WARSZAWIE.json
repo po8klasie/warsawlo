@@ -58,5 +58,20 @@
 		"establishmentDate": "1960-09-01T00:00:00",
 		"dependence": "samodzielna",
 		"regon": "10768727"
+	},
+	"ranking": {
+		"archive": {
+			"2016": null,
+			"2017": 78,
+			"2018": 82
+		},
+		"exam": {
+			"basic": "66.38",
+			"extended": "66.38"
+		},
+		"contests": "0",
+		"examAverage": "29.96",
+		"label": "bronze",
+		"place": 80
 	}
 }

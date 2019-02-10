@@ -110,7 +110,6 @@ const ResultsWrapper = styled('div')`
 const ResultsLoader = styled(Loader)`
   display: ${props => props.loading ? 'block' : 'none'};
 `
-let counter = 0
 export default class extends Component{
   constructor(props){
     super(props)

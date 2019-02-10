@@ -58,5 +58,21 @@
 		"establishmentDate": "1996-06-24T00:00:00",
 		"dependence": "szkoła lub placówka w zespole",
 		"regon": "15766058"
-	}
+	},
+	"openDays": [
+		{
+			"date": {
+				"start": "2019-03-21T17:00:00.000Z",
+				"end": ""
+			},
+			"for": ""
+		},
+		{
+			"date": {
+				"start": "2019-04-25T16:00:00.000Z",
+				"end": ""
+			},
+			"for": ""
+		}
+	]
 }

@@ -58,5 +58,36 @@
 		"establishmentDate": "1992-04-29T00:00:00",
 		"dependence": "samodzielna",
 		"regon": "15289776"
+	},
+	"openDays": [
+		{
+			"date": {
+				"start": "2019-05-11T15:30:00.000Z",
+				"end": ""
+			},
+			"for": "SP"
+		},
+		{
+			"date": {
+				"start": "2019-05-16T15:30:00.000Z",
+				"end": ""
+			},
+			"for": "GIM"
+		}
+	],
+	"ranking": {
+		"archive": {
+			"2016": 85,
+			"2017": 85,
+			"2018": 74
+		},
+		"exam": {
+			"basic": "67.17",
+			"extended": "67.17"
+		},
+		"contests": "0",
+		"examAverage": "27.97",
+		"label": "bronze",
+		"place": 87
 	}
 }

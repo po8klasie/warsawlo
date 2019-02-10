@@ -166,5 +166,29 @@
 				]
 			}
 		}
+	},
+	"openDays": [
+		{
+			"date": {
+				"start": "2019-04-13T08:00:00.000Z",
+				"end": ""
+			},
+			"for": ""
+		}
+	],
+	"ranking": {
+		"archive": {
+			"2016": 11,
+			"2017": 18,
+			"2018": 13
+		},
+		"exam": {
+			"basic": "95.75",
+			"extended": "95.75"
+		},
+		"contests": "0.34",
+		"examAverage": "57.92",
+		"label": "gold",
+		"place": 18
 	}
 }

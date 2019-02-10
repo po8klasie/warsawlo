@@ -127,21 +127,37 @@
 				"start": "2019-05-06T07:00:00.000Z",
 				"end": ""
 			},
-			"for": "dla uczniów klas 8 SP"
+			"for": "SP"
 		},
 		{
 			"date": {
 				"start": "2019-05-06T08:30:00.000Z",
 				"end": ""
 			},
-			"for": "dla kandydatów po gimnazjum"
+			"for": "GIM"
 		},
 		{
 			"date": {
 				"start": "2019-05-06T10:00:00.000Z",
 				"end": ""
 			},
-			"for": "dla kandydatów do klasy międzynarodowej (pre-ib)"
+			"for": "",
+			"description": "dla kandydatów do klasy międzynarodowej (pre-ib)"
 		}
-	]
+	],
+	"ranking": {
+		"archive": {
+			"2016": 4,
+			"2017": 5,
+			"2018": 2
+		},
+		"exam": {
+			"basic": "98.07",
+			"extended": "98.07"
+		},
+		"contests": "17.08",
+		"examAverage": "74.61",
+		"label": "gold",
+		"place": 3
+	}
 }

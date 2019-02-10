@@ -34,6 +34,7 @@ import {
   faUsers,
   faStar
 } from '@fortawesome/free-solid-svg-icons'
+import { faCalendar } from '@fortawesome/free-regular-svg-icons'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {keyframes} from '@emotion/core'
 const responsiveWidth = '1000px'
@@ -182,13 +183,11 @@ color: ${props => props.soon ? theme.colors.secondLight: 'black'};
 position:relative;
 h2{
   letter-spacing:2px;
-  margin-left:2em;
+  margin: 0 0 0 2em;
+  
 }
 `
-const InlineSoon = withBadge(Inline, {
-  title: 'Coming soon',
-  color: 'primary'
-})
+
 const InlineWrapper = styled('div')`
   display:grid;
   grid-template-columns: 1fr 1fr;
@@ -348,14 +347,14 @@ const StartButton = styled(Button)`
            <h2>Podstawowe informacje</h2>
            </Centered>
          </Inline>
-       <InlineSoon>
+       <Inline>
          <Centered>
          <FontAwesomeIcon icon={faBus} size="3x" />
               </Centered>
          <Centered notHorizontal>
          <h2>Dojazd komunikacją</h2>
               </Centered>
-       </InlineSoon>
+       </Inline>
 
        <Inline>
          <Centered>
@@ -366,14 +365,14 @@ const StartButton = styled(Button)`
               </Centered>
        </Inline>
 
-       <InlineSoon>
+       <Inline>
          <Centered>
          <FontAwesomeIcon icon={faFileAlt} size="3x" />
               </Centered>
          <Centered notHorizontal>
          <h2>Zdawalność matur</h2>
               </Centered>
-       </InlineSoon>
+       </Inline>
        <Inline>
          <Centered>
          <FontAwesomeIcon icon={faChartBar} size="3x" />
@@ -382,14 +381,14 @@ const StartButton = styled(Button)`
          <h2>Średnie ilości punktów</h2>
               </Centered>
        </Inline>
-       <InlineSoon>
+       <Inline>
          <Centered>
-         <FontAwesomeIcon icon={faStar} size="3x" />
+         <FontAwesomeIcon icon={faCalendar} size="3x" />
               </Centered>
          <Centered notHorizontal>
-         <h2>Opinie</h2>
+         <h2>Dni otwarte</h2>
               </Centered>
-       </InlineSoon>
+       </Inline>
 
 
        </InlineWrapper>
@@ -500,9 +499,9 @@ const StartButton = styled(Button)`
        <Break color="secondary" />
        <h2>Ten portal tworzy każdy z nas</h2>
          <p css={css`width:100%`}>
-        Idziesz dopiero do liceum i zrobiłeś ogromny research, czy może masz już rekrutacje za sobą i wiesz jak to działa?
+        Idziesz dopiero do liceum i robisz ogromny research, czy może masz już rekrutację za sobą i wiesz jak to działa?
         Podziel się swoimi spostrzeżeniami tutaj.
-        Każdego ucznia ostatniej klasy gimnazjum czy podtawówki co roku czeka to samo.
+        Każdego ucznia ostatniej klasy gimnazjum czy podstawówki co roku czeka to samo.
         Pomagajmy sobie nawzajem.  WarsawLO to portal tworzony przez uczniów dla uczniów.
        <br />
          <br />
@@ -523,8 +522,9 @@ const StartButton = styled(Button)`
      justify-content:center;
      margin: 1em 0;
      `}>
-
+       <Link to="/search" css={css`all:unset;`}>
      <StartButton>Znajdź swoją szkołę już teraz</StartButton>
+     </Link>
    </FullContainer>
    <Line/>
      <FullContainer  background="primary" css={css`padding-top:2em`}>

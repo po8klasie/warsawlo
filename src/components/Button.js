@@ -10,6 +10,7 @@ const ButtonElement = styled('button')`
   border-radius: 3px;
   background: ${theme.colors.light};
   transition: .2s all;
+  margin:10px;
   &:hover:not(&:disabled){
     border-color:${theme.colors.primary};
   }

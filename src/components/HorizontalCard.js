@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import theme from 'utils/theme'
 import toggleFollow from 'utils/follow'
+import FollowModal from 'components/modals/Follow'
 const responsiveWidth = '700px'
 const CardWrapper = styled(Link)`
   all:unset;
@@ -85,11 +86,16 @@ export default class extends Component{
     super(props)
     console.log(props.school)
     this.state = {
+      openModal: false,
       following: typeof window !== 'undefined' && localStorage.following && JSON.parse(localStorage.following).includes(props.school.meta.regon)
     }
   }
   toggleFollow = (e) => {
     e.preventDefault()
+    if(typeof window !== 'undefined' && localStorage.followConsent !== 'true'){
+      this.openModal()
+      return
+    }
     console.log(this.props)
     toggleFollow(this.props.school.meta.regon)
     this.setState(state => ({
@@ -99,9 +105,26 @@ export default class extends Component{
       this.props.onToggleFollow(this.props.school.meta.regon)
     }
   }
+  openModal = () => this.setState({
+    openModal:true
+  })
+  handleAgree = () => {
+    if(typeof window !== 'undefined'){
+      localStorage.followConsent = 'true'
+    }
+    this.setState({
+      openModal:false
+    })
+  }
+  handleCancel = () => {
+    this.setState({
+      openModal:false
+    })
+  }
   render = () => {
     let { school, filters } = this.props
     return (
+      <>
         <CardWrapper to={`/school/${school.meta.regon}`}>
         {
           school.media && school.media[0] ? <SchoolImage src={school.media[0]} /> : <LOPlaceholder />
@@ -146,6 +169,8 @@ export default class extends Component{
         </Actions>
 
         </CardWrapper>
+        <FollowModal open={this.state.openModal} onAgree={this.handleAgree} onCancel={this.handleCancel}/>
+        </>
       )
   }
 }

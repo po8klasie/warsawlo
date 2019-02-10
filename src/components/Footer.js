@@ -6,6 +6,9 @@ import micorixLogo from 'images/micorix-logo.png'
 import {Link} from 'gatsby'
 const responsiveWidth = '1100px'
 const FooterWrapper = styled('footer')`
+@media print { 
+  display: none;
+ }
   width:100%;
   background: ${theme.colors.secondary};
   margin-top:${props => props.location && props.location.pathname === '/' ? '0' : '5em'};

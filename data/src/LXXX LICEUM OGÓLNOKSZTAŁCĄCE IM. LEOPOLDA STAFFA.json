@@ -91,5 +91,36 @@
 				]
 			}
 		}
+	},
+	"openDays": [
+		{
+			"date": {
+				"start": "2019-03-23T09:00:00.000Z",
+				"end": ""
+			},
+			"for": ""
+		},
+		{
+			"date": {
+				"start": "2019-04-03T15:00:00.000Z",
+				"end": ""
+			},
+			"for": ""
+		}
+	],
+	"ranking": {
+		"archive": {
+			"2016": 76,
+			"2017": 80,
+			"2018": 71
+		},
+		"exam": {
+			"basic": "81.25",
+			"extended": "81.25"
+		},
+		"contests": "0",
+		"examAverage": "36.75",
+		"label": "bronze",
+		"place": 59
 	}
 }

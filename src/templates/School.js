@@ -18,7 +18,7 @@ import mapboxgl from 'mapbox-gl'
 import ReactDOM from 'react-dom'
 import theme from 'utils/theme'
 import TextLink from 'components/TextLink'
-const responsiveWidth = '1000px'
+const responsiveWidth = '1500px'
 const Header = styled('header')`
   width: 100%;
   max-height:40vh;
@@ -29,6 +29,10 @@ const Header = styled('header')`
     grid-template-columns:1fr;
     max-height:none;
   }
+  @media print { 
+    /* All your print styles go here */
+    #header, #footer, #nav { display: none !important; } 
+   }
 
   div{
     display:flex;
@@ -36,40 +40,69 @@ const Header = styled('header')`
     @media (max-width: ${responsiveWidth}) {
       display:block;
     }
-    h1{
+    img{
+      @media print { 
+       height:200px;
+       }
+    }
+    .top-info{
+      display: block;
       border: 3px solid #eee;
       padding:.5em;
       border-radius: 5px;
       @media (max-width: ${responsiveWidth}) {
         font-size:1.2em;
       }
+      h2{
+        font-size:1.2em;
+      }
     }
   }
 `
-const Wrapper = styled('div')`
-  width:75%;
+const SchoolWrapper = styled('div')`
+  width:80%;
   margin:calc(70px + 2em) auto auto auto;
   @media (max-width: ${responsiveWidth}) {
     width: calc(100% - 2em);
     margin: 1em auto auto auto;
   }
-`
-const TabLinksWrapper = styled(Scrollspy)`
-width:100%;
-  display:grid;
-  grid-template-columns:repeat(6, 1fr);
-  grid-column-gap:5em;
-  margin:0;
-  @media (max-width: ${responsiveWidth}) {
-    display:none;
+  @media print {
+    width:100%;
+    margin:0;
   }
+`
+const MainGrid = styled('div')`
+  display: grid;
+  grid-template-columns:1fr 4fr;
+  @media (max-width: ${responsiveWidth}) {
+    grid-template-columns:1fr;
+  }
+  
+`
+const LinksWrapper = styled('div')`
+  height:100%;
+  @media (max-width: ${responsiveWidth}) {
+    display: none;
+  }
+`
+const Links = styled(Scrollspy)`
+  position: fixed;
+  top: 25vh;
+  left:5em;
+  max-width: 20%;
+  margin:0;
+  font-size:1.2em;
   li{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-bottom: 3px solid #eee;
+    display: block;
+    border-left: 3px solid ${theme.colors.primary};
+    padding: 10px 1em 10px 10px;
+    margin:0;
+    transition:.2s all;
+    border-top-right-radius:3px;
+    border-bottom-right-radius:3px;
     &.is-current{
-      border-bottom-color: ${theme.colors.primary};
+      background:${theme.colors.primary};
+      color:white;
     }
     a{
       all:unset;
@@ -118,6 +151,9 @@ const InfoGrid = styled('div')`
   @media (max-width: ${responsiveWidth}) {
     grid-template-columns:1fr;
   }
+  @media print { 
+    grid-template-columns:repeat(2, 1fr);
+   }
 `
 const InfoBox = styled('div')`
   border: 3px solid #eee;
@@ -150,18 +186,12 @@ const InfoBox = styled('div')`
 `
 const Section = styled('section')`
   margin-top:2em;
+  #ranking{
+    td{
+      text-align:center;
+    }
+  }
 `
-const TabLinks = props => (
-  <TabLinksWrapper items={ ['info', 'thresholds', 'open-days', 'contact', 'location', 'data-sources'] } currentClassName="is-current">
-  <li><a href="#info">Informacje</a></li>
-  <li><a href="#thresholds">Punkty</a></li>
-  <li><a href="#open-days">Dni otwarte</a></li>
-  <li><a href="#contact">Kontakt</a></li>
-
-  <li><a href="#location">Dojazd</a></li>
-  <li><a href="#data-source">Źródła danych</a></li>
-  </TabLinksWrapper>
-)
 const BarTag = styled(Tag)`
   background:white;
 `
@@ -202,6 +232,9 @@ const MoovitWrapper = styled('div')`
     outline:none;
     margin-bottom:0;
   }
+  @media print {
+    display: none;
+  }
 `
 const ContactGrid = styled('div')`
   display:flex;
@@ -217,6 +250,9 @@ const ContactGrid = styled('div')`
     @media (max-width: ${responsiveWidth}) {
       width:100%;
     }
+    @media print {
+      width:50%;
+    }
 
   }
   .right{
@@ -225,6 +261,9 @@ const ContactGrid = styled('div')`
     @media (max-width: ${responsiveWidth}) {
       width:100%;
       height:30vh;
+    }
+    @media print {
+      width:50%;
     }
   }
 `
@@ -378,7 +417,21 @@ export default class extends Component{
       <SEO title={school.name.full} keywords={[`Liceum`, `LO`, school.name.full]} />
       <DocumentEvents onScroll={this.onScroll} />
       <Layout>
-      <Wrapper>
+        <MainGrid>
+          <LinksWrapper>
+          <Links items={ ['info', 'ranking', 'thresholds', 'open-days', 'contact', 'location', 'opinion', 'data-sources'] } currentClassName="is-current" offset={(this.state.headerHeight+80)}>
+  <li><a href="#info">Informacje</a></li>
+  <li><a href="#ranking">Rankingi</a></li>
+  <li><a href="#thresholds">Punkty</a></li>
+  <li><a href="#open-days">Dni otwarte</a></li>
+  <li><a href="#contact">Kontakt</a></li>
+
+  <li><a href="#location">Dojazd</a></li>
+  <li><a href="#opinion">Opinie</a></li>
+  <li><a href="#data-sources">Źródła danych</a></li>
+  </Links>
+          </LinksWrapper>
+      <SchoolWrapper>
 
 
           <FixedHeader active={this.state.fixedHeader} ref={this.fixedHeaderEl}>
@@ -387,7 +440,7 @@ export default class extends Component{
           { school.media && school.media[0] ? <img src={school.media[0]} /> : <LOPlaceholder /> }
           <h2 >{school.name.full}</h2>
           </div>
-          <TabLinks offset={this.state.headerHeight+80} />
+         
           </div>
 
 
@@ -397,10 +450,14 @@ export default class extends Component{
       <Header bg={school.media && school.media[0]}>
       { school.media && school.media[0] ? <img src={school.media[0]} /> : <LOPlaceholder /> }
       <div>
-      <h1>{school.name.full}</h1>
+      <div className="top-info">
+        <h1>{school.name.full}</h1>
+          <h2 >{school.location && school.location.address.District}</h2>
+          </div>
+      
       </div>
       </Header>
-      <TabLinks offset={this.state.headerHeight+80} />
+      
   </div>
   <Anchor id="info" offset={this.state.headerHeight+80} />
   <Section>
@@ -446,9 +503,51 @@ export default class extends Component{
 
       </InfoGrid>
   </Section>
+  <Anchor id="ranking" offset={this.state.headerHeight+80} />
+  <Section>
+    <h2>Wyniki w rankingu</h2>
+      {!school.ranking && (
+        <p>Brak danych</p>
+      )}
+      {school.ranking && (
+        <>
+        {school.ranking.label && <p>To liceum posiada {school.ranking.label === 'gold' ? 'złoty' : (school.ranking.label === 'silver' ? 'srebrny' : 'brązowy')} znak jakości.</p>}
+        <table>
+          <thead>
+          <tr>
+            <th>Miejsce</th>
+            <th>2018</th>
+            <th>2017</th>
+            <th>2016</th>
+            <th>Matura podstawa</th>
+            <th>Matura rozszerzenie</th>
+            
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            
+            <td>{school.ranking.place}</td>
+            <td>{school.ranking.archive['_2018']}</td>
+            <td>{school.ranking.archive['_2017']}</td>
+            <td>{school.ranking.archive['_2016']}</td>
+            <td>{school.ranking.exam.basic}</td>
+            <td>{school.ranking.exam.extended}</td>
+            
+          </tr>
+          </tbody>
+         
+          </table>
+          </>
+      )}
+      <TextLink wrapper="a" href="http://licea.perspektywy.pl/2019/ranking/ranking-liceow-warszawskich-2019">
+        Ranking liceów warszawskich - perspektywy.pl
+      </TextLink>
+  </Section>
   <Anchor  id="thresholds" offset={this.state.headerHeight+80}/>
   <Section>
-  <h2>Progi punktowe</h2>
+  <h2>Średnie ilości punktów</h2>
+  <h3>2018/2019</h3>
   { !school.thresholds ? <span>Brak danych</span> : (
      <ResponsiveContainer width="100%" height={500} >
     <BarChart height={500} data={school.thresholds._2018.detailed}
@@ -566,6 +665,12 @@ export default class extends Component{
      data-lang="pl" />
 
   </Section>
+  <Anchor id="opinion" offset={this.state.headerHeight+80} />
+  <Section>
+  <h2>Opinie</h2>
+    <p>Sprawdź <TextLink wrapper="a" href="https://www.facebook.com/groups/idziemygdzie">grupę idziemygdzie na Facebooku</TextLink></p>
+  
+  </Section>
     <Anchor id="data-sources" offset={this.state.headerHeight+80} />
   <Section>
   <h2>Źródła danych</h2>
@@ -583,7 +688,9 @@ export default class extends Component{
   <TextLink to="/about-data">Przeczytaj skąd zebraliśmy dane, które Ci prezentujemy</TextLink>
   </Section>
 
-      </Wrapper>
+ 
+      </SchoolWrapper>
+      </MainGrid>
       </Layout>
       </>
     )
@@ -609,7 +716,8 @@ export const pageQuery = graphql`
           Longitude
         },
         address{
-          Label
+          Label,
+          District
         }
       }
       meta{
@@ -627,6 +735,19 @@ export const pageQuery = graphql`
             threshold
           }
         }
+      },
+      ranking{
+        archive{
+          _2018,
+          _2017,
+          _2016
+        },
+        exam{
+          basic,
+          extended
+        },
+        label,
+        place
       },
       openDays{
         date{

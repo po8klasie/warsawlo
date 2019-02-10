@@ -58,5 +58,20 @@
 		"establishmentDate": "1991-09-01T00:00:00",
 		"dependence": "samodzielna",
 		"regon": "10524505"
+	},
+	"ranking": {
+		"archive": {
+			"2016": 7,
+			"2017": 6,
+			"2018": 4
+		},
+		"exam": {
+			"basic": "98.95",
+			"extended": "98.95"
+		},
+		"contests": "3.39",
+		"examAverage": "68.70",
+		"label": "gold",
+		"place": 8
 	}
 }

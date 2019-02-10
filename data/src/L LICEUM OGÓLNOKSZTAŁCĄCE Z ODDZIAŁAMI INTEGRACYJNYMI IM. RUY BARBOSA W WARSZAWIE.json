@@ -58,5 +58,20 @@
 		"establishmentDate": "1977-02-23T00:00:00",
 		"dependence": "szkoła lub placówka w zespole",
 		"regon": "15780035"
+	},
+	"ranking": {
+		"archive": {
+			"2016": 43,
+			"2017": 45,
+			"2018": 50
+		},
+		"exam": {
+			"basic": "80.09",
+			"extended": "80.09"
+		},
+		"contests": "0.32",
+		"examAverage": "42.04",
+		"label": "silver",
+		"place": 46
 	}
 }

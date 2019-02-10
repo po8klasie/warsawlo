@@ -58,5 +58,14 @@
 		"establishmentDate": "1990-09-01T00:00:00",
 		"dependence": "szkoła lub placówka w zespole",
 		"regon": "15850468"
-	}
+	},
+	"openDays": [
+		{
+			"date": {
+				"start": "2019-03-30T09:00:00.000Z",
+				"end": ""
+			},
+			"for": ""
+		}
+	]
 }

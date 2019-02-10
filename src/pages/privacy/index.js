@@ -43,7 +43,7 @@ export default props => {
     </p>
     <h3>Jak mogę usunąć te dane?</h3>
     <p>
-    Wejdź na <TextLink to="/privacy-settings">naszą stronę ustawień prywatności</TextLink> i kliknij "Wyczyść wszystkie dane"
+    Wejdź na <TextLink to="/privacy/settings">naszą stronę ustawień prywatności</TextLink> i kliknij "Wyczyść wszystkie dane"
     </p>
 
     </Article>

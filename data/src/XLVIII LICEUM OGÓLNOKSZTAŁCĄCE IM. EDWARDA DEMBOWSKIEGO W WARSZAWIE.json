@@ -58,5 +58,36 @@
 		"establishmentDate": "1957-09-01T00:00:00",
 		"dependence": "samodzielna",
 		"regon": "799262"
+	},
+	"openDays": [
+		{
+			"date": {
+				"start": "2019-03-27T16:30:00.000Z",
+				"end": ""
+			},
+			"for": ""
+		},
+		{
+			"date": {
+				"start": "2019-04-03T15:30:00.000Z",
+				"end": ""
+			},
+			"for": ""
+		}
+	],
+	"ranking": {
+		"archive": {
+			"2016": 51,
+			"2017": 47,
+			"2018": 54
+		},
+		"exam": {
+			"basic": "82.07",
+			"extended": "82.07"
+		},
+		"contests": "0",
+		"examAverage": "39.06",
+		"label": "silver",
+		"place": 53
 	}
 }

@@ -58,5 +58,20 @@
 		"establishmentDate": "1915-09-13T00:00:00",
 		"dependence": "szkoła lub placówka w zespole",
 		"regon": "799010"
+	},
+	"ranking": {
+		"archive": {
+			"2016": 3,
+			"2017": 4,
+			"2018": 3
+		},
+		"exam": {
+			"basic": "96.10",
+			"extended": "96.10"
+		},
+		"contests": "10.43",
+		"examAverage": "75.24",
+		"label": "gold",
+		"place": 2
 	}
 }

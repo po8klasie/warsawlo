@@ -54,5 +54,14 @@
 		"establishmentDate": "1979-06-30T00:00:00",
 		"dependence": "szkoła lub placówka w zespole",
 		"regon": "15762623"
-	}
+	},
+	"openDays": [
+		{
+			"date": {
+				"start": "2019-03-30T09:00:00.000Z",
+				"end": ""
+			},
+			"for": ""
+		}
+	]
 }

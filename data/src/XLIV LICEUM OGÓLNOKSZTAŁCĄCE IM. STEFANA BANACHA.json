@@ -1,11 +1,11 @@
 {
 	"name": {
-		"full": "XLIV LICEUM OGÓLNOKSZTAŁCĄCE IM. ANTONIEGO DOBISZEWSKIEGO",
+		"full": "XLIV LICEUM OGÓLNOKSZTAŁCĄCE IM. STEFANA BANACHA",
 		"short": "",
 		"nicks": []
 	},
 	"contact": {
-		"email": "lo44@mokotow.waw.pl , dobisz@lo44.edu.pl",
+		"email": "lo44@lo44.edu.pl",
 		"fax": "228417598",
 		"phone": "228419578 , 228403648",
 		"website": ""
@@ -180,5 +180,29 @@
 				]
 			}
 		}
+	},
+	"openDays": [
+		{
+			"date": {
+				"start": "2019-04-25T15:00:00.000Z",
+				"end": ""
+			},
+			"for": ""
+		}
+	],
+	"ranking": {
+		"archive": {
+			"2016": 52,
+			"2017": 40,
+			"2018": 48
+		},
+		"exam": {
+			"basic": "85.15",
+			"extended": "85.15"
+		},
+		"contests": "0",
+		"examAverage": "44.38",
+		"label": "silver",
+		"place": 41
 	}
 }
