@@ -23,8 +23,7 @@ Open source _students for students_ project.
     Clone WarsawLO repository.
 
     ```sh
-    # create a new Gatsby site using the default starter
-    git clone https://github.com/WarsawLO/next
+    git clone https://github.com/WarsawLO/warsawlo
     ```
 
 2.  **Start developing.**
@@ -32,7 +31,7 @@ Open source _students for students_ project.
     Navigate into your WarsawLO repo directory
 
     ```sh
-    cd next/
+    cd warsawlo/
     yarn start
     ```
 
