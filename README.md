@@ -1,3 +1,9 @@
+
+<p align="center">
+  <a href="https://warsawlo.pl">
+    <img alt="WarsawLO" src="https://cdn.jsdelivr.net/gh/WarsawLO/warsawlo@master/logo-full.png" width="60" />
+  </a>
+</p>
 <h1 align="center">
   WarsawLO
 </h1>
