@@ -35,6 +35,26 @@ function SEO({ description, lang, meta, keywords, title }) {
                 content: `website`,
               },
               {
+                property: `og:image`,
+                content: `https://warsawlo.pl/public/logo/share.png`,
+              },
+              {
+                property: `og:image:width`,
+                content: `1000px`,
+              },
+              {
+                property: `og:image:height`,
+                content: `1000px`,
+              },
+              {
+                property: `og:locale`,
+                content: `pl_PL`,
+              },
+              {
+                property: `fb:app_id`,
+                content: `2210096145770395`,
+              },
+              {
                 name: `twitter:card`,
                 content: `summary`,
               },

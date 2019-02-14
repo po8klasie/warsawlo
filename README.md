@@ -1,7 +1,7 @@
 
 <p align="center">
   <a href="https://warsawlo.pl">
-    <img alt="WarsawLO" src="https://cdn.jsdelivr.net/gh/WarsawLO/warsawlo@master/logo-full.png" width="500" />
+    <img alt="WarsawLO" src="https://warsawlo.pl/public/logo/full.png" width="500" />
   </a>
 </p>
 <h1 align="center">
@@ -16,7 +16,7 @@
 
 Open source _students for students_ project.
 
-## 🚀 Quick start (EN only)
+## 🚀 Quick start
 
 1.  **Clone repository.**
 
