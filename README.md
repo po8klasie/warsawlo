@@ -1,7 +1,7 @@
 
 <p align="center">
   <a href="https://warsawlo.pl">
-    <img alt="WarsawLO" src="https://warsawlo.pl/public/logo/full.png" width="500" />
+    <img alt="WarsawLO" src="https://warsawlo.pl/logo/full.png" width="500" />
   </a>
 </p>
 <h1 align="center">

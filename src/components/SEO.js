@@ -36,7 +36,7 @@ function SEO({ description, lang, meta, keywords, title }) {
               },
               {
                 property: `og:image`,
-                content: `https://warsawlo.pl/public/logo/share.png`,
+                content: `https://warsawlo.pl/logo/share.png`,
               },
               {
                 property: `og:image:width`,
