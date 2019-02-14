@@ -320,10 +320,9 @@ const StartButton = styled(Button)`
       <HeaderLogo />
      <Header>
 <h1>Wiesz, że zostało mało czasu, <br/>a nie wiesz gdzie chcesz iść?</h1>
-<p>Nie tylko, ty masz ten problem! Będziemy zmierzać się z tym razem w tym roku, ale
-  po co utrudniać, coś, co może być prostsze!
-  Możesz odwiedzić każdy licealny zakątek internetu
-  albo znaleźć swoją szkołę marzeń w trzy klinknięcia!
+<p>Nie tylko ty masz ten problem! Będziemy mierzyć się z tym razem. W tym roku jednak będzie to znacznie prostsze.
+  Możesz odwiedzić każdy licealny zakątek w Internecie
+  albo znaleźć swoją szkołę marzeń za trzecim kliknięciem!
 </p>
 <LightButton onClick={this.scrollToContent}>Czytaj dalej</LightButton>
 <Link to='/search' css={css`all:unset;margin: 20px 0 0 0;`}>
