@@ -447,10 +447,10 @@ toggleSchoolType = () => {
      </Grid>
      <Box>
        <h2>Razem: {
-           pointsFromGrades(Object.values(this.state.grades))+
+           (pointsFromGrades(Object.values(this.state.grades))+
            pointsFromOther(this.state.other)+
            pointsFromExam(this.state.exam, this.state.schoolType === 'GIM')+
-           pointsFromAccomplishments(this.state.accomplishments)
+           pointsFromAccomplishments(this.state.accomplishments)).toFixed(2)
          } pkt</h2>
      </Box>
    </Layout>
