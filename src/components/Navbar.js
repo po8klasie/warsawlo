@@ -9,7 +9,9 @@ import styled from '@emotion/styled'
 // import {connect} from 'react-redux'
 // import * as styleActions from '../store/actions/style'
 import Logo from 'components/Logo'
-// import SiteLoader from './SiteLoader'
+import Icon from 'components/Icon'
+import TimesIcon from '../images/icons/times.svg'
+import ExclamationTriangleIcon from '../images/icons/exclamation-triangle.svg'
 import { Link } from 'gatsby'
 import theme from 'utils/theme'
 const responsiveWidth = '1100px'
@@ -195,16 +197,25 @@ const MobileNavItem = styled(Link)`
   }
 `
 const Banner = styled('div')`
+  position: fixed;
+  top: 100px;
+  left:50%;
+  margin-right: -50%;
+    transform: translate(-50%, 0);
+    border-radius:5px;
+  width:70%;
 
-  width:100%;
-
-  background: ${theme.colors.secondary};
+  background: ${theme.colors.secondary.replace('b', 'ba').replace(')', ', .9)')};
   color:white;
   z-index:90;
+  transition: .5s all;
+  &:hover{
+    background: ${theme.colors.secondary};
+  }
   .wrapper{
     height:100%;
     width:75%;
-    margin:10px auto;
+    margin:5px auto;
     display:flex;
     align-items:center;
     font-size:1.2em;
@@ -212,18 +223,12 @@ const Banner = styled('div')`
   }
   svg:first-child{
     margin-right:1em;
-    path{
-      fill: white;
-    }
   }
   .close{
     position:absolute;
     right:0;
     top: 50%;
     transform: translate(0, -50%);
-    path{
-      fill:rgba(255,255,255,0.7);
-    }
     cursor:pointer;
   }
 `
@@ -313,9 +318,9 @@ const Banner = styled('div')`
         this.state.banner && (
           <Banner>
           <div className="wrapper">
-          <FontAwesomeIcon icon={faExclamationTriangle} size={"2x"} />
+          <Icon icon={ExclamationTriangleIcon} color="white" />
             <span>Strona jest obecnie w fazie beta. Niektóre funkcje mogą nie działać poprawnie.</span>
-          <FontAwesomeIcon icon={faTimes} className="close" onClick={this.hideBanner} />
+          <Icon icon={TimesIcon} className="close" color="rgba(255,255,255,0.7)" size="1.7em" onClick={this.hideBanner} />
             </div>
           </Banner>
         )

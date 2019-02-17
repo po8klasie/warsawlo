@@ -15,12 +15,16 @@ export const onInitialClientRender = () => {
      google: {
        families: [
          'Work Sans:400:latin,latin-ext',
-         'Playfair Display:400'
+         'Playfair Display:400,700',
+         'Raleway'
        ]
      },
      custom: {
-       families: ['Ostrich Sans Rounded'],
-       urls: ['https://cdn.jsdelivr.net/gh/theleagueof/ostrich-sans/webfonts/ostrich-sans.css']
+       families: ['Ostrich Sans Rounded', 'Playfair Display Bold'],
+       urls: [
+         'https://cdn.jsdelivr.net/gh/theleagueof/ostrich-sans/webfonts/ostrich-sans.css',
+         'http://pl.allfont.net/allfont.css?fonts=playfair-display-bold'
+      ]
    }})
  }
 

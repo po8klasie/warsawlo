@@ -12,55 +12,62 @@ import { faPhone, faGlobe, faAt, faFax, faMapMarkerAlt, faRoad, faCity, faUsers,
 import { faCalendar, faClock } from '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts'
-import subjects from 'utils/subjectsMapping'
+// import subjects from 'utils/subjectsMapping'
 import Tag from 'components/Tag'
 import mapboxgl from 'mapbox-gl'
 import ReactDOM from 'react-dom'
 import theme from 'utils/theme'
 import TextLink from 'components/TextLink'
+import subjects from 'utils/subjects'
 const responsiveWidth = '1500px'
 const Header = styled('header')`
   width: 100%;
-  max-height:40vh;
-  display:grid;
-  grid-template-columns: 1fr 2fr;
-  grid-column-gap:10px;
-  @media (max-width: ${responsiveWidth}) {
-    grid-template-columns:1fr;
-    max-height:none;
+  min-height:50vh;
+  overflow: hidden;
+  background: ${props => props.bg ? 'rgba(0,0,0,.6)' : theme.colors.secondary};
+  position:relative;
+  padding: 3em 0;
+  color:white;
+  h1{
+    font-weight:700;
+    font-family: 'Playfair Display';
   }
-  @media print { 
-    /* All your print styles go here */
-    #header, #footer, #nav { display: none !important; } 
-   }
+  .bg{
+    position: absolute;
+    top:0;
+    left:0;
+    width:calc(100% + 40px);
+    height:calc(100% + 20px);
+    filter: blur(10px);
+    z-index:-1;
+    margin: -20px -20px 0 0;
+  }
 
-  div{
-    display:flex;
+  display:flex;
     align-items:center;
-    @media (max-width: ${responsiveWidth}) {
-      display:block;
-    }
-    img{
-      @media print { 
-       height:200px;
-       }
-    }
-    .top-info{
+    justify-content: center;
+
+
+    & > div{
       display: block;
-      border: 3px solid #eee;
-      padding:.5em;
-      border-radius: 5px;
-      @media (max-width: ${responsiveWidth}) {
-        font-size:1.2em;
+      width:75%;
+      .top-info{
+        display:grid;
+        grid-template-columns: 1fr 4fr;
+        grid-column-gap: 1em;
+        margin-bottom:2em;
       }
+      
+      border-radius: 5px;
+      
       h2{
         font-size:1.2em;
       }
     }
-  }
+
 `
 const SchoolWrapper = styled('div')`
-  width:80%;
+  width:100%;
   margin:calc(70px + 2em) auto auto auto;
   @media (max-width: ${responsiveWidth}) {
     width: calc(100% - 2em);
@@ -71,15 +78,13 @@ const SchoolWrapper = styled('div')`
     margin:0;
   }
 `
-const MainGrid = styled('div')`
-  display: grid;
-  grid-template-columns:1fr 4fr;
-  @media (max-width: ${responsiveWidth}) {
-    grid-template-columns:1fr;
-  }
+const Main = styled('div')`
+  width:75%;
+  margin:auto;
   
 `
 const LinksWrapper = styled('div')`
+display: none;
   height:100%;
   @media (max-width: ${responsiveWidth}) {
     display: none;
@@ -110,6 +115,7 @@ const Links = styled(Scrollspy)`
     }
   }
 `
+
 const FixedHeader = styled('header')`
 @media (max-width: ${responsiveWidth}) {
   display:none;
@@ -212,11 +218,11 @@ const Tick = props => {
     <BarTagsWrapper>
     {
       props.payload.value.split('-').map(sub => {
-        let subject = subjects.filter(s => s[2] === sub)
+        let subject = subjects.filter(s => s.short === sub)
         return (
           <BarTag
           key={sub}
-          color={subject[0] ? subject[0][1] : false}
+          color={subject[0] ? subject[0].color : false}
           >{sub}</BarTag>
         )
       })
@@ -417,7 +423,34 @@ export default class extends Component{
       <SEO title={school.name.full} keywords={[`Liceum`, `LO`, school.name.full]} />
       <DocumentEvents onScroll={this.onScroll} />
       <Layout>
-        <MainGrid>
+      <div ref={this.headerEl}>
+      <Header bg={school.media && school.media[0]}>
+        {
+          school.media && school.media[0] && <img src={school.media[0]} className="bg" />
+        }
+      <div>
+      <div className="top-info">
+      { school.media && school.media[0] ? <img src={school.media[0]} width="400"/> : <LOPlaceholder /> }
+      <div>
+      { school.ranking && <h2> {school.ranking.place}. miejsce w Warszawie</h2> }
+        {
+          school.thresholds && school.thresholds._2018.overview.availableSubjects.map(sub => {
+            let subject = subjects.filter(s => sub === s.short)[0]
+            return <Tag light color={subject && subject.color}>{subject ? subject.full : sub}</Tag>
+          })
+        }
+      </div>
+      </div>
+      <div className="name">
+        <h1>{school.name.full}</h1>
+          <h2 >{school.location && school.location.address.District}</h2>
+          </div>
+          
+      </div>
+      </Header>
+      
+  </div>
+        <Main>
           <LinksWrapper>
           <Links items={ ['info', 'ranking', 'thresholds', 'open-days', 'contact', 'location', 'opinion', 'data-sources'] } currentClassName="is-current" offset={(this.state.headerHeight+80)}>
   <li><a href="#info">Informacje</a></li>
@@ -446,19 +479,7 @@ export default class extends Component{
 
           </FixedHeader>
 
-      <div ref={this.headerEl}>
-      <Header bg={school.media && school.media[0]}>
-      { school.media && school.media[0] ? <img src={school.media[0]} /> : <LOPlaceholder /> }
-      <div>
-      <div className="top-info">
-        <h1>{school.name.full}</h1>
-          <h2 >{school.location && school.location.address.District}</h2>
-          </div>
-      
-      </div>
-      </Header>
-      
-  </div>
+     
   <Anchor id="info" offset={this.state.headerHeight+80} />
   <Section>
     <h2>Informacje o szkole</h2>
@@ -690,7 +711,7 @@ export default class extends Component{
 
  
       </SchoolWrapper>
-      </MainGrid>
+      </Main>
       </Layout>
       </>
     )
@@ -733,6 +754,9 @@ export const pageQuery = graphql`
           detailed{
             extensions,
             threshold
+          },
+          overview{
+            availableSubjects
           }
         }
       },

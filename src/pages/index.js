@@ -7,35 +7,32 @@ import TextLink from 'components/TextLink'
 import Layout from 'components/Layout'
 import SEO from 'components/SEO'
 import styled from '@emotion/styled'
-import SiteWrapper from 'components/SiteWrapper'
 import Logo from 'components/Logo'
 import Button from '../components/Button'
 import Break from '../components/Break'
 import {withBadge} from 'utils/withBadge'
 import { animateScroll} from 'react-scroll'
 import theme from 'utils/theme'
-import {
-  faMapMarkerAlt,
-  faChartBar,
-  faBus,
-  faInfoCircle,
-  faFileAlt,
-  faAmbulance,
-  faServer,
-  faUniversity,
-  faChartLine,
-  faMapMarkedAlt,
-  faCog,
-  faDesktop,
-  faExclamation,
-  faQuestion,
-  faUsers,
-  faStar
-} from '@fortawesome/free-solid-svg-icons'
-import { faCalendar } from '@fortawesome/free-regular-svg-icons'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import BusIcon from '../images/icons/bus.svg'
+import CalendarIcon from '../images/icons/calendar.svg'
+import FileEditIcon from '../images/icons/file-edit.svg'
+import ChartBarIcon from '../images/icons/chart-bar.svg'
+import InfoIcon from '../images/icons/info.svg'
+import MapMarkerIcon from '../images/icons/map-marker.svg'
+import DatabaseIcon from '../images/icons/database.svg'
+import ChartLineIcon from '../images/icons/chart-line.svg'
+import MapIcon from '../images/icons/map.svg'
+import ServersIcon from '../images/icons/servers.svg'
+import CommentExclamationIcon from '../images/icons/comment-exclamation.svg'
+import UsersIcon from '../images/icons/users.svg'
+
+
 import {keyframes} from '@emotion/core'
+import Icon from 'components/Icon'
+import roadImage from 'images/road.jpg'
 const responsiveWidth = '1000px'
+
+
 const First = styled('div')`
 
   display:block;
@@ -55,7 +52,9 @@ const First = styled('div')`
     width:100%;
     height:100%;
     z-index:-2;
-    background: ${theme.colors.primary};
+    background: url(${roadImage});
+    background-position: center center;
+    background-size:cover;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
     @media (max-width: ${responsiveWidth}){
       clip-path:none;
@@ -74,7 +73,7 @@ const First = styled('div')`
   }
 `
 const Header = styled('div')`
-  padding-top:10vh;
+  padding-top:15vh;
   margin-left:10vw;
   width:40vw;
   height:auto;
@@ -85,7 +84,7 @@ const Header = styled('div')`
   padding-top:2vh;
   }
   h1{
-    font-size:3rem;
+    font-size:5rem;
   }
   p{
     line-height:1.5em;
@@ -94,59 +93,29 @@ const Header = styled('div')`
 
   }
 `
-const HeaderLogo = styled(Logo)`
-  position:absolute;
-  top:-10%;
-  right:-10%;
-  width:70%;
-  z-index:-1;
-  overflow:hidden;
-  transform: rotate(30deg);
-  path{
-    fill: rgba(255,255,255,0.6);
-    @media (max-width: ${responsiveWidth}){
-    fill: rgba(255,255,255,0.4);
-    }
-  }
-  @media (max-width: ${responsiveWidth}){
-  top:5%;
-  width:100%;
-  }
 
-`
-const PageWrapper = styled(SiteWrapper)`
-background:transparent;
-`
 const LightButton = styled(Button)`
-  color:${theme.colors.primary};
+  color: rgb(230,230,230);
   margin:20px;
   border-color:white;
   font-size:1.5em;
+  background: rgba(0,0,0,0.3);
 `
-const LightButtonWithBadge = withBadge(LightButton, {
+const LightButtonWithBadge = styled(withBadge(LightButton, {
   title: 'BETA',
   color: 'secondary'
-})
-const HalfContainer = styled('div')`
-  padding:0 5% 5% 5%;
-  background:transparent;
-  color:black;
-  width:50vw;
-  p{
-    line-height:1.5em;
-    font-size:1.1em;
-    letter-spacing:2px;
-
-  }
-  h1{
-    font-size:3rem;
-  }
-  @media (max-width: ${responsiveWidth}){
-    width:calc(100vw - 10%);
-    display:block;
-  }
+}))`
+  background:${theme.colors.primary};
+  border-color:${theme.colors.primary};
+`
+const Shadow = styled('div')`
+  background: #eee;
+  border-radius: 5px;
+  padding:10px;
 `
 const FullContainer = styled('div')`
+// display: grid;
+// grid-template-columns: 1fr 1fr;
 padding: 1em 5vh;
 width:100%;
 box-sizing: border-box;
@@ -219,10 +188,36 @@ from {transform:rotate(0deg);}
 `
 const blink = keyframes`
   0%, 100%{
+    transform: scale(1);
+  }
+  70%{
+    transform: scale(1);
+  }
+  80%{
+    transform: scale(1.1);
+  }
+  
+`
+const slideAndFade = (x) => keyframes`
+  0%{
+    transform: translateY(0) translateX(0);
     opacity:1;
   }
-  10%{
-    opacity: .2;
+  
+  15%{
+    transform: translateY(50%) translateX(${x}%);
+    opacity:1;
+  }
+  25%{
+    opacity:0;
+    transform: translateY(50%) translateX(${x}%);
+  }
+  36%{
+    opacity:0;
+    transform: translateY(0) translateX(0);
+  }
+  100%{
+    opacity:0;
   }
 `
 const SourcesAnimation = styled('div')`
@@ -235,26 +230,25 @@ const SourcesAnimation = styled('div')`
     margin-top:10vh;
     display:flex;
     justify-content:space-around;
-    animation: ${blink} 1s ease 0s infinite;
-  }
-  .process{
-    margin:2em 0 2em 0;
-    width:100%;
-    display:flex;
-    justify-content: center;
-    transform: scale(1.2);
     svg{
-      stroke-width:20;
-      stroke: ${theme.colors.primary};
-      path{
-        fill:transparent;
-      }
-
+      opacity: 0;
     }
-    animation: ${spin} 5s infinite linear;
+    #max-left{
+      animation: ${slideAndFade(70)} 12s ease 0s infinite;
+    }
+    #left{
+      animation: ${slideAndFade(40)} 12s ease 3s infinite;
+    }
+    #right{
+      animation: ${slideAndFade(-40)} 12s ease 6s infinite;
+    }
+    #max-right{
+      animation: ${slideAndFade(-70)} 12s ease 9s infinite;
+    }
+    
   }
   .dest{
-    animation: ${blink} 1s ease 1.2s infinite;
+    animation: ${blink} 3s ease 0s infinite;
     width:100%;
     display:flex;
     justify-content: center;
@@ -262,6 +256,7 @@ const SourcesAnimation = styled('div')`
     font-weight:normal;
     svg{
       width:50%;
+      fill: white;
     }
   }
 
@@ -269,7 +264,6 @@ const SourcesAnimation = styled('div')`
 `
 const Box = styled('div')`
   width:80%;
-
   padding:10px;
 
   h1{
@@ -283,24 +277,22 @@ const Box = styled('div')`
 
 `
 const BoxWrapper = styled('div')`
-  width:50%;
-  display:flex;
-  justify-content:center;
+ 
   @media (max-width: ${responsiveWidth}){
     width:100%;
   }
 `
 const StartButton = styled(Button)`
   font-size: 3em;
-  border: 3px dashed ${theme.colors.primary};
+  border: none;
   color:white;
-  background:transparent;
-  color: black;
+  color: white;
+  font-weight:700;
+  background: ${theme.colors.primary};
+ 
+  transition: transform .2s;
   &:hover{
-    border-style:solid;
-  }
-  @media (max-width: ${responsiveWidth}){
-    font-size: 2em;
+    transform: scale(1.1);
   }
 `
  export default class About extends Component{
@@ -315,10 +307,10 @@ const StartButton = styled(Button)`
    <Layout location={this.props.location}>
      <SEO title="Home" keywords={[`WarsawLO`, `licea`, `wyszukiwarka`]} />
      <First>
-      <HeaderLogo />
+   
      <Header>
-<h1>Wiesz, że zostało mało czasu, <br/>a nie wiesz gdzie chcesz iść?</h1>
-<p>Nie tylko ty masz ten problem! Będziemy mierzyć się z tym razem. W tym roku jednak będzie to znacznie prostsze.
+<h1>Wybierz swoją drogę z nami!</h1>
+<p>Nie wiesz jakie szkoły wybrać? Rekrutacja do szkół średnich to poważny krok. W tym roku jednak będzie to znacznie prostszy.
   Możesz odwiedzić każdy licealny zakątek w Internecie
   albo znaleźć swoją szkołę marzeń za trzecim kliknięciem!
 </p>
@@ -336,87 +328,70 @@ const StartButton = styled(Button)`
        <p>Nadal nie mówimy, że najławiejsze. <br />To twój wybór, ale cieszymy się, że możemy Ci go ułatwić.</p>
        <h2 css={css`margin: 2em 0 2em 0;`}>Dzięki nam szybko sprawdzisz:</h2>
        <InlineWrapper>
-         <Inline>
-           <Centered>
-           <FontAwesomeIcon icon={faInfoCircle} size="3x" />
-           </Centered>
-           <Centered notHorizontal>
-           <h2>Podstawowe informacje</h2>
-           </Centered>
-         </Inline>
-       <Inline>
-         <Centered>
-         <FontAwesomeIcon icon={faBus} size="3x" />
-              </Centered>
-         <Centered notHorizontal>
-         <h2>Dojazd komunikacją</h2>
-              </Centered>
-       </Inline>
-
-       <Inline>
-         <Centered>
-         <FontAwesomeIcon icon={faMapMarkerAlt} size="3x" />
-         </Centered>
-         <Centered notHorizontal>
-         <h2>Lokalizacje</h2>
-              </Centered>
-       </Inline>
-
-       <Inline>
-         <Centered>
-         <FontAwesomeIcon icon={faFileAlt} size="3x" />
-              </Centered>
-         <Centered notHorizontal>
-         <h2>Zdawalność matur</h2>
-              </Centered>
-       </Inline>
-       <Inline>
-         <Centered>
-         <FontAwesomeIcon icon={faChartBar} size="3x" />
-              </Centered>
-         <Centered notHorizontal>
-         <h2>Średnie ilości punktów</h2>
-              </Centered>
-       </Inline>
-       <Inline>
-         <Centered>
-         <FontAwesomeIcon icon={faCalendar} size="3x" />
-              </Centered>
-         <Centered notHorizontal>
-         <h2>Dni otwarte</h2>
-              </Centered>
-       </Inline>
-
-
+         {
+           [
+             {
+               icon: InfoIcon,
+               title: 'Podstawowe informacje'
+             },
+             {
+              icon: BusIcon,
+              title: 'Dojazd komunikacjąe'
+            },
+            {
+              icon: MapMarkerIcon,
+              title: 'Lokalizacje'
+            },
+            {
+              icon: FileEditIcon,
+              title: 'Zdawalność matur'
+            },
+            {
+              icon: ChartBarIcon,
+              title: 'Średnie ilości punktów'
+            },
+            {
+              icon: CalendarIcon,
+              title: 'Dni otwarte'
+            }
+           ].map(feature => (
+            <Inline>
+            <Centered>
+            <Icon color="primary" icon={feature.icon} />
+                 </Centered>
+            <Centered notHorizontal>
+            <h2>{feature.title}</h2>
+                 </Centered>
+          </Inline>
+           ))
+         }
        </InlineWrapper>
      </FullContainer>
 
 
-     <FullContainer background="secondary" shape  css={css`
+     <FullContainer background="secondary" shape={true}  css={css`
               display:flex;
               align-items:center;
               margin-top:7vh;
 
-              background: #eee;
-              color:black;
+              background: ${theme.colors.primary};
+              color:white;
            `}>
 
        <SourcesAnimation>
          <div className="sources">
-           <FontAwesomeIcon icon={faUniversity} size="3x"/>
-           <FontAwesomeIcon icon={faMapMarkedAlt} size="3x"/>
-           <FontAwesomeIcon icon={faChartLine} size="3x"/>
-           <FontAwesomeIcon icon={faServer} size="3x"/>
+          <Icon id="max-left" color="secondary" size="4em" icon={DatabaseIcon} />
+          <Icon id="left" color="secondary" size="4em" icon={MapIcon} />
+          <Icon id="right" color="secondary" size="4em" icon={ChartLineIcon} />
+          <Icon id="max-right" color="secondary" size="4em" icon={ServersIcon} />
 
          </div>
-         <div className="process">
-           <FontAwesomeIcon icon={faCog} size="3x"/>
-         </div>
+     
        <div className="dest">
          <Logo />
        </div>
        </SourcesAnimation>
-       <BoxWrapper>
+       <BoxWrapper css={css`width:50%;`}>
          <Box>
 
            <h1>Jak to działa?</h1>
@@ -440,7 +415,8 @@ const StartButton = styled(Button)`
               align-items:center;
            `}>
 
-           <div css={css`
+         
+             <Shadow css={css`
              width:50%;
              @media (max-width: ${responsiveWidth}){
                width:100%;
@@ -454,7 +430,7 @@ const StartButton = styled(Button)`
                Jeżeli natkniesz się na niego, zgłoś go.
                Nasi moderatorzy zajmą się tym tak szybko, jak tylko będę mogli.
                </p>
-             </div>
+               </Shadow>
 
      <div css={css`
        width:50%;
@@ -467,15 +443,15 @@ const StartButton = styled(Button)`
            display:none;
          }
          `}>
-     <FontAwesomeIcon icon={faExclamation} size="10x"/>
-     <FontAwesomeIcon icon={faQuestion} size="10x"/>
+     <Icon icon={CommentExclamationIcon} size="10em"/>
+   
      </div>
      </div>
 
      </FullContainer>
      <FullContainer css={css`
-              display:flex;
-              align-items:center;
+              display:grid;
+              grid-template-columns: 1fr 1fr;
               margin-top:7vh;
            `}>
      <div css={css`
@@ -484,13 +460,10 @@ const StartButton = styled(Button)`
        align-items:center;
        justify-content:center;
        `}>
-     <FontAwesomeIcon icon={faUsers} size="10x" css={css`
-       @media (max-width: ${responsiveWidth}){
-         display:none;
-       }
-       `}/>
+      <Icon icon={UsersIcon} size="10em"/>
      </div>
      <BoxWrapper>
+       <Shadow>
        <Box>
        <h1>Społeczność</h1>
        <Break color="secondary" />
@@ -500,17 +473,17 @@ const StartButton = styled(Button)`
         Podziel się swoimi spostrzeżeniami tutaj.
         Każdego ucznia ostatniej klasy gimnazjum czy podstawówki co roku czeka to samo.
         Pomagajmy sobie nawzajem.  WarsawLO to portal tworzony przez uczniów dla uczniów.
-       <br />
-         <br />
-         <Break color="secondary" />
-          <br />
-
+       </p>
+       </Box>
+       </Shadow>
+       <Shadow css={css`margin-top:2em;`}>
+         <p>
          Masz jakiś pomysł? Myślisz, że fajnie byłoby coś tutaj dodać? To świetnie!
          Napisz do nas na Messengerze albo mailem na ideas@warsawlo.pl
 
          <TextLink to="/help-us">Dowiedz się, jak możesz nam pomóc</TextLink>
          </p>
-       </Box>
+       </Shadow>
      </BoxWrapper>
    </FullContainer>
    <FullContainer css={css`
@@ -524,12 +497,12 @@ const StartButton = styled(Button)`
      </Link>
    </FullContainer>
    <Line/>
-     <FullContainer  background="primary" css={css`padding-top:2em`}>
-
+     <FullContainer  css={css`padding-top:2em`}>
+  <div css={css`width:50%;margin:auto;`} >
        <h1 css={css`margin-top:0`}>Kto za tym stoi?</h1>
-       <Break color="light" />
+       <Break color="primary" />
        <h2>Hej!</h2>
-         <p css={css`width:100%`}>
+         <p>
 
          Jesteśmy grupą uczniów z warszawskich gimnazjów a zarazem pasjonatów informatyki.
          Rekrutacja spotka lub spotkała każdego z nas. Wszyscy mówią, że chcą się dostać do jak najlepszej szkoły,
@@ -541,10 +514,11 @@ const StartButton = styled(Button)`
 
 
        </p>
-         <Break color="light" />
+         <Break color="primary" />
          <h2>Kontakt</h2>
-          info@warsawlo.pl
-         <br /><br />
+          <p>info@warsawlo.pl</p>
+      
+         </div>
      </FullContainer>
 
    </Layout>
