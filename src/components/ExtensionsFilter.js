@@ -11,6 +11,7 @@ export default props => (
         key={subject}
         active={props.profiles.includes(subject[0])}
         color={subject[1]}
+        light
 
         >{subject[0]}</Tag>
 

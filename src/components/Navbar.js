@@ -11,6 +11,7 @@ import styled from '@emotion/styled'
 import Logo from 'components/Logo'
 import Icon from 'components/Icon'
 import TimesIcon from '../images/icons/times.svg'
+import BarsIcon from '../images/icons/bars.svg'
 import ExclamationTriangleIcon from '../images/icons/exclamation-triangle.svg'
 import { Link } from 'gatsby'
 import theme from 'utils/theme'
@@ -146,55 +147,28 @@ const ActionsWrapper = styled('div')`
 }
 display:inline-block;
 `
-const MobileNav  = styled('nav')`
-@media (max-width: ${responsiveWidth}) {
-  display:grid;
-}
+const MobileNav  = styled('nav')` 
   position:fixed;
-  bottom: 0;
-  border-top: 3px solid #eee;
-  left:0;
-  z-index:99;
-  width:100vw;
-  height:90px;
-  background:white;
-  display:none;
-  grid-template-columns:repeat(5, 1fr);
-  grid-column-gap:1em;
-  padding:10px;
-  // @media (max-width: 650px) {
-  //     height:70px;
-  //     padding:0 10px;
-  //   }
-  @media print { 
-    display: none;
-   }
+  top:80px;
+  left:${props => props.active ? '0' : '-100%'};
+  background:${theme.colors.secondary};
+  height:calc(100vh - 80px);
+  transition:left .2s;
+  z-index:80;
+  width:100%;
 `
 const MobileNavItem = styled(Link)`
   all:unset;
   cursor:pointer;
   user-select:none;
   display:block;
-  .icon-wrapper{
-
-    width:100%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    svg{
-      path{
-        fill:${props => props.active ? theme.colors.primary : '#aaa'};
-      }
-    }
-  }
-  span{
-    margin-top:10px;
-    text-align:center;
-    width:100%;
-    display:block;
-    color:${props => props.active ? 'black' : '#aaa'};
-    font-size:.8em;
-  }
+  color:white;
+  font-family: ${theme.fonts.secondary};
+  font-weight:700;
+  margin:1em 0;
+  font-size:2em;
+  text-align:center;
+  width:100%;
 `
 const Banner = styled('div')`
   position: fixed;
@@ -204,6 +178,10 @@ const Banner = styled('div')`
     transform: translate(-50%, 0);
     border-radius:5px;
   width:70%;
+  @media (max-width: ${responsiveWidth}) {
+    width:calc(100% - 2em);
+    font-size:.7em;
+  }
 
   background: ${theme.colors.secondary.replace('b', 'ba').replace(')', ', .9)')};
   color:white;
@@ -220,6 +198,10 @@ const Banner = styled('div')`
     align-items:center;
     font-size:1.2em;
     position:relative;
+    @media (max-width: ${responsiveWidth}) {
+      width:calc(100% - 2em);
+    
+    }
   }
   svg:first-child{
     margin-right:1em;
@@ -232,6 +214,21 @@ const Banner = styled('div')`
     cursor:pointer;
   }
 `
+const MobileNavShortcut = styled('div')`
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  padding:10px;
+  border-radius:50%;
+  background: ${props => props.closing ? 'white' : theme.colors.secondary};
+  z-index:90;
+  height:3em;
+  width:3em;
+  text-align:center;
+  display: flex;
+  align-items: center;
+  transition: background .2s;
+`
  class AppNavbar extends Component {
   constructor(props) {
     super(props);
@@ -240,7 +237,8 @@ const Banner = styled('div')`
       isOpen: false,
       consent: false,
       siteLoading: false,
-      banner: true
+      banner: true,
+      mobileNavOpen: false
     }
   }
   componentDidUpdate = (prevProps, prevState) => {
@@ -325,41 +323,30 @@ const Banner = styled('div')`
           </Banner>
         )
       }
-      <MobileNav to="/">
-      <MobileNavItem active={this.props.location && this.props.location.pathname === '/'}>
-      <div className="icon-wrapper">
-        <FontAwesomeIcon icon={faInfoCircle} size="2x" />
-      </div>
-      <span>O nas</span>
-      </MobileNavItem>
-
+      
         
 
-        <MobileNavItem search={true} to="/search">
-        <div className="icon-wrapper">
-          <FontAwesomeIcon icon={faSearch} size="2x"/>
+        <MobileNavShortcut onClick={() => this.setState({
+          mobileNavOpen: !this.state.mobileNavOpen
+        })} closing={this.state.mobileNavOpen}>
+          <Icon icon={this.state.mobileNavOpen ? TimesIcon : BarsIcon} color={this.state.mobileNavOpen ? theme.colors.secondary : 'white'} size="100%"/>
+        </MobileNavShortcut>
+        <MobileNav active={this.state.mobileNavOpen}>
+        <div>
+          <MobileNavItem to="/" onClick={() => this.setState({mobileNavOpen:false})}>
+          Home
+          </MobileNavItem>
+          <MobileNavItem to="/search" onClick={() => this.setState({mobileNavOpen:false})}>
+          Szukaj
+          </MobileNavItem>
+          <MobileNavItem to="/calculator" onClick={() => this.setState({mobileNavOpen:false})}>
+          Kalkulator
+          </MobileNavItem>
+          <MobileNavItem to="/following" onClick={() => this.setState({mobileNavOpen:false})}>
+          Obserwowane
+          </MobileNavItem>
         </div>
-        <span>Szukaj</span>
-        </MobileNavItem>
-        <MobileNavItem to="/following">
-        <div className="icon-wrapper">
-          <FontAwesomeIcon icon={faStar} size="2x"/>
-        </div>
-        <span>Obserwowane</span>
-        </MobileNavItem>
-        <MobileNavItem to="/calculator">
-        <div className="icon-wrapper">
-          <FontAwesomeIcon icon={faCalculator} size="2x"/>
-        </div>
-        <span>Kalkulator</span>
-        </MobileNavItem>
-        <MobileNavItem to="/contactus">
-        <div className="icon-wrapper">
-          <FontAwesomeIcon icon={faEnvelope} size="2x" />
-        </div>
-        <span>Kontakt</span>
-        </MobileNavItem>
-      </MobileNav>
+        </MobileNav>
       </Fragment>
     );
   }

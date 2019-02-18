@@ -12,7 +12,11 @@ import { faPhone, faGlobe, faAt, faFax, faMapMarkerAlt, faRoad, faCity, faUsers,
 import { faCalendar, faClock } from '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts'
-// import subjects from 'utils/subjectsMapping'
+import AwardIcon from '../images/icons/award.svg'
+import GlobeIcon from '../images/icons/globe.svg'
+import PrintIcon from '../images/icons/print.svg'
+import GraduationHatIcon from '../images/icons/graduation-hat.svg'
+import Icon from 'components/Icon'
 import Tag from 'components/Tag'
 import mapboxgl from 'mapbox-gl'
 import ReactDOM from 'react-dom'
@@ -31,6 +35,19 @@ const Header = styled('header')`
   h1{
     font-weight:700;
     font-family: 'Playfair Display';
+    @media (max-width: ${responsiveWidth}) {
+      font-size:1.4em;
+    }
+  }
+  .name h2{
+    @media (max-width: ${responsiveWidth}) {
+     font-size:1.2em;
+    }
+  }
+  .thresholds{
+    @media (max-width: ${responsiveWidth}) {
+      display: none;
+     }
   }
   .bg{
     position: absolute;
@@ -56,13 +73,31 @@ const Header = styled('header')`
         grid-template-columns: 1fr 4fr;
         grid-column-gap: 1em;
         margin-bottom:2em;
+        @media (max-width: ${responsiveWidth}) {
+          grid-template-columns:1fr;
+        }
       }
       
-      border-radius: 5px;
-      
-      h2{
-        font-size:1.2em;
+      .ranking{
+        margin:1em 0;
+        display: flex;
+        align-items:center;
+        @media (max-width: ${responsiveWidth}) {
+         margin:0;
+        
+        }
+
+        h2{
+          padding: 0;
+          margin: 0 1em 0 0;
+          @media (max-width: ${responsiveWidth}) {
+            font-size:1.2em;
+          }
+        }
       }
+      
+     
+  
     }
 
 `
@@ -81,7 +116,9 @@ const SchoolWrapper = styled('div')`
 const Main = styled('div')`
   width:75%;
   margin:auto;
-  
+  @media (max-width: ${responsiveWidth}) {
+    width: calc(100% - 2em);
+  }
 `
 const LinksWrapper = styled('div')`
 display: none;
@@ -121,13 +158,13 @@ const FixedHeader = styled('header')`
   display:none;
 }
   position: fixed;
-  background:white;
+  background:${theme.colors.secondary};
   top:${props => props.active ? '70px' : '-100%'};
   left:0;
   width:100%;
   padding: 0;
   z-index:20;
-
+color:white;
   transition:.4s all;
   .container{
     width:75%;
@@ -222,6 +259,7 @@ const Tick = props => {
         return (
           <BarTag
           key={sub}
+          active
           color={subject[0] ? subject[0].color : false}
           >{sub}</BarTag>
         )
@@ -298,10 +336,7 @@ height:100%;`
 const MarkerWrapper = styled('div')`
 background:white;
 padding:5px;
-  svg{
-    path{
-      fill: rgb(89,0,138);
-    }
+border-radius:5px;
   }
 `
 const Anchor = styled('a')`
@@ -312,6 +347,9 @@ const Anchor = styled('a')`
  @media (max-width: ${responsiveWidth}) {
    top:-80px;
  }
+`
+const RankingTableWrapper = styled('div')`
+overflow-x:auto;
 `
 mapboxgl.accessToken = 'pk.eyJ1IjoibWljb3JpeCIsImEiOiJjanJ0cjN2Y2IwcjZiM3ltaWw4a2EwMzNlIn0.9aYkpqbDoPBGO3hTuIvdvw'
 
@@ -331,6 +369,12 @@ const monthMapping = [
 ]
 const padWithZero = (num) => `${num}`.length === 1 ? `0${num}`: `${num}`
 const displayHour = (date) => `${date.getHours()}:${padWithZero(date.getMinutes())}`
+
+const labels = {
+  gold: '#f1c40f',
+  silver: '#95a5a6',
+  bronze: '#CD7F23'
+}
 export default class extends Component{
   constructor(props){
     super(props)
@@ -361,7 +405,7 @@ export default class extends Component{
      el.style = 'display:inline-block;'
      ReactDOM.render((
        <MarkerWrapper>
-        <FontAwesomeIcon icon={faGraduationCap} size="2x" />
+        <Icon icon={GraduationHatIcon} color="rgb(89, 0, 138)" />
        </MarkerWrapper>
      ), el)
      this.map.addControl(new mapboxgl.NavigationControl(), 'top-left')
@@ -399,7 +443,7 @@ export default class extends Component{
 
   }
   handleMouseStart = () => {
-    if(window.innerWidth <= responsiveWidth){
+    if(window && window.innerWidth <= responsiveWidth){
       return
     }
     console.log('x')
@@ -432,13 +476,18 @@ export default class extends Component{
       <div className="top-info">
       { school.media && school.media[0] ? <img src={school.media[0]} width="400"/> : <LOPlaceholder /> }
       <div>
+        <div className="ranking">
       { school.ranking && <h2> {school.ranking.place}. miejsce w Warszawie</h2> }
+      { school.ranking && school.ranking.label && <Icon icon={AwardIcon} color={labels[school.ranking.label]}/>}
+      </div>
+      <div className="thresholds">
         {
-          school.thresholds && school.thresholds._2018.overview.availableSubjects.map(sub => {
+           school.thresholds && school.thresholds._2018.overview.availableSubjects.map(sub => {
             let subject = subjects.filter(s => sub === s.short)[0]
             return <Tag light color={subject && subject.color}>{subject ? subject.full : sub}</Tag>
           })
         }
+      </div>
       </div>
       </div>
       <div className="name">
@@ -480,50 +529,7 @@ export default class extends Component{
           </FixedHeader>
 
      
-  <Anchor id="info" offset={this.state.headerHeight+80} />
-  <Section>
-    <h2>Informacje o szkole</h2>
-
-      <InfoGrid>
-      <InfoBox>
-      <div className="icon-wrapper">
-      <FontAwesomeIcon size="2x" icon={faUsers} />
-      </div>
-      <div className="info-wrapper">
-      <h3>Publiczna</h3>
-      <h4>TAK</h4>
-      </div>
-      </InfoBox>
-      <InfoBox>
-      <div className="icon-wrapper">
-      <FontAwesomeIcon size="2x" icon={faSchool} />
-      </div>
-      <div className="info-wrapper">
-      <h3>Organ prowadzący</h3>
-      <h4>{school.meta.leadingOrgan.type} {school.meta.leadingOrgan.name}</h4>
-      </div>
-      </InfoBox>
-      <InfoBox>
-      <div className="icon-wrapper">
-      <FontAwesomeIcon size="2x" icon={faHandshake} />
-      </div>
-      <div className="info-wrapper">
-      <h3>Organizacja</h3>
-      <h4>{school.meta.parent}</h4>
-      </div>
-      </InfoBox>
-      <InfoBox>
-      <div className="icon-wrapper">
-      <FontAwesomeIcon size="2x" icon={faMoneyBill} />
-      </div>
-      <div className="info-wrapper">
-      <h3>Właściciel kapitału</h3>
-      <h4>{school.meta.capitalOwner}</h4>
-      </div>
-      </InfoBox>
-
-      </InfoGrid>
-  </Section>
+  
   <Anchor id="ranking" offset={this.state.headerHeight+80} />
   <Section>
     <h2>Wyniki w rankingu</h2>
@@ -533,7 +539,8 @@ export default class extends Component{
       {school.ranking && (
         <>
         {school.ranking.label && <p>To liceum posiada {school.ranking.label === 'gold' ? 'złoty' : (school.ranking.label === 'silver' ? 'srebrny' : 'brązowy')} znak jakości.</p>}
-        <table>
+        <RankingTableWrapper>
+          <table>
           <thead>
           <tr>
             <th>Miejsce</th>
@@ -557,8 +564,9 @@ export default class extends Component{
             
           </tr>
           </tbody>
-         
           </table>
+          </RankingTableWrapper>
+          
           </>
       )}
       <TextLink wrapper="a" href="http://licea.perspektywy.pl/2019/ranking/ranking-liceow-warszawskich-2019">
@@ -691,6 +699,50 @@ export default class extends Component{
   <h2>Opinie</h2>
     <p>Sprawdź <TextLink wrapper="a" href="https://www.facebook.com/groups/idziemygdzie">grupę idziemygdzie na Facebooku</TextLink></p>
   
+  </Section>
+  <Anchor id="info" offset={this.state.headerHeight+80} />
+  <Section>
+    <h2>Informacje o szkole</h2>
+
+      <InfoGrid>
+      <InfoBox>
+      <div className="icon-wrapper">
+      <FontAwesomeIcon size="2x" icon={faUsers} />
+      </div>
+      <div className="info-wrapper">
+      <h3>Publiczna</h3>
+      <h4>TAK</h4>
+      </div>
+      </InfoBox>
+      <InfoBox>
+      <div className="icon-wrapper">
+      <FontAwesomeIcon size="2x" icon={faSchool} />
+      </div>
+      <div className="info-wrapper">
+      <h3>Organ prowadzący</h3>
+      <h4>{school.meta.leadingOrgan.type} {school.meta.leadingOrgan.name}</h4>
+      </div>
+      </InfoBox>
+      <InfoBox>
+      <div className="icon-wrapper">
+      <FontAwesomeIcon size="2x" icon={faHandshake} />
+      </div>
+      <div className="info-wrapper">
+      <h3>Organizacja</h3>
+      <h4>{school.meta.parent}</h4>
+      </div>
+      </InfoBox>
+      <InfoBox>
+      <div className="icon-wrapper">
+      <FontAwesomeIcon size="2x" icon={faMoneyBill} />
+      </div>
+      <div className="info-wrapper">
+      <h3>Właściciel kapitału</h3>
+      <h4>{school.meta.capitalOwner}</h4>
+      </div>
+      </InfoBox>
+
+      </InfoGrid>
   </Section>
     <Anchor id="data-sources" offset={this.state.headerHeight+80} />
   <Section>

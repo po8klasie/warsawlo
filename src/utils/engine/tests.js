@@ -14,7 +14,7 @@ export const profiles = (values) => (school) => {
 }
 export const pointsRange = (values) => (school) => {
   if(!school.thresholds){
-    return true
+    return false
   }
   if(school.thresholds._2018.overview.pointsRange[0] >= values[0] && school.thresholds._2018.overview.pointsRange[1] <= values[1]){
     return true
@@ -22,7 +22,9 @@ export const pointsRange = (values) => (school) => {
   return false
 }
 export const distance = (value) => (school) => {
-  console.log(value);
+
+  if(!value)
+    return true
   let distanceInMeters = getDistance({
     latitude: value.startPosition.latitude,
     longitude: value.startPosition.longitude

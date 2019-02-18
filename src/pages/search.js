@@ -5,9 +5,11 @@ import styled from '@emotion/styled'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import { faArrowUp, faSearch, faCaretUp, faCaretDown } from '@fortawesome/free-solid-svg-icons'
 import ExtensionsFilter from 'components/ExtensionsFilter'
+import PointsRangeFilter from 'components/PointsRangeFilter'
+import RadiusFilter from 'components/RadiusFilter'
 import Results from 'components/Results'
 import Button from 'components/Button'
-import PointsRangeFilter from 'components/PointsRangeFilter'
+
 import transformParams from 'utils/engine/transformParams'
 import Loader from 'components/Loader'
 import theme from 'utils/theme'
@@ -15,6 +17,7 @@ import SEO from 'components/SEO'
 import mountainRoadImage from 'images/mountain-road.jpg'
 import subjects from 'utils/subjects'
 import { timingSafeEqual } from 'crypto';
+import Tag from 'components/Tag'
 const responsiveWidth = '1000px'
 const SearchBar = styled('input')`
   margin-top:1em;
@@ -30,6 +33,9 @@ const SearchBar = styled('input')`
     transition:.2s all;
     overflow:hidden;
     outline:none;
+    @media (max-width: ${responsiveWidth}){
+      font-size:1.5em;
+    }
 `
 
 const Tab = styled('div')`
@@ -50,7 +56,12 @@ const Actions = styled('div')`
   transition:.2s all;
   text-align:center;
   font-size: ${props => props.full ? '2em' : '1em'};
+  @media (max-width: ${responsiveWidth}){
+    display: block;
+    margin: 20px 0 20px 0;
+    font-size:2em;
   
+  }
 `
 const BrowseButton = styled(Button)`
   background: transparent;
@@ -59,6 +70,13 @@ const BrowseButton = styled(Button)`
   white-space:nowrap;
   display: block;
   margin:20px 0px 20px 10px;
+  @media (max-width: ${responsiveWidth}){
+    font-size:.5em;
+    width: 100%;
+    white-space:wrap;
+    margin:0;
+    padding: 10px 0;
+  }
 `
 const SearchButton = styled(Button)`
   background: ${theme.colors.primary};
@@ -67,7 +85,13 @@ const SearchButton = styled(Button)`
   width:100%;
   margin:20px 10px 20px 0;
   display: block;
-  
+  @media (max-width: ${responsiveWidth}){
+    font-size:.5em;
+    width: 100%;
+    margin:0 0 10px 0;
+    padding: 10px 0;
+  }
+
 `
 const ResultsWrapper = styled('div')`
   display: ${props => props.active ? 'block' : 'none'};
@@ -81,7 +105,8 @@ const WelcomeWrapper = styled('div')`
   width:100%;
   position: relative;
   background: linear-gradient(transparent 0%, ${theme.colors.primary});
-  padding: ${props => props.minify ? '0' : '2em 0'};
+  padding: ${props => props.minify ? '0 0 10px 0' : '2em 0'};
+  transition: .6s all;
   &::after{
     content: '';
     position: absolute;
@@ -99,29 +124,19 @@ const Heading = styled('h1')`
   font-weight: 700;
   text-align: center;
   font-size:5em;
+  @media (max-width: ${responsiveWidth}){
+    font-size:2em;
+  }
   padding-top:${props => props.active ? '10vh' : '0'};
   transform: translateY(${props => props.active ? '0' : '-10000px'});
   height: ${props => props.active ? 'auto' : '0'};
 `
-const Subjects = styled('div')`
-  display:flex;
-  flex-wrap:wrap;
-  justify-content: center;
-`
-const SubjectTag = styled('span')`
-  margin:10px;
-  padding:10px;
-  border:2px solid ${props => props.color};
-  height:auto;
-  border-radius:3px;
-  color:black;
-  background:rgba(0,0,0,0.5);
-  color:white;
-  
-`
 const Container = styled('div')`
   width:50%;
   margin:auto;
+  @media (max-width: ${responsiveWidth}){
+    width:calc(100% - 2em);
+  }
 `
 
 const TabsNav = styled('div')`
@@ -129,6 +144,10 @@ const TabsNav = styled('div')`
   margin:${props => props.full ? '10vh 0 0 0' : '0'};
   color:white;
   margin-bottom:1em;
+  flex-wrap:wrap;
+  @media (max-width: ${responsiveWidth}){
+    margin-top:20px;
+  }
 `
 const TabLink = styled('span')`
 cursor: pointer;
@@ -140,6 +159,9 @@ cursor: pointer;
   border-radius: ${props => props.active ? '3px' : 'none'};
   &:first-child{
    margin-left:0;
+  }
+  @media (max-width: ${responsiveWidth}) {
+    font-size:.9em;
   }
 `
 export default class extends Component{
@@ -159,7 +181,8 @@ export default class extends Component{
       preservedQuery: '',
       filters: {
         profiles: this.params && this.params.has('subjects') ? transformParams('subjects', this.params.get('subjects'), true): [] ,
-        pointsRange: [0, 200]
+        pointsRange: [0, 200],
+        distance: null
       }
     }
   }
@@ -218,6 +241,7 @@ export default class extends Component{
     })
   }
   handlePointsRangeChange = (value) => {
+    console.log(value)
     this.setState({
       filters: {
         pointsRange: value
@@ -239,6 +263,11 @@ export default class extends Component{
     }))
   }
   handleLoad = () => {
+    this.setState({
+      loading:false
+    })
+  }
+  handleRadiusChange = (radius) => {
     this.setState({
       loading:false
     })
@@ -270,7 +299,13 @@ export default class extends Component{
             onClick={() => this.setState({
               activeTab: 'profiles'
             })}
-            >Profile i progi</TabLink>
+            >Profile</TabLink>
+            <TabLink
+            active={this.state.activeTab === 'points'}
+            onClick={() => this.setState({
+              activeTab: 'points'
+            })}
+            >Punkty</TabLink>
           <TabLink
             active={this.state.activeTab === 'location'}
             onClick={() => this.setState({
@@ -283,17 +318,13 @@ export default class extends Component{
       <SearchBar placeholder="Szukaj szkoły" id="search-input" value={this.state.query} onChange={this.handleQueryChange}/>
       </Tab>
       <Tab active={this.state.activeTab === 'profiles'}>
-      <Subjects>
-        {
-          subjects.map(subject => (
-            <SubjectTag color={subject.color}>{subject.full}</SubjectTag>
-          ))
-        }
-      </Subjects>
+      <ExtensionsFilter profiles={this.state.filters.profiles} onToggle={this.handleProfilesToggle}/>
+      </Tab>
+      <Tab active={this.state.activeTab === 'points'}>
+      <PointsRangeFilter range={this.state.filters.pointsRange} onToggle={this.handlePointsRangeChange}/>
       </Tab>
       <Tab active={this.state.activeTab === 'location'}>
-      <span>W promieniu</span>
-      <input /><span> km</span>
+      <RadiusFilter radius={this.state.filters.radius} onChange={this.handleRadiusChange}/>
       </Tab>
       
       <ResultsLoader active={this.state.loading} />

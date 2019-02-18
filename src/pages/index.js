@@ -40,10 +40,7 @@ const First = styled('div')`
   overflow:hidden;
   min-height: calc(115vh - 80px);
   width:100%;
-  // &:last-child{
-  //   margin-top:60vh;
-  //   margin-left:-10vw;
-  }
+  
   &::before{
     position:absolute;
     content: '';
@@ -56,11 +53,10 @@ const First = styled('div')`
     background-position: center center;
     background-size:cover;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
-    @media (max-width: ${responsiveWidth}){
-      clip-path:none;
-    }
+   
   }
   @media (max-width: ${responsiveWidth}){
+   
     overflow-x:hidden;
     &::before{
     transform:none;
@@ -85,12 +81,17 @@ const Header = styled('div')`
   }
   h1{
     font-size:5rem;
+      @media (max-width: ${responsiveWidth}){
+        font-size:2em;
+    }
   }
   p{
     line-height:1.5em;
     font-size:1.1em;
     letter-spacing:2px;
-
+    @media (max-width: ${responsiveWidth}){
+      font-size:.9em;
+  }
   }
 `
 
@@ -100,6 +101,10 @@ const LightButton = styled(Button)`
   border-color:white;
   font-size:1.5em;
   background: rgba(0,0,0,0.3);
+  @media (max-width: ${responsiveWidth}){
+    font-size:1em;
+    margin: 10px;
+}
 `
 const LightButtonWithBadge = styled(withBadge(LightButton, {
   title: 'BETA',
@@ -107,6 +112,7 @@ const LightButtonWithBadge = styled(withBadge(LightButton, {
 }))`
   background:${theme.colors.primary};
   border-color:${theme.colors.primary};
+
 `
 const Shadow = styled('div')`
   background: #eee;
@@ -132,11 +138,22 @@ ${props => props.shape &&
 }
 h1{
   font-size:3rem;
+  @media (max-width: ${responsiveWidth}){
+    font-size:1.7em;
+}
+}
+h2{
+  @media (max-width: ${responsiveWidth}){
+    font-size:1.2em;
+}
 }
 p{
   line-height:1.5em;
   font-size:1.1em;
   letter-spacing:2px;
+  @media (max-width: ${responsiveWidth}){
+    font-size:.9em;
+}
 }
 @media (max-width: ${responsiveWidth}){
   display:block;
@@ -224,10 +241,14 @@ const SourcesAnimation = styled('div')`
   width: 50%;
   @media (max-width: ${responsiveWidth}){
     width:100%;
-    padding-top:2vh;
+    padding-top:0;
+    margin-bottom:1em;
   }
   .sources{
     margin-top:10vh;
+    @media (max-width: ${responsiveWidth}){
+      margin-top:0;
+    }
     display:flex;
     justify-content:space-around;
     svg{
@@ -283,8 +304,12 @@ const BoxWrapper = styled('div')`
   }
 `
 const StartButton = styled(Button)`
+@media (max-width: ${responsiveWidth}){
+  font-size:1.2em;
+}
   font-size: 3em;
   border: none;
+  text-align:center;
   color:white;
   color: white;
   font-weight:700;
@@ -376,6 +401,9 @@ const StartButton = styled(Button)`
 
               background: ${theme.colors.primary};
               color:white;
+              @media (max-width: ${responsiveWidth}){
+                margin-top:0em;
+              }
            `}>
 
        <SourcesAnimation>
@@ -399,7 +427,7 @@ const StartButton = styled(Button)`
            <h2>Pobieramy dane z różnych źródeł, aby móc przedstawić Ci je w jak najlepszej postaci.</h2>
            <p>
              Korzystamy z danych Urzędu Miasta Warszawy, aby pobrać listę szkół oraz średnie liczby punktów,
-             na bierząco łączymy się z wieloma serwisami lokalizacyjnymi, aby dostarczyć Ci
+             na bieżąco łączymy się z wieloma serwisami lokalizacyjnymi, aby dostarczyć Ci
              informacje o
              jak najlepszym połączeniu komunikacyjnym z twoją wymarzoną szkołą.
              <br />
@@ -437,15 +465,14 @@ const StartButton = styled(Button)`
        display:flex;
        align-items:center;
        justify-content:center;
+       @media (max-width: ${responsiveWidth}){
+        display:none;
+      }
        `}>
-       <div css={css`
-         @media (max-width: ${responsiveWidth}){
-           display:none;
-         }
-         `}>
+     
      <Icon icon={CommentExclamationIcon} size="10em"/>
    
-     </div>
+    
      </div>
 
      </FullContainer>
@@ -455,10 +482,13 @@ const StartButton = styled(Button)`
               margin-top:7vh;
            `}>
      <div css={css`
-       width:50%;
+       width:100%;
        display:flex;
        align-items:center;
        justify-content:center;
+       @media (max-width: ${responsiveWidth}){
+        display:none;
+      }
        `}>
       <Icon icon={UsersIcon} size="10em"/>
      </div>
@@ -498,7 +528,13 @@ const StartButton = styled(Button)`
    </FullContainer>
    <Line/>
      <FullContainer  css={css`padding-top:2em`}>
-  <div css={css`width:50%;margin:auto;`} >
+  <div css={css`
+  width:50%;
+  margin:auto;
+  @media (max-width: ${responsiveWidth}){
+    width:calc(100% - 2em);
+}
+  `} >
        <h1 css={css`margin-top:0`}>Kto za tym stoi?</h1>
        <Break color="primary" />
        <h2>Hej!</h2>
