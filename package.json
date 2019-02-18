@@ -14,6 +14,8 @@
     "@fortawesome/free-solid-svg-icons": "^5.6.3",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "anchorate": "^1.2.3",
+    "babel-plugin-inline-react-svg": "^1.0.1",
+    "babel-preset-gatsby": "^0.1.7",
     "emotion-theming": "^10.0.6",
     "fuse.js": "^3.3.0",
     "gatsby": "^2.0.118",

@@ -10,7 +10,7 @@ const typography = new Typography({
     'Arial',
     'sans-serif',
   ],
-  bodyFontFamily: ['Work Sans', 'serif'],
+  bodyFontFamily: ['Raleway', 'serif'],
 })
 
 export default typography
