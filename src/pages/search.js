@@ -64,8 +64,8 @@ const Actions = styled('div')`
   }
 `
 const BrowseButton = styled(Button)`
-  background: transparent;
-  border-color:white;
+  background: rgba(0,0,0,0.4);
+  border-color:rgba(255,255,255,0.4);
   color:white;
   white-space:nowrap;
   display: block;
@@ -104,7 +104,6 @@ const WelcomeWrapper = styled('div')`
   height: ${props => props.minify ? 'auto' : 'calc(100vh - 80px)'};
   width:100%;
   position: relative;
-  background: linear-gradient(transparent 0%, ${theme.colors.primary});
   padding: ${props => props.minify ? '0 0 10px 0' : '2em 0'};
   transition: .6s all;
   &::after{
