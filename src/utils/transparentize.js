@@ -1,0 +1,1 @@
+export default (color, val) => color.replace('(', 'a(').replace(')', `,${val})`)

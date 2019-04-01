@@ -1,15 +1,14 @@
-import Subjects from 'utils/subjectsMapping'
+import Subjects from 'utils/subjects'
 import {getDistance} from 'geolib'
 export const profiles = (values) => (school) => {
   if(!school.thresholds){
     return false
   }
-  let shortNames = values.map(fullName => Subjects.filter(subject => subject[0] === fullName)[0][2])
-  if(shortNames.every(elem => school.thresholds._2018.overview.availableSubjects.includes(elem))){
-
+ 
+  if(values.every(elem => school.thresholds._2018.overview.availableSubjects.includes(elem))){
     return true
   }
-  console.log(shortNames, school.thresholds._2018.overview.availableSubjects);
+ 
   return false
 }
 export const pointsRange = (values) => (school) => {

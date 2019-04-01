@@ -2,7 +2,7 @@
 const theme = {
   colors: {
     primary: 'rgb(89, 0, 138)',
-    secondary: 'rgb(12,10,62)',
+    secondary: '#FF0015',
     tertiary: 'rgb(249,86,79)',
     light: 'rgb(242,242,242)',
     secondLight: 'rgb(230,230,230)',
@@ -10,7 +10,7 @@ const theme = {
   },
   fonts: {
     primary: 'Work Sans',
-    secondary: 'Playfair Display',
+    secondary: 'Josefin Sans',
     tertiary: 'Ostrich Sans Rounded'
   }
 }

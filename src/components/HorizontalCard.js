@@ -1,26 +1,29 @@
 import React, {Component} from 'react'
 import styled from '@emotion/styled'
-import LOPlaceholder from 'components/LOPlaceholder'
 import Tag from 'components/Tag'
 import subjectsMapping from 'utils/subjectsMapping'
 import { Link } from 'gatsby'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar } from '@fortawesome/free-solid-svg-icons'
+import Icon from 'components/Icon'
+import PlusIcon from '../images/icons/plus.svg'
+import CheckIcon from '../images/icons/check.svg'
 import theme from 'utils/theme'
 import toggleFollow from 'utils/follow'
 import FollowModal from 'components/modals/Follow'
 const responsiveWidth = '700px'
+const gradient = `linear-gradient(to right, ${theme.colors.primary}, ${theme.colors.tertiary})`
 const CardWrapper = styled(Link)`
   all:unset;
   width:100%;
-  border: 3px solid #eee;
+  border-radius:5px;
   display:grid;
-  grid-template-columns: 1fr 4fr 1fr;
-  margin:1em;
+  grid-template-columns: 2fr 8fr 1fr;
+  margin:1em 0;
   cursor:pointer;
   transition: .4s all;
+  background: white;
+  border: 3px solid ${props => props.selected ? `${theme.colors.primary} !important` : '#ddd'};
   &:hover{
-    box-shadow: 0 20px 70px -20px rgba(0,0,0,0.3);
+    border-color:#aaa;
   }
   @media (max-width: ${responsiveWidth}) {
     margin: 1em 0;
@@ -32,41 +35,6 @@ const Info = styled('div')`
   h3{
     margin-bottom:20px;
   }
-`
-const Actions = styled('div')`
-  height:100%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  & > div{
-    @media (max-width: ${responsiveWidth}) {
-      width:100%;
-    }
-  }
-
-  a{
-    all:unset;
-    cursor:pointer;
-    background: #eee;
-    padding:5px;
-    margin:10px;
-    display:block;
-    font-size:0.8em;
-    text-align:center;
-  }
-`
-const FollowButton = styled('button')`
-cursor:pointer;
-padding:5px;
-margin:10px;
-display:block;
-font-size:0.8em;
-width: calc(100% - 34px);
-background:${props => props.active ? theme.colors.primary : 'transparent'};
-color: ${props => props.active ? 'white' : 'black'};
-text-align:center;
-border: 2px solid ${theme.colors.primary};
-outline:none;
 `
 const SchoolImage = styled('img')`
   object-fit:cover;
@@ -80,30 +48,45 @@ const SchoolImage = styled('img')`
     height:200px;
   }
 `
-
+const Select = styled.div`
+  height:100%;
+  background:transparent;
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  transition: .2s all;
+  svg{
+    transition: .2s all;
+  }
+`
+const LOPlaceholder = styled.div`
+  width:100%;
+  height: 100%;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  font-family:'Playfair Display';
+  text-align:center;
+  font-size:5em;
+  background: ${gradient};
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  color:${theme.colors.primary};
+`
 export default class extends Component{
   constructor(props){
     super(props)
     console.log(props.school)
     this.state = {
       openModal: false,
+      selected: false,
       following: typeof window !== 'undefined' && localStorage.following && JSON.parse(localStorage.following).includes(props.school.meta.regon)
     }
   }
-  toggleFollow = (e) => {
+  toggleSelect = (e) => {
+    console.log('xd')
     e.preventDefault()
-    if(typeof window !== 'undefined' && localStorage.followConsent !== 'true'){
-      this.openModal()
-      return
-    }
-    console.log(this.props)
-    toggleFollow(this.props.school.meta.regon)
-    this.setState(state => ({
-      following: !state.following
-    }))
-    if(this.props.onToggleFollow){
-      this.props.onToggleFollow(this.props.school.meta.regon)
-    }
+    this.props.onToggleSelect(this.props.school.meta.regon)
   }
   openModal = () => this.setState({
     openModal:true
@@ -122,17 +105,18 @@ export default class extends Component{
     })
   }
   render = () => {
-    let { school, filters } = this.props
+    let { school, filters, selected } = this.props
+    console.log(selected == true)
     return (
       <>
-        <CardWrapper to={`/school/${school.meta.regon}`}>
+        <CardWrapper to={`/school/${school.meta.regon}`} selected={selected}>
         {
-          school.media && school.media[0] ? <SchoolImage src={school.media[0]} /> : <LOPlaceholder />
+           <LOPlaceholder>LO</LOPlaceholder>
         }
         <Info>
         <h3>{school.name.full}</h3>
-        <h5>{school.location && school.location.address.District}</h5>
-        {
+        <h5>{school.location.address.District}</h5>
+        {/* {
           school.thresholds && school.thresholds._2018.overview.availableSubjects.map(subject => {
             let subArr = subjectsMapping.filter(s => s[2] == subject)
             let color = subArr[0] ? subArr[0][1] : 'black'
@@ -147,29 +131,15 @@ export default class extends Component{
               </Tag>
             )
           })
-        }
+        } */}
         </Info>
-        <Actions>
-        <div>
-          {school.contact.website && <a href={`http://${school.contact.website}`}
-          target="_blank"
-          rel="noopener norefferer"
-          onClick={e => e.stopPropagation()}
-          >Odwiedź stronę</a>}
-          <a href={`https://google.com/search?q=${school.name.full.split(' ').join('+')}`}
-          target="_blank"
-          rel="noopener norefferer"
-          onClick={e => e.stopPropagation()}
-          >Szukaj w Google</a>
-          <FollowButton className="action follow" active={this.state.following} onClick={this.toggleFollow}>
-          <FontAwesomeIcon icon={faStar} /> {this.state.following ? 'Nie obserwuj' : 'Obserwuj'}
-          </FollowButton>
-          </div>
-
-        </Actions>
+        <Select onClick={this.toggleSelect} selected={selected}>
+         <Icon icon={selected ? CheckIcon : PlusIcon} color={theme.colors.primary} /> 
+       
+          </Select>
 
         </CardWrapper>
-        <FollowModal open={this.state.openModal} onAgree={this.handleAgree} onCancel={this.handleCancel}/>
+      
         </>
       )
   }

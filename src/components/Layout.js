@@ -7,6 +7,7 @@ import Navbar from 'components/Navbar'
 import Footer from 'components/Footer'
 import styled from '@emotion/styled'
 const LayoutWrapper = styled('div')`
+padding-top:80px;
 display: flex;
 flex-direction: column;
 height:100%;

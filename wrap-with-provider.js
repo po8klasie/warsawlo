@@ -15,9 +15,7 @@ export default ({ element }) =>(
          width:100%;
          height:100%;
        }
-       body{
-         padding-top:80px;
-       }
+      
        #___gatsby{
 
          height:100%;

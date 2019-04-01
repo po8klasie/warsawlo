@@ -4,13 +4,13 @@ const typography = new Typography({
   baseLineHeight: 1.666,
   headerFontFamily: [
     'Playfair Display',
-    'Helvetica Neue',
+    'helvetica New',
     'Segoe UI',
     'Helvetica',
     'Arial',
     'sans-serif',
   ],
-  bodyFontFamily: ['Raleway', 'serif'],
+  bodyFontFamily: ['Josefin Sans', 'serif'],
 })
 
 export default typography

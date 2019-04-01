@@ -1,10 +1,9 @@
 /** @jsx jsx */
 import React, { Component } from 'react'
-import Layout from 'components/Layout'
+import AppLayout from 'components/app/Layout'
 import styled from '@emotion/styled'
 import { css, jsx } from '@emotion/core'
 import { graphql, Link } from 'gatsby'
-import LOPlaceholder from 'components/LOPlaceholder'
 import Scrollspy from 'react-scrollspy'
 import DocumentEvents from 'react-document-events'
 import SEO from 'components/SEO'
@@ -24,14 +23,25 @@ import theme from 'utils/theme'
 import TextLink from 'components/TextLink'
 import subjects from 'utils/subjects'
 const responsiveWidth = '1500px'
+const LOPlaceholder = styled.span`
+  font-family:'Playfair Display';
+  padding:10px;
+  font-size:4em;
+  text-align: center;
+  border:2px solid white;
+  
+  border-radius:3px;
+`
 const Header = styled('header')`
   width: 100%;
   min-height:50vh;
   overflow: hidden;
-  background: ${props => props.bg ? 'rgba(0,0,0,.6)' : theme.colors.secondary};
+  background: linear-gradient(to right, ${theme.colors.primary}, ${theme.colors.tertiary});
+  color:white;
   position:relative;
   padding: 3em 0;
-  color:white;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+  
   h1{
     font-weight:700;
     font-family: 'Playfair Display';
@@ -49,6 +59,16 @@ const Header = styled('header')`
       display: none;
      }
   }
+  &::before{
+    width:100%;
+    height:100%;
+    position: absolute;
+    content:${props => props.bg ? "''" : ''};
+    background: rgba(0,0,0,0.5);
+    top:0;
+    left:0;
+    z-index:-1;
+  }
   .bg{
     position: absolute;
     top:0;
@@ -56,9 +76,12 @@ const Header = styled('header')`
     width:calc(100% + 40px);
     height:calc(100% + 20px);
     filter: blur(10px);
-    z-index:-1;
+    
+    z-index:-2;
     margin: -20px -20px 0 0;
+   
   }
+
 
   display:flex;
     align-items:center;
@@ -466,7 +489,7 @@ export default class extends Component{
       <>
       <SEO title={school.name.full} keywords={[`Liceum`, `LO`, school.name.full]} />
       <DocumentEvents onScroll={this.onScroll} />
-      <Layout>
+      <AppLayout location={this.props.location}>
       <div ref={this.headerEl}>
       <Header bg={school.media && school.media[0]}>
         {
@@ -474,7 +497,7 @@ export default class extends Component{
         }
       <div>
       <div className="top-info">
-      { school.media && school.media[0] ? <img src={school.media[0]} width="400"/> : <LOPlaceholder /> }
+      { school.media && school.media[0] ? <img src={school.media[0]} width="400"/> : <LOPlaceholder>LO</LOPlaceholder> }
       <div>
         <div className="ranking">
       { school.ranking && <h2> {school.ranking.place}. miejsce w Warszawie</h2> }
@@ -484,7 +507,7 @@ export default class extends Component{
         {
            school.thresholds && school.thresholds._2018.overview.availableSubjects.map(sub => {
             let subject = subjects.filter(s => sub === s.short)[0]
-            return <Tag light color={subject && subject.color}>{subject ? subject.full : sub}</Tag>
+            return <Tag  color={subject && subject.color}>{subject ? subject.full : sub}</Tag>
           })
         }
       </div>
@@ -581,7 +604,7 @@ export default class extends Component{
      <ResponsiveContainer width="100%" height={500} >
     <BarChart height={500} data={school.thresholds._2018.detailed}
 
-              layout="vertical"
+              AppLayout="vertical"
               >
          <YAxis dataKey={t => t.extensions.join('-')} type="category" tick={<Tick />} tickLine={false}/>
          <XAxis type="number" unit="pkt" domain={[0, 200]}/>
@@ -764,7 +787,7 @@ export default class extends Component{
  
       </SchoolWrapper>
       </Main>
-      </Layout>
+      </AppLayout>
       </>
     )
   }
