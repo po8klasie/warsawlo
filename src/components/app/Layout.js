@@ -133,7 +133,7 @@ export default props => {
         <AccountInfo>
             <div className="info">
             <Icon icon={UserIcon} gradient={[theme.colors.primary, theme.colors.secondary]} />
-            <h4>{localStorage.currentUser}</h4>
+            <h4>{typeof window !== 'undefined' && localStorage.currentUser}</h4>
           
             </div>
             <Accounts>

@@ -32,9 +32,9 @@ export const getUsernames = async () => {
 
 export const setCurrentUser = (username) => new Promise((resolve, reject) => {
     getUser(username).then(user => {
-        localStorage.currentUser = username
+        localStorage.currentUser = typeof window !== 'undefined' ? username : ''
         resolve(user)
     }).catch(err => reject(err))
 })
-export const getCurrentUsername = () => localStorage.currentUser
+export const getCurrentUsername = () => typeof window !== 'undefined' ? localStorage.currentUser : {}
 export const getCurrentUser = () => getUser(getCurrentUsername())
