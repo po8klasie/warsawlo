@@ -151,9 +151,11 @@ export default class extends Component{
                                 <label>Typ szkoły: </label>
                             <Switch
                             active={this.state.schoolType === 'SP'}
+                            type='button'
                             onClick={() => this.setState({schoolType: 'SP'})}>Szkoła podstawowa</Switch>
                             <Switch
                             active={this.state.schoolType === 'GIM'}
+                            type='button'
                             onClick={() => this.setState({schoolType: 'GIM'})}>Gimnazjum</Switch>
                             </Switches>
                             <p>Wszystkie z tych danych zapisujemy na twoim urządzeniu. Nie wysyłamy ich do zewnętrzych baz danych. </p>
