@@ -246,7 +246,8 @@ margin-left:3em;
 const BarTagsWrapper = styled('div')`
 position: absolute;               /* 2 */
  top: 50%;                         /* 3 */
- transform: translate(0, -50%)
+ transform: translate(0, -50%);
+ z-index:2;
 `
 const Tick = props => {
   console.log(props)
@@ -267,6 +268,17 @@ const Tick = props => {
     }
     </BarTagsWrapper>
     </ForeignObject>)
+}
+const CustomShape =  (props) => {
+  const {
+    fill, x, y, width, height,
+  } = props;
+
+  return <path d={`
+    M ${x+width}, ${y}
+    L ${x+width}, ${y+height}
+    z
+  `} stroke="none" fill={fill} />;
 }
 const MoovitWrapper = styled('div')`
   width:100%;
@@ -585,8 +597,8 @@ export default class extends Component{
               >
          <YAxis dataKey={t => t.extensions.join('-')} type="category" tick={<Tick />} tickLine={false}/>
          <XAxis type="number" unit="pkt" domain={[0, 200]}/>
-         <Tooltip/>
-         <Bar dataKey='threshold' fill="rgb(89,0,138)" name="Próg punktowy" />
+        
+         <Bar dataKey='threshold' fill="rgba(89, 0, 138, .2)" name="Próg punktowy" />
         </BarChart>
           </ResponsiveContainer>
 

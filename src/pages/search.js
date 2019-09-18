@@ -9,7 +9,7 @@ import PointsRangeFilter from 'components/PointsRangeFilter'
 import RadiusFilter from 'components/RadiusFilter'
 import Results from 'components/Results'
 import Button from 'components/Button'
-
+import Img from 'gatsby-image'
 import transformParams from 'utils/engine/transformParams'
 import Loader from 'components/Loader'
 import theme from 'utils/theme'
@@ -106,16 +106,13 @@ const WelcomeWrapper = styled('div')`
   position: relative;
   padding: ${props => props.minify ? '0 0 10px 0' : '2em 0'};
   transition: .6s all;
-  &::after{
-    content: '';
-    position: absolute;
+  .bg{
+    position: absolute !important;
     top: 0;
     left: 0;
     width:100%;
     height:100%;
-    background: url(${mountainRoadImage});
-  background-size:cover;
-  background-position:center center;
+    object-fit: cover;
   z-index:-1;
   }
 `
@@ -285,6 +282,7 @@ export default class extends Component{
       <SEO title="Wyszukiwarka" keywords={[`liceum`, `szukaj`, `wyszukiwarka`]} />
       
       <WelcomeWrapper minify={this.state.formDirty}>
+        <Img className="bg" fluid={this.props.data.file.childImageSharp.fluid} />
         <Heading active={!this.state.formDirty}>A jaki jest Twój cel podróży?</Heading>
         <Container>
           <TabsNav full={!this.state.formDirty}>
@@ -341,3 +339,16 @@ export default class extends Component{
     )
   }
 }
+export const query = graphql`
+  query {
+    file(relativePath: { eq: "mountain-road.jpg" }) {
+      childImageSharp {
+        # Specify the image processing specifications right in the query.
+        # Makes it trivial to update as your page's design changes.
+        fluid(maxWidth: 1920) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
