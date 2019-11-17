@@ -559,8 +559,8 @@ export default class extends Component{
             <th>2018</th>
             <th>2017</th>
             <th>2016</th>
-            <th>Matura podstawa</th>
-            <th>Matura rozszerzenie</th>
+            <th>Matura podstawowa</th>
+            <th>Matura rozszerzona</th>
             
           </tr>
           </thead>
@@ -587,7 +587,7 @@ export default class extends Component{
   </Section>
   <Anchor  id="thresholds" offset={this.state.headerHeight+80}/>
   <Section>
-  <h2>Średnie ilości punktów</h2>
+  <h2>Średnia ilość punktów</h2>
   <h3>2018/2019</h3>
   { !school.thresholds ? <span>Brak danych</span> : (
      <ResponsiveContainer width="100%" height={500} >
@@ -709,7 +709,7 @@ export default class extends Component{
   <Anchor id="opinion" offset={this.state.headerHeight+80} />
   <Section>
   <h2>Opinie</h2>
-    <p>Sprawdź <TextLink wrapper="a" href="https://www.facebook.com/groups/idziemygdzie">grupę idziemygdzie na Facebooku</TextLink></p>
+    <p>Sprawdź grupę <TextLink wrapper="a" href="https://www.facebook.com/groups/idziemygdzie">idziemygdzie </TextLink>na Facebooku</p>
   
   </Section>
   <Anchor id="info" offset={this.state.headerHeight+80} />
@@ -770,7 +770,7 @@ export default class extends Component{
         }
       })()
     }</p>}
-  <TextLink to="/about-data">Przeczytaj skąd zebraliśmy dane, które Ci prezentujemy</TextLink>
+  <TextLink to="/about-data">Sprawdź skąd zebraliśmy dane, które Ci prezentujemy</TextLink>
   </Section>
 
  

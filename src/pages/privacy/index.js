@@ -20,7 +20,7 @@ export default props => {
     Wierzymy, że wszystko może być proste i przejrzyste, dlatego zbieramy <b>TYLKO</b> dane,
     które zwyczjnie ułatwią Ci życie. Nic innego. Żadnych cookies od Google Analytics itp.
     </p>
-    <h3>Jakie dane od Ciebie pozyskujemy?</h3>
+    <h3>Jakie dane pozyskujemy?</h3>
     <ol>
     <li>Ilość punktów, którą obliczyłeś za pomocą naszego kalkulatora punktów (tylko wtedy, gdy wyrazisz na to zgodę)</li>
     <li>Listę obserwowanych szkół</li>
@@ -30,9 +30,9 @@ export default props => {
     </p>
     <h3>Gdzie są przechowywane te dane?</h3>
     <p>
-    Te dane są przechowywane tylko na twoim urządzeniu za pomocą technologii WebStorage oraz IndexedDB,
-    o których możnaby powiedzieć, że są czymś w rodzaju nowocześniejszych plików cookies.
-    Pamiętaj, nigdzie nie wysyłamy twoich danych!
+    Te dane są przechowywane tylko na Twoim urządzeniu za pomocą technologii WebStorage oraz IndexedDB,
+    o które są czymś w rodzaju nowocześniejszych plików cookies.
+    Pamiętaj, nigdzie nie wysyłamy Twoich danych!
     </p>
     <p>
     <i>Jeśli chcesz poczytać więcej na temat WebStorage i IndexedDB polecam strony:<br />

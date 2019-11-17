@@ -327,7 +327,7 @@ export default class extends Component{
       <ResultsLoader active={this.state.loading} />
       <Actions full={!this.state.formDirty}>
       <SearchButton type="submit">Szukaj</SearchButton>
-      <BrowseButton type="reset" onClick={this.showAll}>przeglądaj wszystkie szkoły</BrowseButton>
+      <BrowseButton type="reset" onClick={this.showAll}>Przeglądaj wszystkie szkoły</BrowseButton>
       </Actions>
       </form>
       </Container>

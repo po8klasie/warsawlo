@@ -18,15 +18,15 @@ export default props => {
     <ArticleWrapper>
     <Article>
     <p>Hej, doceniamy, że chcesz włączyć się w naszą pracę. To wiele znaczy.
-    Możesz pomóc (może nawet wszystkim) warszawskim przyszłym licealistom!
+    Możesz pomóc (może nawet wszystkim) przyszłym warszawskim licealistom!
     </p>
     <p>Poniżej przedstawiamy kilka sposobów na twój wkład,
-    lecz jeśli masz inny pomysł, jak nam pomóc, daj nam znać na Messengerze albo mailem  - <TextLink wrapper="a" href="mailto:ideas@warsawlo.pl">ideas@warsawlo.pl</TextLink>.
+    lecz jeśli masz inny pomysł, daj znać na Messengerze albo mailem  - <TextLink wrapper="a" href="mailto:ideas@warsawlo.pl">ideas@warsawlo.pl</TextLink>.
     </p>
     <h3>Spraw, by było o nas głośno!</h3>
     <p>Czy chcesz udostępnić naszą stronę na FB, czy pisać z hashtagiem #WarsawLO - up to you. Po prostu spraw, by social media nas poznały.</p>
     <h3>Wyłapuj błędy!</h3>
-    <p>Jak przeglądając nasz serwis tafisz na jakiś błąd, zgłoś go - napisz do nas na Messengerze albo na <TextLink wrapper="a" href="mailto:report@warsawlo.pl">report@warsawlo.pl</TextLink></p>
+    <p>Jeśli przeglądając nasz serwis trafisz na błąd, zgłoś to - napisz do nas na Messengerze albo na <TextLink wrapper="a" href="mailto:report@warsawlo.pl">report@warsawlo.pl</TextLink></p>
     <h3>Kręci Cię programowanie?</h3>
     <p>
       To jest coś. Nie pozwól swojemu talentowi się marnować. Zajrzyj na stronę <TextLink to="/for-developers">dla deweloperów</TextLink>,
