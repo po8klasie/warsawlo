@@ -294,7 +294,9 @@ const MobileNavShortcut = styled('div')`
         <LinksContainer opened={this.state.isOpen} onClick={this.toggle}>
           <div>
 
-              <NavLink to="/search" className={this.isLinkActive('/search')}>Szukaj</NavLink>
+              <NavLink to="/search" className={this.isLinkActive('/search')}>Znajdź szkołę</NavLink>
+              {/* czy: "Szukaj szkoły" - zalezy czy chcesz nacisk połołyć na procesz szukania,
+               czy na rezultat - znalezienie*/}
 
 
               <NavLink to="/calculator" className={this.isLinkActive('/calculator')}>Kalkulator punktów</NavLink>

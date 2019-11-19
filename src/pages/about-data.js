@@ -18,7 +18,7 @@ export default props => {
     <Article>
     <p>
     Hej, pewnie zastanawiasz się skąd zebraliśmy te wszystkie dane?
-    Poniżej przedtawimy Ci nasze źródła.
+    Poniżej przedtawiamy nasze źródła.
     </p>
     <h3>Miasto Stołeczne Warszawa</h3>
     <p>

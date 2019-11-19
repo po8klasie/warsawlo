@@ -335,13 +335,21 @@ const StartButton = styled(Button)`
    
      <Header>
 <h1>Wybierz swoją drogę z nami!</h1>
-<p>Nie wiesz jakie szkoły wybrać? Rekrutacja do szkół średnich to poważny krok. W tym roku jednak będzie to znacznie prostszy.
-  Możesz odwiedzić każdy licealny zakątek w Internecie
-  albo znaleźć swoją szkołę marzeń za trzecim kliknięciem!
+<p>Nie wiesz którą szkołę wybrać? Rekrutacja do szkół średnich to poważna sprawa. W tym roku jednak będzie on znacznie prostszy.
+  {/* Możesz odwiedzić każdy licealny zakątek w Internecie
+  albo znaleźć swoją szkołę marzeń za trzecim kliknięciem! */}
+  Znajdź szkołę swoich marzeń za trzecim klknięciem.
 </p>
+{/* Mimo, że bardzo podoba mi sie "licelalny zakątek" (ach, jednak jakiś humanistyczny akcent;)!) to ux stoi po stronie
+ plain language. Na pierwszy rzut oka można by pomyslec, że te zakątki można obejrzeć sobie w WarsawLO. Ja tak roboczo skróciłam
+ to hasło, ale myślę, że jest po prostu do przemyślenia. Ogólnie konstrukcja i zamysł jest super bo porównuje "tradycyjne" metody
+ poszukiwania informacji o szkołach i zestawia z zaletami aplikcaji, ale tak jak mówię - plain language ;) Coś prostego, 
+ bez metafor. 
+  */}
+
 <LightButton onClick={this.scrollToContent}>Czytaj dalej</LightButton>
 <Link to='/search' css={css`all:unset;margin: 20px 0 0 0;`}>
-<LightButtonWithBadge>Znajdź mi szkołę</LightButtonWithBadge>
+<LightButtonWithBadge>Znajdź szkołę</LightButtonWithBadge>
 </Link>
 </Header>
 </First>
@@ -361,7 +369,7 @@ const StartButton = styled(Button)`
              },
              {
               icon: BusIcon,
-              title: 'Dojazd komunikacjąe'
+              title: 'Dojazd komunikacją'
             },
             {
               icon: MapMarkerIcon,
@@ -373,7 +381,7 @@ const StartButton = styled(Button)`
             },
             {
               icon: ChartBarIcon,
-              title: 'Średnie ilości punktów'
+              title: 'Średnią ilość punktów'
             },
             {
               icon: CalendarIcon,
@@ -429,11 +437,11 @@ const StartButton = styled(Button)`
              Korzystamy z danych Urzędu Miasta Warszawy, aby pobrać listę szkół oraz średnie liczby punktów,
              na bieżąco łączymy się z wieloma serwisami lokalizacyjnymi, aby dostarczyć Ci
              informacje o
-             jak najlepszym połączeniu komunikacyjnym z twoją wymarzoną szkołą.
+             jak najlepszym połączeniu komunikacyjnym z Twoją wymarzoną szkołą.
              <br />
              A to wszystko zebrane tylko w jednym miejscu...
            </p>
-           <TextLink to="/about-data">Dowiedz się o tym więcej</TextLink>
+           <TextLink to="/about-data">Dowiedz się więcej</TextLink>
          </Box>
        </BoxWrapper>
      </FullContainer>
@@ -455,7 +463,7 @@ const StartButton = styled(Button)`
              <h2>Nobody's perfect...</h2>
                <p css={css`width:100%`}>
                Przetwarzając ogromne ilości informacji może wkraść się do danych jakiś błąd.
-               Jeżeli natkniesz się na niego, zgłoś go.
+               Jeżeli natkniesz się na niego, zgłoś to.
                Nasi moderatorzy zajmą się tym tak szybko, jak tylko będę mogli.
                </p>
                </Shadow>
@@ -499,16 +507,16 @@ const StartButton = styled(Button)`
        <Break color="secondary" />
        <h2>Ten portal tworzy każdy z nas</h2>
          <p css={css`width:100%`}>
-        Idziesz dopiero do liceum i robisz ogromny research, czy może masz już rekrutację za sobą i wiesz jak to działa?
+        Wybierasz liceum i robisz ogromny research, czy może masz już rekrutację za sobą i wiesz jak to działa?
         Podziel się swoimi spostrzeżeniami tutaj.
-        Każdego ucznia ostatniej klasy gimnazjum czy podstawówki co roku czeka to samo.
+        Każdego ucznia ostatniej klasy podstawówki czeka to samo.
         Pomagajmy sobie nawzajem.  WarsawLO to portal tworzony przez uczniów dla uczniów.
        </p>
        </Box>
        </Shadow>
        <Shadow css={css`margin-top:2em;`}>
          <p>
-         Masz jakiś pomysł? Myślisz, że fajnie byłoby coś tutaj dodać? To świetnie!
+         Masz jakiś pomysł? Myślisz, że fajnie byłoby coś tu dodać? To świetnie!
          Napisz do nas na Messengerze albo mailem na ideas@warsawlo.pl
 
          <TextLink to="/help-us">Dowiedz się, jak możesz nam pomóc</TextLink>
@@ -540,8 +548,8 @@ const StartButton = styled(Button)`
        <h2>Hej!</h2>
          <p>
 
-         Jesteśmy grupą uczniów z warszawskich gimnazjów a zarazem pasjonatów informatyki.
-         Rekrutacja spotka lub spotkała każdego z nas. Wszyscy mówią, że chcą się dostać do jak najlepszej szkoły,
+         Jesteśmy grupą uczniów z warszawskich gimnazjów, a zarazem pasjonatami informatyki.
+         W rekrutacji brał lub będzie brał udział każdy z nas. Wszyscy mówią, że chcą się dostać do jak najlepszej szkoły,
          ale przecież to, czy dana szkoła jest najlepsza to kwestia subiektywna.
          Chcieliśmy choć trochę uprościć ten trudny wybór szkoły średniej.
          Nasunęło się nam na myśl, że czemu nie rozwiązać tego problemu właśnie za pomocą aplikacji lub strony internetowej?

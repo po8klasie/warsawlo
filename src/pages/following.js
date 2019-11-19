@@ -54,7 +54,7 @@ class Following extends Component{
       <SEO title="Obserwowane szkoły" />
       <Wrapper>
       <Container>
-      <h1>Obswerowane szkoły</h1>
+      <h1>Obserwowane szkoły</h1>
       {
         this.state.following.length === 0 && (
           <InfoWrapper>
