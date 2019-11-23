@@ -2,6 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 
 import theme from 'utils/theme'
+
 const responsiveWidth = '1000px'
 const ArticleWrapper = styled('article')`
 width:100%;
@@ -20,9 +21,9 @@ h1{
 export default props => {
   return (
     <ArticleWrapper>
-    <div className="container">
-    {props.children}
-    </div>
+      <div className="container">
+        {props.children}
+      </div>
     </ArticleWrapper>
   )
 }

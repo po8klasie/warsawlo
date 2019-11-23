@@ -10,8 +10,8 @@ import styled from '@emotion/styled'
 import Logo from 'components/Logo'
 import Button from '../components/Button'
 import Break from '../components/Break'
-import {withBadge} from 'utils/withBadge'
-import { animateScroll} from 'react-scroll'
+import { withBadge } from 'utils/withBadge'
+import { animateScroll } from 'react-scroll'
 import theme from 'utils/theme'
 import BusIcon from '../images/icons/bus.svg'
 import CalendarIcon from '../images/icons/calendar.svg'
@@ -27,9 +27,10 @@ import CommentExclamationIcon from '../images/icons/comment-exclamation.svg'
 import UsersIcon from '../images/icons/users.svg'
 
 
-import {keyframes} from '@emotion/core'
+import { keyframes } from '@emotion/core'
 import Icon from 'components/Icon'
 import roadImage from 'images/road.jpg'
+
 const responsiveWidth = '1000px'
 
 
@@ -108,7 +109,7 @@ const LightButton = styled(Button)`
 `
 const LightButtonWithBadge = styled(withBadge(LightButton, {
   title: 'BETA',
-  color: 'secondary'
+  color: 'secondary',
 }))`
   background:${theme.colors.primary};
   border-color:${theme.colors.primary};
@@ -133,7 +134,7 @@ ${props => props.shape &&
     clip-path: polygon(0 20%, 100% 0, 100% 80%, 0% 100%);
      padding-top:5%;
      padding-bottom:10%;`
-  }
+}
 
 }
 h1{
@@ -163,7 +164,7 @@ const Inline = styled('div')`
 display:grid;
 grid-template-columns: .2fr 1fr;
 grid-column-gap:10px;
-color: ${props => props.soon ? theme.colors.secondLight: 'black'};
+color: ${props => props.soon ? theme.colors.secondLight : 'black'};
 position:relative;
 h2{
   letter-spacing:2px;
@@ -320,89 +321,91 @@ const StartButton = styled(Button)`
     transform: scale(1.1);
   }
 `
- export default class About extends Component{
- constructor(props){
- super(props)
- }
- scrollToContent = () => {
-   animateScroll.scrollTo(window.innerHeight*0.8);
- }
- render = () => {
- return (
-   <Layout location={this.props.location}>
-     <SEO title="Home" keywords={[`WarsawLO`, `licea`, `wyszukiwarka`]} />
-     <First>
-   
-     <Header>
-<h1>Wybierz swoją drogę z nami!</h1>
-<p>Nie wiesz którą szkołę wybrać? Rekrutacja do szkół średnich to poważna sprawa. W tym roku jednak będzie on znacznie prostszy.
-  {/* Możesz odwiedzić każdy licealny zakątek w Internecie
+export default class About extends Component {
+  constructor(props) {
+    super(props)
+  }
+
+  scrollToContent = () => {
+    animateScroll.scrollTo(window.innerHeight * 0.8)
+  }
+  render = () => {
+    return (
+      <Layout location={this.props.location}>
+        <SEO title="Home" keywords={[`WarsawLO`, `licea`, `wyszukiwarka`]}/>
+        <First>
+
+          <Header>
+            <h1>Wybierz swoją drogę z nami!</h1>
+            <p>Nie wiesz którą szkołę wybrać? Rekrutacja do szkół średnich to poważna sprawa. W tym roku jednak będzie
+              on znacznie prostszy.
+              {/* Możesz odwiedzić każdy licealny zakątek w Internecie
   albo znaleźć swoją szkołę marzeń za trzecim kliknięciem! */}
-  Znajdź szkołę swoich marzeń za trzecim klknięciem.
-</p>
-{/* Mimo, że bardzo podoba mi sie "licelalny zakątek" (ach, jednak jakiś humanistyczny akcent;)!) to ux stoi po stronie
+              Znajdź szkołę swoich marzeń za trzecim klknięciem.
+            </p>
+            {/* Mimo, że bardzo podoba mi sie "licelalny zakątek" (ach, jednak jakiś humanistyczny akcent;)!) to ux stoi po stronie
  plain language. Na pierwszy rzut oka można by pomyslec, że te zakątki można obejrzeć sobie w WarsawLO. Ja tak roboczo skróciłam
  to hasło, ale myślę, że jest po prostu do przemyślenia. Ogólnie konstrukcja i zamysł jest super bo porównuje "tradycyjne" metody
  poszukiwania informacji o szkołach i zestawia z zaletami aplikcaji, ale tak jak mówię - plain language ;) Coś prostego, 
  bez metafor. 
   */}
 
-<LightButton onClick={this.scrollToContent}>Czytaj dalej</LightButton>
-<Link to='/search' css={css`all:unset;margin: 20px 0 0 0;`}>
-<LightButtonWithBadge>Znajdź szkołę</LightButtonWithBadge>
-</Link>
-</Header>
-</First>
+            <LightButton onClick={this.scrollToContent}>Czytaj dalej</LightButton>
+            <Link to='/search' css={css`all:unset;margin: 20px 0 0 0;`}>
+              <LightButtonWithBadge>Znajdź szkołę</LightButtonWithBadge>
+            </Link>
+          </Header>
+        </First>
 
 
-     <FullContainer>
-       <h1>To prostsze!</h1>
-       <Break color="secondary" />
-       <p>Nadal nie mówimy, że najławiejsze. <br />To twój wybór, ale cieszymy się, że możemy Ci go ułatwić.</p>
-       <h2 css={css`margin: 2em 0 2em 0;`}>Dzięki nam szybko sprawdzisz:</h2>
-       <InlineWrapper>
-         {
-           [
-             {
-               icon: InfoIcon,
-               title: 'Podstawowe informacje'
-             },
-             {
-              icon: BusIcon,
-              title: 'Dojazd komunikacją'
-            },
+        <FullContainer>
+          <h1>To prostsze!</h1>
+          <Break color="secondary"/>
+          <p>Nadal nie mówimy, że najławiejsze. <br/>To twój wybór, ale cieszymy się, że możemy Ci go ułatwić.</p>
+          <h2 css={css`margin: 2em 0 2em 0;`}>Dzięki nam szybko sprawdzisz:</h2>
+          <InlineWrapper>
             {
-              icon: MapMarkerIcon,
-              title: 'Lokalizacje'
-            },
-            {
-              icon: FileEditIcon,
-              title: 'Zdawalność matur'
-            },
-            {
-              icon: ChartBarIcon,
-              title: 'Średnią ilość punktów'
-            },
-            {
-              icon: CalendarIcon,
-              title: 'Dni otwarte'
+              [
+                {
+                  icon: InfoIcon,
+                  title: 'Podstawowe informacje',
+                },
+                {
+                  icon: BusIcon,
+                  title: 'Dojazd komunikacją',
+                },
+                {
+                  icon: MapMarkerIcon,
+                  title: 'Lokalizacje',
+                },
+                {
+                  icon: FileEditIcon,
+                  title: 'Zdawalność matur',
+                },
+                {
+                  icon: ChartBarIcon,
+                  title: 'Średnią ilość punktów',
+                },
+                {
+                  icon: CalendarIcon,
+                  title: 'Dni otwarte',
+                },
+              ].map(feature => (
+                <Inline>
+                  <Centered>
+                    <Icon color="primary" icon={feature.icon}/>
+                  </Centered>
+                  <Centered notHorizontal>
+                    <h2>{feature.title}</h2>
+                  </Centered>
+                </Inline>
+              ))
             }
-           ].map(feature => (
-            <Inline>
-            <Centered>
-            <Icon color="primary" icon={feature.icon} />
-                 </Centered>
-            <Centered notHorizontal>
-            <h2>{feature.title}</h2>
-                 </Centered>
-          </Inline>
-           ))
-         }
-       </InlineWrapper>
-     </FullContainer>
+          </InlineWrapper>
+        </FullContainer>
 
 
-     <FullContainer background="secondary" shape={true}  css={css`
+        <FullContainer background="secondary" shape={true} css={css`
               display:flex;
               align-items:center;
               margin-top:7vh;
@@ -414,61 +417,61 @@ const StartButton = styled(Button)`
               }
            `}>
 
-       <SourcesAnimation>
-         <div className="sources">
-          <Icon id="max-left" color="secondary" size="4em" icon={DatabaseIcon} />
-          <Icon id="left" color="secondary" size="4em" icon={MapIcon} />
-          <Icon id="right" color="secondary" size="4em" icon={ChartLineIcon} />
-          <Icon id="max-right" color="secondary" size="4em" icon={ServersIcon} />
+          <SourcesAnimation>
+            <div className="sources">
+              <Icon id="max-left" color="secondary" size="4em" icon={DatabaseIcon}/>
+              <Icon id="left" color="secondary" size="4em" icon={MapIcon}/>
+              <Icon id="right" color="secondary" size="4em" icon={ChartLineIcon}/>
+              <Icon id="max-right" color="secondary" size="4em" icon={ServersIcon}/>
 
-         </div>
-     
-       <div className="dest">
-         <Logo />
-       </div>
-       </SourcesAnimation>
-       <BoxWrapper css={css`width:50%;`}>
-         <Box>
+            </div>
 
-           <h1>Jak to działa?</h1>
-           <Break color="primary" />
-           <h2>Pobieramy dane z różnych źródeł, aby móc przedstawić Ci je w jak najlepszej postaci.</h2>
-           <p>
-             Korzystamy z danych Urzędu Miasta Warszawy, aby pobrać listę szkół oraz średnie liczby punktów,
-             na bieżąco łączymy się z wieloma serwisami lokalizacyjnymi, aby dostarczyć Ci
-             informacje o
-             jak najlepszym połączeniu komunikacyjnym z Twoją wymarzoną szkołą.
-             <br />
-             A to wszystko zebrane tylko w jednym miejscu...
-           </p>
-           <TextLink to="/about-data">Dowiedz się więcej</TextLink>
-         </Box>
-       </BoxWrapper>
-     </FullContainer>
+            <div className="dest">
+              <Logo/>
+            </div>
+          </SourcesAnimation>
+          <BoxWrapper css={css`width:50%;`}>
+            <Box>
 
-     <FullContainer css={css`
+              <h1>Jak to działa?</h1>
+              <Break color="primary"/>
+              <h2>Pobieramy dane z różnych źródeł, aby móc przedstawić Ci je w jak najlepszej postaci.</h2>
+              <p>
+                Korzystamy z danych Urzędu Miasta Warszawy, aby pobrać listę szkół oraz średnie liczby punktów,
+                na bieżąco łączymy się z wieloma serwisami lokalizacyjnymi, aby dostarczyć Ci
+                informacje o
+                jak najlepszym połączeniu komunikacyjnym z Twoją wymarzoną szkołą.
+                <br/>
+                A to wszystko zebrane tylko w jednym miejscu...
+              </p>
+              <TextLink to="/about-data">Dowiedz się więcej</TextLink>
+            </Box>
+          </BoxWrapper>
+        </FullContainer>
+
+        <FullContainer css={css`
               display:flex;
               align-items:center;
            `}>
 
-         
-             <Shadow css={css`
+
+          <Shadow css={css`
              width:50%;
              @media (max-width: ${responsiveWidth}){
                width:100%;
              }
              `}>
-             <h1>Nieaktualne dane?</h1>
-             <Break color="secondary" />
-             <h2>Nobody's perfect...</h2>
-               <p css={css`width:100%`}>
-               Przetwarzając ogromne ilości informacji może wkraść się do danych jakiś błąd.
-               Jeżeli natkniesz się na niego, zgłoś to.
-               Nasi moderatorzy zajmą się tym tak szybko, jak tylko będę mogli.
-               </p>
-               </Shadow>
+            <h1>Nieaktualne dane?</h1>
+            <Break color="secondary"/>
+            <h2>Nobody's perfect...</h2>
+            <p css={css`width:100%`}>
+              Przetwarzając ogromne ilości informacji może wkraść się do danych jakiś błąd.
+              Jeżeli natkniesz się na niego, zgłoś to.
+              Nasi moderatorzy zajmą się tym tak szybko, jak tylko będę mogli.
+            </p>
+          </Shadow>
 
-     <div css={css`
+          <div css={css`
        width:50%;
        display:flex;
        align-items:center;
@@ -477,19 +480,19 @@ const StartButton = styled(Button)`
         display:none;
       }
        `}>
-     
-     <Icon icon={CommentExclamationIcon} size="10em"/>
-   
-    
-     </div>
 
-     </FullContainer>
-     <FullContainer css={css`
+            <Icon icon={CommentExclamationIcon} size="10em"/>
+
+
+          </div>
+
+        </FullContainer>
+        <FullContainer css={css`
               display:grid;
               grid-template-columns: 1fr 1fr;
               margin-top:7vh;
            `}>
-     <div css={css`
+          <div css={css`
        width:100%;
        display:flex;
        align-items:center;
@@ -498,74 +501,77 @@ const StartButton = styled(Button)`
         display:none;
       }
        `}>
-      <Icon icon={UsersIcon} size="10em"/>
-     </div>
-     <BoxWrapper>
-       <Shadow>
-       <Box>
-       <h1>Społeczność</h1>
-       <Break color="secondary" />
-       <h2>Ten portal tworzy każdy z nas</h2>
-         <p css={css`width:100%`}>
-        Wybierasz liceum i robisz ogromny research, czy może masz już rekrutację za sobą i wiesz jak to działa?
-        Podziel się swoimi spostrzeżeniami tutaj.
-        Każdego ucznia ostatniej klasy podstawówki czeka to samo.
-        Pomagajmy sobie nawzajem.  WarsawLO to portal tworzony przez uczniów dla uczniów.
-       </p>
-       </Box>
-       </Shadow>
-       <Shadow css={css`margin-top:2em;`}>
-         <p>
-         Masz jakiś pomysł? Myślisz, że fajnie byłoby coś tu dodać? To świetnie!
-         Napisz do nas na Messengerze albo mailem na ideas@warsawlo.pl
+            <Icon icon={UsersIcon} size="10em"/>
+          </div>
+          <BoxWrapper>
+            <Shadow>
+              <Box>
+                <h1>Społeczność</h1>
+                <Break color="secondary"/>
+                <h2>Ten portal tworzy każdy z nas</h2>
+                <p css={css`width:100%`}>
+                  Wybierasz liceum i robisz ogromny research, czy może masz już rekrutację za sobą i wiesz jak to
+                  działa?
+                  Podziel się swoimi spostrzeżeniami tutaj.
+                  Każdego ucznia ostatniej klasy podstawówki czeka to samo.
+                  Pomagajmy sobie nawzajem. WarsawLO to portal tworzony przez uczniów dla uczniów.
+                </p>
+              </Box>
+            </Shadow>
+            <Shadow css={css`margin-top:2em;`}>
+              <p>
+                Masz jakiś pomysł? Myślisz, że fajnie byłoby coś tu dodać? To świetnie!
+                Napisz do nas na Messengerze albo mailem na ideas@warsawlo.pl
 
-         <TextLink to="/help-us">Dowiedz się, jak możesz nam pomóc</TextLink>
-         </p>
-       </Shadow>
-     </BoxWrapper>
-   </FullContainer>
-   <FullContainer css={css`
+                <TextLink to="/help-us">Dowiedz się, jak możesz nam pomóc</TextLink>
+              </p>
+            </Shadow>
+          </BoxWrapper>
+        </FullContainer>
+        <FullContainer css={css`
      display:flex;
      align-items:center;
      justify-content:center;
      margin: 1em 0;
      `}>
-       <Link to="/search" css={css`all:unset;`}>
-     <StartButton>Znajdź swoją szkołę już teraz</StartButton>
-     </Link>
-   </FullContainer>
-   <Line/>
-     <FullContainer  css={css`padding-top:2em`}>
-  <div css={css`
+          <Link to="/search" css={css`all:unset;`}>
+            <StartButton>Znajdź swoją szkołę już teraz</StartButton>
+          </Link>
+        </FullContainer>
+        <Line/>
+        <FullContainer css={css`padding-top:2em`}>
+          <div css={css`
   width:50%;
   margin:auto;
   @media (max-width: ${responsiveWidth}){
     width:calc(100% - 2em);
 }
-  `} >
-       <h1 css={css`margin-top:0`}>Kto za tym stoi?</h1>
-       <Break color="primary" />
-       <h2>Hej!</h2>
-         <p>
+  `}>
+            <h1 css={css`margin-top:0`}>Kto za tym stoi?</h1>
+            <Break color="primary"/>
+            <h2>Hej!</h2>
+            <p>
 
-         Jesteśmy grupą uczniów z warszawskich gimnazjów, a zarazem pasjonatami informatyki.
-         W rekrutacji brał lub będzie brał udział każdy z nas. Wszyscy mówią, że chcą się dostać do jak najlepszej szkoły,
-         ale przecież to, czy dana szkoła jest najlepsza to kwestia subiektywna.
-         Chcieliśmy choć trochę uprościć ten trudny wybór szkoły średniej.
-         Nasunęło się nam na myśl, że czemu nie rozwiązać tego problemu właśnie za pomocą aplikacji lub strony internetowej?
-         Tak zrodziło się WarsawLO. Całkowicie pozaszkolny, niekomercyjny projekt open-source.
-         Wiemy, że nasza strona jest niedoskonała, ale liczymy, że z Waszą pomocą damy radę ;)
+              Jesteśmy grupą uczniów z warszawskich gimnazjów, a zarazem pasjonatami informatyki.
+              W rekrutacji brał lub będzie brał udział każdy z nas. Wszyscy mówią, że chcą się dostać do jak najlepszej
+              szkoły,
+              ale przecież to, czy dana szkoła jest najlepsza to kwestia subiektywna.
+              Chcieliśmy choć trochę uprościć ten trudny wybór szkoły średniej.
+              Nasunęło się nam na myśl, że czemu nie rozwiązać tego problemu właśnie za pomocą aplikacji lub strony
+              internetowej?
+              Tak zrodziło się WarsawLO. Całkowicie pozaszkolny, niekomercyjny projekt open-source.
+              Wiemy, że nasza strona jest niedoskonała, ale liczymy, że z Waszą pomocą damy radę ;)
 
 
-       </p>
-         <Break color="primary" />
-         <h2>Kontakt</h2>
-          <p>info@warsawlo.pl</p>
-      
-         </div>
-     </FullContainer>
+            </p>
+            <Break color="primary"/>
+            <h2>Kontakt</h2>
+            <p>info@warsawlo.pl</p>
 
-   </Layout>
- )
- }
- }
+          </div>
+        </FullContainer>
+
+      </Layout>
+    )
+  }
+}

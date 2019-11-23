@@ -8,7 +8,20 @@ import LOPlaceholder from 'components/LOPlaceholder'
 import Scrollspy from 'react-scrollspy'
 import DocumentEvents from 'react-document-events'
 import SEO from 'components/SEO'
-import { faPhone, faGlobe, faAt, faFax, faMapMarkerAlt, faRoad, faCity, faUsers, faSchool, faHandshake, faMoneyBill, faGraduationCap } from '@fortawesome/free-solid-svg-icons'
+import {
+  faPhone,
+  faGlobe,
+  faAt,
+  faFax,
+  faMapMarkerAlt,
+  faRoad,
+  faCity,
+  faUsers,
+  faSchool,
+  faHandshake,
+  faMoneyBill,
+  faGraduationCap,
+} from '@fortawesome/free-solid-svg-icons'
 import { faCalendar, faClock } from '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts'
@@ -23,6 +36,7 @@ import ReactDOM from 'react-dom'
 import theme from 'utils/theme'
 import TextLink from 'components/TextLink'
 import subjects from 'utils/subjects'
+
 const responsiveWidth = '1500px'
 const Header = styled('header')`
   width: 100%;
@@ -252,33 +266,34 @@ position: absolute;               /* 2 */
 const Tick = props => {
   console.log(props)
   // return props.payload.value
-  return (<ForeignObject x={props.x+10} y={props.y-props.payload.offset} width={500} height={props.payload.offset*2}>
-    <BarTagsWrapper>
-    {
-      props.payload.value.split('-').map(sub => {
-        let subject = subjects.filter(s => s.short === sub)
-        return (
-          <BarTag
-          key={sub}
-          active
-          color={subject[0] ? subject[0].color : false}
-          >{sub}</BarTag>
-        )
-      })
-    }
-    </BarTagsWrapper>
+  return (
+    <ForeignObject x={props.x + 10} y={props.y - props.payload.offset} width={500} height={props.payload.offset * 2}>
+      <BarTagsWrapper>
+        {
+          props.payload.value.split('-').map(sub => {
+            let subject = subjects.filter(s => s.short === sub)
+            return (
+              <BarTag
+                key={sub}
+                active
+                color={subject[0] ? subject[0].color : false}
+              >{sub}</BarTag>
+            )
+          })
+        }
+      </BarTagsWrapper>
     </ForeignObject>)
 }
-const CustomShape =  (props) => {
+const CustomShape = (props) => {
   const {
     fill, x, y, width, height,
-  } = props;
+  } = props
 
   return <path d={`
-    M ${x+width}, ${y}
-    L ${x+width}, ${y+height}
+    M ${x + width}, ${y}
+    L ${x + width}, ${y + height}
     z
-  `} stroke="none" fill={fill} />;
+  `} stroke="none" fill={fill}/>
 }
 const MoovitWrapper = styled('div')`
   width:100%;
@@ -377,90 +392,93 @@ const monthMapping = [
   'września',
   'października',
   'listopada',
-  'grudnia'
+  'grudnia',
 ]
-const padWithZero = (num) => `${num}`.length === 1 ? `0${num}`: `${num}`
+const padWithZero = (num) => `${num}`.length === 1 ? `0${num}` : `${num}`
 const displayHour = (date) => `${date.getHours()}:${padWithZero(date.getMinutes())}`
 
 const labels = {
   gold: '#f1c40f',
   silver: '#95a5a6',
-  bronze: '#CD7F23'
+  bronze: '#CD7F23',
 }
-export default class extends Component{
-  constructor(props){
+export default class extends Component {
+  constructor(props) {
     super(props)
     console.log(props)
     this.headerEl = React.createRef()
     this.state = {
       fixedHeader: false,
       mouse: 'out',
-      headerHeight: 0
+      headerHeight: 0,
     }
     this.mapContainer = React.createRef()
     this.fixedHeaderEl = React.createRef()
   }
+
   componentWillUnmount() {
-    this.map.remove();
+    this.map.remove()
   }
+
   componentDidMount = () => {
     let { location } = this.props.data.school
-    if(location && location.position){
+    if (location && location.position) {
       this.map = new mapboxgl.Map({
-       container: this.mapContainer.current,
-       style: 'mapbox://styles/mapbox/streets-v9',
-       center: [location.position.Longitude, location.position.Latitude],
-       zoom: 13
-     })
-     let el = document.createElement('div')
-     el.className = 'marker';
-     el.style = 'display:inline-block;'
-     ReactDOM.render((
-       <MarkerWrapper>
-        <Icon icon={GraduationHatIcon} color="rgb(89, 0, 138)" />
-       </MarkerWrapper>
-     ), el)
-     this.map.addControl(new mapboxgl.NavigationControl(), 'top-left')
-     this.map.addControl(new mapboxgl.FullscreenControl({container: document.querySelector('body')}))
-     this.map.on('mousemove', this.handleMouseStart)
-    this.map.on('mouseout', this.handleMouseOut)
-     new mapboxgl.Marker(el)
-     .setLngLat([location.position.Longitude, location.position.Latitude])
-     .addTo(this.map)
-     console.log(this.fixedHeaderEl.current.clientHeight)
-     this.setState({
-       headerHeight: this.fixedHeaderEl.current.clientHeight
-     })
+        container: this.mapContainer.current,
+        style: 'mapbox://styles/mapbox/streets-v9',
+        center: [location.position.Longitude, location.position.Latitude],
+        zoom: 13,
+      })
+      let el = document.createElement('div')
+      el.className = 'marker'
+      el.style = 'display:inline-block;'
+      ReactDOM.render((
+        <MarkerWrapper>
+          <Icon icon={GraduationHatIcon} color="rgb(89, 0, 138)"/>
+        </MarkerWrapper>
+      ), el)
+      this.map.addControl(new mapboxgl.NavigationControl(), 'top-left')
+      this.map.addControl(new mapboxgl.FullscreenControl({ container: document.querySelector('body') }))
+      this.map.on('mousemove', this.handleMouseStart)
+      this.map.on('mouseout', this.handleMouseOut)
+      new mapboxgl.Marker(el)
+        .setLngLat([location.position.Longitude, location.position.Latitude])
+        .addTo(this.map)
+      console.log(this.fixedHeaderEl.current.clientHeight)
+      this.setState({
+        headerHeight: this.fixedHeaderEl.current.clientHeight,
+      })
     }
 
     (function(d, s, id) {
       // if(!document.querySelector('#moovit-jsw')){
-        let js, fjs = d.getElementsByTagName(s)[0];
-        js = d.createElement(s); js.id = id;
-        js.src = "https://widgets.moovit.com/wtp/pl";
-        fjs.parentNode.insertBefore(js, fjs);
+      let js, fjs = d.getElementsByTagName(s)[0]
+      js = d.createElement(s)
+      js.id = id
+      js.src = 'https://widgets.moovit.com/wtp/pl'
+      fjs.parentNode.insertBefore(js, fjs)
       // }
 
       return null
-      })(document, 'script', 'moovit-jsw')
+    })(document, 'script', 'moovit-jsw')
   }
   onScroll = (e) => {
     const rect = this.headerEl.current.getBoundingClientRect()
-    let fixedHeader = rect.top+rect.height <= 70
-    if(fixedHeader != this.state.fixedHeader){
+    let fixedHeader = rect.top + rect.height <= 70
+    if (fixedHeader != this.state.fixedHeader) {
       this.setState({
-        fixedHeader
+        fixedHeader,
       })
     }
 
   }
   handleMouseStart = () => {
-    if(window && window.innerWidth <= responsiveWidth){
+    if (window && window.innerWidth <= responsiveWidth) {
       return
     }
     console.log('x')
     this.setState({
-      mouse: 'over'
+      mouse: 'over',
     }, () => {
       window.dispatchEvent(new Event('resize'))
       console.log('x')
@@ -468,7 +486,7 @@ export default class extends Component{
   }
   handleMouseOut = () => {
     this.setState({
-      mouse: 'out'
+      mouse: 'out',
     }, () => window.dispatchEvent(new Event('resize')))
 
   }
@@ -476,307 +494,314 @@ export default class extends Component{
     const { school } = this.props.data
     return (
       <>
-      <SEO title={school.name.full} keywords={[`Liceum`, `LO`, school.name.full]} />
-      <DocumentEvents onScroll={this.onScroll} />
-      <Layout>
-      <div ref={this.headerEl}>
-      <Header bg={school.media && school.media[0]}>
-        {
-          school.media && school.media[0] && <img src={school.media[0]} className="bg" />
-        }
-      <div>
-      <div className="top-info">
-      { school.media && school.media[0] ? <img src={school.media[0]} width="400"/> : <LOPlaceholder /> }
-      <div>
-        <div className="ranking">
-      { school.ranking && <h2> {school.ranking.place}. miejsce w Warszawie</h2> }
-      { school.ranking && school.ranking.label && <Icon icon={AwardIcon} color={labels[school.ranking.label]}/>}
-      </div>
-      <div className="thresholds">
-        {
-           school.thresholds && school.thresholds._2018.overview.availableSubjects.map(sub => {
-            let subject = subjects.filter(s => sub === s.short)[0]
-            return <Tag light color={subject && subject.color}>{subject ? subject.full : sub}</Tag>
-          })
-        }
-      </div>
-      </div>
-      </div>
-      <div className="name">
-        <h1>{school.name.full}</h1>
-          <h2 >{school.location && school.location.address.District}</h2>
+        <SEO title={school.name.full} keywords={[`Liceum`, `LO`, school.name.full]}/>
+        <DocumentEvents onScroll={this.onScroll}/>
+        <Layout>
+          <div ref={this.headerEl}>
+            <Header bg={school.media && school.media[0]}>
+              {
+                school.media && school.media[0] && <img src={school.media[0]} className="bg"/>
+              }
+              <div>
+                <div className="top-info">
+                  {school.media && school.media[0] ? <img src={school.media[0]} width="400"/> : <LOPlaceholder/>}
+                  <div>
+                    <div className="ranking">
+                      {school.ranking && <h2> {school.ranking.place}. miejsce w Warszawie</h2>}
+                      {school.ranking && school.ranking.label &&
+                      <Icon icon={AwardIcon} color={labels[school.ranking.label]}/>}
+                    </div>
+                    <div className="thresholds">
+                      {
+                        school.thresholds && school.thresholds._2018.overview.availableSubjects.map(sub => {
+                          let subject = subjects.filter(s => sub === s.short)[0]
+                          return <Tag light color={subject && subject.color}>{subject ? subject.full : sub}</Tag>
+                        })
+                      }
+                    </div>
+                  </div>
+                </div>
+                <div className="name">
+                  <h1>{school.name.full}</h1>
+                  <h2>{school.location && school.location.address.District}</h2>
+                </div>
+
+              </div>
+            </Header>
+
           </div>
-          
-      </div>
-      </Header>
-      
-  </div>
-        <Main>
-          <LinksWrapper>
-          <Links items={ ['info', 'ranking', 'thresholds', 'open-days', 'contact', 'location', 'opinion', 'data-sources'] } currentClassName="is-current" offset={(this.state.headerHeight+80)}>
-  <li><a href="#info">Informacje</a></li>
-  <li><a href="#ranking">Rankingi</a></li>
-  <li><a href="#thresholds">Punkty</a></li>
-  <li><a href="#open-days">Dni otwarte</a></li>
-  <li><a href="#contact">Kontakt</a></li>
+          <Main>
+            <LinksWrapper>
+              <Links
+                items={['info', 'ranking', 'thresholds', 'open-days', 'contact', 'location', 'opinion', 'data-sources']}
+                currentClassName="is-current" offset={(this.state.headerHeight + 80)}>
+                <li><a href="#info">Informacje</a></li>
+                <li><a href="#ranking">Rankingi</a></li>
+                <li><a href="#thresholds">Punkty</a></li>
+                <li><a href="#open-days">Dni otwarte</a></li>
+                <li><a href="#contact">Kontakt</a></li>
 
-  <li><a href="#location">Dojazd</a></li>
-  <li><a href="#opinion">Opinie</a></li>
-  <li><a href="#data-sources">Źródła danych</a></li>
-  </Links>
-          </LinksWrapper>
-      <SchoolWrapper>
+                <li><a href="#location">Dojazd</a></li>
+                <li><a href="#opinion">Opinie</a></li>
+                <li><a href="#data-sources">Źródła danych</a></li>
+              </Links>
+            </LinksWrapper>
+            <SchoolWrapper>
 
 
-          <FixedHeader active={this.state.fixedHeader} ref={this.fixedHeaderEl}>
-          <div className="container">
-          <div className="top">
-          { school.media && school.media[0] ? <img src={school.media[0]} /> : <LOPlaceholder /> }
-          <h2 >{school.name.full}</h2>
-          </div>
-         
-          </div>
+              <FixedHeader active={this.state.fixedHeader} ref={this.fixedHeaderEl}>
+                <div className="container">
+                  <div className="top">
+                    {school.media && school.media[0] ? <img src={school.media[0]}/> : <LOPlaceholder/>}
+                    <h2>{school.name.full}</h2>
+                  </div>
+
+                </div>
 
 
-          </FixedHeader>
-
-     
-  
-  <Anchor id="ranking" offset={this.state.headerHeight+80} />
-  <Section>
-    <h2>Wyniki w rankingu</h2>
-      {!school.ranking && (
-        <p>Brak danych</p>
-      )}
-      {school.ranking && (
-        <>
-        {school.ranking.label && <p>To liceum posiada {school.ranking.label === 'gold' ? 'złoty' : (school.ranking.label === 'silver' ? 'srebrny' : 'brązowy')} znak jakości.</p>}
-        <RankingTableWrapper>
-          <table>
-          <thead>
-          <tr>
-            <th>Miejsce</th>
-            <th>2018</th>
-            <th>2017</th>
-            <th>2016</th>
-            <th>Matura podstawowa</th>
-            <th>Matura rozszerzona</th>
-            
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            
-            <td>{school.ranking.place}</td>
-            <td>{school.ranking.archive['_2018']}</td>
-            <td>{school.ranking.archive['_2017']}</td>
-            <td>{school.ranking.archive['_2016']}</td>
-            <td>{school.ranking.exam.basic}</td>
-            <td>{school.ranking.exam.extended}</td>
-            
-          </tr>
-          </tbody>
-          </table>
-          </RankingTableWrapper>
-          
-          </>
-      )}
-      <TextLink wrapper="a" href="http://licea.perspektywy.pl/2019/ranking/ranking-liceow-warszawskich-2019">
-        Ranking liceów warszawskich - perspektywy.pl
-      </TextLink>
-  </Section>
-  <Anchor  id="thresholds" offset={this.state.headerHeight+80}/>
-  <Section>
-  <h2>Średnia ilość punktów</h2>
-  <h3>2018/2019</h3>
-  { !school.thresholds ? <span>Brak danych</span> : (
-     <ResponsiveContainer width="100%" height={500} >
-    <BarChart height={500} data={school.thresholds._2018.detailed}
-
-              layout="vertical"
-              >
-         <YAxis dataKey={t => t.extensions.join('-')} type="category" tick={<Tick />} tickLine={false}/>
-         <XAxis type="number" unit="pkt" domain={[0, 200]}/>
-        
-         <Bar dataKey='threshold' fill="rgba(89, 0, 138, .2)" name="Próg punktowy" />
-        </BarChart>
-          </ResponsiveContainer>
-
-  )}
-  </Section>
-  <Anchor id="open-days" offset={this.state.headerHeight+80} />
-  <Section >
-  <h2>Dni otwarte</h2>
-    {!school.openDays ? <p>Brak danych</p> :
-      (
-        <table>
-
-        {school.openDays.map(day => {
-          let start = new Date(day.date.start)
-          let end = day.date.end ? new Date(day.date.end) : null
-          return (
-            <tr>
-            <td>
-              <FontAwesomeIcon icon={faCalendar} /> {start.getDate()} {monthMapping[start.getMonth()]}
-            </td>
-            <td>
-              <FontAwesomeIcon icon={faClock} /> { end && 'od'} {displayHour(start)} { end && `do ${displayHour(end)}`}
-            </td>
-            <td>
-              { day.for }
-            </td>
-            </tr>
-          )
-        })}
-        </table>
-      ) }
-  </Section>
-    <Anchor id="contact" offset={this.state.headerHeight+80} />
-  <Section>
-    <h2>Kontakt</h2>
-    <address>
-    {school.location.address.Label}
-    </address>
-    <ContactGrid full={this.state.mouse === 'over'}>
-    <div class="left">
-    {
-      school.contact.phone && (
-        <ContactBox>
-        <div className="icon-wrapper">
-        <FontAwesomeIcon icon={faPhone} size="2x"  />
-        </div>
-        <div className="info">
-          {school.contact.phone}
-          </div>
-        </ContactBox>
-      )
-    }
-    {
-      school.contact.fax && (
-        <ContactBox>
-        <div className="icon-wrapper">
-        <FontAwesomeIcon icon={faFax} size="2x" />
-        </div>
-        <div className="info">
-          {school.contact.fax}
-          </div>
-        </ContactBox>
-      )
-    }
-    {
-      school.contact.email && (
-        <ContactBox>
-        <div className="icon-wrapper">
-        <FontAwesomeIcon icon={faAt} size="2x"  />
-        </div>
-        <div className="info">
-          {school.contact.email}
-          </div>
-        </ContactBox>
-      )
-    }
-    {
-      school.contact.website && (
-        <ContactBox>
-        <div className="icon-wrapper">
-        <FontAwesomeIcon icon={faGlobe}  size="2x" />
-        </div>
-        <div className="info">
-          {school.contact.website}
-          </div>
-        </ContactBox>
-      )
-    }
-    </div>
-    <div class="right">
-      <MapWrapper ref={this.mapContainer} />
+              </FixedHeader>
 
 
-    </div>
+              <Anchor id="ranking" offset={this.state.headerHeight + 80}/>
+              <Section>
+                <h2>Wyniki w rankingu</h2>
+                {!school.ranking && (
+                  <p>Brak danych</p>
+                )}
+                {school.ranking && (
+                  <>
+                    {school.ranking.label && <p>To liceum
+                      posiada {school.ranking.label === 'gold' ? 'złoty' : (school.ranking.label === 'silver' ? 'srebrny' : 'brązowy')} znak
+                      jakości.</p>}
+                    <RankingTableWrapper>
+                      <table>
+                        <thead>
+                        <tr>
+                          <th>Miejsce</th>
+                          <th>2018</th>
+                          <th>2017</th>
+                          <th>2016</th>
+                          <th>Matura podstawowa</th>
+                          <th>Matura rozszerzona</th>
 
-    </ContactGrid>
-  </Section>
-    <Anchor id="location" offset={this.state.headerHeight+80} />
-  <Section>
-  <h2>Dojazd komunikacją</h2>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
 
-  <MoovitWrapper className="mv-wtp"
-     data-metro="1062"
-     data-to-lat-long={[school.location.position.Latitude, school.location.position.Longitude].join('_')}
-     data-lang="pl" />
+                          <td>{school.ranking.place}</td>
+                          <td>{school.ranking.archive['_2018']}</td>
+                          <td>{school.ranking.archive['_2017']}</td>
+                          <td>{school.ranking.archive['_2016']}</td>
+                          <td>{school.ranking.exam.basic}</td>
+                          <td>{school.ranking.exam.extended}</td>
 
-  </Section>
-  <Anchor id="opinion" offset={this.state.headerHeight+80} />
-  <Section>
-  <h2>Opinie</h2>
-    <p>Sprawdź grupę <TextLink wrapper="a" href="https://www.facebook.com/groups/idziemygdzie">idziemygdzie </TextLink>na Facebooku</p>
-  
-  </Section>
-  <Anchor id="info" offset={this.state.headerHeight+80} />
-  <Section>
-    <h2>Informacje o szkole</h2>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </RankingTableWrapper>
 
-      <InfoGrid>
-      <InfoBox>
-      <div className="icon-wrapper">
-      <FontAwesomeIcon size="2x" icon={faUsers} />
-      </div>
-      <div className="info-wrapper">
-      <h3>Publiczna</h3>
-      <h4>TAK</h4>
-      </div>
-      </InfoBox>
-      <InfoBox>
-      <div className="icon-wrapper">
-      <FontAwesomeIcon size="2x" icon={faSchool} />
-      </div>
-      <div className="info-wrapper">
-      <h3>Organ prowadzący</h3>
-      <h4>{school.meta.leadingOrgan.type} {school.meta.leadingOrgan.name}</h4>
-      </div>
-      </InfoBox>
-      <InfoBox>
-      <div className="icon-wrapper">
-      <FontAwesomeIcon size="2x" icon={faHandshake} />
-      </div>
-      <div className="info-wrapper">
-      <h3>Organizacja</h3>
-      <h4>{school.meta.parent}</h4>
-      </div>
-      </InfoBox>
-      <InfoBox>
-      <div className="icon-wrapper">
-      <FontAwesomeIcon size="2x" icon={faMoneyBill} />
-      </div>
-      <div className="info-wrapper">
-      <h3>Właściciel kapitału</h3>
-      <h4>{school.meta.capitalOwner}</h4>
-      </div>
-      </InfoBox>
+                  </>
+                )}
+                <TextLink wrapper="a" href="http://licea.perspektywy.pl/2019/ranking/ranking-liceow-warszawskich-2019">
+                  Ranking liceów warszawskich - perspektywy.pl
+                </TextLink>
+              </Section>
+              <Anchor id="thresholds" offset={this.state.headerHeight + 80}/>
+              <Section>
+                <h2>Średnia ilość punktów</h2>
+                <h3>2018/2019</h3>
+                {!school.thresholds ? <span>Brak danych</span> : (
+                  <ResponsiveContainer width="100%" height={500}>
+                    <BarChart height={500} data={school.thresholds._2018.detailed}
 
-      </InfoGrid>
-  </Section>
-    <Anchor id="data-sources" offset={this.state.headerHeight+80} />
-  <Section>
-  <h2>Źródła danych</h2>
-    {school.media && <p>Źródło zdjęcia: {
-      (() => {
-        if(typeof window !== 'undefined' && new URL(school.media[0]).hostname.includes('wikimedia.org')){
-          let url = school.media[0].split('/')
-          console.log('url', `https://commons.wikimedia.org/wiki/File:${url[url.length-2]}`)
-          return `https://commons.wikimedia.org/wiki/File:${url[url.length-2]}`
-        }else{
-          return school.media[0]
-        }
-      })()
-    }</p>}
-  <TextLink to="/about-data">Sprawdź skąd zebraliśmy dane, które Ci prezentujemy</TextLink>
-  </Section>
+                              layout="vertical"
+                    >
+                      <YAxis dataKey={t => t.extensions.join('-')} type="category" tick={<Tick/>} tickLine={false}/>
+                      <XAxis type="number" unit="pkt" domain={[0, 200]}/>
 
- 
-      </SchoolWrapper>
-      </Main>
-      </Layout>
+                      <Bar dataKey='threshold' fill="rgba(89, 0, 138, .2)" name="Próg punktowy"/>
+                    </BarChart>
+                  </ResponsiveContainer>
+
+                )}
+              </Section>
+              <Anchor id="open-days" offset={this.state.headerHeight + 80}/>
+              <Section>
+                <h2>Dni otwarte</h2>
+                {!school.openDays ? <p>Brak danych</p> :
+                  (
+                    <table>
+
+                      {school.openDays.map(day => {
+                        let start = new Date(day.date.start)
+                        let end = day.date.end ? new Date(day.date.end) : null
+                        return (
+                          <tr>
+                            <td>
+                              <FontAwesomeIcon icon={faCalendar}/> {start.getDate()} {monthMapping[start.getMonth()]}
+                            </td>
+                            <td>
+                              <FontAwesomeIcon
+                                icon={faClock}/> {end && 'od'} {displayHour(start)} {end && `do ${displayHour(end)}`}
+                            </td>
+                            <td>
+                              {day.for}
+                            </td>
+                          </tr>
+                        )
+                      })}
+                    </table>
+                  )}
+              </Section>
+              <Anchor id="contact" offset={this.state.headerHeight + 80}/>
+              <Section>
+                <h2>Kontakt</h2>
+                <address>
+                  {school.location.address.Label}
+                </address>
+                <ContactGrid full={this.state.mouse === 'over'}>
+                  <div class="left">
+                    {
+                      school.contact.phone && (
+                        <ContactBox>
+                          <div className="icon-wrapper">
+                            <FontAwesomeIcon icon={faPhone} size="2x"/>
+                          </div>
+                          <div className="info">
+                            {school.contact.phone}
+                          </div>
+                        </ContactBox>
+                      )
+                    }
+                    {
+                      school.contact.fax && (
+                        <ContactBox>
+                          <div className="icon-wrapper">
+                            <FontAwesomeIcon icon={faFax} size="2x"/>
+                          </div>
+                          <div className="info">
+                            {school.contact.fax}
+                          </div>
+                        </ContactBox>
+                      )
+                    }
+                    {
+                      school.contact.email && (
+                        <ContactBox>
+                          <div className="icon-wrapper">
+                            <FontAwesomeIcon icon={faAt} size="2x"/>
+                          </div>
+                          <div className="info">
+                            {school.contact.email}
+                          </div>
+                        </ContactBox>
+                      )
+                    }
+                    {
+                      school.contact.website && (
+                        <ContactBox>
+                          <div className="icon-wrapper">
+                            <FontAwesomeIcon icon={faGlobe} size="2x"/>
+                          </div>
+                          <div className="info">
+                            {school.contact.website}
+                          </div>
+                        </ContactBox>
+                      )
+                    }
+                  </div>
+                  <div class="right">
+                    <MapWrapper ref={this.mapContainer}/>
+
+
+                  </div>
+
+                </ContactGrid>
+              </Section>
+              <Anchor id="location" offset={this.state.headerHeight + 80}/>
+              <Section>
+                <h2>Dojazd komunikacją</h2>
+
+                <MoovitWrapper className="mv-wtp"
+                               data-metro="1062"
+                               data-to-lat-long={[school.location.position.Latitude, school.location.position.Longitude].join('_')}
+                               data-lang="pl"/>
+
+              </Section>
+              <Anchor id="opinion" offset={this.state.headerHeight + 80}/>
+              <Section>
+                <h2>Opinie</h2>
+                <p>Sprawdź grupę <TextLink wrapper="a"
+                                           href="https://www.facebook.com/groups/idziemygdzie">idziemygdzie </TextLink>na
+                  Facebooku</p>
+
+              </Section>
+              <Anchor id="info" offset={this.state.headerHeight + 80}/>
+              <Section>
+                <h2>Informacje o szkole</h2>
+
+                <InfoGrid>
+                  <InfoBox>
+                    <div className="icon-wrapper">
+                      <FontAwesomeIcon size="2x" icon={faUsers}/>
+                    </div>
+                    <div className="info-wrapper">
+                      <h3>Publiczna</h3>
+                      <h4>TAK</h4>
+                    </div>
+                  </InfoBox>
+                  <InfoBox>
+                    <div className="icon-wrapper">
+                      <FontAwesomeIcon size="2x" icon={faSchool}/>
+                    </div>
+                    <div className="info-wrapper">
+                      <h3>Organ prowadzący</h3>
+                      <h4>{school.meta.leadingOrgan.type} {school.meta.leadingOrgan.name}</h4>
+                    </div>
+                  </InfoBox>
+                  <InfoBox>
+                    <div className="icon-wrapper">
+                      <FontAwesomeIcon size="2x" icon={faHandshake}/>
+                    </div>
+                    <div className="info-wrapper">
+                      <h3>Organizacja</h3>
+                      <h4>{school.meta.parent}</h4>
+                    </div>
+                  </InfoBox>
+                  <InfoBox>
+                    <div className="icon-wrapper">
+                      <FontAwesomeIcon size="2x" icon={faMoneyBill}/>
+                    </div>
+                    <div className="info-wrapper">
+                      <h3>Właściciel kapitału</h3>
+                      <h4>{school.meta.capitalOwner}</h4>
+                    </div>
+                  </InfoBox>
+
+                </InfoGrid>
+              </Section>
+              <Anchor id="data-sources" offset={this.state.headerHeight + 80}/>
+              <Section>
+                <h2>Źródła danych</h2>
+                {school.media && <p>Źródło zdjęcia: {
+                  (() => {
+                    if (typeof window !== 'undefined' && new URL(school.media[0]).hostname.includes('wikimedia.org')) {
+                      let url = school.media[0].split('/')
+                      console.log('url', `https://commons.wikimedia.org/wiki/File:${url[url.length - 2]}`)
+                      return `https://commons.wikimedia.org/wiki/File:${url[url.length - 2]}`
+                    } else {
+                      return school.media[0]
+                    }
+                  })()
+                }</p>}
+                <TextLink to="/about-data">Sprawdź skąd zebraliśmy dane, które Ci prezentujemy</TextLink>
+              </Section>
+
+
+            </SchoolWrapper>
+          </Main>
+        </Layout>
       </>
     )
   }
