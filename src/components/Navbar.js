@@ -15,6 +15,7 @@ import BarsIcon from '../images/icons/bars.svg'
 import ExclamationTriangleIcon from '../images/icons/exclamation-triangle.svg'
 import { Link } from 'gatsby'
 import theme from 'utils/theme'
+import Cookies from 'js-cookie';
 const responsiveWidth = '1100px'
 
 const Brand = styled(Link)`
@@ -230,6 +231,8 @@ const MobileNavShortcut = styled('div')`
   transition: background .2s;
 `
  class AppNavbar extends Component {
+
+  
   constructor(props) {
     super(props);
     this.toggle = this.toggle.bind(this);
@@ -246,12 +249,23 @@ const MobileNavShortcut = styled('div')`
       window.dispatchEvent(new Event('resize'));
     }
   }
+
+  componentDidMount(){
+    if(Cookies.get('didUserHideBanner')==='true'){
+      this.setState({
+        banner: false
+      })
+    }
+  }
+
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen
     });
   }
+
   hideBanner = () => {
+    Cookies.set('didUserHideBanner', 'true', { expires: 1 })
     this.setState({
       banner:false
     })
