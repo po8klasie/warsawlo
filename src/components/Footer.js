@@ -157,7 +157,6 @@ export default props => (
             <div>
               <img src={micorixLogo}/>
             </div>
-
           </DeveloperLogo>
         </div>
       </div>

@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
 import Layout from 'components/Layout'
-import Input from 'components/Input'
+import FuzzyStaticAutoSuggest from 'components/FuzzyStaticAutoSuggest'
 import styled from '@emotion/styled'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowUp, faSearch, faCaretUp, faCaretDown } from '@fortawesome/free-solid-svg-icons'
 import ExtensionsFilter from 'components/ExtensionsFilter'
 import PointsRangeFilter from 'components/PointsRangeFilter'
 import RadiusFilter from 'components/RadiusFilter'
@@ -14,10 +12,7 @@ import transformParams from 'utils/engine/transformParams'
 import Loader from 'components/Loader'
 import theme from 'utils/theme'
 import SEO from 'components/SEO'
-import mountainRoadImage from 'images/mountain-road.jpg'
 import subjects from 'utils/subjects'
-import { timingSafeEqual } from 'crypto'
-import Tag from 'components/Tag'
 
 const responsiveWidth = '1000px'
 const SearchBar = styled('input')`
@@ -192,20 +187,15 @@ export default class extends Component {
     })
     this.props.navigate(`${this.props.location.pathname}?${this.params ? this.params.toString() : ''}`)
   }
-  setFiltersParams = () => {
-    // for(let [name, value] of Object.entries(this.state.filters)) {
-    //   if(name !== 'query' && value && !isEqual(value, this.defaultFilters[name]))
-    //   this.params.set(name, transformParams(name, value))
-    // }
-  }
-  handleQueryChange = (e) => {
+  handleQueryChange = (value) => {
+    console.log(value, "value");
+    
     this.setState({
-      query: e.target.value,
+      query: value,
     })
   }
   handleSubmit = (e) => {
     e.preventDefault()
-
 
     this.setState({
       formDirty: true,
@@ -214,9 +204,8 @@ export default class extends Component {
       this.params.set('query', this.state.query)
       this.updateURI()
     })
-
-
   }
+
   handleProfilesToggle = (profile) => {
     this.setState(state => {
       if (state.filters.profiles.includes(profile))
@@ -248,18 +237,6 @@ export default class extends Component {
 
     })
   }
-  createListenerFor = (key) => ({
-    onClick: () => this.setState({
-      activeFiltersTab: this.state.activeFiltersTab === key ? null : key,
-    }),
-
-  })
-  syncQueries = (e) => {
-    this.setState(state => ({
-      query: state.query,
-      buttonDirty: true,
-    }))
-  }
   handleLoad = () => {
     this.setState({
       loading: false,
@@ -278,7 +255,6 @@ export default class extends Component {
     })
   }
   render = () => {
-    let isQueryEmpty = this.state.query.trim().length === 0 && !this.state.inputDirty
     return (
       <Layout location={this.props.location}>
         <SEO title="Wyszukiwarka" keywords={[`liceum`, `szukaj`, `wyszukiwarka`]}/>
@@ -314,8 +290,14 @@ export default class extends Component {
             </TabsNav>
             <form onSubmit={this.handleSubmit}>
               <Tab active={this.state.activeTab === 'name'}>
-                <SearchBar placeholder="Szukaj szkoły" id="search-input" value={this.state.query}
-                           onChange={this.handleQueryChange}/>
+                <FuzzyStaticAutoSuggest
+                  error={false}
+                  onChange={this.handleQueryChange}
+                  onSuggestionSelected={answer => console.log('onSuggestionSelected', answer)} // tutaj trzeba dodac akcje wyboru odpowiedzi ostatecznej przez uzytwkonika
+                  placeholder={'Wyszukaj szkoły po nazwię lub dzielnicy'}
+                  value={this.state.query}
+                  withIcon={false} // czy ma byc pokazana ikonka czy nie :)
+                />
               </Tab>
               <Tab active={this.state.activeTab === 'profiles'}>
                 <ExtensionsFilter profiles={this.state.filters.profiles} onToggle={this.handleProfilesToggle}/>

@@ -85,7 +85,6 @@ const SchoolImage = styled('img')`
 export default class extends Component {
   constructor(props) {
     super(props)
-    console.log(props.school)
     this.state = {
       openModal: false,
       following: typeof window !== 'undefined' && localStorage.following && JSON.parse(localStorage.following).includes(props.school.meta.regon),
@@ -98,7 +97,6 @@ export default class extends Component {
       this.openModal()
       return
     }
-    console.log(this.props)
     toggleFollow(this.props.school.meta.regon)
     this.setState(state => ({
       following: !state.following,

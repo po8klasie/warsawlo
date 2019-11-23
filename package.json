@@ -47,7 +47,8 @@
     "react-typography": "^0.16.18",
     "recharts": "^1.4.2",
     "typography": "^0.16.18",
-    "webfontloader": "^1.6.28"
+    "webfontloader": "^1.6.28",
+    "react-autosuggest": "latest"
   },
   "keywords": [
     "gatsby"

@@ -55,7 +55,6 @@ module.exports = () => new Promise((resolve, reject) => {
         }
         askForProcessors()
       case 'processors':
-      console.log(answer)
         config.processors = Array.isArray(answer) ? answer.map(a => answersMappings.processors[a.trim()]) : []
         prompts.next({
           type: 'confirm',

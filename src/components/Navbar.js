@@ -292,7 +292,6 @@ class AppNavbar extends Component {
   }
 
   render() {
-    console.log(this.props)
     // let openPrivacyModal = this.props.location.pathname !== '/' && !localStorage.consent && !this.state.consent
     return (
       <Fragment>

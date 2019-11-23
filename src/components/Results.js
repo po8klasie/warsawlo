@@ -27,15 +27,11 @@ class Results extends Component {
     this.state = {
       results: props.data.allSchool.edges.map(({ node }) => node),
     }
-    console.log(props.data)
     this.engine = new Engine(props.data.allSchool.edges.map(({ node }) => node))
-
-
   }
 
   componentDidUpdate = async (prevProps, prevState) => {
     if (prevProps.query.trim() !== this.props.query.trim() || !isEqual(prevProps.filters, this.props.filters)) {
-      console.log(this.props.query)
       this.setState({
         loading: true,
       })
@@ -47,7 +43,6 @@ class Results extends Component {
     }
   }
   render = () => {
-    console.log(this.state.results)
     return (
       <CardsWrapper view={this.props.view}>
         {

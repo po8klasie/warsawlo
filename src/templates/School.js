@@ -405,7 +405,6 @@ const labels = {
 export default class extends Component {
   constructor(props) {
     super(props)
-    console.log(props)
     this.headerEl = React.createRef()
     this.state = {
       fixedHeader: false,
