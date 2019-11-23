@@ -9,7 +9,6 @@ import { faStar } from '@fortawesome/free-solid-svg-icons'
 import theme from 'utils/theme'
 import toggleFollow from 'utils/follow'
 import FollowModal from 'components/modals/Follow'
-import gapi from 'gapi-client'
 
 const responsiveWidth = '700px'
 const CardWrapper = styled('section')`

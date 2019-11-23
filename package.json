@@ -18,7 +18,6 @@
     "babel-preset-gatsby": "^0.1.7",
     "emotion-theming": "^10.0.6",
     "fuse.js": "^3.3.0",
-    "gapi-client": "^0.0.3",
     "gatsby": "^2.0.118",
     "gatsby-image": "^2.0.20",
     "gatsby-plugin-emotion": "^4.0.3",
