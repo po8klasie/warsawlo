@@ -1,10 +1,21 @@
-import React, { Component, Fragment} from 'react';
+import React, { Component, Fragment } from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faFacebookMessenger } from '@fortawesome/free-brands-svg-icons'
-import { faAt, faCompass, faInfoCircle, faMapMarkerAlt, faSearch, faCalculator, faEnvelope, faExclamationTriangle, faTimes, faStar } from '@fortawesome/free-solid-svg-icons'
+import {
+  faAt,
+  faCompass,
+  faInfoCircle,
+  faMapMarkerAlt,
+  faSearch,
+  faCalculator,
+  faEnvelope,
+  faExclamationTriangle,
+  faTimes,
+  faStar,
+} from '@fortawesome/free-solid-svg-icons'
 // import { faCompass } from '@fortawesome/free-regular-svg-icons'
-import { css} from '@emotion/core'
+import { css } from '@emotion/core'
 import styled from '@emotion/styled'
 // import {connect} from 'react-redux'
 // import * as styleActions from '../store/actions/style'
@@ -15,6 +26,7 @@ import BarsIcon from '../images/icons/bars.svg'
 import ExclamationTriangleIcon from '../images/icons/exclamation-triangle.svg'
 import { Link } from 'gatsby'
 import theme from 'utils/theme'
+
 const responsiveWidth = '1100px'
 
 const Brand = styled(Link)`
@@ -147,7 +159,7 @@ const ActionsWrapper = styled('div')`
 }
 display:inline-block;
 `
-const MobileNav  = styled('nav')` 
+const MobileNav = styled('nav')` 
   position:fixed;
   top:80px;
   left:${props => props.active ? '0' : '-100%'};
@@ -229,31 +241,35 @@ const MobileNavShortcut = styled('div')`
   align-items: center;
   transition: background .2s;
 `
- class AppNavbar extends Component {
+
+class AppNavbar extends Component {
   constructor(props) {
-    super(props);
-    this.toggle = this.toggle.bind(this);
+    super(props)
+    this.toggle = this.toggle.bind(this)
     this.state = {
       isOpen: false,
       consent: false,
       siteLoading: false,
       banner: true,
-      mobileNavOpen: false
+      mobileNavOpen: false,
     }
   }
+
   componentDidUpdate = (prevProps, prevState) => {
-    if(prevState.isOpen !== this.state.isOpen){
-      window.dispatchEvent(new Event('resize'));
+    if (prevState.isOpen !== this.state.isOpen) {
+      window.dispatchEvent(new Event('resize'))
     }
   }
+
   toggle() {
     this.setState({
-      isOpen: !this.state.isOpen
-    });
+      isOpen: !this.state.isOpen,
+    })
   }
+
   hideBanner = () => {
     this.setState({
-      banner:false
+      banner: false,
     })
   }
   isLinkActive = (pathname) => false
@@ -262,97 +278,103 @@ const MobileNavShortcut = styled('div')`
       pathname: '/search',
       search: `?query=${e.target.value.trim().split(' ').join('+')}`,
       state: {
-        focus: true
-      }
+        focus: true,
+      },
     })
-    e.nativeEvent.target.value = ""
+    e.nativeEvent.target.value = ''
     e.nativeEvent.target.blur()
   }
   handlePrivacyModalClose = () => {
     this.setState({
-      consent: true
+      consent: true,
     })
-    localStorage.consent = true;
+    localStorage.consent = true
   }
+
   render() {
     console.log(this.props)
     // let openPrivacyModal = this.props.location.pathname !== '/' && !localStorage.consent && !this.state.consent
     return (
       <Fragment>
-      <div>
-        <Navbar className="navbar">
+        <div>
+          <Navbar className="navbar">
 
-<Top opened={this.state.isOpen}>
-          <Brand to="/"  onClick={this.toggle} >
-          <Logo />
-          <span>Warsaw<span className="highlight">LO</span></span>
+            <Top opened={this.state.isOpen}>
+              <Brand to="/" onClick={this.toggle}>
+                <Logo/>
+                <span>Warsaw<span className="highlight">LO</span></span>
 
 
-        </Brand>
-  </Top>
+              </Brand>
+            </Top>
 
-        <LinksContainer opened={this.state.isOpen} onClick={this.toggle}>
-          <div>
+            <LinksContainer opened={this.state.isOpen} onClick={this.toggle}>
+              <div>
 
-              <NavLink to="/search" className={this.isLinkActive('/search')}>Znajdź szkołę</NavLink>
-              {/* czy: "Szukaj szkoły" - zalezy czy chcesz nacisk połołyć na procesz szukania,
+                <NavLink to="/search" className={this.isLinkActive('/search')}>Znajdź szkołę</NavLink>
+                {/* czy: "Szukaj szkoły" - zalezy czy chcesz nacisk połołyć na procesz szukania,
                czy na rezultat - znalezienie*/}
 
 
-              <NavLink to="/calculator" className={this.isLinkActive('/calculator')}>Kalkulator punktów</NavLink>
-              <NavLink to="/following" className={this.isLinkActive('/following')}>Obserwowane szkoły</NavLink>
-          </div>
-            <div>
+                <NavLink to="/calculator" className={this.isLinkActive('/calculator')}>Kalkulator punktów</NavLink>
+                <NavLink to="/following" className={this.isLinkActive('/following')}>Obserwowane szkoły</NavLink>
+              </div>
+              <div>
 
-              <ActionsWrapper>
-<Action href="http://fb.com/warsawlo" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFacebook} size="2x"/></Action>
-  <Action href="https://m.me/warsawlo" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFacebookMessenger} size="2x"/></Action>
-    <Action href="mailto:info@warsawlo.pl" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faAt} size="2x"/></Action>
-</ActionsWrapper>
-            </div>
+                <ActionsWrapper>
+                  <Action href="http://fb.com/warsawlo" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon
+                    icon={faFacebook} size="2x"/></Action>
+                  <Action href="https://m.me/warsawlo" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon
+                    icon={faFacebookMessenger} size="2x"/></Action>
+                  <Action href="mailto:info@warsawlo.pl" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon
+                    icon={faAt} size="2x"/></Action>
+                </ActionsWrapper>
+              </div>
             </LinksContainer>
 
-        </Navbar>
-      </div>
-      {
-        this.state.banner && (
-          <Banner>
-          <div className="wrapper">
-          <Icon icon={ExclamationTriangleIcon} color="white" />
-            <span>Strona jest obecnie w fazie beta. Niektóre funkcje mogą nie działać poprawnie.</span>
-          <Icon icon={TimesIcon} className="close" color="rgba(255,255,255,0.7)" size="1.7em" onClick={this.hideBanner} />
-            </div>
-          </Banner>
-        )
-      }
-      
-        
+          </Navbar>
+        </div>
+        {
+          this.state.banner && (
+            <Banner>
+              <div className="wrapper">
+                <Icon icon={ExclamationTriangleIcon} color="white"/>
+                <span>Strona jest obecnie w fazie beta. Niektóre funkcje mogą nie działać poprawnie.</span>
+                <Icon icon={TimesIcon} className="close" color="rgba(255,255,255,0.7)" size="1.7em"
+                      onClick={this.hideBanner}/>
+              </div>
+            </Banner>
+          )
+        }
+
 
         <MobileNavShortcut onClick={() => this.setState({
-          mobileNavOpen: !this.state.mobileNavOpen
+          mobileNavOpen: !this.state.mobileNavOpen,
         })} closing={this.state.mobileNavOpen}>
-          <Icon icon={this.state.mobileNavOpen ? TimesIcon : BarsIcon} color={this.state.mobileNavOpen ? theme.colors.secondary : 'white'} size="100%"/>
+          <Icon icon={this.state.mobileNavOpen ? TimesIcon : BarsIcon}
+                color={this.state.mobileNavOpen ? theme.colors.secondary : 'white'} size="100%"/>
         </MobileNavShortcut>
         <MobileNav active={this.state.mobileNavOpen}>
-        <div>
-          <MobileNavItem to="/" onClick={() => this.setState({mobileNavOpen:false})}>
-          Home
-          </MobileNavItem>
-          <MobileNavItem to="/search" onClick={() => this.setState({mobileNavOpen:false})}>
-          Szukaj
-          </MobileNavItem>
-          <MobileNavItem to="/calculator" onClick={() => this.setState({mobileNavOpen:false})}>
-          Kalkulator
-          </MobileNavItem>
-          <MobileNavItem to="/following" onClick={() => this.setState({mobileNavOpen:false})}>
-          Obserwowane
-          </MobileNavItem>
-        </div>
+          <div>
+            <MobileNavItem to="/" onClick={() => this.setState({ mobileNavOpen: false })}>
+              Home
+            </MobileNavItem>
+            <MobileNavItem to="/search" onClick={() => this.setState({ mobileNavOpen: false })}>
+              Szukaj
+            </MobileNavItem>
+            <MobileNavItem to="/calculator" onClick={() => this.setState({ mobileNavOpen: false })}>
+              Kalkulator
+            </MobileNavItem>
+            <MobileNavItem to="/following" onClick={() => this.setState({ mobileNavOpen: false })}>
+              Obserwowane
+            </MobileNavItem>
+          </div>
         </MobileNav>
       </Fragment>
-    );
+    )
   }
 }
+
 // <NavItem>
 //
 // </NavItem>

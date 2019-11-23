@@ -1,6 +1,7 @@
 import React from 'react'
 import theme from 'utils/theme'
 import styled from '@emotion/styled'
+
 const responsiveWidth = '1000px'
 const HeaderWrapper = styled('header')`
 min-height:30vh;
