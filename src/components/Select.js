@@ -1,8 +1,9 @@
-import React, {Component} from 'react'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import React, { Component } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import styled from '@emotion/styled'
 import theme from 'utils/theme'
+
 const SelectWrapper = styled('span')`
   all:inherit;
   position: relative;
@@ -34,8 +35,8 @@ transition: .2s all;
 `
 export default props => (
   <SelectWrapper>
-  <select {...props}>
-    {props.children}
-  </select>
+    <select {...props}>
+      {props.children}
+    </select>
   </SelectWrapper>
 )

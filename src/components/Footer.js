@@ -3,7 +3,8 @@ import styled from '@emotion/styled'
 import theme from 'utils/theme'
 import Logo from 'components/Logo'
 import micorixLogo from 'images/micorix-logo.png'
-import {Link} from 'gatsby'
+import { Link } from 'gatsby'
+
 const responsiveWidth = '1100px'
 const FooterWrapper = styled('footer')`
 @media print { 
@@ -115,50 +116,51 @@ cursor:pointer;
 export default props => (
   <FooterWrapper location={props.location}>
 
-<div className="container">
+    <div className="container">
 
-  <div className="grid">
-  <div>
-  <p className="data-info">Dokładamy wszelkich starań, aby dane były aktualne, ale nie ponosimy odpwiedzialności za ich prawidłowość.</p>
-  <div className="inner-grid">
-  <div>
-  <ul>
-    <li><Link to="/">Strona główna</Link></li>
-    <li><Link to="/search">Wyszukiwarka szkół</Link></li>
-    <li><Link to="/calculator">Kalkulator punktów</Link></li>
-  </ul>
-  </div>
-  <div>
-  <ul>
-    <li><Link to="/about-data">O naszych danych</Link></li>
-    <li><Link to="/help-us">Pomóż nam!</Link></li>
-    <li><Link to="/for-developers">Dla developerów / API</Link></li>
-  </ul>
-  </div>
-  <div>
-  <ul>
-    <li><Link to="/privacy">Polityka prywatności</Link></li>
-    <li><Link to="/privacy/settings">Ustawienia prywatności</Link></li>
-  </ul>
-  </div>
-  </div>
-    </div>
-  <div>
-  <Brand to="/">
-  <div>
-  <Logo />
-  <span>Warsaw<span className="highlight">LO</span></span>
-  </div>
-  </Brand>
-  <DeveloperLogo href="https://micorix.com" target="_blank" rel="noopener noreferrer">
-  <span>Projekt i realizacja strony</span>
-  <div>
-    <img src={micorixLogo} />
-    </div>
+      <div className="grid">
+        <div>
+          <p className="data-info">Dokładamy wszelkich starań, aby dane były aktualne, ale nie ponosimy odpwiedzialności
+            za ich prawidłowość.</p>
+          <div className="inner-grid">
+            <div>
+              <ul>
+                <li><Link to="/">Strona główna</Link></li>
+                <li><Link to="/search">Wyszukiwarka szkół</Link></li>
+                <li><Link to="/calculator">Kalkulator punktów</Link></li>
+              </ul>
+            </div>
+            <div>
+              <ul>
+                <li><Link to="/about-data">O naszych danych</Link></li>
+                <li><Link to="/help-us">Pomóż nam!</Link></li>
+                <li><Link to="/for-developers">Dla developerów / API</Link></li>
+              </ul>
+            </div>
+            <div>
+              <ul>
+                <li><Link to="/privacy">Polityka prywatności</Link></li>
+                <li><Link to="/privacy/settings">Ustawienia prywatności</Link></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div>
+          <Brand to="/">
+            <div>
+              <Logo/>
+              <span>Warsaw<span className="highlight">LO</span></span>
+            </div>
+          </Brand>
+          <DeveloperLogo href="https://micorix.com" target="_blank" rel="noopener noreferrer">
+            <span>Projekt i realizacja strony</span>
+            <div>
+              <img src={micorixLogo}/>
+            </div>
 
-  </DeveloperLogo>
-  </div>
-  </div>
-  </div>
+          </DeveloperLogo>
+        </div>
+      </div>
+    </div>
   </FooterWrapper>
 )

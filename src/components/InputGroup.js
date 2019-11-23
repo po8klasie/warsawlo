@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import theme from 'utils/theme'
+
 const radius = '3px'
 const InputGroupElement = styled('div')`
   display:flex;
@@ -34,14 +35,14 @@ const AddonElement = styled('div')`
 export const InputGroup = (props) => {
   return (
     <InputGroupElement {...props}>
-    {props.children}
+      {props.children}
     </InputGroupElement>
   )
 }
 export const InputAddon = (props) => {
   return (
     <AddonElement className="addon">
-    {props.children}
+      {props.children}
     </AddonElement>
   )
 }

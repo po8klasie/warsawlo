@@ -5064,6 +5064,11 @@ fuse.js@^3.3.0:
   resolved "https://registry.yarnpkg.com/fuse.js/-/fuse.js-3.4.1.tgz#ed1f24ad48edc615cfd78ba80750b6d8703b6414"
   integrity sha512-AGW5tPUGWOMb1dcIVZRfr2xCphPJuAjsEtp/YkXsqSjiodmPqXV34tZpM0cvWxVGb+Os2aBjP1aVsCUkaT3/og==
 
+gapi-client@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/gapi-client/-/gapi-client-0.0.3.tgz#f7bc70ad06dd9ebdf57b5825ca008205deb911bf"
+  integrity sha1-97xwrQbdnr31e1glygCCBd65Eb8=
+
 gatsby-cli@^2.4.9:
   version "2.4.9"
   resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.4.9.tgz#4b085eff9ac0daa063d7d3ebfdfe6b1cde1f198b"

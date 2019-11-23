@@ -1,10 +1,11 @@
-import React, {Component} from 'react'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faCheckSquare as CheckedIcon} from '@fortawesome/free-solid-svg-icons'
+import React, { Component } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheckSquare as CheckedIcon } from '@fortawesome/free-solid-svg-icons'
 
-import {faCheckSquare as UncheckedIcon} from '@fortawesome/free-regular-svg-icons'
+import { faCheckSquare as UncheckedIcon } from '@fortawesome/free-regular-svg-icons'
 import styled from '@emotion/styled'
 import theme from 'utils/theme'
+
 const CheckboxElement = styled('div')`
   position: relative;
   display: inline-block;
@@ -39,7 +40,7 @@ const CheckboxElement = styled('div')`
       background-color: white;
       transition: .4s;
       border-radius: 50%;
-      ${props => props.checked &&'transform: translateX(26px);'}
+      ${props => props.checked && 'transform: translateX(26px);'}
     }
   }
 
@@ -47,7 +48,7 @@ const CheckboxElement = styled('div')`
 `
 
 
- export default props =>  (<CheckboxElement checked={props.checked}>
- <input type="checkbox" />
- <span className="slider" {...props} onClick={props.onToggle}></span>
-     </CheckboxElement>)
+export default props => (<CheckboxElement checked={props.checked}>
+  <input type="checkbox"/>
+  <span className="slider" {...props} onClick={props.onToggle}></span>
+</CheckboxElement>)

@@ -8,6 +8,6 @@ const Wrapper = styled('div')`
 
 export default (props) => (
   <Wrapper {...props}>
-  {props.children}
+    {props.children}
   </Wrapper>
 )

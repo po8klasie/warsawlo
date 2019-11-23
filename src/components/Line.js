@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import theme from 'utils/theme'
+
 export default styled('div')`
 background:
   repeating-linear-gradient(

@@ -1,4 +1,3 @@
-
 const theme = {
   colors: {
     primary: 'rgb(89, 0, 138)',
@@ -11,8 +10,8 @@ const theme = {
   fonts: {
     primary: 'Work Sans',
     secondary: 'Playfair Display',
-    tertiary: 'Ostrich Sans Rounded'
-  }
+    tertiary: 'Ostrich Sans Rounded',
+  },
 }
 
 export default theme

@@ -8,8 +8,8 @@ const Tag = styled('span')`
     display:inline-block;
     border-radius:3px;
     cursor: pointer;
-    margin: ${props => props.small ? 2 :20}px;
-    font-size: ${props => props.small ? 0.8 :1}em;
+    margin: ${props => props.small ? 2 : 20}px;
+    font-size: ${props => props.small ? 0.8 : 1}em;
     margin: 5px;
     border: 2px solid ${props => props.active ? props.color : 'rgb(210,210,210)'};
     transition: .2s all;

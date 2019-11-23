@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import styled from '@emotion/styled'
 import LOPlaceholder from 'components/LOPlaceholder'
 import Tag from 'components/Tag'
@@ -9,13 +9,15 @@ import { faStar } from '@fortawesome/free-solid-svg-icons'
 import theme from 'utils/theme'
 import toggleFollow from 'utils/follow'
 import FollowModal from 'components/modals/Follow'
+import gapi from 'gapi-client'
+
 const responsiveWidth = '700px'
-const CardWrapper = styled(Link)`
+const CardWrapper = styled('section')`
   all:unset;
   width:100%;
   border: 3px solid #eee;
   display:grid;
-  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-columns: 5fr 1fr;
   margin:1em;
   cursor:pointer;
   transition: .4s all;
@@ -27,6 +29,20 @@ const CardWrapper = styled(Link)`
     grid-template-columns: 1fr;
   }
 `
+
+const GoToSchoolLink = styled(Link)`
+  color: #000;
+  display:grid;
+  grid-template-columns: 1fr 4fr;
+  
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
+`
+
 const Info = styled('div')`
   padding:1em;
   h3{
@@ -67,6 +83,7 @@ color: ${props => props.active ? 'white' : 'black'};
 text-align:center;
 border: 2px solid ${theme.colors.primary};
 outline:none;
+pointer-events: all;
 `
 const SchoolImage = styled('img')`
   object-fit:cover;
@@ -81,96 +98,115 @@ const SchoolImage = styled('img')`
   }
 `
 
-export default class extends Component{
-  constructor(props){
+export default class extends Component {
+  constructor(props) {
     super(props)
-    console.log(props.school)
     this.state = {
       openModal: false,
-      following: typeof window !== 'undefined' && localStorage.following && JSON.parse(localStorage.following).includes(props.school.meta.regon)
+      following: typeof window !== 'undefined' && localStorage.following && JSON.parse(localStorage.following).includes(props.school.meta.regon),
     }
   }
+
+  getAddToCalendarLink = () => {
+    // TODO date should be dynamic
+    const { school: { name, location } } = this.props
+    const eventName = `Rekrutacja do ${name.full}`
+    const locationPath = (location && location.address.District) && `location=Warsaw,${location.address.District},Poland`
+    const dateStart = new Date('2020-06-14T08:30:00').toISOString().replace(/-|:|\.\d\d\d/g,"")
+    const dateEnd = new Date('2020-06-19T14:00:00').toISOString().replace(/-|:|\.\d\d\d/g,"")
+    const details = `Pamiętaj o złożeniu dokumentów do ${name.full}`
+    return `https://calendar.google.com/calendar/r/eventedit?text=${eventName}&dates=${dateStart}/${dateEnd}&details=${details}&${locationPath && locationPath}`
+  }
+
+
   toggleFollow = (e) => {
     e.preventDefault()
-    if(typeof window !== 'undefined' && localStorage.followConsent !== 'true'){
+
+    if (typeof window !== 'undefined' && localStorage.followConsent !== 'true') {
       this.openModal()
       return
     }
-    console.log(this.props)
     toggleFollow(this.props.school.meta.regon)
     this.setState(state => ({
-      following: !state.following
+      following: !state.following,
     }))
-    if(this.props.onToggleFollow){
+    if (this.props.onToggleFollow) {
       this.props.onToggleFollow(this.props.school.meta.regon)
     }
   }
   openModal = () => this.setState({
-    openModal:true
+    openModal: true,
   })
   handleAgree = () => {
-    if(typeof window !== 'undefined'){
+    if (typeof window !== 'undefined') {
       localStorage.followConsent = 'true'
     }
     this.setState({
-      openModal:false
+      openModal: false,
     })
   }
   handleCancel = () => {
     this.setState({
-      openModal:false
+      openModal: false,
     })
   }
   render = () => {
-    let { school, filters } = this.props
+    const { school, filters } = this.props
     return (
       <>
-        <CardWrapper to={`/school/${school.meta.regon}`}>
-        {
-          school.media && school.media[0] ? <SchoolImage src={school.media[0]} /> : <LOPlaceholder />
-        }
-        <Info>
-        <h3>{school.name.full}</h3>
-        <h5>{school.location && school.location.address.District}</h5>
-        {
-          school.thresholds && school.thresholds._2018.overview.availableSubjects.map(subject => {
-            let subArr = subjectsMapping.filter(s => s[2] == subject)
-            let color = subArr[0] ? subArr[0][1] : 'black'
-            return (
-                <Tag
-                small
-                color={color}
-                key={subject}
-                active={filters && filters.profiles.includes(subArr[0] ? subArr[0][0] : 0)}
-                >
-                {subject}
-              </Tag>
-            )
-          })
-        }
-        </Info>
-        <Actions>
-        <div>
-          {school.contact.website && <a href={`http://${school.contact.website}`}
-          target="_blank"
-          rel="noopener norefferer"
-          onClick={e => e.stopPropagation()}
-          >Odwiedź stronę</a>}
-          <a href={`https://google.com/search?q=${school.name.full.split(' ').join('+')}`}
-          target="_blank"
-          rel="noopener norefferer"
-          onClick={e => e.stopPropagation()}
-          >Szukaj w Google</a>
-          <FollowButton className="action follow" active={this.state.following} onClick={this.toggleFollow}>
-          <FontAwesomeIcon icon={faStar} /> {this.state.following ? 'Nie obserwuj' : 'Obserwuj'}
-          </FollowButton>
-          </div>
+        <CardWrapper>
+          <GoToSchoolLink to={`/school/${school.meta.regon}`}>
+            {
+              school.media && school.media[0] ? <SchoolImage src={school.media[0]}/> : <LOPlaceholder/>
+            }
+            <Info>
+              <h3>{school.name.full}</h3>
+              <h5>{school.location && school.location.address.District}</h5>
+              {
+                school.thresholds && school.thresholds._2018.overview.availableSubjects.map(subject => {
+                  let subArr = subjectsMapping.filter(s => s[2] == subject)
+                  let color = subArr[0] ? subArr[0][1] : 'black'
+                  return (
+                    <Tag
+                      small
+                      color={color}
+                      key={subject}
+                      active={filters && filters.profiles.includes(subArr[0] ? subArr[0][0] : 0)}
+                    >
+                      {subject}
+                    </Tag>
+                  )
+                })
+              }
+            </Info>
+          </GoToSchoolLink>
+          <Actions>
+            <div>
+              {school.contact.website &&
+              <a href={`http://${school.contact.website}`}
+                 target="_blank"
+                 rel="noopener norefferer"
+                 onClick={e => e.stopPropagation()}
+              >Odwiedź stronę</a>}
+              <a href={`https://google.com/search?q=${school.name.full.split(' ').join('+')}`}
+                 target="_blank"
+                 rel="noopener norefferer"
+                 onClick={e => e.stopPropagation()}
+              >Szukaj w Google</a>
+              <FollowButton className="action follow" active={this.state.following} onClick={this.toggleFollow}>
+                <FontAwesomeIcon icon={faStar}/> {this.state.following ? 'Nie obserwuj' : 'Obserwuj'}
+              </FollowButton>
 
-        </Actions>
+              <a role="button" href={this.getAddToCalendarLink()} target="_blank">
+                Add to calendar
+              </a>
+            </div>
+
+          </Actions>
 
         </CardWrapper>
         <FollowModal open={this.state.openModal} onAgree={this.handleAgree} onCancel={this.handleCancel}/>
-        </>
-      )
+      </>
+    )
   }
 }

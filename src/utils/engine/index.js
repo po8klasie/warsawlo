@@ -13,20 +13,21 @@ export default class Engine {
       keys: [
         'name.full',
         'name.short',
-        'name.nicks'
-      ]
+        'name.nicks',
+      ],
     })
     this.defaultFilters = {
       profiles: [],
-      pointsRange: [0, 200]
+      pointsRange: [0, 200],
     }
   }
+
   generateTests = (filters) => {
-    console.log(filters, filters ==this.defaultFilters, this.defaultFilters===filters)
-    if(filters == null){
+    console.log(filters, filters == this.defaultFilters, this.defaultFilters === filters)
+    if (filters == null) {
       return []
     }
-    return Object.keys({...filters})
+    return Object.keys({ ...filters })
       .filter(key => !isEqual(filters[key], this.defaultFilters[key]))
       .map(key => tests[key](filters[key]))
   }
@@ -46,7 +47,6 @@ export default class Engine {
       result = this.queryResult.filter(school => this.runTests.every(test => test(school)))
     }
     resolve(result)
-
 
 
   })

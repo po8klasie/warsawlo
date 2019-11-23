@@ -1,8 +1,8 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import Layout from 'components/Layout'
 import Input from 'components/Input'
 import styled from '@emotion/styled'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUp, faSearch, faCaretUp, faCaretDown } from '@fortawesome/free-solid-svg-icons'
 import ExtensionsFilter from 'components/ExtensionsFilter'
 import PointsRangeFilter from 'components/PointsRangeFilter'
@@ -16,8 +16,9 @@ import theme from 'utils/theme'
 import SEO from 'components/SEO'
 import mountainRoadImage from 'images/mountain-road.jpg'
 import subjects from 'utils/subjects'
-import { timingSafeEqual } from 'crypto';
+import { timingSafeEqual } from 'crypto'
 import Tag from 'components/Tag'
+
 const responsiveWidth = '1000px'
 const SearchBar = styled('input')`
   margin-top:1em;
@@ -160,8 +161,8 @@ cursor: pointer;
     font-size:.9em;
   }
 `
-export default class extends Component{
-  constructor(props){
+export default class extends Component {
+  constructor(props) {
     super(props)
     if (typeof window !== `undefined`) {
       this.params = new URLSearchParams(this.props.location.search)
@@ -172,20 +173,21 @@ export default class extends Component{
       buttonDirty: false,
       activeTab: 'name',
       view: 'horizontal',
-      loading:false,
-      loaded:false,
+      loading: false,
+      loaded: false,
       preservedQuery: '',
       filters: {
-        profiles: this.params && this.params.has('subjects') ? transformParams('subjects', this.params.get('subjects'), true): [] ,
+        profiles: this.params && this.params.has('subjects') ? transformParams('subjects', this.params.get('subjects'), true) : [],
         pointsRange: [0, 200],
-        distance: null
-      }
+        distance: null,
+      },
     }
   }
+
   updateURI = () => {
     console.log(`${this.props.location.pathname}?${this.params ? this.params.toString() : ''}`)
     this.params.forEach((value, key) => {
-      if(!value)
+      if (!value)
         this.params.delete(key)
     })
     this.props.navigate(`${this.props.location.pathname}?${this.params ? this.params.toString() : ''}`)
@@ -198,38 +200,38 @@ export default class extends Component{
   }
   handleQueryChange = (e) => {
     this.setState({
-      query: e.target.value
+      query: e.target.value,
     })
   }
   handleSubmit = (e) => {
     e.preventDefault()
 
 
-      this.setState({
-        formDirty: true,
-        preservedQuery: this.state.query,
-      }, () => {
-        this.params.set('query', this.state.query)
-        this.updateURI()
-      })
-    
+    this.setState({
+      formDirty: true,
+      preservedQuery: this.state.query,
+    }, () => {
+      this.params.set('query', this.state.query)
+      this.updateURI()
+    })
+
 
   }
   handleProfilesToggle = (profile) => {
     this.setState(state => {
-      if(state.filters.profiles.includes(profile))
+      if (state.filters.profiles.includes(profile))
         return {
           filters: {
             ...state.filters,
-            profiles: state.filters.profiles.filter(p => p !== profile)
-          }
+            profiles: state.filters.profiles.filter(p => p !== profile),
+          },
         }
       else
         return {
           filters: {
             ...state.filters,
-            profiles: [...state.filters.profiles, profile]
-          }
+            profiles: [...state.filters.profiles, profile],
+          },
         }
     }, () => {
       this.params.set('subjects', transformParams('subjects', this.state.filters.profiles))
@@ -240,101 +242,103 @@ export default class extends Component{
     console.log(value)
     this.setState({
       filters: {
-        pointsRange: value
-      }
+        pointsRange: value,
+      },
     }, () => {
 
     })
   }
   createListenerFor = (key) => ({
     onClick: () => this.setState({
-      activeFiltersTab: this.state.activeFiltersTab === key ? null : key
-    })
+      activeFiltersTab: this.state.activeFiltersTab === key ? null : key,
+    }),
 
   })
   syncQueries = (e) => {
     this.setState(state => ({
       query: state.query,
-      buttonDirty: true
+      buttonDirty: true,
     }))
   }
   handleLoad = () => {
     this.setState({
-      loading:false
+      loading: false,
     })
   }
   handleRadiusChange = (radius) => {
     this.setState({
-      loading:false
+      loading: false,
     })
   }
   showAll = () => {
     this.setState({
       query: '',
       preservedQuery: '',
-      formDirty: true
+      formDirty: true,
     })
   }
   render = () => {
     let isQueryEmpty = this.state.query.trim().length === 0 && !this.state.inputDirty
     return (
       <Layout location={this.props.location}>
-      <SEO title="Wyszukiwarka" keywords={[`liceum`, `szukaj`, `wyszukiwarka`]} />
-      
-      <WelcomeWrapper minify={this.state.formDirty}>
-        <Img className="bg" fluid={this.props.data.file.childImageSharp.fluid} />
-        <Heading active={!this.state.formDirty}>A jaki jest Twój cel podróży?</Heading>
-        <Container>
-          <TabsNav full={!this.state.formDirty}>
-          <TabLink
-            active={this.state.activeTab === 'name'}
-            onClick={() => this.setState({
-              activeTab: 'name'
-            })}>Nazwa szkoły</TabLink>
-            <TabLink
-            active={this.state.activeTab === 'profiles'}
-            onClick={() => this.setState({
-              activeTab: 'profiles'
-            })}
-            >Profile</TabLink>
-            <TabLink
-            active={this.state.activeTab === 'points'}
-            onClick={() => this.setState({
-              activeTab: 'points'
-            })}
-            >Punkty</TabLink>
-          <TabLink
-            active={this.state.activeTab === 'location'}
-            onClick={() => this.setState({
-              activeTab: 'location'
-            })}
-            >Lokalizacja</TabLink>
-          </TabsNav>
-          <form onSubmit={this.handleSubmit} >
-          <Tab active={this.state.activeTab === 'name'}>
-      <SearchBar placeholder="Szukaj szkoły" id="search-input" value={this.state.query} onChange={this.handleQueryChange}/>
-      </Tab>
-      <Tab active={this.state.activeTab === 'profiles'}>
-      <ExtensionsFilter profiles={this.state.filters.profiles} onToggle={this.handleProfilesToggle}/>
-      </Tab>
-      <Tab active={this.state.activeTab === 'points'}>
-      <PointsRangeFilter range={this.state.filters.pointsRange} onToggle={this.handlePointsRangeChange}/>
-      </Tab>
-      <Tab active={this.state.activeTab === 'location'}>
-      <RadiusFilter radius={this.state.filters.radius} onChange={this.handleRadiusChange}/>
-      </Tab>
-      
-      <ResultsLoader active={this.state.loading} />
-      <Actions full={!this.state.formDirty}>
-      <SearchButton type="submit">Szukaj</SearchButton>
-      <BrowseButton type="reset" onClick={this.showAll}>Przeglądaj wszystkie szkoły</BrowseButton>
-      </Actions>
-      </form>
-      </Container>
-      </WelcomeWrapper>
-      <ResultsWrapper  active={this.state.formDirty}>
-      <Results view={this.state.view} query={this.state.preservedQuery} filters={this.state.filters} onLoad={this.handleLoad}/>
-      </ResultsWrapper>
+        <SEO title="Wyszukiwarka" keywords={[`liceum`, `szukaj`, `wyszukiwarka`]}/>
+
+        <WelcomeWrapper minify={this.state.formDirty}>
+          <Img className="bg" fluid={this.props.data.file.childImageSharp.fluid}/>
+          <Heading active={!this.state.formDirty}>A jaki jest Twój cel podróży?</Heading>
+          <Container>
+            <TabsNav full={!this.state.formDirty}>
+              <TabLink
+                active={this.state.activeTab === 'name'}
+                onClick={() => this.setState({
+                  activeTab: 'name',
+                })}>Nazwa szkoły</TabLink>
+              <TabLink
+                active={this.state.activeTab === 'profiles'}
+                onClick={() => this.setState({
+                  activeTab: 'profiles',
+                })}
+              >Profile</TabLink>
+              <TabLink
+                active={this.state.activeTab === 'points'}
+                onClick={() => this.setState({
+                  activeTab: 'points',
+                })}
+              >Punkty</TabLink>
+              <TabLink
+                active={this.state.activeTab === 'location'}
+                onClick={() => this.setState({
+                  activeTab: 'location',
+                })}
+              >Lokalizacja</TabLink>
+            </TabsNav>
+            <form onSubmit={this.handleSubmit}>
+              <Tab active={this.state.activeTab === 'name'}>
+                <SearchBar placeholder="Szukaj szkoły" id="search-input" value={this.state.query}
+                           onChange={this.handleQueryChange}/>
+              </Tab>
+              <Tab active={this.state.activeTab === 'profiles'}>
+                <ExtensionsFilter profiles={this.state.filters.profiles} onToggle={this.handleProfilesToggle}/>
+              </Tab>
+              <Tab active={this.state.activeTab === 'points'}>
+                <PointsRangeFilter range={this.state.filters.pointsRange} onToggle={this.handlePointsRangeChange}/>
+              </Tab>
+              <Tab active={this.state.activeTab === 'location'}>
+                <RadiusFilter radius={this.state.filters.radius} onChange={this.handleRadiusChange}/>
+              </Tab>
+
+              <ResultsLoader active={this.state.loading}/>
+              <Actions full={!this.state.formDirty}>
+                <SearchButton type="submit">Szukaj</SearchButton>
+                <BrowseButton type="reset" onClick={this.showAll}>Przeglądaj wszystkie szkoły</BrowseButton>
+              </Actions>
+            </form>
+          </Container>
+        </WelcomeWrapper>
+        <ResultsWrapper active={this.state.formDirty}>
+          <Results view={this.state.view} query={this.state.preservedQuery} filters={this.state.filters}
+                   onLoad={this.handleLoad}/>
+        </ResultsWrapper>
       </Layout>
     )
   }

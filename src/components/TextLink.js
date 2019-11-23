@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import theme from 'utils/theme'
-import  {Link} from 'gatsby'
+import { Link } from 'gatsby'
+
 export default props => {
   const Element = styled(props.wrapper ? props.wrapper : Link)`
     all:unset;
@@ -27,8 +28,8 @@ export default props => {
       }
     }
   `
-  let attr = {...props}
-  if(props.wrapper === 'a'){
+  let attr = { ...props }
+  if (props.wrapper === 'a') {
     attr.rel = 'noopener noreferrer'
     attr.target = '_blank'
   }

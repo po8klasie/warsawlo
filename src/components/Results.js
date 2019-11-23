@@ -1,4 +1,4 @@
-import React, { Component} from 'react'
+import React, { Component } from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 import styled from '@emotion/styled'
 import isEqual from 'lodash.isequal'
@@ -14,53 +14,54 @@ const styles = (props) => ({
     @media (max-width: ${responsiveWidth}){
     width:calc(100% - 2em);
     }
-  `
+  `,
 })
 
 const CardsWrapper = styled('div')`
   ${props => styles(props)[props.view]}
 `
-class Results extends Component{
-  constructor(props){
+
+class Results extends Component {
+  constructor(props) {
     super(props)
     this.state = {
-      results: props.data.allSchool.edges.map(({node}) => node)
+      results: props.data.allSchool.edges.map(({ node }) => node),
     }
     console.log(props.data)
-    this.engine = new Engine(props.data.allSchool.edges.map(({node}) => node))
-
-
-
-
+    this.engine = new Engine(props.data.allSchool.edges.map(({ node }) => node))
   }
+
   componentDidUpdate = async (prevProps, prevState) => {
-    if(prevProps.query.trim() !== this.props.query.trim() || !isEqual(prevProps.filters, this.props.filters)){
+    if (prevProps.query.trim() !== this.props.query.trim() || !isEqual(prevProps.filters, this.props.filters)) {
       console.log(this.props.query)
       this.setState({
-        loading:true
+        loading: true,
       })
       this.setState({
         results: await this.engine.search(this.props.query, this.props.filters),
-        loading: false
+        loading: false,
       })
       this.props.onLoad()
     }
   }
+
   render = () => {
     console.log(this.state.results)
     return (
       <CardsWrapper view={this.props.view}>
-      {
-        this.state.results && this.state.results.map(school => <HorizontalCard school={school} filters={this.props.filters} key={school.meta.regon}/>)
-      }
+        {
+          this.state.results && this.state.results.map(school => <HorizontalCard school={school}
+                                                                                 filters={this.props.filters}
+                                                                                 key={school.meta.regon}/>)
+        }
       </CardsWrapper>
     )
   }
 }
 
-  export default props => (
-    <StaticQuery
-      query={graphql`
+export default props => (
+  <StaticQuery
+    query={graphql`
         query {
           allSchool {
             edges {
@@ -92,6 +93,6 @@ class Results extends Component{
             }
           }
         }`}
-      render={data => <Results data={data} {...props} />}
-    />
-  )
+    render={data => <Results data={data} {...props} />}
+  />
+)

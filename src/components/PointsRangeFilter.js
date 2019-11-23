@@ -1,8 +1,9 @@
 import React from 'react'
-import Slider, {createSliderWithTooltip} from 'rc-slider'
+import Slider, { createSliderWithTooltip } from 'rc-slider'
 import styled from '@emotion/styled'
 import 'rc-slider/assets/index.css'
 import theme from 'utils/theme'
+
 const RangeWrapper = styled('div')`
   width:70%;
   margin:auto;
@@ -46,7 +47,7 @@ export default props => (
   // <span>200 pkt</span>
   // </RangeWrapper>
   <>
-   <Info>Pracujemy nad tym! Wpadnij tu później!</Info>
+    <Info>Pracujemy nad tym! Wpadnij tu później!</Info>
 
   </>
 )

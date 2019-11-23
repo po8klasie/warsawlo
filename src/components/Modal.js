@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faMarker, faTimes} from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMarker, faTimes } from '@fortawesome/free-solid-svg-icons'
+
 const responsiveWidth = '1000px'
 const ModalWrapper = styled('div')`
   position:fixed;
@@ -60,26 +61,27 @@ const ModalWrapper = styled('div')`
 
 
 class Modal extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props)
   }
-  render () {
-    if(this.props.open)
+
+  render() {
+    if (this.props.open)
       return (
         <ModalWrapper onClick={this.props.onClose}>
-        <div className="modal" onClick={e => e.stopPropagation()}>
-        <FontAwesomeIcon icon={faTimes} className="modal-close" onClick={this.props.onClose}/>
-        <div className="modal-icon">
-        <FontAwesomeIcon icon={this.props.icon} size="3x"/>
-        </div>
-        <div className="modal-body">
-        {this.props.children}
-        </div>
-        </div>
+          <div className="modal" onClick={e => e.stopPropagation()}>
+            <FontAwesomeIcon icon={faTimes} className="modal-close" onClick={this.props.onClose}/>
+            <div className="modal-icon">
+              <FontAwesomeIcon icon={this.props.icon} size="3x"/>
+            </div>
+            <div className="modal-body">
+              {this.props.children}
+            </div>
+          </div>
         </ModalWrapper>
       )
     return null
   }
 }
 
-export default Modal;
+export default Modal
