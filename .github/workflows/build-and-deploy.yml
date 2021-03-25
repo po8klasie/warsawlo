@@ -18,7 +18,9 @@ jobs:
           node-version: 15.x
 
       - name: Install dependencies 📦
-        run: yarn --frozen-lockfile
+        run: | # https://github.com/octalmage/robotjs/issues/398#issuecomment-392380641
+          yarn global add node-gyp
+          yarn --frozen-lockfile
 
       - name: Build 🏗️
         run: yarn pre-deploy
