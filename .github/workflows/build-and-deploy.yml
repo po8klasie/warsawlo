@@ -12,10 +12,16 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v2.3.1
 
-      - name: Install and Build 🔧
-        run: |
-          yarn --frozen-lockfile
-          yarn pre-deploy
+      - name: Setup node 🟩
+        uses: actions/setup-node@v2
+        with:
+          node-version: 15.x
+
+      - name: Install dependencies 📦
+        run: yarn --frozen-lockfile
+
+      - name: Build 🏗️
+        run: yarn pre-deploy
 
       - name: Add domain config 🔧
         run: echo "$DOMAIN" > ./public/CNAME
